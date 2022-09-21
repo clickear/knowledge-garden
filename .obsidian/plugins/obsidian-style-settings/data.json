@@ -162,5 +162,6 @@
   "shimmering-focus@@show-search-pane-suggestions": true,
   "shimmering-focus@@status-bar-mode": "only-on-hover-statusbar",
   "shimmering-focus@@quotation-mark-deco": false,
-  "shimmering-focus@@permanently-show-block-ids": true
+  "shimmering-focus@@permanently-show-block-ids": true,
+  "supercharged-links@@b19c-8ca5-color": "#AC8A4A"
 }

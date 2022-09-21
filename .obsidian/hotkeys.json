@@ -127,5 +127,50 @@
   "pane-relief:go-1st": [],
   "pane-relief:go-7th": [],
   "pane-relief:go-8th": [],
-  "pane-relief:go-last": []
+  "pane-relief:go-last": [],
+  "shortcuts-extender:heading-1": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "1"
+    }
+  ],
+  "shortcuts-extender:heading-2": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "2"
+    }
+  ],
+  "shortcuts-extender:heading-3": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "3"
+    }
+  ],
+  "shortcuts-extender:heading-4": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "4"
+    }
+  ],
+  "shortcuts-extender:heading-5": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "5"
+    }
+  ],
+  "shortcuts-extender:heading-6": [],
+  "pane-relief:put-last": [],
+  "pane-relief:put-8th": [],
+  "pane-relief:put-7th": [],
+  "pane-relief:put-6th": []
 }

@@ -12,7 +12,7 @@
     "菜单栏及侧边栏定制"
   ],
   "theme": "system",
-  "baseFontSize": 14,
+  "baseFontSize": 15,
   "baseFontSizeAction": true,
   "translucency": false
 }
