@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-19
-date modified: 2022-09-19
+date modified: 2022-09-22
 title: 资料
 ---
 
@@ -55,7 +55,7 @@ new thread(socket);
 
 #todo/continue epollo模型
 
-#### 单reactor模式
+#### 单reactor模式（redis早期版本）
 
 连接，IO事件等都在一个线程。  
 ![](http://image.clickear.top/20220919152128.png)
@@ -66,11 +66,17 @@ new thread(socket);
 
 将decode、compute、encode等处理器的执行放入线程池，多线程进行业务处理。但Reactor仍为单个线程。
 
+Redis 6.0（单 Reactor 多线程模型）进行了优化，引入了 **IO多线程**，把读写请求数据的逻辑，用多线程处理，提升并发性能
+
 #### 主从reactor模式 (对于多个CPU的机器，为充分利用系统资源，将Reactor拆分为两部分)
 
 ![](http://image.clickear.top/20220919152446.png)
 
 mainReactor负责监听连接，accept连接给subReactor处理，为什么要单独分一个Reactor来处理监听呢？因为像TCP这样需要经过3次握手才能建立连接，这个建立连接的过程也是要耗时间和资源的，单独分一个Reactor来处理，可以提高性能。
+
+- Nginx：多 Reactor 多进程模型。主Reacotr不处理网络IO，只用来初始化 socket，由 Wroker子进程 accept 连接，之后这个连接的所有处理都在子进程中完成。每个Wroker进程是一个独立的单Reacotr单线程模型。
+- Netty：多 Reactor 多线程模型。主Reacotr只负责建立连接，然后把建立好的连接给从Reactor，从Reactor负责IO读写。
+- Kafka：多 Reactor 多线程模型。但因为Kafka主要与磁盘IO交互，因此真正的读写数据不是从Reactor 处理的，而是有一个worker线程池，专门处理磁盘IO，从Reactor负责网络IO，然后把任务交给worker线程池处理。
 
 #### [[rocketmq]]中的1+N+M1+M2
 

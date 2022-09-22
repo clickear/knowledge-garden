@@ -4,137 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "5395aeba341a84af",
+        "id": "241e95459d851447",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "5395aeba341a84af",
+              "leaf": "241e95459d851447",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":6.002976190476191}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":31,\"ch\":7},\"to\":{\"line\":31,\"ch\":5}}}"
             },
             {
-              "leaf": "5395aeba341a84af",
+              "leaf": "241e95459d851447",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/» 本库笔记的emoji符号记录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":20,\"ch\":102},\"to\":{\"line\":20,\"ch\":102}},\"scroll\":10.388764880952381}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/§ dubbo源码学习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
             },
             {
-              "leaf": "5395aeba341a84af",
+              "leaf": "241e95459d851447",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":36,\"ch\":14},\"to\":{\"line\":36,\"ch\":14}},\"scroll\":26.32276744894849}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":7},\"to\":{\"line\":2,\"ch\":7}},\"scroll\":0}"
             },
             {
-              "leaf": "5395aeba341a84af",
+              "leaf": "241e95459d851447",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/∑ mq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":202,\"ch\":0},\"to\":{\"line\":202,\"ch\":0}},\"scroll\":192.54712695889165}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/§ dubbo源码学习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
             },
             {
-              "leaf": "5395aeba341a84af",
+              "leaf": "241e95459d851447",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketmq事务消息.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":15},\"to\":{\"line\":3,\"ch\":15}}}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/∑ mq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":119,\"ch\":18},\"to\":{\"line\":119,\"ch\":18}},\"scroll\":109.1703869047619}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketmq事务消息.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/∑ mq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":117,\"ch\":0},\"to\":{\"line\":117,\"ch\":0}},\"scroll\":103.02573529411765}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketmq事务消息.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/∑ mq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":124,\"ch\":0},\"to\":{\"line\":124,\"ch\":0}},\"scroll\":106.86458333333333}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/∑ mq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":123,\"ch\":72},\"to\":{\"line\":123,\"ch\":72}},\"scroll\":100.18912237330036}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/面试碰到问题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":24,\"ch\":0},\"to\":{\"line\":24,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式系统/Paxos.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":156,\"ch\":0},\"to\":{\"line\":156,\"ch\":0}},\"scroll\":142.2860863095238}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/JVM调优.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/面试碰到问题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":6},\"to\":{\"line\":10,\"ch\":6}}}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/团队管理/团队管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":49,\"ch\":18},\"to\":{\"line\":49,\"ch\":18}},\"scroll\":0}"
-            },
-            {
-              "leaf": "5395aeba341a84af",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/面试碰到问题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":9},\"to\":{\"line\":9,\"ch\":9}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":0},\"to\":{\"line\":15,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+            "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -142,233 +52,23 @@
         }
       },
       {
-        "id": "2b9c7fe0bff4b448",
+        "id": "3ddf37136c6c626d",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "2b9c7fe0bff4b448",
+              "leaf": "3ddf37136c6c626d",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "2b9c7fe0bff4b448",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/初始化.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "2b9c7fe0bff4b448",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/阿里巴巴java开发手册/指令重排.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":3},\"to\":{\"line\":16,\"ch\":3}},\"scroll\":0}"
-            },
-            {
-              "leaf": "2b9c7fe0bff4b448",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/JVM调优.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":292,\"ch\":0},\"to\":{\"line\":292,\"ch\":0}},\"scroll\":277.49626307922273}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":30.403111739745402}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "450123fe16ac6a22",
-        "type": "leaf",
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":47},\"to\":{\"line\":16,\"ch\":47}},\"scroll\":0}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/并发/∑ 并发.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":8},\"to\":{\"line\":10,\"ch\":8}}}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":19},\"to\":{\"line\":14,\"ch\":19}}}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/阿里巴巴java开发手册/阿里巴巴java开发手册.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":0},\"to\":{\"line\":16,\"ch\":0}}}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/并发/∑ 并发.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":0},\"to\":{\"line\":10,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "450123fe16ac6a22",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/JVM调优.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":293,\"ch\":0},\"to\":{\"line\":293,\"ch\":0}},\"scroll\":266.8111979166667}"
-            }
-          ]
-        },
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "dcf45b675449d217",
-        "type": "leaf",
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/阿里巴巴java开发手册/阿里巴巴java开发手册.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/» 读书笔记工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/计算机/网络是怎样连接的-户根勤.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":36,\"ch\":0},\"to\":{\"line\":36,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/arthas.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":175,\"ch\":0},\"to\":{\"line\":175,\"ch\":0}},\"scroll\":161.31436011904762}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/杂文/reactor模式.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":27.148331273176762}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/§ mq面试.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":55.21568627450981}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/临时文档/文档备份.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":0},\"to\":{\"line\":10,\"ch\":0}}}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":0},\"to\":{\"line\":10,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/JVM/arthas.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":66,\"ch\":63},\"to\":{\"line\":66,\"ch\":63}},\"scroll\":167.0874255952381}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":67},\"to\":{\"line\":9,\"ch\":67}},\"scroll\":0}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/§ mq面试.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":68,\"ch\":0},\"to\":{\"line\":68,\"ch\":0}},\"scroll\":55.21568627450981}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/杂文/netty.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":36,\"ch\":0},\"to\":{\"line\":36,\"ch\":0}},\"scroll\":28.624383409707832}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":111,\"ch\":0},\"to\":{\"line\":111,\"ch\":0}},\"scroll\":102.4672619047619}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/项目总结/∑ 项目总结.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/杂文/reactor模式.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/∑ 面试计划.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":122.10491071428571}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/杂文/reactor模式.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":40,\"ch\":0},\"to\":{\"line\":40,\"ch\":0}},\"scroll\":37.02955163043478}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/杂文/netty.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":0},\"to\":{\"line\":9,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "dcf45b675449d217",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/1-Project/我的面试指南/mq/§ mq面试.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":74,\"ch\":108},\"to\":{\"line\":74,\"ch\":108}},\"scroll\":59.15196078431372}"
-            }
-          ]
-        },
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Sources/Books/阿里巴巴java开发手册/阿里巴巴java开发手册.md",
+            "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -424,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#todo/con",
+                "query": "reactor",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -476,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md"
               }
             }
           },
@@ -490,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -506,7 +206,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -545,7 +245,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -589,17 +289,17 @@
     "width": 100,
     "collapsed": true
   },
-  "active": "450123fe16ac6a22",
+  "active": "241e95459d851447",
   "lastOpenFiles": [
-    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/1-Project/我的面试指南/并发/∑ 并发.md",
-    "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
-    "Sources/Books/阿里巴巴java开发手册/阿里巴巴java开发手册.md",
-    "Spaces/1-Project/我的面试指南/JVM/JVM调优.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/dubbo/dubbo.md",
     "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md",
-    "Spaces/1-Project/我的面试指南/JVM/初始化.md",
-    "Sources/Books/阿里巴巴java开发手册/指令重排.md",
-    "Sources/Books/阿里巴巴java开发手册/线程池.md",
-    "Sources/Books/读书笔记/» 读书笔记工作流.md"
+    "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/分布式id.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/dubbo/§ dubbo源码学习.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/∑ 分布式.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
+    "Spaces/1-Project/我的面试指南/分布式系统/分布式系统导论.md"
   ]
 }
