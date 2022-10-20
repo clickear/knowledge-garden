@@ -35,23 +35,6 @@
       "key": "2"
     }
   ],
-  "omnisearch:show-modal": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
-  "omnisearch:show-modal-infile": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "L"
-    }
-  ],
   "obsidian-spaced-repetition:srs-note-review-open-note": [
     {
       "modifiers": [
@@ -78,24 +61,7 @@
       "key": "E"
     }
   ],
-  "obsidian-better-command-palette:open-better-commmand-palette": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
   "pane-relief:go-6th": [],
-  "command-palette:open": [],
-  "editor:toggle-source": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
   "app:go-back": [
     {
       "modifiers": [
@@ -112,14 +78,6 @@
       "key": "]"
     }
   ],
-  "obsidian-another-quick-switcher:search-command_Recommended search": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
   "pane-relief:go-5th": [],
   "pane-relief:go-4th": [],
   "pane-relief:go-3rd": [],
@@ -128,49 +86,65 @@
   "pane-relief:go-7th": [],
   "pane-relief:go-8th": [],
   "pane-relief:go-last": [],
-  "shortcuts-extender:heading-1": [
+  "obsidian-shellcommands:shell-command-vnphwuno3u": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ],
+  "obsidian-better-command-palette:open-better-commmand-palette": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:toggle-source": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "1"
+      "key": "R"
     }
   ],
-  "shortcuts-extender:heading-2": [
+  "obsidian-another-quick-switcher:search-command_Recommended search": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:open-search-replace": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "2"
+      "key": "H"
     }
   ],
-  "shortcuts-extender:heading-3": [
+  "obsidian-another-quick-switcher:search-command_recent-search": [
     {
       "modifiers": [
+        "Alt",
         "Mod"
       ],
-      "key": "3"
+      "key": "O"
     }
-  ],
-  "shortcuts-extender:heading-4": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "4"
-    }
-  ],
-  "shortcuts-extender:heading-5": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "5"
-    }
-  ],
-  "shortcuts-extender:heading-6": [],
-  "pane-relief:put-last": [],
-  "pane-relief:put-8th": [],
-  "pane-relief:put-7th": [],
-  "pane-relief:put-6th": []
+  ]
 }

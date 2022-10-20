@@ -4,7 +4,7 @@
     "flashcardGoodText": "记得",
     "flashcardHardText": "较难",
     "flashcardTags": [
-      "#cards"
+      "#记忆闪卡"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": true,
@@ -21,14 +21,17 @@
     "multilineCardSeparator": "+++",
     "multilineReversedCardSeparator": "",
     "tagsToReview": [
-      "#review"
+      "#复习回顾/常青笔记",
+      "#复习回顾",
+      "#习惯养成"
     ],
     "noteFoldersToIgnore": [
-      "☘️ 花园导览 🍀"
+      "🍀 花园导览",
+      "🧰 本库指南"
     ],
     "openRandomNote": true,
     "autoNextNote": true,
-    "disableFileMenuReviewOptions": false,
+    "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
@@ -37,6 +40,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-08-25",
+  "buryDate": "2022-09-21",
   "buryList": []
 }

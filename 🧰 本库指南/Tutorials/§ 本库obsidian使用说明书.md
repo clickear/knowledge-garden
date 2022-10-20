@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-05
-date modified: 2022-08-20
+date modified: 2022-09-26
 tags: [TOC, todo/本周]
 title: § 本库obsidian使用说明书
 ---
@@ -31,7 +31,7 @@ x:: [[» 本库tutorial编写工作流]]
 
 数学公式
 
-因为[[File cooker]]这个插件，计划重新思考Spaces文件夹的意义和用法。待刷新 #todo/今天
+因为[[File cooker]]这个插件，计划重新思考Spaces文件夹的意义和用法。待刷新
 
 ## obsidian和外部的联动。
 

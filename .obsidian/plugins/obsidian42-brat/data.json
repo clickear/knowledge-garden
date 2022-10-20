@@ -1,12 +1,16 @@
 {
   "pluginList": [
+    "czottmann/obsidian-actions-uri",
+    "prncc/obsidian-repeat-plugin",
+    "marcusolsson/obsidian-projects",
+    "OlegLustenko/obsidian-bulk-rename",
     "cogscides/obsidian-keyboard-analyzer",
     "stefanopagliari/bibnotes"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
-  "updateAtStartup": false,
-  "updateThemesAtStartup": false,
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
   "ribbonIconEnabled": true,
   "loggingEnabled": false,
   "loggingPath": "BRAT-log",

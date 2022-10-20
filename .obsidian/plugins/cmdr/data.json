@@ -2,14 +2,7 @@
   "confirmDeletion": false,
   "showAddCommand": false,
   "debug": false,
-  "editorMenu": [
-    {
-      "id": "obsidian-linter:lint-file",
-      "icon": "lint-file",
-      "name": "Linter: Lint the current file",
-      "mode": "any"
-    }
-  ],
+  "editorMenu": [],
   "fileMenu": [],
   "leftRibbon": [],
   "rightRibbon": [],
@@ -36,41 +29,34 @@
   "statusBar": [],
   "pageHeader": [
     {
-      "id": "file-explorer:reveal-active-file",
-      "icon": "navigate-glyph",
-      "name": "文件列表: 在文件列表中显示当前文件",
-      "mode": "any"
-    },
-    {
       "id": "editor:toggle-source",
       "icon": "code-glyph",
       "name": "切换实时阅览/源码模式",
       "mode": "any"
     },
     {
-      "id": "app:go-forward",
-      "icon": "right-arrow-with-tail",
-      "name": "前进",
-      "mode": "any"
-    },
-    {
-      "id": "app:go-back",
-      "icon": "left-arrow-with-tail",
-      "name": "返回",
+      "id": "file-explorer:reveal-active-file",
+      "icon": "navigate-glyph",
+      "name": "文件列表: 在文件列表中显示当前文件",
       "mode": "any"
     }
   ],
   "macros": [],
   "hide": {
-    "statusbar": [],
+    "statusbar": [
+      "janitor",
+      "obsidian-keyboard-analyzer",
+      "word-count",
+      "backlink"
+    ],
     "leftRibbon": [
       "复习卡片",
       "新建 Excalidraw 绘图",
       "Show Slide Preview",
       "插入模板",
-      "Manage workspace layouts",
       "BRAT",
-      "打开命令面板"
+      "打开命令面板",
+      "打开快速切换"
     ]
   },
   "spacing": "8"

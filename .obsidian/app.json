@@ -3,16 +3,14 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
-  "userIgnoreFilters": [
-    "Extras/"
-  ],
+  "userIgnoreFilters": null,
   "readableLineLength": true,
   "strictLineBreaks": true,
   "emacsyKeys": false,
   "legacyEditor": false,
   "livePreview": true,
   "showLineNumber": false,
-  "communityPluginSortOrder": "download",
+  "communityPluginSortOrder": "release",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "Cards",
   "newLinkFormat": "shortest",
@@ -27,5 +25,8 @@
   "autoPairMarkdown": true,
   "autoPairBrackets": true,
   "smartIndentList": true,
-  "tabSize": 4
+  "tabSize": 4,
+  "showInlineTitle": false,
+  "showIndentGuide": true,
+  "showFrontmatter": false
 }
