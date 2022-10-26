@@ -4,23 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "a23b965bde93484d",
+        "id": "b2ef03a44b1cba94",
         "type": "tabs",
         "children": [
           {
-            "id": "a9d06de42b0f9274",
+            "id": "b006e1262c37234c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/其他/🎥 我的PPT.md",
+                "file": "Spaces/1-Project/我的面试指南/持续学习/∑ 持续学习.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66dc52f78d4526dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f8f183a02ede7fd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -51,9 +78,9 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -83,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🍀 花园导览/其他/🎥 我的PPT.md"
+                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md"
               }
             }
           },
@@ -93,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🍀 花园导览/其他/🎥 我的PPT.md",
+                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +132,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🍀 花园导览/其他/🎥 我的PPT.md",
+                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🍀 花园导览/其他/🎥 我的PPT.md",
+                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 338.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -183,17 +210,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "a9d06de42b0f9274",
+  "active": "f8f183a02ede7fd6",
   "lastOpenFiles": [
-    "Cards/Pending/🆕 最近更新.md",
-    "🍀 花园导览/其他/🎥 我的PPT.md",
-    "README.md",
-    "Calendar/Daily notes/2022-10-20.md",
-    "Cards/永久笔记/没有完美的方法论和工具，找到一个后，大量练习和实践才是关键.md",
-    "HOMEPAGE.md",
-    "AboutTheGarden.md",
-    "Cards/永久笔记/卡片笔记.md",
-    "Calendar/Daily notes/2022-10-18.md",
-    "Spaces/2-Area/运动与健康/168轻断食.md"
+    "Spaces/1-Project/我的开源项目/测试项目.md",
+    "Spaces/1-Project/我的开源项目/metacloud.md",
+    "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+    "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
+    "Spaces/1-Project/第二大脑建设专题/Building a second brain 读书笔记前言.md",
+    "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
+    "Spaces/1-Project/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md",
+    "Spaces/1-Project/第二大脑建设专题/What Is a Second Brain? - 第二大脑是什么？.md",
+    "🧰 本库指南/Tutorials/∑ 本库 ACCESS 的文件夹入口汇总.md",
+    "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md"
   ]
 }
