@@ -1,5 +1,22 @@
 [
   {
+    "tag": "tutorial",
+    "tagCount": 11,
+    "relativePaths": [
+      "AboutTheGarden.md",
+      "Spaces/3-Resource/About Resource.md",
+      "Spaces/2-Area/About Area.md",
+      "Spaces/About Spaces.md",
+      "Spaces/4-Archive/About Archive.md",
+      "Spaces/1-Project/About Project.md",
+      "Sources/About Sources.md",
+      "Extras/About Extras.md",
+      "Calendar/About Calendar.md",
+      "Cards/About Cards.md",
+      "Atlas/About Atlas.md"
+    ]
+  },
+  {
     "tag": "moc",
     "tagCount": 47,
     "relativePaths": [
@@ -73,22 +90,6 @@
       "Sources/Articles/常青笔记阅读笔记/间隔重复对于逐步完善灵光一闪可能有用.md",
       "Sources/Articles/常青笔记阅读笔记/优先使用细粒度的关联.md",
       "Calendar/文章草稿/» 本库文章发布工作流.md"
-    ]
-  },
-  {
-    "tag": "tutorial",
-    "tagCount": 10,
-    "relativePaths": [
-      "Spaces/3-Resource/About Resource.md",
-      "Spaces/2-Area/About Area.md",
-      "Spaces/About Spaces.md",
-      "Spaces/4-Archive/About Archive.md",
-      "Spaces/1-Project/About Project.md",
-      "Sources/About Sources.md",
-      "Extras/About Extras.md",
-      "Calendar/About Calendar.md",
-      "Cards/About Cards.md",
-      "Atlas/About Atlas.md"
     ]
   },
   {

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b2ef03a44b1cba94",
+        "id": "94b2e8026cc426af",
         "type": "tabs",
         "children": [
           {
-            "id": "66dc52f78d4526dc",
+            "id": "b19ced21964e590e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Calendar/Daily notes/2022-11-23.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+                "file": "Calendar/Daily notes/2022-11-23.md"
               }
             }
           },
@@ -93,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Calendar/Daily notes/2022-11-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Calendar/Daily notes/2022-11-23.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+                "file": "Calendar/Daily notes/2022-11-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,17 +180,17 @@
     "width": 263.5,
     "collapsed": true
   },
-  "active": "66dc52f78d4526dc",
+  "active": "b19ced21964e590e",
   "lastOpenFiles": [
+    "HOMEPAGE.md",
+    "Atlas/Dataviews/本库的宏观统计数据.md",
+    "Calendar/Daily notes/2022-11-23.md",
+    "README.md",
+    "AboutTheGarden.md",
+    "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+    "Spaces/About Spaces.md",
     "Spaces/1-Project/我的面试指南/数据结构和算法.md",
     "Spaces/1-Project/我的面试指南/面试碰到问题.md",
-    "README.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md",
-    "Extras/Templates/其他/领域入门模板.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/通过刻意练习，改变智识，让自己更聪明.md",
-    "Sources/Courses/人文社科通识/心理学/常见心理学效应/习得性无助.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
-    "Sources/Courses/∑ 课程笔记.md",
-    "Sources/Courses/» 课程笔记工作流.md"
+    "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
   ]
 }
