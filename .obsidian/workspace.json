@@ -8,46 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b006e1262c37234c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/持续学习/∑ 持续学习.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "66dc52f78d4526dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f8f183a02ede7fd6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md"
+                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
               }
             }
           },
@@ -120,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -167,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+                "file": "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,20 +180,17 @@
     "width": 263.5,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "f8f183a02ede7fd6",
+  "active": "66dc52f78d4526dc",
   "lastOpenFiles": [
-    "Spaces/1-Project/我的开源项目/测试项目.md",
-    "Spaces/1-Project/我的开源项目/metacloud.md",
-    "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
-    "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
-    "Spaces/1-Project/第二大脑建设专题/Building a second brain 读书笔记前言.md",
-    "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
-    "Spaces/1-Project/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md",
-    "Spaces/1-Project/第二大脑建设专题/What Is a Second Brain? - 第二大脑是什么？.md",
-    "🧰 本库指南/Tutorials/∑ 本库 ACCESS 的文件夹入口汇总.md",
-    "Spaces/1-Project/我的面试指南/JVM/§ JVM目录.md"
+    "Spaces/1-Project/我的面试指南/数据结构和算法.md",
+    "Spaces/1-Project/我的面试指南/面试碰到问题.md",
+    "README.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md",
+    "Extras/Templates/其他/领域入门模板.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/通过刻意练习，改变智识，让自己更聪明.md",
+    "Sources/Courses/人文社科通识/心理学/常见心理学效应/习得性无助.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
+    "Sources/Courses/∑ 课程笔记.md",
+    "Sources/Courses/» 课程笔记工作流.md"
   ]
 }
