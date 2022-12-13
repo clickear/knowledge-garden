@@ -98,8 +98,8 @@
   "obsidian-better-command-palette:open-better-commmand-palette": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Mod",
+        "Alt"
       ],
       "key": "P"
     }
@@ -124,8 +124,8 @@
   "omnisearch:show-modal": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Mod",
+        "Alt"
       ],
       "key": "F"
     }
@@ -141,8 +141,8 @@
   "obsidian-another-quick-switcher:search-command_recent-search": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Mod",
+        "Alt"
       ],
       "key": "O"
     }
@@ -200,5 +200,14 @@
   "workspace:goto-tab-3": [],
   "workspace:goto-tab-4": [],
   "workspace:goto-tab-5": [],
-  "workspace:goto-tab-6": []
+  "workspace:goto-tab-6": [],
+  "obsidian-another-quick-switcher:search-command_tags-search": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": ","
+    }
+  ]
 }

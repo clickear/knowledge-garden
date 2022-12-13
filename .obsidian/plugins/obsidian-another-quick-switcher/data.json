@@ -8,7 +8,7 @@
   "showAliasesOnTop": true,
   "showExistingFilesOnly": false,
   "hideGutterIcons": false,
-  "hideHotkeyGuides": false,
+  "hideHotkeyGuides": true,
   "userAltInsteadOfModForQuickResultSelection": false,
   "hotkeys": {
     "main": {
@@ -75,6 +75,14 @@
         }
       ],
       "open in popup": [],
+      "open in new tab in background": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "o"
+        }
+      ],
       "open all in new tabs": [
         {
           "modifiers": [
@@ -303,7 +311,7 @@
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": false,
+      "expand": true,
       "isBacklinkSearch": false
     },
     {
@@ -349,7 +357,7 @@
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": false,
+      "expand": true,
       "isBacklinkSearch": false
     },
     {
@@ -389,6 +397,7 @@
       "isBacklinkSearch": false
     }
   ],
+  "ripgrepCommand": "rg",
   "moveFileExcludePrefixPathPatterns": [],
   "showLogAboutPerformanceInConsole": false,
   "backLinkExcludePrefixPathPatterns": [],

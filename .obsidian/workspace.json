@@ -19,8 +19,100 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b0fa7369472d6706",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2022-11-23.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "85fd09912f2568f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2022-12-07.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73337e16dc4b4096",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2022-12-07.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5b92ed7010a502d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/高效开发.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "089eb8c6718254d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/jrebel.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a17c96715b9b6121",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/jrebel.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b2af3bf1890aabf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/jrebel.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -83,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-23.md"
+                "file": "Calendar/Daily notes/jrebel.md"
               }
             }
           },
@@ -93,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-23.md",
+                "file": "Calendar/Daily notes/jrebel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +197,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-23.md",
+                "file": "Calendar/Daily notes/jrebel.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +232,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-23.md",
+                "file": "Calendar/Daily notes/jrebel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +247,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 283.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -180,17 +272,17 @@
     "width": 263.5,
     "collapsed": true
   },
-  "active": "b19ced21964e590e",
+  "active": "089eb8c6718254d3",
   "lastOpenFiles": [
-    "HOMEPAGE.md",
-    "Atlas/Dataviews/本库的宏观统计数据.md",
+    "Calendar/Daily notes/高效开发.md",
+    "Calendar/Daily notes/2022-12-07.md",
+    "Calendar/Daily notes/2022-12-09.md",
+    "Calendar/Daily notes/jrebel.md",
+    "Calendar/Daily notes/计算机学习知识图谱.md",
+    "Calendar/Daily notes/未命名.md",
     "Calendar/Daily notes/2022-11-23.md",
-    "README.md",
-    "AboutTheGarden.md",
-    "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
-    "Spaces/About Spaces.md",
-    "Spaces/1-Project/我的面试指南/数据结构和算法.md",
-    "Spaces/1-Project/我的面试指南/面试碰到问题.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
+    "Sources/Articles/常青笔记阅读笔记/助记媒介.md",
+    "Spaces/1-Project/第二大脑建设专题/Where It All Started - 第二大脑之缘起.md",
+    "Spaces/About Spaces.md"
   ]
 }

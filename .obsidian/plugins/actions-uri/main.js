@@ -3736,7 +3736,14 @@ async function searchAndReplaceInNote(filepath, searchTerm, replacement) {
     return res;
   }
   const noteContent = res.result;
-  const newContent = noteContent.replace(searchTerm, replacement);
+  let newContent = noteContent;
+  if (typeof searchTerm === "string") {
+    do {
+      newContent = newContent.replace(searchTerm, replacement);
+    } while (newContent.indexOf(searchTerm) !== -1);
+  } else {
+    newContent = noteContent.replace(searchTerm, replacement);
+  }
   if (noteContent === newContent) {
     return {
       isSuccess: true,
@@ -3822,7 +3829,8 @@ async function createFolderIfNecessary(folder) {
   await vault.createFolder(folder);
 }
 function dirname(path) {
-  return (0, import_obsidian.normalizePath)(path).replace(/\/[^\/]*$/, "");
+  path = (0, import_obsidian.normalizePath)(path);
+  return path.indexOf("/") === -1 ? "." : path.replace(/\/[^/]*$/, "");
 }
 function extname(path) {
   const filename = (0, import_obsidian.normalizePath)(path).split("/").pop() || "";
@@ -3905,10 +3913,17 @@ async function handleHello(data) {
 }
 
 // src/routes/daily-note.ts
+var listParams = incomingBaseParams.extend({
+  "x-error": mod.string().url(),
+  "x-success": mod.string().url()
+});
 var readParams = incomingBaseParams.extend({
   silent: zodOptionalBoolean,
   "x-error": mod.string().url(),
   "x-success": mod.string().url()
+});
+var openParams = incomingBaseParams.extend({
+  silent: zodAlwaysFalse
 });
 var createParams = incomingBaseParams.extend({
   content: mod.string().optional(),
@@ -3938,11 +3953,18 @@ var searchAndReplaceParams = incomingBaseParams.extend({
 var routePath = {
   "/daily-note": [
     helloRoute(),
+    { path: "/list", schema: listParams, handler: handleList },
     { path: "/get-current", schema: readParams, handler: handleGetCurrent },
     {
       path: "/get-most-recent",
       schema: readParams,
       handler: handleGetMostRecent
+    },
+    { path: "/open-current", schema: openParams, handler: handleOpenCurrent },
+    {
+      path: "/open-most-recent",
+      schema: openParams,
+      handler: handleOpenMostRecent
     },
     { path: "/create", schema: createParams, handler: handleCreate },
     { path: "/append", schema: appendParams, handler: handleAppend },
@@ -3959,6 +3981,26 @@ var routePath = {
     }
   ]
 };
+async function handleList(incoming) {
+  if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
+    return {
+      isSuccess: false,
+      errorCode: 412,
+      errorMessage: STRINGS.daily_notes_feature_not_available
+    };
+  }
+  const notes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
+  const files = Object.keys(notes).sort().reverse().map((k) => ({
+    name: notes[k].basename,
+    filepath: notes[k].path
+  }));
+  return {
+    isSuccess: true,
+    result: {
+      files
+    }
+  };
+}
 async function handleGetCurrent(incomingParams) {
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
@@ -3983,28 +4025,16 @@ async function handleGetCurrent(incomingParams) {
   };
 }
 async function handleGetMostRecent(incomingParams) {
-  if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
-    return {
-      isSuccess: false,
-      errorCode: 412,
-      errorMessage: STRINGS.daily_notes_feature_not_available
-    };
+  const res1 = await getMostRecentDailyNote();
+  if (!res1.isSuccess) {
+    return res1;
   }
-  const notes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
-  const mostRecentKey = Object.keys(notes).sort().last();
-  if (!mostRecentKey) {
-    return {
-      isSuccess: false,
-      errorCode: 404,
-      errorMessage: STRINGS.note_not_found
-    };
+  const dailyNote = res1.result;
+  const res2 = await getNoteContent(dailyNote.path);
+  if (!res2.isSuccess) {
+    return res2;
   }
-  const dailyNote = notes[mostRecentKey];
-  const res = await getNoteContent(dailyNote.path);
-  if (!res.isSuccess) {
-    return res;
-  }
-  const content = res.result;
+  const content = res2.result;
   const { body, frontMatter } = extractNoteContentParts(content);
   return {
     isSuccess: true,
@@ -4016,6 +4046,22 @@ async function handleGetMostRecent(incomingParams) {
     },
     processedFilepath: dailyNote.path
   };
+}
+async function handleOpenCurrent(incomingParams) {
+  const res = getDailyNotePathIfPluginIsAvailable();
+  return res.isSuccess ? {
+    isSuccess: true,
+    result: { message: STRINGS.open.note_opened },
+    processedFilepath: res.result
+  } : res;
+}
+async function handleOpenMostRecent(incomingParams) {
+  const res = await getMostRecentDailyNote();
+  return res.isSuccess ? {
+    isSuccess: true,
+    result: { message: STRINGS.open.note_opened },
+    processedFilepath: res.result.path
+  } : res;
 }
 async function handleCreate(incomingParams) {
   const params = incomingParams;
@@ -4107,8 +4153,8 @@ async function handleSearchStringAndReplace(incomingParams) {
     return resDNP;
   }
   const filepath = resDNP.result;
-  const regex = new RegExp(params.search, "g");
-  const res = await searchAndReplaceInNote(filepath, regex, params.replace);
+  const { search, replace } = params;
+  const res = await searchAndReplaceInNote(filepath, search, replace);
   return res.isSuccess ? {
     isSuccess: true,
     result: { message: res.result },
@@ -4133,14 +4179,34 @@ async function handleSearchRegexAndReplace(incomingParams) {
     processedFilepath: filepath
   } : res;
 }
+async function getMostRecentDailyNote() {
+  if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
+    return {
+      isSuccess: false,
+      errorCode: 412,
+      errorMessage: STRINGS.daily_notes_feature_not_available
+    };
+  }
+  const notes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
+  const mostRecentKey = Object.keys(notes).sort().last();
+  if (!mostRecentKey) {
+    return {
+      isSuccess: false,
+      errorCode: 404,
+      errorMessage: STRINGS.note_not_found
+    };
+  }
+  const dailyNote = notes[mostRecentKey];
+  return await getNoteFile(dailyNote.path);
+}
 
 // src/routes/info.ts
 var import_obsidian5 = require("obsidian");
 
 // src/plugin-info.ts
 var PLUGIN_INFO = {
-  "pluginVersion": "0.11.0",
-  "pluginReleasedAt": "2022-11-07T12:46:22+0100"
+  "pluginVersion": "0.12.1",
+  "pluginReleasedAt": "2022-11-23T14:35:52+0100"
 };
 
 // src/routes/info.ts
@@ -4187,6 +4253,10 @@ var readParams2 = incomingBaseParams.extend({
   "x-error": mod.string().url(),
   "x-success": mod.string().url()
 });
+var openParams2 = incomingBaseParams.extend({
+  file: zodSanitizedFilePath,
+  silent: zodAlwaysFalse
+});
 var createParams2 = incomingBaseParams.extend({
   content: mod.string().optional(),
   file: zodSanitizedFilePath,
@@ -4216,6 +4286,7 @@ var routePath3 = {
   "/note": [
     helloRoute(),
     { path: "/get", schema: readParams2, handler: handleGet },
+    { path: "/open", schema: openParams2, handler: handleOpen },
     { path: "/create", schema: createParams2, handler: handleCreate2 },
     { path: "/append", schema: appendParams2, handler: handleAppend2 },
     { path: "/prepend", schema: prependParams2, handler: handlePrepend2 },
@@ -4250,6 +4321,15 @@ async function handleGet(incomingParams) {
     };
   }
   return res;
+}
+async function handleOpen(incomingParams) {
+  const params = incomingParams;
+  const res = await getNoteFile(params.file);
+  return res.isSuccess ? {
+    isSuccess: true,
+    result: { message: STRINGS.open.note_opened },
+    processedFilepath: res.result.path
+  } : res;
 }
 async function handleCreate2(incomingParams) {
   const params = incomingParams;
@@ -4295,8 +4375,7 @@ async function handlePrepend2(incomingParams) {
 async function handleSearchStringAndReplace2(incomingParams) {
   const params = incomingParams;
   const { search, file, replace } = params;
-  const regex = new RegExp(search, "g");
-  const res = await searchAndReplaceInNote(file, regex, replace);
+  const res = await searchAndReplaceInNote(file, search, replace);
   return res.isSuccess ? {
     isSuccess: true,
     result: { message: res.result },
@@ -4333,29 +4412,9 @@ var searchParams = incomingBaseParams.extend({
 var routePath4 = {
   "/open": [
     helloRoute(),
-    { path: "/daily-note", schema: dailyNoteParams, handler: handleDailyNote },
-    { path: "/note", schema: noteParams, handler: handleNote },
     { path: "/search", schema: searchParams, handler: handleSearch }
   ]
 };
-async function handleDailyNote(incomingParams) {
-  const params = incomingParams;
-  const res = getDailyNotePathIfPluginIsAvailable();
-  return res.isSuccess ? {
-    isSuccess: true,
-    result: { message: STRINGS.open.note_opened },
-    processedFilepath: res.result
-  } : res;
-}
-async function handleNote(incomingParams) {
-  const params = incomingParams;
-  const res = await getNoteFile(params.file);
-  return res.isSuccess ? {
-    isSuccess: true,
-    result: { message: STRINGS.open.note_opened },
-    processedFilepath: res.result.path
-  } : res;
-}
 async function handleSearch(incomingParams) {
   const params = incomingParams;
   window.open("obsidian://search?vault=" + encodeURIComponent(window.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim()));
@@ -4416,6 +4475,32 @@ async function handleSearch2(incomingParams) {
   } : res;
 }
 
+// src/routes/vault.ts
+var defaultParams3 = incomingBaseParams.extend({
+  "x-error": mod.string().url(),
+  "x-success": mod.string().url()
+});
+var routePath7 = {
+  "/vault": [
+    helloRoute(),
+    { path: "/open", schema: defaultParams3, handler: handleOpen2 },
+    { path: "/close", schema: defaultParams3, handler: handleClose }
+  ]
+};
+async function handleOpen2(incomingParams) {
+  return {
+    isSuccess: true,
+    result: {}
+  };
+}
+async function handleClose(incomingParams) {
+  window.setTimeout(window.close, 600);
+  return {
+    isSuccess: true,
+    result: {}
+  };
+}
+
 // src/routes.ts
 var routes = {
   ...routePath5,
@@ -4423,7 +4508,8 @@ var routes = {
   ...routePath3,
   ...routePath4,
   ...routePath6,
-  ...routePath2
+  ...routePath2,
+  ...routePath7
 };
 
 // node_modules/filter-obj/index.js
@@ -4495,10 +4581,10 @@ var ActionsURI = class extends import_obsidian6.Plugin {
   }
   registerRoutes(routeTree) {
     const registeredRoutes = [];
-    for (const [routePath7, routeSubpaths] of Object.entries(routeTree)) {
+    for (const [routePath8, routeSubpaths] of Object.entries(routeTree)) {
       for (const route of routeSubpaths) {
         const { path, schema, handler } = route;
-        const fullPath = (0, import_obsidian6.normalizePath)(`${URI_NAMESPACE}/${routePath7}/${path}`).replace(/\/$/, "");
+        const fullPath = (0, import_obsidian6.normalizePath)(`${URI_NAMESPACE}/${routePath8}/${path}`).replace(/\/$/, "");
         this.registerObsidianProtocolHandler(fullPath, async (incomingParams) => {
           const res = schema.safeParse(incomingParams);
           res.success ? await this.handleIncomingCall(handler, res.data) : this.handleParseError(res.error);
