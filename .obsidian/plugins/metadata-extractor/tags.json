@@ -1,76 +1,32 @@
 [
   {
-    "tag": "dataview",
-    "tagCount": 14,
-    "relativePaths": [
-      "Spaces/Index for Spaces.md",
-      "Sources/Index for Sources.md",
-      "Extras/Index for Extras.md",
-      "Cards/Index for Cards.md",
-      "Calendar/Index for Calendar.md",
-      "Atlas/Index for Atlases.md",
-      "Atlas/Dataviews/模板汇总.md",
-      "Atlas/Dataviews/本库的宏观统计数据.md",
-      "Atlas/Dataviews/微信读书清单.md",
-      "Atlas/Dataviews/MOC文件汇总.md",
-      "Atlas/Dataviews/LATEST.md",
-      "Atlas/Dataviews/Index for 已发布文章和草稿.md",
-      "Atlas/Dataviews/EXTERNAL.md",
-      "Atlas/Dataviews/Daily notes汇总.md"
-    ]
-  },
-  {
-    "tag": "tutorial",
+    "tag": "todo/continue",
     "tagCount": 11,
     "relativePaths": [
-      "Spaces/About Spaces.md",
-      "Spaces/4-Archive/About Archive.md",
-      "Spaces/3-Resource/About Resource.md",
-      "Spaces/2-Area/About Area.md",
-      "Spaces/1-Project/About Project.md",
-      "Sources/About Sources.md",
-      "Extras/About Extras.md",
-      "Cards/About Cards.md",
-      "Calendar/About Calendar.md",
-      "Atlas/About Atlas.md",
-      "AboutTheGarden.md"
+      "Sources/临时文档/文档备份.md",
+      "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+      "Spaces/1-Project/我的面试指南/杂文/reactor模式.md",
+      "Spaces/1-Project/我的面试指南/杂文/netty.md",
+      "Spaces/1-Project/我的面试指南/并发/∑ 并发.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md",
+      "Spaces/1-Project/我的面试指南/mq/§ mq面试.md",
+      "Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md",
+      "Spaces/1-Project/我的面试指南/JVM/arthas.md"
     ]
   },
   {
-    "tag": "toc",
-    "tagCount": 6,
+    "tag": "视频笔记",
+    "tagCount": 3,
     "relativePaths": [
-      "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
-      "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
-      "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
-      "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
-      "Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md",
-      "Atlas/TOCs/§ TOCs.md"
+      "Sources/Videos/📹视频笔记-youtube.md",
+      "Sources/Videos/📹【罗翔】我们为什么要读书？.md",
+      "Sources/Videos/📹storytelling.md"
     ]
   },
   {
     "tag": "moc",
     "tagCount": 47,
     "relativePaths": [
-      "Spaces/3-Resource/投资与理财/∑ 投资与理财.md",
-      "Spaces/3-Resource/小知识点/∑ 小知识点.md",
-      "Spaces/3-Resource/城市与旅行/∑ 城市与旅行.md",
-      "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-      "Spaces/2-Area/计算机科学专题/∑ 计算机科学.md",
-      "Spaces/2-Area/知识管理/∑ 知识管理.md",
-      "Spaces/2-Area/沟通与表达专题/∑ 沟通与表达.md",
-      "Spaces/2-Area/人与科技融合专题/必备软件/∑ 必备软件.md",
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md",
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ PKM.md",
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/§ linux常用命令行.md",
-      "Spaces/2-Area/人与科技融合专题/∑ 人与科技融合.md",
-      "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md",
-      "Spaces/2-Area/golang入门与精通/∑ golang.md",
-      "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
-      "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
-      "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
       "Sources/Videos/∑ 视频笔记.md",
       "Sources/Talks/∑ 播客笔记.md",
       "Sources/Papers/∑ 论文笔记.md",
@@ -91,6 +47,25 @@
       "Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md",
       "Sources/Articles/∑ 文章笔记.md",
       "Sources/Articles/flomo101阅读笔记/∑ flomo101阅读笔记.md",
+      "Spaces/3-Resource/投资与理财/∑ 投资与理财.md",
+      "Spaces/3-Resource/小知识点/∑ 小知识点.md",
+      "Spaces/3-Resource/城市与旅行/∑ 城市与旅行.md",
+      "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+      "Spaces/2-Area/计算机科学专题/∑ 计算机科学.md",
+      "Spaces/2-Area/知识管理/∑ 知识管理.md",
+      "Spaces/2-Area/沟通与表达专题/∑ 沟通与表达.md",
+      "Spaces/2-Area/人与科技融合专题/必备软件/∑ 必备软件.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ PKM.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/§ linux常用命令行.md",
+      "Spaces/2-Area/人与科技融合专题/∑ 人与科技融合.md",
+      "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md",
+      "Spaces/2-Area/golang入门与精通/∑ golang.md",
+      "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
+      "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
+      "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
       "Extras/Templates/∑ 模板文件创建入口.md",
       "Extras/Draws/∑ excalidraw 白板创建入口.md",
       "Calendar/文章草稿/∑ 文章草稿.md",
@@ -101,22 +76,9 @@
     ]
   },
   {
-    "tag": "todo/某天",
-    "tagCount": 7,
-    "relativePaths": [
-      "Spaces/3-Resource/小知识点/∑ 小知识点.md",
-      "Spaces/1-Project/我的面试指南/JVM/AOT.md",
-      "Sources/Courses/如何成为学习高手-高冷冷/如何100%保证完成自己的制定计划.md",
-      "Sources/Articles/常青笔记阅读笔记/间隔重复对于逐步完善灵光一闪可能有用.md",
-      "Sources/Articles/常青笔记阅读笔记/优先使用细粒度的关联.md",
-      "Calendar/文章草稿/» 本库文章发布工作流.md"
-    ]
-  },
-  {
     "tag": "todo/持续迭代",
     "tagCount": 11,
     "relativePaths": [
-      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md",
       "Sources/Videos/» 视频笔记工作流.md",
       "Sources/Talks/» 播客笔记工作流.md",
       "Sources/Papers/» 论文笔记工作流.md",
@@ -125,100 +87,9 @@
       "Sources/Courses/» 课程笔记工作流.md",
       "Sources/Books/读书笔记/» 读书笔记工作流.md",
       "Sources/Articles/常青笔记阅读笔记/常青笔记的标题就像 API.md",
+      "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md",
       "Atlas/TOCs/§ TOCs.md",
       "Atlas/MOCs/∑ MOCs.md"
-    ]
-  },
-  {
-    "tag": "todo/今天",
-    "tagCount": 5,
-    "relativePaths": [
-      "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
-      "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
-      "Sources/Articles/常青笔记阅读笔记/文献笔记是次要的，分离的.md",
-      "Sources/Articles/常青笔记阅读笔记/如何将阅读标注处理成常青笔记.md",
-      "Sources/Articles/» 文章笔记工作流.md"
-    ]
-  },
-  {
-    "tag": "todo/think",
-    "tagCount": 2,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/职业规划/∑ 职业规划？.md",
-      "Spaces/1-Project/我的面试指南/持续学习/∑ 持续学习.md"
-    ]
-  },
-  {
-    "tag": "todo/continue",
-    "tagCount": 11,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/杂文/reactor模式.md",
-      "Spaces/1-Project/我的面试指南/杂文/netty.md",
-      "Spaces/1-Project/我的面试指南/并发/∑ 并发.md",
-      "Spaces/1-Project/我的面试指南/分布式组件/dubbo/∑ rpc框架实战.md",
-      "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
-      "Spaces/1-Project/我的面试指南/mq/§ mq面试.md",
-      "Spaces/1-Project/我的面试指南/mq/rocketmq/rocketMq.md",
-      "Spaces/1-Project/我的面试指南/JVM/arthas.md",
-      "Sources/临时文档/文档备份.md"
-    ]
-  },
-  {
-    "tag": "excalidraw",
-    "tagCount": 6,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
-      "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
-      "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
-      "Extras/Draws/excalibrain.md",
-      "Extras/Draws/README 2022-08-21.md",
-      "Calendar/Daily notes/白板 2022-11-23.md"
-    ]
-  },
-  {
-    "tag": "分布式",
-    "tagCount": 1,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/分布式系统/分布式算法.md"
-    ]
-  },
-  {
-    "tag": "todo/now",
-    "tagCount": 2,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/分布式系统/∑ 分布式系统.md",
-      "Spaces/1-Project/我的面试指南/spring/spring循环依赖.md"
-    ]
-  },
-  {
-    "tag": "uncomplete",
-    "tagCount": 2,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/分布式系统/ZAB.md",
-      "Spaces/1-Project/我的面试指南/分布式系统/Raft.md"
-    ]
-  },
-  {
-    "tag": "todo/面试",
-    "tagCount": 1,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
-    ]
-  },
-  {
-    "tag": "todo/本周",
-    "tagCount": 1,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/JVM/arthas.md"
-    ]
-  },
-  {
-    "tag": "视频笔记",
-    "tagCount": 3,
-    "relativePaths": [
-      "Sources/Videos/📹视频笔记-youtube.md",
-      "Sources/Videos/📹【罗翔】我们为什么要读书？.md",
-      "Sources/Videos/📹storytelling.md"
     ]
   },
   {
@@ -262,6 +133,38 @@
     "tagCount": 1,
     "relativePaths": [
       "Sources/Movies + TV/电影笔记/∑ 电影笔记.md"
+    ]
+  },
+  {
+    "tag": "dataview",
+    "tagCount": 14,
+    "relativePaths": [
+      "Sources/Index for Sources.md",
+      "Spaces/Index for Spaces.md",
+      "Extras/Index for Extras.md",
+      "Cards/Index for Cards.md",
+      "Calendar/Index for Calendar.md",
+      "Atlas/Index for Atlases.md",
+      "Atlas/Dataviews/模板汇总.md",
+      "Atlas/Dataviews/本库的宏观统计数据.md",
+      "Atlas/Dataviews/微信读书清单.md",
+      "Atlas/Dataviews/MOC文件汇总.md",
+      "Atlas/Dataviews/LATEST.md",
+      "Atlas/Dataviews/Index for 已发布文章和草稿.md",
+      "Atlas/Dataviews/EXTERNAL.md",
+      "Atlas/Dataviews/Daily notes汇总.md"
+    ]
+  },
+  {
+    "tag": "toc",
+    "tagCount": 6,
+    "relativePaths": [
+      "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+      "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
+      "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+      "Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md",
+      "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
+      "Atlas/TOCs/§ TOCs.md"
     ]
   },
   {
@@ -390,6 +293,18 @@
     ]
   },
   {
+    "tag": "todo/某天",
+    "tagCount": 7,
+    "relativePaths": [
+      "Sources/Courses/如何成为学习高手-高冷冷/如何100%保证完成自己的制定计划.md",
+      "Sources/Articles/常青笔记阅读笔记/间隔重复对于逐步完善灵光一闪可能有用.md",
+      "Sources/Articles/常青笔记阅读笔记/优先使用细粒度的关联.md",
+      "Spaces/3-Resource/小知识点/∑ 小知识点.md",
+      "Spaces/1-Project/我的面试指南/JVM/AOT.md",
+      "Calendar/文章草稿/» 本库文章发布工作流.md"
+    ]
+  },
+  {
     "tag": "todo",
     "tagCount": 46,
     "relativePaths": [
@@ -417,11 +332,11 @@
       "Sources/Books/微信读书同步/经济理财/解读中国经济-林毅夫.md",
       "Sources/Books/微信读书同步/经济理财/股票作手回忆录-埃德温·利非弗 杰西·利弗莫尔.md",
       "Sources/Books/微信读书同步/经济理财/置身事内：中国政府与经济发展-兰小欢.md",
-      "Sources/Books/微信读书同步/经济理财/结构性改革-黄奇帆.md",
       "Sources/Books/微信读书同步/经济理财/精益创业-埃里克·莱斯.md",
+      "Sources/Books/微信读书同步/经济理财/结构性改革-黄奇帆.md",
       "Sources/Books/微信读书同步/经济理财/激荡四十年：中国企业1978—2018（全三册）-吴晓波.md",
-      "Sources/Books/微信读书同步/经济理财/浩荡两千年：中国企业公元前7世纪~1869年（十年典藏版）-吴晓波.md",
       "Sources/Books/微信读书同步/经济理财/我曾走在崩溃的边缘：俞敏洪亲述新东方创业发展之路-俞敏洪.md",
+      "Sources/Books/微信读书同步/经济理财/浩荡两千年：中国企业公元前7世纪~1869年（十年典藏版）-吴晓波.md",
       "Sources/Books/微信读书同步/经济理财/富爸爸穷爸爸（20周年修订版）-罗伯特·清崎.md",
       "Sources/Books/微信读书同步/经济理财/大败局（修订版）（套装共2册）-吴晓波.md",
       "Sources/Books/微信读书同步/经济理财/周鸿祎自述：我的互联网方法论-周鸿祎.md",
@@ -476,6 +391,7 @@
       "Sources/Books/微信读书同步/生活百科/如何正确吵架-朱迪斯·莱特 鲍勃·莱特.md",
       "Sources/Books/微信读书同步/生活百科/囚徒健身：用失传的技艺练就强大的生存实力-保罗·威德.md",
       "Sources/Books/微信读书同步/未分类/Building a Second Brain-Tiago Forte.md",
+      "Sources/Books/微信读书同步/文学/我所理解的生活-韩寒.md",
       "Sources/Books/微信读书同步/文学/黑客与画家（10万册纪念版）-保罗·格雷厄姆.md",
       "Sources/Books/微信读书同步/文学/钢铁是怎样炼成的-奥斯特洛夫斯基.md",
       "Sources/Books/微信读书同步/文学/追风筝的人-卡勒德·胡赛尼.md",
@@ -490,12 +406,11 @@
       "Sources/Books/微信读书同步/文学/有本事-冯唐.md",
       "Sources/Books/微信读书同步/文学/晚熟的人（莫言诺奖后首部作品）-莫言.md",
       "Sources/Books/微信读书同步/文学/无所畏-冯唐.md",
-      "Sources/Books/微信读书同步/文学/我所理解的生活-韩寒.md",
       "Sources/Books/微信读书同步/文学/必然（KK三部曲·展望）-凯文·凯利.md",
       "Sources/Books/微信读书同步/文学/年少荒唐-朱炫.md",
       "Sources/Books/微信读书同步/文学/失乐园-渡边淳一.md",
-      "Sources/Books/微信读书同步/文学/在细雨中呼喊（第3版）-余华.md",
       "Sources/Books/微信读书同步/文学/围城-钱锺书-22946457.md",
+      "Sources/Books/微信读书同步/文学/在细雨中呼喊（第3版）-余华.md",
       "Sources/Books/微信读书同步/文学/围城-钱钟书.md",
       "Sources/Books/微信读书同步/文学/变形记-卡夫卡.md",
       "Sources/Books/微信读书同步/文学/原谅我红尘颠倒-慕容雪村.md",
@@ -506,8 +421,8 @@
       "Sources/Books/微信读书同步/文学/丰乳肥臀-莫言.md",
       "Sources/Books/微信读书同步/文学/中国，少了一味药-慕容雪村.md",
       "Sources/Books/微信读书同步/文学/一句顶一万句（典藏版）-刘震云.md",
-      "Sources/Books/微信读书同步/文学/1988：我想和这个世界谈谈-韩寒.md",
       "Sources/Books/微信读书同步/文学/1984-乔治·奥威尔.md",
+      "Sources/Books/微信读书同步/文学/1988：我想和这个世界谈谈-韩寒.md",
       "Sources/Books/微信读书同步/教育学习/如何阅读一本书-莫提默·艾德勒 查尔斯·范多伦.md",
       "Sources/Books/微信读书同步/政治军事/公正：该如何做是好？-迈克尔·桑德尔.md",
       "Sources/Books/微信读书同步/心理/认知驱动：做成一件对他人很有用的事-周岭.md",
@@ -564,6 +479,17 @@
     ]
   },
   {
+    "tag": "todo/今天",
+    "tagCount": 5,
+    "relativePaths": [
+      "Sources/Articles/常青笔记阅读笔记/文献笔记是次要的，分离的.md",
+      "Sources/Articles/常青笔记阅读笔记/如何将阅读标注处理成常青笔记.md",
+      "Sources/Articles/» 文章笔记工作流.md",
+      "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
+      "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+    ]
+  },
+  {
     "tag": "books",
     "tagCount": 1,
     "relativePaths": [
@@ -610,6 +536,80 @@
     "tagCount": 11,
     "relativePaths": [
       "Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md"
+    ]
+  },
+  {
+    "tag": "tutorial",
+    "tagCount": 11,
+    "relativePaths": [
+      "Sources/About Sources.md",
+      "Spaces/About Spaces.md",
+      "Spaces/4-Archive/About Archive.md",
+      "Spaces/3-Resource/About Resource.md",
+      "Spaces/2-Area/About Area.md",
+      "Spaces/1-Project/About Project.md",
+      "Extras/About Extras.md",
+      "Cards/About Cards.md",
+      "Calendar/About Calendar.md",
+      "Atlas/About Atlas.md",
+      "AboutTheGarden.md"
+    ]
+  },
+  {
+    "tag": "todo/面试",
+    "tagCount": 1,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+    ]
+  },
+  {
+    "tag": "todo/think",
+    "tagCount": 2,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/职业规划/∑ 职业规划？.md",
+      "Spaces/1-Project/我的面试指南/持续学习/∑ 持续学习.md"
+    ]
+  },
+  {
+    "tag": "excalidraw",
+    "tagCount": 6,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
+      "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
+      "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
+      "Extras/Draws/excalibrain.md",
+      "Extras/Draws/README 2022-08-21.md",
+      "Calendar/Daily notes/白板 2022-11-23.md"
+    ]
+  },
+  {
+    "tag": "分布式",
+    "tagCount": 1,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式系统/分布式算法.md"
+    ]
+  },
+  {
+    "tag": "todo/now",
+    "tagCount": 2,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式系统/∑ 分布式系统.md",
+      "Spaces/1-Project/我的面试指南/spring/spring循环依赖.md"
+    ]
+  },
+  {
+    "tag": "uncomplete",
+    "tagCount": 2,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式系统/ZAB.md",
+      "Spaces/1-Project/我的面试指南/分布式系统/Raft.md"
+    ]
+  },
+  {
+    "tag": "todo/本周",
+    "tagCount": 1,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/JVM/arthas.md"
     ]
   },
   {
