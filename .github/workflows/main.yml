@@ -22,14 +22,10 @@ jobs:
             repoName: knowledge-garden
             branchName: main
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          submodules: recursive
       - name: Check New Commit
         run: |
-          git clone https://github.com/clickear/dg3.git dg3
+          cd ../
+          git clone https://${{ github.actor }}:${{ secrets.PERSON_PASSWORD }}@github.com/clickear/dg3.git dg3
           cd dg3
           echo "$(pwd)"
           git checkout hugo
@@ -45,8 +41,8 @@ jobs:
         if: ${{ env.commit }}
         run: |
           echo "$(pwd)"
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git config user.email "42694815+${{github.actor}}@users.noreply.github.com"
           git config pull.rebase false
           git submodule foreach git pull origin main
           echo "fetch submodule finish"
@@ -54,3 +50,4 @@ jobs:
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin hugo
+        working-directory: ../dg3
