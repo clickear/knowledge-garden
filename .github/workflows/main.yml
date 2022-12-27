@@ -27,6 +27,7 @@ jobs:
           cd ../
           git clone https://${{ github.actor }}:${{ secrets.PERSON_PASSWORD }}@github.com/clickear/dg3.git dg3
           cd dg3
+          git submodule update --init --recursive
           echo "$(pwd)"
           git checkout hugo
           upStream=https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}
