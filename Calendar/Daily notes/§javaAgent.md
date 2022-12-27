@@ -11,3 +11,5 @@ date modified: 2022-12-27
 	+ [[arthas]]
 	+ jvmbox
 	+ skywalking-agent
++ 优秀文章
+	+ [多agent治理在海拍客的应用与实践 | 海拍客技术博客](https://tech.hipac.cn/archives/aeb6e3616cf74e1984b908fc1cd98913)
