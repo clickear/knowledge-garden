@@ -8,3 +8,6 @@ date modified: 2022-12-27
 + 最佳实践
 	+ 类隔离 --> [[类加载器]]
 + 开源项目
+	+ [[arthas]]
+	+ jvmbox
+	+ skywalking-agent
