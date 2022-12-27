@@ -22,13 +22,11 @@ jobs:
             repoName: knowledge-garden
             branchName: main
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          submodules: recursive
       - name: Check New Commit
         run: |
+          cd ../
+          mkdir dg3
+          cd dg3
           git clone https://github.com/clickear/dg3.git dg3
           cd dg3
           echo "$(pwd)"
@@ -54,3 +52,4 @@ jobs:
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin hugo
+        working-directory: ../dg3
