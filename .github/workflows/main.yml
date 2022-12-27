@@ -32,7 +32,7 @@ jobs:
           git clone https://github.com/clickear/dg3.git dg3
           cd dg3
           echo "$(pwd)"
-          git checkout -b hugo
+          git checkout hugo
           upStream=https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}
           echo "upStream=$upStream" >> $GITHUB_ENV
           commit=$(curl -sL $upStream/commits/${{ matrix.branchName }} |grep -o "/${{ matrix.userName }}/${{ matrix.repoName }}/commit/[a-z0-9]\+" |head -1 | cut -d\/ -f5)
