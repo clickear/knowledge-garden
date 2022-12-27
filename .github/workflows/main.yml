@@ -46,7 +46,7 @@ jobs:
           git config pull.rebase false
           git submodule foreach git pull origin main
           echo "fetch submodule finish"
-          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_PAT }}@github.com/clickear/dg3.git"
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.PERSON_PASSWORD }}@github.com/clickear/dg3.git"
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           git add --all
           git commit -m "${{ env.commit }}"
