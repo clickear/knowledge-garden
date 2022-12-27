@@ -29,6 +29,10 @@ jobs:
           submodules: recursive
       - name: Check New Commit
         run: |
+          git clone https://github.com/clickear/dg3.git dg3
+          cd dg3
+          echo "$(pwd)"
+          git checkout -b hugo
           upStream=https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}
           echo "upStream=$upStream" >> $GITHUB_ENV
           commit=$(curl -sL $upStream/commits/${{ matrix.branchName }} |grep -o "/${{ matrix.userName }}/${{ matrix.repoName }}/commit/[a-z0-9]\+" |head -1 | cut -d\/ -f5)
@@ -40,8 +44,7 @@ jobs:
       - name: Push to master
         if: ${{ env.commit }}
         run: |
-          git clone https://github.com/clickear/dg3.git
-          git checkout hugo
+          echo "$(pwd)"
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config pull.rebase false
