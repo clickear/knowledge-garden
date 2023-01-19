@@ -1552,8 +1552,12 @@ function replaceAllTemplates(entriesArray, note, selectedEntry) {
   let copy = note.slice();
   for (let z = 0; z < entriesArray.length; z++) {
     const KW = entriesArray[z];
+    console.log(KW);
     const KW_Brackets = "{{" + KW + "}}";
+    console.log(KW_Brackets);
+    console.log(`${selectedEntry[KW]}`);
     copy = replaceTemplate(copy, KW_Brackets, `${selectedEntry[KW]}`);
+    console.log(copy);
   }
   return copy;
 }
@@ -1568,7 +1572,9 @@ var makeQuotes = (str) => '"' + str + '"';
 var makeTags = (str) => "#" + str;
 var createAuthorKey = (creators) => {
   const authorKey = [];
+  const editorKey = [];
   let authorKeyFixed = "";
+  let editorKeyFixed = "";
   for (let creatorindex = 0; creatorindex < creators.length; creatorindex++) {
     const creator = creators[creatorindex];
     if (creator.creatorType === "author") {
@@ -1583,13 +1589,13 @@ var createAuthorKey = (creators) => {
       }
     } else if (creator.creatorType === "editor") {
       if (creator.hasOwnProperty("name")) {
-        authorKey.push(creator.name);
+        editorKey.push(creator.name);
       } else if (creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
-        authorKey.push(creator.lastName);
+        editorKey.push(creator.lastName);
       } else if (creator.hasOwnProperty("lastName") && !creator.hasOwnProperty("firstName")) {
-        authorKey.push(creator.lastName);
+        editorKey.push(creator.lastName);
       } else if (!creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
-        authorKey.push(creator.firstName);
+        editorKey.push(creator.firstName);
       }
     }
   }
@@ -1599,10 +1605,154 @@ var createAuthorKey = (creators) => {
   if (authorKey.length == 2) {
     authorKeyFixed = authorKey[0] + " and " + authorKey[1];
   }
-  if (authorKey.length > 2) {
+  if (authorKey.length == 3) {
+    authorKeyFixed = authorKey[0] + ", " + authorKey[1] + " and " + authorKey[2];
+  }
+  if (authorKey.length > 3) {
     authorKeyFixed = authorKey[0] + " et al.";
   }
-  return authorKeyFixed;
+  if (authorKey.length > 0) {
+    return authorKeyFixed;
+  }
+  if (editorKey.length == 1) {
+    editorKeyFixed = editorKey[0];
+  }
+  if (editorKey.length == 2) {
+    editorKeyFixed = editorKey[0] + " and " + editorKey[1];
+  }
+  if (editorKey.length == 3) {
+    editorKeyFixed = editorKey[0] + ", " + editorKey[1] + " and " + editorKey[2];
+  }
+  if (authorKey.length > 3) {
+    editorKeyFixed = editorKey[0] + " et al.";
+  }
+  if (editorKey.length > 0) {
+    return editorKeyFixed;
+  }
+};
+var createAuthorKeyFullName = (creators) => {
+  const authorKey = [];
+  const authorKeyReverse = [];
+  const editorKey = [];
+  const editorKeyReverse = [];
+  let authorKeyFixed = "";
+  let editorKeyFixed = "";
+  for (let creatorindex = 0; creatorindex < creators.length; creatorindex++) {
+    const creator = creators[creatorindex];
+    if (creator.creatorType === "author") {
+      if (creator.hasOwnProperty("name")) {
+        authorKey.push(creator.name);
+      } else if (creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.lastName + ", " + creator.firstName);
+        authorKeyReverse.push(creator.firstName + " " + creator.lastName);
+      } else if (creator.hasOwnProperty("lastName") && !creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.lastName);
+      } else if (!creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.firstName);
+      }
+    } else if (creator.creatorType === "editor") {
+      if (creator.hasOwnProperty("name")) {
+        editorKey.push(creator.name);
+      } else if (creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.lastName + ", " + creator.firstName);
+        editorKeyReverse.push(creator.firstName + " " + creator.lastName);
+      } else if (creator.hasOwnProperty("lastName") && !creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.lastName);
+      } else if (!creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.firstName);
+      }
+    }
+  }
+  if (authorKey.length == 1) {
+    authorKeyFixed = authorKey[0];
+  }
+  if (authorKey.length == 2) {
+    authorKeyFixed = authorKey[0] + " and " + authorKeyReverse[1];
+  }
+  if (authorKey.length == 3) {
+    authorKeyFixed = authorKey[0] + ", " + authorKeyReverse[1] + " and " + authorKeyReverse[2];
+  }
+  if (authorKey.length > 3) {
+    authorKeyFixed = authorKey[0] + " et al.";
+  }
+  if (authorKey.length > 0) {
+    return authorKeyFixed;
+  }
+  if (editorKey.length == 1) {
+    editorKeyFixed = editorKey[0];
+  }
+  if (editorKey.length == 2) {
+    editorKeyFixed = editorKey[0] + " and " + editorKeyReverse[1];
+  }
+  if (editorKey.length == 3) {
+    editorKeyFixed = editorKey[0] + ", " + editorKeyReverse[1] + " and " + editorKeyReverse[2];
+  }
+  if (authorKey.length > 3) {
+    editorKeyFixed = editorKey[0] + " et al.";
+  }
+  if (editorKey.length > 0) {
+    return editorKeyFixed;
+  }
+};
+var createAuthorKeyInitials = (creators) => {
+  const authorKey = [];
+  const editorKey = [];
+  let authorKeyFixed = "";
+  let editorKeyFixed = "";
+  for (let creatorindex = 0; creatorindex < creators.length; creatorindex++) {
+    const creator = creators[creatorindex];
+    if (creator.creatorType === "author") {
+      if (creator.hasOwnProperty("name")) {
+        authorKey.push(creator.name);
+      } else if (creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.lastName + ", " + creator.firstName.substring(0, 1) + ".");
+      } else if (creator.hasOwnProperty("lastName") && !creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.lastName);
+      } else if (!creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        authorKey.push(creator.firstName);
+      }
+    } else if (creator.creatorType === "editor") {
+      if (creator.hasOwnProperty("name")) {
+        editorKey.push(creator.name);
+      } else if (creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.lastName + ", " + creator.firstName.substring(0, 1) + ".");
+      } else if (creator.hasOwnProperty("lastName") && !creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.lastName);
+      } else if (!creator.hasOwnProperty("lastName") && creator.hasOwnProperty("firstName")) {
+        editorKey.push(creator.firstName);
+      }
+    }
+  }
+  if (authorKey.length == 1) {
+    authorKeyFixed = authorKey[0];
+  }
+  if (authorKey.length == 2) {
+    authorKeyFixed = authorKey[0] + " and " + authorKey[1];
+  }
+  if (authorKey.length == 3) {
+    authorKeyFixed = authorKey[0] + ", " + authorKey[1] + " and " + authorKey[2];
+  }
+  if (authorKey.length > 3) {
+    authorKeyFixed = authorKey[0] + " et al.";
+  }
+  if (authorKey.length > 0) {
+    return authorKeyFixed;
+  }
+  if (editorKey.length == 1) {
+    editorKeyFixed = editorKey[0];
+  }
+  if (editorKey.length == 2) {
+    editorKeyFixed = editorKey[0] + " and " + editorKey[1];
+  }
+  if (editorKey.length == 3) {
+    editorKeyFixed = editorKey[0] + ", " + editorKey[1] + " and " + editorKey[2];
+  }
+  if (authorKey.length > 3) {
+    editorKeyFixed = editorKey[0] + " et al.";
+  }
+  if (editorKey.length > 0) {
+    return editorKeyFixed;
+  }
 };
 function removeQuoteFromStart(quote, annotation) {
   let copy = annotation.slice();
@@ -1746,9 +1896,14 @@ function createNoteTitle(selectedEntry, exportTitle, exportPath) {
   exportTitle = exportTitle.replace("{{citationKey}}", selectedEntry.citationKey);
   exportTitle = exportTitle.replace("{{citationkey}}", selectedEntry.citationKey);
   exportTitle = exportTitle.replace("{{citekey}}", selectedEntry.citationKey);
+  exportTitle = exportTitle.replace("{{citekey}}", selectedEntry.citationKey);
   exportTitle = exportTitle.replace("{{title}}", selectedEntry.title);
   exportTitle = exportTitle.replace("{{author}}", selectedEntry.authorKey);
   exportTitle = exportTitle.replace("{{authors}}", selectedEntry.authorKey);
+  exportTitle = exportTitle.replace("{{authorInitials}}", selectedEntry.authorKeyInitials);
+  exportTitle = exportTitle.replace("{{authorsInitials}}", selectedEntry.authorKeyInitials);
+  exportTitle = exportTitle.replace("{{authorFullName}}", selectedEntry.authorKeyFullName);
+  exportTitle = exportTitle.replace("{{authorsFullName}}", selectedEntry.authorKeyFullName);
   exportTitle = exportTitle.replace("{{year}}", selectedEntry.year);
   exportTitle = exportTitle.replace("{{date}}", selectedEntry.year);
   exportTitle = exportTitle.replace(/[/\\?%*:|"<>]/g, "");
@@ -3736,7 +3891,7 @@ var SettingTab = class extends import_obsidian5.PluginSettingTab {
         yield plugin.saveSettings();
       }));
     });
-    new import_obsidian5.Setting(settingsExport).setName("Note Title").setDesc("Select the format of the title of the note. Possible values include: {{citeKey}}, {{title}}, {{author}}, {{year}}").addText((text) => text.setPlaceholder("{{citeKey}}").setValue(settings.exportTitle).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(settingsExport).setName("Note Title").setDesc("Select the format of the title of the note. Possible values include: {{citeKey}}, {{title}}, {{author}},{{authorInitials}}, {{authorFullName}} {{year}}").addText((text) => text.setPlaceholder("{{citeKey}}").setValue(settings.exportTitle).onChange((value) => __async(this, null, function* () {
       settings.exportTitle = value;
       yield plugin.saveSettings();
     })));
@@ -4336,6 +4491,7 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       selectedEntry.localLibrary = "[Zotero](" + selectedEntry.select + ")";
       selectedEntry.localLibraryLink = selectedEntry.select;
     }
+    selectedEntry.citeKey = selectedEntry.citationKey;
     if (selectedEntry.itemType == "journalArticle") {
       selectedEntry.itemType = "Journal Article";
     }
@@ -4354,6 +4510,10 @@ var MyPlugin = class extends import_obsidian6.Plugin {
     selectedEntry.itemType = selectedEntry.itemType.charAt(0).toUpperCase() + selectedEntry.itemType.slice(1);
     selectedEntry.citationInLine = createAuthorKey(selectedEntry.creators) + " (" + selectedEntry.year + ")";
     selectedEntry.citationInLine = selectedEntry.citationInLine.replace("()", "");
+    selectedEntry.citationInLineInitials = createAuthorKeyInitials(selectedEntry.creators) + " (" + selectedEntry.year + ")";
+    selectedEntry.citationInLineInitials = selectedEntry.citationInLineInitials.replace("()", "");
+    selectedEntry.citationInLineFullName = createAuthorKeyFullName(selectedEntry.creators) + " (" + selectedEntry.year + ")";
+    selectedEntry.citationInLineFullName = selectedEntry.citationInLineFullName.replace("()", "");
     if (selectedEntry.itemType == "Journal Article") {
       selectedEntry.citationShort = selectedEntry.citationInLine + " '" + selectedEntry.title + "'";
       selectedEntry.citationFull = selectedEntry.citationShort + ", *" + selectedEntry.publicationTitle + "*, " + selectedEntry.volume + "(" + selectedEntry.issue + "), pp. " + selectedEntry.pages + ".";
@@ -5443,6 +5603,8 @@ var MyPlugin = class extends import_obsidian6.Plugin {
   createNote(selectedEntry, data) {
     const authorKey = createAuthorKey(selectedEntry.creators);
     selectedEntry.authorKey = authorKey;
+    selectedEntry.authorKeyInitials = createAuthorKeyInitials(selectedEntry.creators);
+    selectedEntry.authorKeyFullName = createAuthorKeyFullName(selectedEntry.creators);
     let bugout = new Debugout({ realTimeLoggingOn: false });
     if (this.settings.debugMode === true) {
       bugout = new Debugout({ realTimeLoggingOn: true });

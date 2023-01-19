@@ -276,11 +276,11 @@ Raft与Multi-Paxos中相似的概念:
 
 ## 演进
 
-![[分布式算法#paxos的算法演进]]
+![[∑ 分布式算法#paxos的算法演进]]
 
 ### Multipaxos、ZAB、Raft为什么是等价算法？
 
-![[分布式算法#MultiPaxos 、 ZAB 、 Raft 为什么是等价算法？]]
+![[∑ 分布式算法#MultiPaxos 、 ZAB 、 Raft 为什么是等价算法？]]
 
 ## Leader宕机
 

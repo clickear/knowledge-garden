@@ -4162,6 +4162,13 @@ function summarizeDueAt(dueAt, now2 = DateTime.now()) {
   }
   return diffSequence[0].summary;
 }
+function summarizeDueAtWithPrefix(dueAt, now2 = DateTime.now()) {
+  const diffSummary = summarizeDueAt(dueAt, now2);
+  if (dueAt > now2) {
+    return ["in", diffSummary].join(" ");
+  }
+  return ["overdue by", diffSummary].join(" ");
+}
 
 // src/utils.ts
 function uniqByField(array, field) {
@@ -4407,7 +4414,7 @@ function parseRepetitionFromMarkdown(markdown) {
 }
 
 // src/repeat/queries.ts
-function getNotesDue(dv) {
+function getNotesDue(dv, ignoreFolderPath, ignoreFilePath) {
   const now2 = DateTime.now();
   return dv == null ? void 0 : dv.pages().mutate((page) => {
     const { repeat, due_at } = page.file.frontmatter || {};
@@ -4422,14 +4429,20 @@ function getNotesDue(dv) {
     if (!repetition) {
       return false;
     }
+    if (ignoreFolderPath && page.file.folder.startsWith(ignoreFolderPath)) {
+      return false;
+    }
+    if (ignoreFilePath && page.file.path === ignoreFilePath) {
+      return false;
+    }
     return repetition.repeatDueAt <= now2;
   }).sort((page) => {
     return page.repetition.repeatDueAt;
   }, "asc");
 }
-function getNextDueNote(dv) {
+function getNextDueNote(dv, ignoreFolderPath, ignoreFilePath) {
   var _a;
-  const page = (_a = getNotesDue(dv)) == null ? void 0 : _a.first();
+  const page = (_a = getNotesDue(dv, ignoreFolderPath, ignoreFilePath)) == null ? void 0 : _a.first();
   if (!page) {
     return;
   }
@@ -4631,7 +4644,7 @@ async function renderTitleElement(container, file, vault) {
 // src/repeat/obsidian/RepeatView.tsx
 var REPEATING_NOTES_DUE_VIEW = "repeating-notes-due-view";
 var RepeatView = class extends import_obsidian3.ItemView {
-  constructor(leaf) {
+  constructor(leaf, ignoreFolderPath) {
     super(leaf);
     this.icon = "clock";
     this.addRepeatButton = this.addRepeatButton.bind(this);
@@ -4642,9 +4655,10 @@ var RepeatView = class extends import_obsidian3.ItemView {
     this.promiseMetadataChangeOrTimeOut = this.promiseMetadataChangeOrTimeOut.bind(this);
     this.setMessage = this.setMessage.bind(this);
     this.setPage = this.setPage.bind(this);
-    this.resetContainers = this.resetContainers.bind(this);
+    this.resetView = this.resetView.bind(this);
     this.component = new import_obsidian3.Component();
     this.dv = (0, import_obsidian_dataview.getAPI)(this.app);
+    this.ignoreFolderPath = ignoreFolderPath;
     this.root = this.containerEl.children[1];
     this.indexPromise = new Promise((resolve, reject) => {
       const resolver = () => resolve(null);
@@ -4657,7 +4671,7 @@ var RepeatView = class extends import_obsidian3.ItemView {
         resolve(null);
       }
     });
-    this.resetContainers();
+    this.resetView();
     this.setMessage("Loading...");
   }
   getViewType() {
@@ -4688,41 +4702,45 @@ var RepeatView = class extends import_obsidian3.ItemView {
     this.app.vault.off("rename", this.handleExternalRename);
   }
   async promiseMetadataChangeOrTimeOut() {
-    let resolveRef;
+    let resolver;
     return new Promise((resolve) => {
-      resolveRef = resolve;
-      this.registerEvent(this.app.metadataCache.on("dataview:metadata-change", resolveRef));
-      setTimeout(resolveRef, 100);
+      resolver = (_, eventFile, previousPath) => {
+        if ((eventFile == null ? void 0 : eventFile.path) === this.currentDueFilePath || previousPath === this.currentDueFilePath) {
+          resolve(null);
+        }
+      };
+      this.registerEvent(this.app.metadataCache.on("dataview:metadata-change", resolver));
+      setTimeout(resolve, 100);
     }).then(() => {
-      this.app.metadataCache.off("dataview:metadata-change", resolveRef);
+      this.app.metadataCache.off("dataview:metadata-change", resolver);
     });
   }
   async handleExternalModifyOrDelete(file) {
     if (file.path === this.currentDueFilePath) {
       await this.promiseMetadataChangeOrTimeOut();
-      this.resetContainers();
+      this.resetView();
       this.setPage();
     }
   }
   async handleExternalRename(file, oldFilePath) {
     if (oldFilePath === this.currentDueFilePath) {
       await this.promiseMetadataChangeOrTimeOut();
-      this.resetContainers();
+      this.resetView();
       this.setPage();
     }
   }
-  async setPage() {
+  async setPage(ignoreFilePath) {
     await this.indexPromise;
     this.setMessage("");
     this.messageContainer.style.display = "none";
-    const page = getNextDueNote(this.dv);
+    const page = getNextDueNote(this.dv, this.ignoreFolderPath, ignoreFilePath);
     if (!page) {
       this.setMessage("All done for now!");
       this.buttonsContainer.createEl("button", {
         text: "Refresh"
       }, (buttonElement) => {
         buttonElement.onclick = () => {
-          this.resetContainers();
+          this.resetView();
           this.setPage();
         };
       });
@@ -4744,7 +4762,7 @@ var RepeatView = class extends import_obsidian3.ItemView {
     const delimitedFrontmatterBounds = determineFrontmatterBounds(markdown, true);
     await renderMarkdown(markdown.slice(delimitedFrontmatterBounds ? delimitedFrontmatterBounds[1] : 0), this.previewContainer, file.path, this.component, this.app.vault);
   }
-  resetContainers() {
+  resetView() {
     this.messageContainer && this.messageContainer.remove();
     this.buttonsContainer && this.buttonsContainer.remove();
     this.previewContainer && this.previewContainer.remove();
@@ -4763,27 +4781,15 @@ var RepeatView = class extends import_obsidian3.ItemView {
       text: choice.text
     }, (buttonElement) => {
       buttonElement.onclick = async () => {
-        this.resetContainers();
+        this.resetView();
         if (!choice.nextRepetition) {
           this.setPage();
           return;
         }
         const markdown = await this.app.vault.read(file);
         const newMarkdown = replaceOrInsertFields(markdown, serializeRepetition(choice.nextRepetition));
-        let resolver;
-        new Promise((resolve) => {
-          resolver = (_, eventFile, __) => {
-            if ((eventFile == null ? void 0 : eventFile.path) === file.path) {
-              resolve(null);
-            }
-          };
-          this.registerEvent(this.app.metadataCache.on("dataview:metadata-change", resolver));
-          this.app.vault.modify(file, newMarkdown);
-          setTimeout(resolve, 100);
-        }).then(() => {
-          this.app.metadataCache.off("dataview:metadata-change", resolver);
-          this.setPage();
-        });
+        this.app.vault.modify(file, newMarkdown);
+        this.setPage(file.path);
       };
     });
   }
@@ -4802,7 +4808,7 @@ var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
     super(app);
     this.onSubmit = onSubmit;
     this.updateResult = this.updateResult.bind(this);
-    this.result = initialValue != null ? initialValue : {
+    this.result = initialValue ? { ...initialValue } : {
       repeatStrategy: "SPACED",
       repeatPeriod: 1,
       repeatPeriodUnit: "DAY",
@@ -4812,14 +4818,21 @@ var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
     if (!this.result.repeatDueAt) {
       this.updateResult("repeatPeriod", this.result.repeatPeriod);
     }
+    this.result.summary = summarizeDueAtWithPrefix(this.result.repeatDueAt);
     this.datetimePickerEl;
   }
   updateResult(key, value) {
+    var _a;
     this.result[key] = value;
-    this.result.repeatDueAt = incrementRepeatDueAt(this.result);
+    this.result.repeatDueAt = incrementRepeatDueAt({
+      ...this.result,
+      repeatDueAt: void 0
+    });
+    this.result.summary = summarizeDueAtWithPrefix(this.result.repeatDueAt);
     if (this.datetimePickerEl) {
       this.datetimePickerEl.value = formatDateTimeForPicker(this.result.repeatDueAt);
     }
+    (_a = this.dueAtSummaryEl) == null ? void 0 : _a.setText(this.result.summary);
   }
   onOpen() {
     const { contentEl } = this;
@@ -4873,22 +4886,28 @@ var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
       console.error("Repeat Plugin: Could not set time of day HTML element styles:");
       console.error(e);
     }
-    new import_obsidian4.Setting(contentEl).setName("Next repeat").setDesc(`in ${summarizeDueAt(this.result.repeatDueAt)}`).addText((datetimePicker) => {
+    const nextRepeatEl = new import_obsidian4.Setting(contentEl).setName("Next repeat").setDesc(this.result.summary).addText((datetimePicker) => {
       datetimePicker.inputEl.type = "datetime-local";
       datetimePicker.inputEl.addClass("repeat-date_picker");
       const pickerValue = formatDateTimeForPicker(this.result.repeatDueAt);
       datetimePicker.inputEl.value = pickerValue;
       this.datetimePickerEl = datetimePicker.inputEl;
       datetimePicker.onChange((value) => {
+        var _a;
         const parsedValue = DateTime.fromISO(value);
         if (parsedValue.invalid) {
           console.error("Repeat Plugin: Could not parse datetime from picker.");
           return;
         }
         this.result.repeatDueAt = parsedValue;
+        this.result.summary = summarizeDueAtWithPrefix(this.result.repeatDueAt);
+        (_a = this.dueAtSummaryEl) == null ? void 0 : _a.setText(this.result.summary);
       });
     });
+    this.dueAtSummaryEl = nextRepeatEl == null ? void 0 : nextRepeatEl.descEl;
     new import_obsidian4.Setting(contentEl).addButton((btn) => btn.setButtonText("Set Up Repetition").setCta().onClick(() => {
+      const final = { ...this.result };
+      delete final.summary;
       this.close();
       this.onSubmit(this.result);
     }));
@@ -4903,7 +4922,8 @@ var RepeatNoteSetupModal_default = RepeatNoteSetupModal;
 // src/settings.ts
 var DEFAULT_SETTINGS = {
   showDueCountInStatusBar: true,
-  showRibbonIcon: true
+  showRibbonIcon: true,
+  ignoreFolderPath: ""
 };
 
 // src/main.ts
@@ -4931,15 +4951,16 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
     await this.saveData(this.settings);
     if (!this.settings.showDueCountInStatusBar && this.statusBarItem) {
       this.statusBarItem.remove();
+      this.statusBarItem = void 0;
     }
     if (this.settings.showDueCountInStatusBar) {
-      this.statusBarItem = this.addStatusBarItem();
       this.updateNotesDueCount();
     }
     if (!this.settings.showRibbonIcon && this.ribbonIcon) {
       this.ribbonIcon.remove();
+      this.ribbonIcon = void 0;
     }
-    if (this.settings.showRibbonIcon) {
+    if (this.settings.showRibbonIcon && !this.ribbonIcon) {
       this.makeRepeatRibbonIcon();
     }
   }
@@ -4949,15 +4970,17 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
       this.statusBarItem = this.addStatusBarItem();
     }
     if (this.settings.showDueCountInStatusBar) {
-      const dueNoteCount = (_a = getNotesDue((0, import_obsidian_dataview2.getAPI)(this.app))) == null ? void 0 : _a.length;
+      const dueNoteCount = (_a = getNotesDue((0, import_obsidian_dataview2.getAPI)(this.app), this.settings.ignoreFolderPath)) == null ? void 0 : _a.length;
       if (dueNoteCount != void 0 && this.statusBarItem) {
         this.statusBarItem.setText(`${dueNoteCount} repeat notes due`);
       }
     }
   }
   manageStatusBarItem() {
-    this.registerEvent(this.app.metadataCache.on("dataview:index-ready", this.updateNotesDueCount));
-    this.registerEvent(this.app.metadataCache.on("dataview:metadata-change", this.updateNotesDueCount));
+    this.registerEvent(this.app.metadataCache.on("dataview:index-ready", () => {
+      this.updateNotesDueCount();
+      this.registerEvent(this.app.metadataCache.on("dataview:metadata-change", this.updateNotesDueCount));
+    }));
     const FIVE_MINUTES_IN_MS = 5 * 60 * 1e3;
     this.registerInterval(window.setInterval(this.updateNotesDueCount, FIVE_MINUTES_IN_MS));
   }
@@ -4978,10 +5001,10 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
           if (!markdownView) {
             return;
           }
-          const { editor } = markdownView;
+          const { editor, file } = markdownView;
           const content = editor.getValue();
           const newContent = replaceOrInsertFields(content, serializeRepetition(result));
-          editor.setValue(newContent);
+          this.app.vault.modify(file, newContent);
         };
         if (markdownView) {
           if (!checking) {
@@ -5013,7 +5036,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
           const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
           if (markdownView) {
             if (!checking) {
-              const { editor } = markdownView;
+              const { editor, file } = markdownView;
               const content = editor.getValue();
               const repeat = {
                 repeatStrategy: "PERIODIC",
@@ -5029,7 +5052,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
                 ...repeat,
                 repeatDueAt
               }));
-              editor.setValue(newContent);
+              this.app.vault.modify(file, newContent);
             }
             return true;
           }
@@ -5043,7 +5066,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
     this.makeRepeatRibbonIcon();
     this.manageStatusBarItem();
     this.registerCommands();
-    this.registerView(REPEATING_NOTES_DUE_VIEW, (leaf) => new RepeatView_default(leaf));
+    this.registerView(REPEATING_NOTES_DUE_VIEW, (leaf) => new RepeatView_default(leaf, this.settings.ignoreFolderPath));
     this.addSettingTab(new RepeatPluginSettingTab(this.app, this));
   }
   onunload() {
@@ -5065,6 +5088,10 @@ var RepeatPluginSettingTab = class extends import_obsidian5.PluginSettingTab {
     }));
     new import_obsidian5.Setting(containerEl).setName("Show ribbon icon").setDesc("Whether to display the ribbon icon that opens the Repeat pane.").addToggle((component) => component.setValue(this.plugin.settings.showRibbonIcon).onChange(async (value) => {
       this.plugin.settings.showRibbonIcon = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerEl).setName("Ignore folder path").setDesc("Notes in this folder and its subfolders will not become due. Useful for templates.").addText((component) => component.setValue(this.plugin.settings.ignoreFolderPath).onChange(async (value) => {
+      this.plugin.settings.ignoreFolderPath = value;
       await this.plugin.saveSettings();
     }));
   }

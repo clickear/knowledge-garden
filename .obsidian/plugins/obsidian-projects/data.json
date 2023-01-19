@@ -1,17 +1,16 @@
 {
+  "version": 2,
   "projects": [
     {
-      "id": "5b2e982b-3384-43c2-94d8-4ac66a05d8d5",
       "name": "本库指南",
-      "path": "🧰 本库指南",
-      "recursive": true,
+      "id": "5b2e982b-3384-43c2-94d8-4ac66a05d8d5",
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
       "views": [
         {
-          "id": "69c79ea8-8601-4906-b81a-69bcccc14d77",
-          "name": "Table",
-          "type": "table",
           "config": {
             "sortField": "date created",
             "sortAsc": true,
@@ -20,59 +19,117 @@
                 "hide": true
               }
             }
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "69c79ea8-8601-4906-b81a-69bcccc14d77",
+          "name": "Table",
+          "type": "table"
         },
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "49aaddd6-5e6e-4f0d-8149-bc9b14503403",
           "name": "Board",
-          "type": "board",
-          "config": {}
+          "type": "board"
         },
         {
-          "id": "41c93621-b188-4f7f-8b62-998b5d006fe1",
-          "name": "Calendar",
-          "type": "calendar",
           "config": {
             "interval": "month",
             "dateField": "date modified"
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "41c93621-b188-4f7f-8b62-998b5d006fe1",
+          "name": "Calendar",
+          "type": "calendar"
         }
       ],
-      "dataview": false
+      "newNotesFolder": "",
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "🧰 本库指南",
+          "recursive": true
+        }
+      }
     },
     {
-      "id": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
       "name": "运动与健康",
-      "path": "Spaces/2-Area/运动与健康",
-      "recursive": false,
+      "id": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
       "views": [
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "275d5593-0fdb-4993-9f99-10b2a74ae332",
           "name": "Table",
-          "type": "table",
-          "config": {}
+          "type": "table"
         },
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "ba8d510a-4132-4144-b78e-06828bd9449c",
           "name": "Board",
-          "type": "board",
-          "config": {}
+          "type": "board"
         },
         {
-          "id": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d",
-          "name": "Calendar",
-          "type": "calendar",
           "config": {
             "dateField": "date created",
             "interval": "month"
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d",
+          "name": "Calendar",
+          "type": "calendar"
         }
-      ]
+      ],
+      "newNotesFolder": "",
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "Spaces/2-Area/运动与健康",
+          "recursive": false
+        }
+      }
     }
   ],
-  "version": 1,
-  "lastProjectId": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
-  "lastViewId": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d"
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    }
+  }
 }

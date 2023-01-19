@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-26
-date modified: 2022-09-30
+date modified: 2023-01-19
 title: threadlocal
 ---
 
