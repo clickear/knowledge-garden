@@ -2,21 +2,51 @@
   "version": 2,
   "projects": [
     {
-      "name": "本库指南",
-      "id": "5b2e982b-3384-43c2-94d8-4ac66a05d8d5",
-      "fieldConfig": {},
+      "fieldConfig": {
+        "status": {
+          "richText": true,
+          "options": [
+            "完成",
+            "未完成",
+            "待开始"
+          ]
+        }
+      },
       "defaultName": "",
       "templates": [],
       "excludedNotes": [],
       "isDefault": false,
+      "dataSource": {
+        "kind": "dataview",
+        "config": {
+          "query": "TABLE file.tags as tags,title as title,status as status FROM #todo"
+        }
+      },
+      "newNotesFolder": "",
       "views": [
         {
           "config": {
-            "sortField": "date created",
-            "sortAsc": true,
             "fieldConfig": {
-              "title": {
+              "date created": {
                 "hide": true
+              },
+              "date modified": {
+                "hide": true
+              },
+              "sr-due": {
+                "hide": true
+              },
+              "sr-ease": {
+                "hide": true
+              },
+              "sr-interval": {
+                "hide": true
+              },
+              "path": {
+                "hide": true
+              },
+              "name": {
+                "width": 192
               }
             }
           },
@@ -24,106 +54,69 @@
             "conditions": []
           },
           "colors": {
-            "conditions": []
+            "conditions": [
+              {
+                "color": "#7958c6",
+                "condition": {
+                  "field": "name",
+                  "operator": "is-not-empty"
+                }
+              }
+            ]
           },
-          "id": "69c79ea8-8601-4906-b81a-69bcccc14d77",
+          "id": "db7aabc3-8233-4ad0-9744-67d3c4ebedd2",
           "name": "Table",
           "type": "table"
         },
         {
-          "config": {},
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "id": "49aaddd6-5e6e-4f0d-8149-bc9b14503403",
-          "name": "Board",
-          "type": "board"
-        },
-        {
           "config": {
-            "interval": "month",
-            "dateField": "date modified"
+            "includeFields": [
+              "status"
+            ],
+            "groupByField": "status",
+            "columns": {
+              "No status": {
+                "weight": 0
+              },
+              "待开始": {
+                "weight": 1
+              },
+              "完成": {
+                "weight": 2
+              },
+              "未完成": {
+                "weight": 3
+              }
+            }
           },
           "filter": {
             "conditions": []
           },
           "colors": {
-            "conditions": []
+            "conditions": [
+              {
+                "color": "#a882ff",
+                "condition": {
+                  "field": "tags",
+                  "operator": "is-not-empty"
+                }
+              },
+              {
+                "color": "#8a2c90",
+                "condition": {
+                  "field": "tags",
+                  "operator": "is-not-empty"
+                }
+              }
+            ]
           },
-          "id": "41c93621-b188-4f7f-8b62-998b5d006fe1",
-          "name": "Calendar",
-          "type": "calendar"
+          "id": "f0350ec5-403b-4c2d-bd5c-9adbd2883046",
+          "name": "看板",
+          "type": "board"
         }
       ],
-      "newNotesFolder": "",
-      "dataSource": {
-        "kind": "folder",
-        "config": {
-          "path": "🧰 本库指南",
-          "recursive": true
-        }
-      }
-    },
-    {
-      "name": "运动与健康",
-      "id": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
-      "fieldConfig": {},
-      "defaultName": "",
-      "templates": [],
-      "excludedNotes": [],
-      "isDefault": false,
-      "views": [
-        {
-          "config": {},
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "id": "275d5593-0fdb-4993-9f99-10b2a74ae332",
-          "name": "Table",
-          "type": "table"
-        },
-        {
-          "config": {},
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "id": "ba8d510a-4132-4144-b78e-06828bd9449c",
-          "name": "Board",
-          "type": "board"
-        },
-        {
-          "config": {
-            "dateField": "date created",
-            "interval": "month"
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "id": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d",
-          "name": "Calendar",
-          "type": "calendar"
-        }
-      ],
-      "newNotesFolder": "",
-      "dataSource": {
-        "kind": "folder",
-        "config": {
-          "path": "Spaces/2-Area/运动与健康",
-          "recursive": false
-        }
-      }
+      "id": "bb7451f8-617c-4c14-b96a-3254315ff4de",
+      "name": "todo"
     }
   ],
   "preferences": {
