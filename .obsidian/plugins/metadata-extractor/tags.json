@@ -37,6 +37,21 @@
     ]
   },
   {
+    "tag": "todo",
+    "tagCount": 52,
+    "relativePaths": [
+      "Spaces/4-Archive/PMP/引论.md",
+      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/遗传算法.md",
+      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法/排序算法.md",
+      "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
+      "Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md",
+      "Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md",
+      "Sources/Articles/常青笔记阅读笔记/笔记标题建议使用完整的句子，避免模糊主张.md",
+      "Sources/Articles/常青笔记阅读笔记/单独的间隔重复记忆卡片是一种糟糕的交流媒介.md",
+      "Sources/Articles/常青笔记阅读笔记/助记媒介.md"
+    ]
+  },
+  {
     "tag": "moc",
     "tagCount": 47,
     "relativePaths": [
@@ -387,18 +402,6 @@
       "Sources/Articles/flomo101阅读笔记/为何要写卡片.md",
       "Sources/Articles/flomo101阅读笔记/为何知识需要连接.md",
       "Sources/Articles/flomo101阅读笔记/为何收藏无用.md"
-    ]
-  },
-  {
-    "tag": "todo",
-    "tagCount": 48,
-    "relativePaths": [
-      "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
-      "Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md",
-      "Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md",
-      "Sources/Articles/常青笔记阅读笔记/笔记标题建议使用完整的句子，避免模糊主张.md",
-      "Sources/Articles/常青笔记阅读笔记/单独的间隔重复记忆卡片是一种糟糕的交流媒介.md",
-      "Sources/Articles/常青笔记阅读笔记/助记媒介.md"
     ]
   },
   {

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8cf5f7a17602d827",
+        "id": "4346de2ef8c88556",
         "type": "tabs",
         "children": [
           {
-            "id": "6062eb12e35e0cdc",
+            "id": "69cd2bcfb8aa5505",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -193,17 +193,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "6062eb12e35e0cdc",
+  "active": "69cd2bcfb8aa5505",
   "lastOpenFiles": [
-    "Spaces/4-Archive/软考/软考-00软件设计师.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/遗传算法.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/贪心算法.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/数据结构.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/杂项算法/滑动窗口.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/∑ 数据结构与算法.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/资料.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/§ 算法目录.md",
-    "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法/排序算法.md",
-    "Spaces/1-Project/我的面试指南/数据结构和算法.md"
+    "Calendar/Daily notes/2023-01-20.md",
+    "Spaces/4-Archive/软考/软考-数据结构.md",
+    "Spaces/4-Archive/软考/软考-待深入.md",
+    "Spaces/2-Area/java/springboot/§ springboot.md",
+    "Spaces/2-Area/java/springboot/spring中事务处理.md",
+    "Spaces/2-Area/java/§ java.md",
+    "Calendar/Daily notes/ffmpeg.md",
+    "Calendar/Daily notes/计算机学习知识图谱.md",
+    "Calendar/已发布文章/∑ 已发布文章.md",
+    "Cards/About Cards.md"
   ]
 }

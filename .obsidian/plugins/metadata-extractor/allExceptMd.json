@@ -495,6 +495,42 @@
     {
       "name": "java基础",
       "relativePath": "Spaces/2-Area/java/java基础"
+    },
+    {
+      "name": "数据结构与算法",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法"
+    },
+    {
+      "name": "数据结构",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构"
+    },
+    {
+      "name": "线性表",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表"
+    },
+    {
+      "name": "字符串",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表/字符串"
+    },
+    {
+      "name": "基础算法",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法"
+    },
+    {
+      "name": "排序算法",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法"
+    },
+    {
+      "name": "杂项算法",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/杂项算法"
+    },
+    {
+      "name": "软考",
+      "relativePath": "Spaces/4-Archive/软考"
+    },
+    {
+      "name": "PMP",
+      "relativePath": "Spaces/4-Archive/PMP"
     }
   ],
   "nonMdFiles": [
