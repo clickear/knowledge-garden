@@ -128,6 +128,13 @@
     ]
   },
   {
+    "tag": "task",
+    "tagCount": 2,
+    "relativePaths": [
+      "Spaces/2-Area/java/java基础/§ java基础.md"
+    ]
+  },
+  {
     "tag": "todo/持续迭代",
     "tagCount": 11,
     "relativePaths": [
