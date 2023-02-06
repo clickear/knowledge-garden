@@ -4648,6 +4648,10 @@
         "level": 3
       },
       {
+        "heading": "线程安全",
+        "level": 3
+      },
+      {
         "heading": "参考资料",
         "level": 2
       }
@@ -6255,6 +6259,69 @@
         "relativePath": "Atlas/MOCs/∑ MOCs.md"
       }
     ]
+  },
+  {
+    "fileName": "如何做年度计划",
+    "relativePath": "Spaces/1-Project/时间管理/如何做年度计划.md",
+    "frontmatter": {
+      "title": "如何做年度计划",
+      "date created": "2023-01-31",
+      "date modified": "2023-01-31",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 73
+        }
+      }
+    }
+  },
+  {
+    "fileName": "∑ 会计基础",
+    "relativePath": "Spaces/1-Project/会计/CPA/∑ 会计基础.md",
+    "frontmatter": {
+      "title": "∑ 会计基础",
+      "date created": "2023-01-29",
+      "date modified": "2023-01-29",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 72
+        }
+      }
+    }
+  },
+  {
+    "fileName": "CPA",
+    "relativePath": "Spaces/1-Project/会计/CPA/CPA.md",
+    "frontmatter": {
+      "title": "CPA",
+      "date created": "2023-01-29",
+      "date modified": "2023-01-29",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 69
+        }
+      }
+    }
   },
   {
     "fileName": "∑ 软件项目管理",
@@ -47725,6 +47792,110 @@
     "links": [
       {
         "link": "ACCESS 笔记组织法"
+      }
+    ]
+  },
+  {
+    "fileName": "2023-02-03",
+    "relativePath": "Calendar/Daily notes/2023-02-03.md",
+    "frontmatter": {
+      "title": "2023-02-03",
+      "date created": "2023-02-03",
+      "date modified": "2023-02-03",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 78
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "技术",
+        "level": 2
+      },
+      {
+        "heading": "效能提升",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "oltp"
+      },
+      {
+        "link": "olap"
+      }
+    ]
+  },
+  {
+    "fileName": "vpn",
+    "relativePath": "Calendar/Daily notes/vpn.md",
+    "frontmatter": {
+      "title": "vpn",
+      "date created": "2023-02-02",
+      "date modified": "2023-02-03",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 69
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "2023-02-02",
+        "link": "vpn",
+        "relativePath": "Calendar/Daily notes/2023-02-02.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2023-02-02",
+    "relativePath": "Calendar/Daily notes/2023-02-02.md",
+    "frontmatter": {
+      "title": "2023-02-02",
+      "date created": "2023-02-02",
+      "date modified": "2023-02-02",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 78
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "vpn",
+        "relativePath": "Calendar/Daily notes/vpn.md"
       }
     ]
   },
