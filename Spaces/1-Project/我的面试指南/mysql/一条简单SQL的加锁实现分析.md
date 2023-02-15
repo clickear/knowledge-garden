@@ -1,8 +1,10 @@
 ---
 date created: 2022-09-13
-date modified: 2022-09-13
+date modified: 2023-02-15
 title: 一条简单SQL的加锁实现分析
 ---
+
+[TOC]
 
 ## 上锁与排除
 
