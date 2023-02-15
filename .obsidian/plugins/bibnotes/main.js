@@ -1482,6 +1482,7 @@ var DEFAULT_SETTINGS = {
   isHighlightItalic: true,
   isHighlightBold: false,
   isHighlightHighlighted: false,
+  isHighlightColoured: false,
   isHighlightBullet: true,
   isHighlightBlockquote: false,
   isHighlightQuote: true,
@@ -1490,6 +1491,7 @@ var DEFAULT_SETTINGS = {
   isCommentItalic: false,
   isCommentBold: true,
   isCommentHighlighted: false,
+  isCommentColoured: false,
   isCommentBullet: false,
   isCommentBlockquote: true,
   isCommentQuote: false,
@@ -1498,6 +1500,7 @@ var DEFAULT_SETTINGS = {
   isTagItalic: false,
   isTagBold: false,
   isTagHighlighted: false,
+  isTagColoured: false,
   isTagBullet: false,
   isTagBlockquote: false,
   isTagQuote: false,
@@ -1552,12 +1555,8 @@ function replaceAllTemplates(entriesArray, note, selectedEntry) {
   let copy = note.slice();
   for (let z = 0; z < entriesArray.length; z++) {
     const KW = entriesArray[z];
-    console.log(KW);
     const KW_Brackets = "{{" + KW + "}}";
-    console.log(KW_Brackets);
-    console.log(`${selectedEntry[KW]}`);
     copy = replaceTemplate(copy, KW_Brackets, `${selectedEntry[KW]}`);
-    console.log(copy);
   }
   return copy;
 }
@@ -1891,6 +1890,38 @@ function createLocalFileLink(reference2) {
   const filesListString = filesList.join("; ");
   return filesListString;
 }
+function createLocalFilePathLink(reference2) {
+  if (reference2.attachments.length == 0)
+    return "{{localFilePathLink}}";
+  const filesPathList = [];
+  for (let attachmentindex = 0; attachmentindex < reference2.attachments.length; attachmentindex++) {
+    if (reference2.attachments[attachmentindex].itemType !== "attachment")
+      continue;
+    if (reference2.attachments[attachmentindex].select == void 0) {
+      reference2.attachments[attachmentindex].select = "";
+    }
+    const selectedFilePath = "[" + reference2.attachments[attachmentindex].title + "](" + encodeURI(reference2.attachments[attachmentindex].select) + ")";
+    filesPathList.push(selectedFilePath);
+  }
+  const filesPathListString = filesPathList.join("; ");
+  return filesPathListString;
+}
+function createZoteroReaderPathLink(reference2) {
+  if (reference2.attachments.length == 0)
+    return "{{localFilePathLink}}";
+  const filesPathList = [];
+  for (let attachmentindex = 0; attachmentindex < reference2.attachments.length; attachmentindex++) {
+    if (reference2.attachments[attachmentindex].itemType !== "attachment")
+      continue;
+    if (reference2.attachments[attachmentindex].select == void 0) {
+      reference2.attachments[attachmentindex].select = "";
+    }
+    const selectedFilePath = "[" + reference2.attachments[attachmentindex].title + "](" + encodeURI(reference2.attachments[attachmentindex].select).replace("select", "open-pdf") + ")";
+    filesPathList.push(selectedFilePath);
+  }
+  const filesPathListString = filesPathList.join("; ");
+  return filesPathListString;
+}
 function createNoteTitle(selectedEntry, exportTitle, exportPath) {
   exportTitle = exportTitle.replace("{{citeKey}}", selectedEntry.citationKey);
   exportTitle = exportTitle.replace("{{citationKey}}", selectedEntry.citationKey);
@@ -1983,7 +2014,6 @@ var fuzzySelectEntryFromJson = class extends import_obsidian2.FuzzySuggestModal 
       if (import_obsidian2.Platform.isDesktopApp) {
         this.focusInput();
       }
-      this.plugin.checkSQLite();
       const jsonPath = this.app.vault.adapter.getBasePath() + "/" + this.plugin.settings.bibPath;
       if (!fs.existsSync(jsonPath)) {
         new import_obsidian2.Notice("No BetterBibTex Json file found at " + jsonPath);
@@ -4025,8 +4055,13 @@ var SettingTab = class extends import_obsidian5.PluginSettingTab {
       yield plugin.saveSettings();
       this.display();
     })));
-    new import_obsidian5.Setting(settingsHighlights).setName("Highlighted").addToggle((text) => text.setValue(settings.isHighlightHighlighted).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(settingsHighlights).setName("Highlighted (markdown").addToggle((text) => text.setValue(settings.isHighlightHighlighted).onChange((value) => __async(this, null, function* () {
       settings.isHighlightHighlighted = value;
+      yield plugin.saveSettings();
+      this.display();
+    })));
+    new import_obsidian5.Setting(settingsHighlights).setName("Highlighted (original colour)").addToggle((text) => text.setValue(settings.isHighlightColoured).onChange((value) => __async(this, null, function* () {
+      settings.isHighlightColoured = value;
       yield plugin.saveSettings();
       this.display();
     })));
@@ -4069,8 +4104,13 @@ var SettingTab = class extends import_obsidian5.PluginSettingTab {
       yield plugin.saveSettings();
       this.display();
     })));
-    new import_obsidian5.Setting(settingsComments).setName("Highlighted").addToggle((text) => text.setValue(settings.isCommentHighlighted).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(settingsComments).setName("Highlighted (markdown)").addToggle((text) => text.setValue(settings.isCommentHighlighted).onChange((value) => __async(this, null, function* () {
       settings.isCommentHighlighted = value;
+      yield plugin.saveSettings();
+      this.display();
+    })));
+    new import_obsidian5.Setting(settingsComments).setName("Highlighted (original colour)").addToggle((text) => text.setValue(settings.isCommentColoured).onChange((value) => __async(this, null, function* () {
+      settings.isCommentColoured = value;
       yield plugin.saveSettings();
       this.display();
     })));
@@ -4119,8 +4159,13 @@ var SettingTab = class extends import_obsidian5.PluginSettingTab {
       yield plugin.saveSettings();
       this.display();
     })));
-    new import_obsidian5.Setting(settingsTags).setName("Highlighted").addToggle((text) => text.setValue(settings.isTagHighlighted).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(settingsTags).setName("Highlighted (markdown)").addToggle((text) => text.setValue(settings.isTagHighlighted).onChange((value) => __async(this, null, function* () {
       settings.isTagHighlighted = value;
+      yield plugin.saveSettings();
+      this.display();
+    })));
+    new import_obsidian5.Setting(settingsTags).setName("Highlighted (original colour)").addToggle((text) => text.setValue(settings.isTagColoured).onChange((value) => __async(this, null, function* () {
+      settings.isTagColoured = value;
       yield plugin.saveSettings();
       this.display();
     })));
@@ -4381,6 +4426,7 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       isCommentItalic,
       isCommentBold,
       isCommentHighlighted,
+      isCommentColoured,
       isCommentBullet,
       isCommentBlockquote,
       isCommentQuote,
@@ -4389,6 +4435,7 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       isHighlightItalic,
       isHighlightBold,
       isHighlightHighlighted,
+      isHighlightColoured,
       isHighlightBullet,
       isHighlightBlockquote,
       isHighlightQuote,
@@ -4397,6 +4444,7 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       isTagItalic,
       isTagBold,
       isTagHighlighted,
+      isTagColoured,
       isTagBullet,
       isTagBlockquote,
       isTagQuote,
@@ -4413,32 +4461,44 @@ var MyPlugin = class extends import_obsidian6.Plugin {
     ] = [
       isHighlightItalic ? "*" : "",
       isHighlightBold ? "**" : "",
-      isHighlightHighlighted ? "==" : "",
+      isHighlightHighlighted == true && isHighlightColoured == false ? "==" : "",
       isHighlightBullet ? "- " : "",
       isHighlightBlockquote ? "> " : "",
       isHighlightQuote ? "\u201C" : "",
       isHighlightQuote ? "\u201D" : ""
     ];
-    const highlightFormatBefore = highlightHighlighted + highlightBold + highlightItalic + highlightQuoteOpen;
-    const highlightFormatAfter = highlightQuoteClose + highlightItalic + highlightBold + highlightHighlighted + highlightCustomTextAfter;
+    let highlightColouredBefore = "";
+    let highlightColouredAfter = "";
+    if (isHighlightColoured == true) {
+      highlightColouredBefore = '<mark style="background: SELECTED_COLOUR>';
+      highlightColouredAfter = "</mark>";
+    }
+    const highlightFormatBefore = highlightHighlighted + highlightColouredBefore + highlightBold + highlightItalic + highlightQuoteOpen;
+    const highlightFormatAfter = highlightQuoteClose + highlightItalic + highlightBold + highlightColouredAfter + highlightHighlighted + highlightCustomTextAfter;
     let highlightPrepend = "";
     if (highlightBullet != "" || highlightBlockquote != "") {
       highlightPrepend = "\n" + highlightBullet + highlightBlockquote + highlightCustomTextBefore;
     }
     const commentItalic = isCommentItalic ? "*" : "";
     const commentBold = isCommentBold ? "**" : "";
-    const commentHighlighted = isCommentHighlighted ? "==" : "";
+    const commentHighlighted = isCommentHighlighted == true && isCommentColoured == false ? "==" : "";
     const commentBullet = isCommentBullet ? "- " : "";
     const commentBlockquote = isCommentBlockquote ? "> " : "";
     const commentQuoteOpen = isCommentQuote ? "\u201C" : "";
     const commentQuoteClose = isCommentQuote ? "\u201D" : "";
-    const commentFormatBefore = commentHighlighted + commentBold + commentItalic + commentQuoteOpen;
-    const commentFormatAfter = commentQuoteClose + commentItalic + commentBold + commentHighlighted + commentCustomTextAfter;
+    let commentColouredBefore = "";
+    let commentColouredAfter = "";
+    if (isCommentColoured == true) {
+      commentColouredBefore = '<mark style="background: SELECTED_COLOUR>';
+      commentColouredAfter = "</mark>";
+    }
+    const commentFormatBefore = commentHighlighted + commentColouredBefore;
+    commentBold + commentItalic + commentQuoteOpen;
+    const commentFormatAfter = commentQuoteClose + commentItalic + commentBold + commentColouredAfter + commentHighlighted + commentCustomTextAfter;
     let commentPrepend = "";
     if (commentBullet != "" || commentBlockquote != "") {
       commentPrepend = "\n" + commentBullet + commentBlockquote + commentCustomTextBefore;
     }
-    ;
     const [
       tagHash,
       tagItalic,
@@ -4452,14 +4512,20 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       isTagHash ? "#" : "",
       isTagItalic ? "*" : "",
       isTagBold ? "**" : "",
-      isTagHighlighted ? "==" : "",
+      isTagHighlighted == true && isTagColoured == false ? "==" : "",
       isTagBullet ? "- " : "",
       isTagBlockquote ? "> " : "",
       isTagQuote ? "\u201C" : "",
       isTagQuote ? "\u201D" : ""
     ];
-    const tagFormatBefore = tagHash + tagHighlighted + tagBold + tagItalic + tagQuoteOpen;
-    const tagFormatAfter = tagQuoteClose + tagItalic + tagBold + tagHighlighted + tagCustomTextAfter;
+    let tagColouredBefore = "";
+    let tagColouredAfter = "";
+    if (isTagColoured == true) {
+      tagColouredBefore = '<mark style="background: SELECTED_COLOUR>';
+      tagColouredAfter = "</mark>";
+    }
+    const tagFormatBefore = tagHash + tagHighlighted + tagColouredBefore + tagBold + tagItalic + tagQuoteOpen;
+    const tagFormatAfter = tagQuoteClose + tagItalic + tagBold + tagColouredAfter + tagHighlighted + tagCustomTextAfter;
     let tagPrepend = "";
     if (tagBullet != "" || tagBlockquote != "") {
       tagPrepend = "\n" + tagBullet + tagBlockquote + tagCustomTextBefore;
@@ -4523,6 +4589,10 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       selectedEntry.citationFull = selectedEntry.citationFull.replace("pp. ", "");
     }
     selectedEntry.file = createLocalFileLink(selectedEntry);
+    selectedEntry.filePath = createLocalFilePathLink(selectedEntry);
+    console.log(selectedEntry.filePath);
+    selectedEntry.zoteroReaderLink = createZoteroReaderPathLink(selectedEntry);
+    console.log(selectedEntry.zoteroReaderLink);
     const entriesArray = Object.keys(selectedEntry);
     note = replaceAllTemplates(entriesArray, note, selectedEntry);
     note = note.replace(/```/g, "HEREISAPLACEHOLDERFORBACKTICK");
@@ -5046,22 +5116,25 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       if (lineElements.highlightText === "Extracted Annotations") {
         lineElements.annotationType = "typeExtractedHeading";
       }
+      const highlightFormatBeforeColoured = highlightFormatBefore.replace("SELECTED_COLOUR", lineElements.highlightColour + ";");
+      const commentFormatBeforeColoured = highlightFormatBefore.replace("SELECTED_COLOUR", lineElements.highlightColour + ";");
+      const tagFormatBeforeColoured = highlightFormatBefore.replace("SELECTED_COLOUR", lineElements.highlightColour + ";");
       if (lineElements.annotationType === "typeExtractedHeading") {
         lineElements.rowEdited = "**" + lineElements.rowOriginal.toUpperCase() + "**";
       }
       if (lineElements.highlightText != "") {
-        lineElements.highlightFormatted = highlightPrepend + highlightFormatBefore + lineElements.highlightText + highlightFormatAfter + " " + lineElements.citeKey + " ";
-        lineElements.highlightFormattedNoPrepend = highlightFormatBefore + lineElements.highlightText + highlightFormatAfter + " " + lineElements.citeKey + " ";
+        lineElements.highlightFormatted = highlightPrepend + highlightFormatBeforeColoured + lineElements.highlightText + highlightFormatAfter + " " + lineElements.citeKey + " ";
+        lineElements.highlightFormattedNoPrepend = highlightFormatBeforeColoured + lineElements.highlightText + highlightFormatAfter + " " + lineElements.citeKey + " ";
       } else {
         lineElements.highlightFormatted = "";
         lineElements.highlightFormattedNoPrepend = "";
       }
       if (lineElements.commentText != "" && lineElements.highlightText != "") {
-        lineElements.commentFormatted = commentPrepend + commentFormatBefore + lineElements.commentText + commentFormatAfter + " ";
-        lineElements.commentFormattedNoPrepend = commentFormatBefore + lineElements.commentText + commentFormatAfter + " ";
+        lineElements.commentFormatted = commentPrepend + commentFormatBeforeColoured + lineElements.commentText + commentFormatAfter + " ";
+        lineElements.commentFormattedNoPrepend = commentFormatBeforeColoured + lineElements.commentText + commentFormatAfter + " ";
       } else if (lineElements.commentText != "" && lineElements.highlightText == "") {
-        lineElements.commentFormatted = commentPrepend + commentFormatBefore + lineElements.commentText + commentFormatAfter + " " + lineElements.zoteroBackLink + " ";
-        lineElements.commentFormattedNoPrepend = commentFormatBefore + lineElements.commentText + commentFormatAfter + " " + lineElements.zoteroBackLink + " ";
+        lineElements.commentFormatted = commentPrepend + commentFormatBeforeColoured + lineElements.commentText + commentFormatAfter + " " + lineElements.zoteroBackLink + " ";
+        lineElements.commentFormattedNoPrepend = commentFormatBeforeColoured + lineElements.commentText + commentFormatAfter + " " + lineElements.zoteroBackLink + " ";
       } else {
         lineElements.commentFormatted = "";
         lineElements.commentFormattedNoPrepend = "";

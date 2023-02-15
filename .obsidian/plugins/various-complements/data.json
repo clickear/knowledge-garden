@@ -47,6 +47,14 @@
   },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
+    "233": {
+      "233": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1676447356426
+        }
+      }
+    },
     "obsidian": {
       "obsidian": {
         "internalLink": {
@@ -370,8 +378,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 8,
-          "lastUpdated": 1674186167741
+          "count": 11,
+          "lastUpdated": 1676455251257
         }
       }
     },
@@ -584,6 +592,46 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1674180363173
+        }
+      }
+    },
+    "mysql领域": {
+      "mysql领域": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1675678742930
+        }
+      }
+    },
+    "回表": {
+      "回表": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1676449277171
+        }
+      }
+    },
+    "note": {
+      "note": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1676451725791
+        }
+      }
+    },
+    "ti": {
+      "ti": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1676451748952
+        }
+      }
+    },
+    "co-summary": {
+      "co-abstract": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1676455102163
         }
       }
     }

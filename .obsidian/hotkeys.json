@@ -209,5 +209,14 @@
       ],
       "key": ","
     }
+  ],
+  "obsidian-footnotes:insert-footnote": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "1"
+    }
   ]
 }

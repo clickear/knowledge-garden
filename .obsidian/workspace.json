@@ -8,22 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "69cd2bcfb8aa5505",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "obsidian-projects",
-              "state": {},
-              "pinned": true
-            }
-          },
-          {
-            "id": "ed3ff0ae8ea01600",
+            "id": "a6c00c1e8e441497",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/java/java基础/HashMap.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -31,12 +21,12 @@
             }
           },
           {
-            "id": "47e93575de5e7d94",
+            "id": "fed989ed895d49c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-03.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -44,12 +34,12 @@
             }
           },
           {
-            "id": "5ac9c9c7d2f2e8a3",
+            "id": "3db7183ec4939762",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/java/§ java.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -57,59 +47,19 @@
             }
           },
           {
-            "id": "e8c535f75dc29009",
+            "id": "89947c33e592de27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/java/java基础/§ java基础.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "914a9f12466f46fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/java/java基础/java集合.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0a342c121c49882e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/java/java基础/HashMap.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4be3a033a30fa293",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/java/java基础/HashMap.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-03.md"
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md"
               }
             }
           },
@@ -182,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-03.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,9 +144,9 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-03.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
@@ -205,20 +155,20 @@
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
-                  "collapse-color-groups": true,
+                  "collapse-color-groups": false,
                   "colorGroups": [],
-                  "collapse-display": true,
+                  "collapse-display": false,
                   "showArrow": false,
                   "textFadeMultiplier": 0,
                   "nodeSizeMultiplier": 1,
                   "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
+                  "collapse-forces": false,
                   "centerStrength": 0.518713248970312,
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8735804647362985,
-                  "close": false
+                  "scale": 0.29430074976446324,
+                  "close": true
                 }
               }
             }
@@ -229,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-03.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -290,17 +240,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "47e93575de5e7d94",
+  "active": "a6c00c1e8e441497",
   "lastOpenFiles": [
-    "Spaces/1-Project/会计/CPA/∑ 会计基础.md",
-    "Spaces/1-Project/会计/CPA/CPA.md",
-    "Spaces/2-Area/软技能/软技能.md",
-    "Calendar/Daily notes/2023-02-02.md",
-    "Calendar/Daily notes/vpn.md",
-    "Sources/Books/读书笔记/» 读书笔记工作流.md",
-    "Sources/Books/读书笔记/📚如何阅读一本书.md",
-    "Sources/Books/读书笔记/∑ 读书笔记.md",
-    "Spaces/1-Project/时间管理/如何做年度计划.md",
-    "Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
+    "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql调优.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
+    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Calendar/Daily notes/2023-02-15.md",
+    "Spaces/1-Project/时间管理/2023年度计划.md",
+    "Spaces/2-Area/java/§ java.md"
   ]
 }

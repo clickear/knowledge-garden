@@ -41,5 +41,7 @@
   "keyboard-analyzer",
   "metadata-extractor",
   "obsidian-table-generator",
-  "emoji-shortcodes"
+  "emoji-shortcodes",
+  "better-fn",
+  "obsidian-footnotes"
 ]
