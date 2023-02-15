@@ -12781,7 +12781,26 @@
         }
       }
     },
+    "headings": [
+      {
+        "heading": "索引覆盖的优先级比[[索引下推]]高（此规则，不确定与优化器优化是否有关联）",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "索引下推",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/索引下推.md"
+      }
+    ],
     "backlinks": [
+      {
+        "fileName": "索引下推",
+        "link": "索引覆盖#^4dfc81",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
+        "cleanLink": "索引覆盖",
+        "displayText": "索引覆盖与索引下推的优先级"
+      },
       {
         "fileName": "索引",
         "link": "索引覆盖",
@@ -12824,7 +12843,26 @@
         }
       }
     },
+    "headings": [
+      {
+        "heading": "[[索引覆盖#^4dfc81 |索引覆盖与索引下推的优先级]]",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "索引覆盖#^4dfc81",
+        "cleanLink": "索引覆盖",
+        "displayText": "索引覆盖与索引下推的优先级",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md"
+      }
+    ],
     "backlinks": [
+      {
+        "fileName": "索引覆盖",
+        "link": "索引下推",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md"
+      },
       {
         "fileName": "查询语句执行",
         "link": "索引下推",
@@ -14521,7 +14559,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
     "frontmatter": {
       "date created": "2022-09-07",
-      "date modified": "2023-02-06",
+      "date modified": "2022-09-07",
       "title": "∑ mysql",
       "position": {
         "start": {
@@ -14559,7 +14597,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
     "frontmatter": {
       "date created": "2022-09-07",
-      "date modified": "2023-02-06",
+      "date modified": "2022-09-21",
       "title": "§ mysql目录",
       "position": {
         "start": {
@@ -47946,43 +47984,6 @@
     "links": [
       {
         "link": "ACCESS 笔记组织法"
-      }
-    ]
-  },
-  {
-    "fileName": "2023-02-15",
-    "relativePath": "Calendar/Daily notes/2023-02-15.md",
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2023-02-06",
-    "relativePath": "Calendar/Daily notes/2023-02-06.md",
-    "frontmatter": {
-      "title": "2023-02-06",
-      "date created": "2023-02-06",
-      "date modified": "2023-02-06",
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 4,
-          "col": 3,
-          "offset": 78
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
       }
     ]
   },

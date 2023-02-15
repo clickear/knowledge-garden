@@ -1,7 +1,7 @@
 ---
 date created: 2022-09-13
 date modified: 2023-02-15
-title: 资料
+title: mysql调优
 ---
 
 ## 优化步骤
@@ -147,7 +147,7 @@ select * from user where name = 'xx' and age > 12 and sex = 1;
 
    
 
-# 资料
+## 资料
 
 [MySQL 三万字精华总结 + 面试100 问，和面试官扯皮绰绰有余（收藏系列） - 掘金](https://juejin.cn/post/6850037271233331208)
 
