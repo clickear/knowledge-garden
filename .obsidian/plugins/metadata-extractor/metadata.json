@@ -15181,7 +15181,7 @@
     "frontmatter": {
       "date created": "2022-09-13",
       "date modified": "2023-02-15",
-      "title": "资料",
+      "title": "mysql调优",
       "position": {
         "start": {
           "line": 0,
@@ -15191,7 +15191,7 @@
         "end": {
           "line": 4,
           "col": 3,
-          "offset": 68
+          "offset": 73
         }
       }
     },
@@ -15234,7 +15234,7 @@
       },
       {
         "heading": "资料",
-        "level": 1
+        "level": 2
       }
     ],
     "links": [
@@ -47984,6 +47984,16 @@
     "links": [
       {
         "link": "ACCESS 笔记组织法"
+      }
+    ]
+  },
+  {
+    "fileName": "2023-02-15",
+    "relativePath": "Calendar/Daily notes/2023-02-15.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
       }
     ]
   },
