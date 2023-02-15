@@ -1,8 +1,10 @@
 ---
 date created: 2022-09-07
-date modified: 2022-09-07
+date modified: 2023-02-15
 title: ∑ mysql
 ---
+
+[toc]
 
 ## ::一览mysql
 
