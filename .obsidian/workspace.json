@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5cad1cb39caf095a",
+        "id": "ff43e1c4e6d5d96d",
         "type": "tabs",
         "children": [
           {
-            "id": "9c909077a2bc8460",
+            "id": "a219dc3c68277c7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "年度",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md"
+                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md"
               }
             }
           },
@@ -93,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -128,7 +128,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8127892787287047,
+                  "scale": 0.695787010952895,
                   "close": true
                 }
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,17 +201,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "9c909077a2bc8460",
+  "active": "a219dc3c68277c7e",
   "lastOpenFiles": [
-    "Sources/临时文档/文档备份.md",
-    "Sources/临时文档/日志脱敏.md",
-    "Calendar/Daily notes/2023-02-15.md",
-    "Sources/临时文档/workflow/工作流SDK.pdf",
-    "Sources/临时文档/workflow/工作流扩展功能.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
-    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/未命名 1.md",
-    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-首页推荐门店.md"
+    "Sources/Books/读书笔记/∑ 读书笔记.md",
+    "Sources/Books/微信读书同步/计算机/白帽子讲Web安全（纪念版）-吴翰清.md",
+    "Sources/Books/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md",
+    "Sources/Videos/📹【罗翔】我们为什么要读书？.md",
+    "Sources/Books/读书笔记/» 读书笔记工作流.md",
+    "Sources/Books/读书笔记/📚置身事内 - 热门批注.md",
+    "Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md",
+    "README.md",
+    "HOMEPAGE.md",
+    "AboutTheGarden.md"
   ]
 }

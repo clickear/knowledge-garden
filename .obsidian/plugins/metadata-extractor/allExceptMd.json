@@ -205,10 +205,6 @@
       "relativePath": "Spaces/1-Project/会计"
     },
     {
-      "name": "我的开源项目",
-      "relativePath": "Spaces/1-Project/我的开源项目"
-    },
-    {
       "name": "我的面试指南",
       "relativePath": "Spaces/1-Project/我的面试指南"
     },
@@ -235,10 +231,6 @@
     {
       "name": "java",
       "relativePath": "Spaces/2-Area/java"
-    },
-    {
-      "name": "云计算与云原生",
-      "relativePath": "Spaces/2-Area/云计算与云原生"
     },
     {
       "name": "人与科技融合专题",

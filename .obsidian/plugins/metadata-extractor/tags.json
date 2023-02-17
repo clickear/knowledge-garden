@@ -65,7 +65,7 @@
   },
   {
     "tag": "moc",
-    "tagCount": 47,
+    "tagCount": 45,
     "relativePaths": [
       "Spaces/3-Resource/投资与理财/∑ 投资与理财.md",
       "Spaces/3-Resource/小知识点/∑ 小知识点.md",
@@ -81,11 +81,9 @@
       "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ PKM.md",
       "Spaces/2-Area/人与科技融合专题/个人效率系统打造/§ linux常用命令行.md",
       "Spaces/2-Area/人与科技融合专题/∑ 人与科技融合.md",
-      "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md",
       "Spaces/2-Area/golang入门与精通/∑ golang.md",
       "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
       "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
-      "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
       "Sources/Videos/∑ 视频笔记.md",
       "Sources/Talks/∑ 播客笔记.md",
       "Sources/Papers/∑ 论文笔记.md",
