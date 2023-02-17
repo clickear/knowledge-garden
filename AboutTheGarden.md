@@ -1,7 +1,7 @@
 ---
 comments: true
 date created: 2022-08-06
-date modified: 2022-11-23
+date modified: 2023-02-17
 id: home
 layout: page
 permalink: /
@@ -10,4 +10,16 @@ title: AboutTheGarden
 status: 完成
 ---
 
-基于[GitHub - oldwinter/knowledge-garden: 我的第二大脑 second brain，我的数字花园 digital garden，用obsidian双链笔记软件写作而成](https://github.com/oldwinter/knowledge-garden)改造而来
+基于[oldwinter/knowledge-garden](https://github.com/oldwinter/knowledge-garden) 改造而来。
+
+## 计算机
+
++ [ ] [[§ JVM目录]]
++ [ ] [[§ mysql目录]]
++ [ ] [[§ mq面试]]
++ [ ] [[∑ 分布式算法]]
++ [ ] [[§ 分布式]]
+
+## 团队管理
+
++ [ ] [[团队管理]]
