@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-09
-date modified: 2022-09-09
+date modified: 2023-03-02
 title: readview
 ---
 
@@ -15,15 +15,25 @@ Read View主要是用来做可见性判断的, 即当我们某个事务执行快
  在[[快照读]]时，把未提交事务列表记录下来。  
 	- 在[[可重复读]]隔离级别下，使用的是同一个readview。  
 	- 在[[读已提交]]隔离级别下，会在每次进行快照读时，进行记录。  
-readview包含3部分:
+readview包含3部分:  
 
 - **trx_list** 未提交事务ID列表，用来维护Read View生成时刻系统正活跃的事务ID。  
 - **up_limit_id** 记录trx_list列表中事务ID最小的ID。
 - **low_limit_id** ReadView生成时刻系统尚未分配的下一个事务ID，也就是目前已出现过的事务ID的最大值+1。
 
+![[readView示意图]]
+
+> [!TIP] 技巧💡
+> 1. 一个数据版本，对于一个事务视图来说，除了**自己的更新总是可见**
+> 2. < 低水位。 事务已经提交。**可见**；
+> 3. 在高低水位之间
+> 	1. 不在活跃中的事务集合下，说明reaview生成时刻，事务已经提交了。**可见**
+> 	2. 在活跃中的事务集合下，说明readview生成时刻，事务还在活跃，未提交。**不可见**
+> 5. 高水位，未提交，**不可见**
+
 ## 可见性分析
 
-结合[[MVCC]]可知，会有个[[undolog]]链，首节点是最新的，尾节点是旧记录。在[[快照读]]时，会获取[[readview]]。readview是使用本事务第一次获取的readview还是获取最新的readvew，需要根据[[事务隔离级别]]，[[可重复读|RR]]使用第一次获取的readview，[[读已提交|RC]]则是每次都进行获取最新readview
+结合[[MVCC]]可知，会有个[[undolog]]链，首节点是最新的，尾节点是旧记录。在[[快照读]]时，会获取[[Spaces/1-Project/我的面试指南/mysql/readview]]。readview是使用本事务第一次获取的readview还是获取最新的readvew，需要根据[[事务隔离级别]]，[[可重复读|RR]]使用第一次获取的readview，[[读已提交|RC]]则是每次都进行获取最新readview
 
 步骤:  
 DB_TRX_ID， 当前undolog记录的事务id。

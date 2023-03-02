@@ -24,11 +24,6 @@
     },
     "backlinks": [
       {
-        "fileName": "excalibrain",
-        "link": "About Area",
-        "relativePath": "Extras/Draws/excalibrain.md"
-      },
-      {
         "fileName": "§ TOCs",
         "link": "About Area",
         "relativePath": "Atlas/TOCs/§ TOCs.md"
@@ -6331,11 +6326,6 @@
         "fileName": "∑ 读书笔记",
         "link": "building your second brain读书笔记 - CODE方法",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "building your second brain读书笔记 - CODE方法",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -11792,6 +11782,34 @@
     }
   },
   {
+    "fileName": "两阶段锁",
+    "relativePath": "Spaces/1-Project/我的面试指南/mysql/两阶段锁.md",
+    "frontmatter": {
+      "title": "两阶段锁",
+      "date created": "2023-03-02",
+      "date modified": "2023-03-02",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "§ mysql目录",
+        "link": "两阶段锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md"
+      }
+    ]
+  },
+  {
     "fileName": "查询日志",
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/查询日志.md",
     "frontmatter": {
@@ -12044,7 +12062,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/死锁.md",
     "frontmatter": {
       "date created": "2022-09-13",
-      "date modified": "2022-09-13",
+      "date modified": "2023-03-02",
       "title": "死锁",
       "position": {
         "start": {
@@ -12083,6 +12101,14 @@
       {
         "heading": "如何避免",
         "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "innodb_lock_wait_timeout"
+      },
+      {
+        "link": "innodb_deadlock_detect"
       }
     ],
     "backlinks": [
@@ -14275,7 +14301,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/readview.md",
     "frontmatter": {
       "date created": "2022-09-09",
-      "date modified": "2022-09-09",
+      "date modified": "2023-03-02",
       "title": "readview",
       "position": {
         "start": {
@@ -14331,6 +14357,7 @@
       },
       {
         "link": "readview",
+        "displayText": "Spaces/1-Project/我的面试指南/mysql/readview",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/readview.md"
       },
       {
@@ -14346,6 +14373,10 @@
         "link": "读已提交",
         "displayText": "RC",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/读已提交.md"
+      },
+      {
+        "link": "readView示意图",
+        "relativePath": "Extras/Draws/readView示意图.md"
       }
     ],
     "backlinks": [
@@ -14772,6 +14803,10 @@
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/锁.md"
       },
       {
+        "link": "两阶段锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/两阶段锁.md"
+      },
+      {
         "link": "乐观锁"
       },
       {
@@ -15016,7 +15051,7 @@
     "frontmatter": {
       "title": "mysql领域",
       "date created": "2023-02-06",
-      "date modified": "2023-02-06",
+      "date modified": "2023-03-02",
       "position": {
         "start": {
           "line": 0,
@@ -15050,6 +15085,11 @@
       {
         "heading": "原版书",
         "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "📚高性能MySQL"
       }
     ],
     "backlinks": [
@@ -15270,7 +15310,7 @@
     "frontmatter": {
       "title": "MDL",
       "date created": "2023-03-01",
-      "date modified": "2023-03-01",
+      "date modified": "2023-03-02",
       "position": {
         "start": {
           "line": 0,
@@ -15295,6 +15335,10 @@
       },
       {
         "heading": "如何避免",
+        "level": 2
+      },
+      {
+        "heading": "MDL与行锁",
         "level": 2
       },
       {
@@ -22827,11 +22871,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚置身事内 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚置身事内 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23058,11 +23097,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚三体 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚三体 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23101,11 +23135,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚金字塔原理",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚金字塔原理",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23333,11 +23362,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚这样读书就够了",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚这样读书就够了",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23536,11 +23560,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚认知觉醒 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚认知觉醒 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23569,11 +23588,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚解忧杂货店",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚解忧杂货店",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -23679,11 +23693,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚白夜行",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚白夜行",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24030,11 +24039,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚拆掉思维里的强 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚拆掉思维里的强 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24063,11 +24067,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚思考·快与慢",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚思考·快与慢",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24134,11 +24133,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚如何阅读一本书",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚如何阅读一本书",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24233,11 +24227,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚围城 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚围城 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24457,11 +24446,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚史蒂夫·乔布斯传 - 热门批注",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚史蒂夫·乔布斯传 - 热门批注",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -24640,11 +24624,6 @@
         "fileName": "∑ 读书笔记",
         "link": "📚三重门",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
-      },
-      {
-        "fileName": "excalibrain",
-        "link": "📚三重门",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },
@@ -47041,6 +47020,41 @@
     ]
   },
   {
+    "fileName": "readView示意图",
+    "relativePath": "Extras/Draws/readView示意图.md",
+    "tags": [
+      "excalidraw"
+    ],
+    "frontmatter": {
+      "excalidraw-plugin": "parsed",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "col": 3,
+          "offset": 54
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "Text Elements",
+        "level": 1
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "readview",
+        "link": "readView示意图",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/readview.md"
+      }
+    ]
+  },
+  {
     "fileName": "README 2022-08-21",
     "relativePath": "Extras/Draws/README 2022-08-21.md",
     "tags": [
@@ -47206,168 +47220,6 @@
       {
         "heading": "Text Elements",
         "level": 1
-      }
-    ],
-    "links": [
-      {
-        "link": "building your second brain读书笔记 - CODE方法",
-        "relativePath": "Spaces/1-Project/第二大脑建设专题/building your second brain读书笔记 - CODE方法.md"
-      },
-      {
-        "link": "🔡RIA"
-      },
-      {
-        "link": "📚三体 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚三体 - 热门批注.md"
-      },
-      {
-        "link": "📚三重门",
-        "relativePath": "Sources/Books/读书笔记/📚三重门.md"
-      },
-      {
-        "link": "📚史蒂夫·乔布斯传 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚史蒂夫·乔布斯传 - 热门批注.md"
-      },
-      {
-        "link": "📚围城 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚围城 - 热门批注.md"
-      },
-      {
-        "link": "📚如何阅读一本书",
-        "relativePath": "Sources/Books/读书笔记/📚如何阅读一本书.md"
-      },
-      {
-        "link": "《学会提问》"
-      },
-      {
-        "link": "📚思考·快与慢",
-        "relativePath": "Sources/Books/读书笔记/📚思考·快与慢.md"
-      },
-      {
-        "link": "📚拆掉思维里的强 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚拆掉思维里的强 - 热门批注.md"
-      },
-      {
-        "link": "📚白夜行",
-        "relativePath": "Sources/Books/读书笔记/📚白夜行.md"
-      },
-      {
-        "link": "📚置身事内 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚置身事内 - 热门批注.md"
-      },
-      {
-        "link": "📚解忧杂货店",
-        "relativePath": "Sources/Books/读书笔记/📚解忧杂货店.md"
-      },
-      {
-        "link": "📚认知觉醒 - 热门批注",
-        "relativePath": "Sources/Books/读书笔记/📚认知觉醒 - 热门批注.md"
-      },
-      {
-        "link": "📚这样读书就够了",
-        "relativePath": "Sources/Books/读书笔记/📚这样读书就够了.md"
-      },
-      {
-        "link": "📚金字塔原理",
-        "relativePath": "Sources/Books/读书笔记/📚金字塔原理.md"
-      },
-      {
-        "link": "卡片笔记"
-      },
-      {
-        "link": "§ TOCs",
-        "relativePath": "Atlas/TOCs/§ TOCs.md"
-      },
-      {
-        "link": "About Area",
-        "relativePath": "Spaces/2-Area/About Area.md"
-      },
-      {
-        "link": "GTD"
-      },
-      {
-        "link": "IAAS、PAAS与SAAS"
-      },
-      {
-        "link": "metacloud"
-      },
-      {
-        "link": "raycast插件"
-      },
-      {
-        "link": "∑ 个人简历"
-      },
-      {
-        "link": "什么值得买"
-      },
-      {
-        "link": "价值投资"
-      },
-      {
-        "link": "信息集散中心：滴答清单"
-      },
-      {
-        "link": "健身"
-      },
-      {
-        "link": "区块链与数字货币"
-      },
-      {
-        "link": "合约、配资、期货等金融杠杆"
-      },
-      {
-        "link": "团队协作"
-      },
-      {
-        "link": "团队建设"
-      },
-      {
-        "link": "基于 RSS 的信息体系构建"
-      },
-      {
-        "link": "多维度链接"
-      },
-      {
-        "link": "如何寻找网络资源"
-      },
-      {
-        "link": "实业投资"
-      },
-      {
-        "link": "效率成瘾五味药"
-      },
-      {
-        "link": "效率系统三原则"
-      },
-      {
-        "link": "既要重器轻用，也要万法归一"
-      },
-      {
-        "link": "沟通 - communicate"
-      },
-      {
-        "link": "演讲 - speech"
-      },
-      {
-        "link": "股市"
-      },
-      {
-        "link": "说服 - persuade"
-      },
-      {
-        "link": "谈判 - negotiate"
-      },
-      {
-        "link": "跑步"
-      },
-      {
-        "link": "输入驱动输出，输出倒逼输入"
-      },
-      {
-        "link": "辩论 - debate"
-      },
-      {
-        "link": "饮食"
       }
     ],
     "backlinks": [
@@ -47692,6 +47544,16 @@
     "links": [
       {
         "link": "ACCESS 笔记组织法"
+      }
+    ]
+  },
+  {
+    "fileName": "2023-03-02",
+    "relativePath": "Calendar/Daily notes/2023-03-02.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
       }
     ]
   },
@@ -48253,16 +48115,6 @@
         "fileName": "2023-01-18",
         "link": "SMART",
         "relativePath": "Calendar/Daily notes/2023-01-18.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2023-03-01",
-    "relativePath": "Calendar/Daily notes/2023-03-01.md",
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
       }
     ]
   },
@@ -49076,13 +48928,6 @@
       {
         "link": "Index for 已发布文章和草稿",
         "relativePath": "Atlas/Dataviews/Index for 已发布文章和草稿.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "excalibrain",
-        "link": "§ TOCs",
-        "relativePath": "Extras/Draws/excalibrain.md"
       }
     ]
   },

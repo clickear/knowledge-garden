@@ -178,10 +178,11 @@
   },
   {
     "tag": "excalidraw",
-    "tagCount": 6,
+    "tagCount": 7,
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
       "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
+      "Extras/Draws/readView示意图.md",
       "Extras/Draws/README 2022-08-21.md",
       "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
       "Extras/Draws/excalibrain.md",

@@ -4,15 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "be76da1040d85e7d",
+        "id": "920c742f75dfabf8",
         "type": "tabs",
         "children": [
           {
-            "id": "e0b1ad5584e72eb2",
+            "id": "436b6ca117999447",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c38238a73477e22f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Extras/Draws/readView示意图.md"
+              }
             }
           }
         ]
@@ -45,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "年度",
+                "query": "readview",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,7 +80,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "92910ae8836a7b22",
@@ -77,7 +93,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md"
+              }
             }
           },
           {
@@ -86,6 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,6 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -131,6 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,33 +212,36 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "e0b1ad5584e72eb2",
+  "active": "436b6ca117999447",
   "lastOpenFiles": [
+    "Extras/Draws/readView示意图.md",
+    "Spaces/1-Project/我的面试指南/mysql/readview.md",
+    "Spaces/1-Project/我的面试指南/mysql/MVCC.md",
+    "Spaces/1-Project/我的面试指南/杂文/threadlocal.md",
+    "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
+    "Spaces/1-Project/我的面试指南/杂文/零拷贝.md",
+    "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
+    "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
+    "Extras/Draws/excalibrain.svg",
+    "Extras/Draws/excalibrain.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
+    "Extras/Draws/readView示意图.svg",
+    "Calendar/Daily notes/2023-03-02.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
+    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Spaces/1-Project/我的面试指南/mysql/死锁.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引.md",
+    "Spaces/1-Project/我的面试指南/mysql/本地事务.md",
+    "Spaces/1-Project/我的面试指南/mysql/两阶段锁.md",
+    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+    "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
+    "Spaces/1-Project/我的面试指南/mysql/MDL.md",
     "Calendar/Daily notes/2023-03-01.md",
     "Spaces/1-Project/我的面试指南/mysql/一条简单SQL的加锁实现分析.md",
     "Spaces/1-Project/我的面试指南/mysql/锁.md",
-    "Spaces/1-Project/我的面试指南/mysql/MDL.md",
-    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引.md",
     "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
-    "Spaces/1-Project/我的面试指南/mysql/二阶段提交.md",
-    "Spaces/1-Project/我的面试指南/mysql/错误日志.md",
-    "Spaces/1-Project/我的面试指南/mysql/当前读.md",
-    "Spaces/1-Project/我的面试指南/mysql/读未提交.md",
-    "Spaces/1-Project/我的面试指南/mysql/读已提交.md",
-    "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
-    "Spaces/1-Project/我的面试指南/mysql/redolog和undolog的区别.md",
-    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/1-Project/我的面试指南/mysql/日志.md",
-    "Spaces/1-Project/我的面试指南/mysql/undolog.md",
-    "Spaces/1-Project/我的面试指南/mysql/redolog.md",
-    "AboutTheGarden.md",
-    "HOMEPAGE.md",
-    "Sources/临时文档/workflow/工作流扩展功能.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
-    "Sources/Books/读书笔记/» 读书笔记工作流.md",
-    "Sources/Books/读书笔记/∑ 读书笔记.md",
-    "Sources/Books/微信读书同步/计算机/白帽子讲Web安全（纪念版）-吴翰清.md"
+    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md"
   ]
 }

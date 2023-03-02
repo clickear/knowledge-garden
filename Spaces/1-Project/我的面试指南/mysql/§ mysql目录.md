@@ -70,6 +70,7 @@ title: § mysql目录
 	+ [[binlog]]
 	+ [[undolog]]
 + [[锁]] [大厂面试05期-说一说你对MySQL中锁的理解？](https://mp.weixin.qq.com/s/pTpPE33X-iYULYt8DOPp2w)
+	+ [[两阶段锁]]
 	+ 加锁机制
 		+ [[乐观锁]]
 		+ [[悲观锁]]
