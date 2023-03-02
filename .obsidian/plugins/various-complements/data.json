@@ -370,16 +370,16 @@
     "co-info": {
       "co-info": {
         "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1663475788227
+          "count": 3,
+          "lastUpdated": 1677656425407
         }
       }
     },
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 11,
-          "lastUpdated": 1676455251257
+          "count": 12,
+          "lastUpdated": 1676613041251
         }
       }
     },
@@ -648,6 +648,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1676604356633
+        }
+      }
+    },
+    "redolog": {
+      "redolog": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1677649056037
         }
       }
     }

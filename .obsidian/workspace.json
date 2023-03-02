@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ff43e1c4e6d5d96d",
+        "id": "be76da1040d85e7d",
         "type": "tabs",
         "children": [
           {
-            "id": "a219dc3c68277c7e",
+            "id": "e0b1ad5584e72eb2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -32,7 +27,7 @@
       {
         "id": "987dbc5670d8f4fa",
         "type": "tabs",
-        "dimension": 74.3664717348928,
+        "dimension": 54.41008018327606,
         "children": [
           {
             "id": "a4d1994dfc9f1870",
@@ -75,16 +70,14 @@
       {
         "id": "92910ae8836a7b22",
         "type": "tabs",
-        "dimension": 25.633528265107213,
+        "dimension": 45.58991981672394,
         "children": [
           {
             "id": "e3c3bc13cb0131c1",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md"
-              }
+              "state": {}
             }
           },
           {
@@ -93,7 +86,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +97,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -128,7 +119,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.695787010952895,
+                  "scale": 0.9689116517249272,
                   "close": true
                 }
               }
@@ -140,7 +131,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Books/读书笔记/» 读书笔记工作流.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +142,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -183,6 +173,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:新建白板": false,
       "templater-obsidian:Templater": false,
       "obsidian-weread-plugin:Weread": false,
       "obsidian-spaced-repetition:复习卡片": false,
@@ -195,23 +186,38 @@
       "obsidian-stille:Toggle Stille": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:Create new canvas": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "a219dc3c68277c7e",
+  "active": "e0b1ad5584e72eb2",
   "lastOpenFiles": [
-    "Sources/Books/读书笔记/∑ 读书笔记.md",
-    "Sources/Books/微信读书同步/计算机/白帽子讲Web安全（纪念版）-吴翰清.md",
-    "Sources/Books/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md",
-    "Sources/Videos/📹【罗翔】我们为什么要读书？.md",
-    "Sources/Books/读书笔记/» 读书笔记工作流.md",
-    "Sources/Books/读书笔记/📚置身事内 - 热门批注.md",
-    "Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md",
-    "README.md",
+    "Calendar/Daily notes/2023-03-01.md",
+    "Spaces/1-Project/我的面试指南/mysql/一条简单SQL的加锁实现分析.md",
+    "Spaces/1-Project/我的面试指南/mysql/锁.md",
+    "Spaces/1-Project/我的面试指南/mysql/MDL.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md",
+    "Spaces/1-Project/我的面试指南/mysql/二阶段提交.md",
+    "Spaces/1-Project/我的面试指南/mysql/错误日志.md",
+    "Spaces/1-Project/我的面试指南/mysql/当前读.md",
+    "Spaces/1-Project/我的面试指南/mysql/读未提交.md",
+    "Spaces/1-Project/我的面试指南/mysql/读已提交.md",
+    "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
+    "Spaces/1-Project/我的面试指南/mysql/redolog和undolog的区别.md",
+    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
+    "Spaces/1-Project/我的面试指南/mysql/日志.md",
+    "Spaces/1-Project/我的面试指南/mysql/undolog.md",
+    "Spaces/1-Project/我的面试指南/mysql/redolog.md",
+    "AboutTheGarden.md",
     "HOMEPAGE.md",
-    "AboutTheGarden.md"
+    "Sources/临时文档/workflow/工作流扩展功能.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
+    "Sources/Books/读书笔记/» 读书笔记工作流.md",
+    "Sources/Books/读书笔记/∑ 读书笔记.md",
+    "Sources/Books/微信读书同步/计算机/白帽子讲Web安全（纪念版）-吴翰清.md"
   ]
 }
