@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
+                "file": "Extras/Templates/其他/mermaid模板/mermaid模板.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -29,8 +29,22 @@
                 "file": "Extras/Draws/readView示意图.md"
               }
             }
+          },
+          {
+            "id": "e28390b8b896855a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -60,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "readview",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -80,8 +94,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -94,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md"
+                "file": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md"
               }
             }
           },
@@ -104,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -151,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
+                "file": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,9 +225,14 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "436b6ca117999447",
+  "active": "e28390b8b896855a",
   "lastOpenFiles": [
+    "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
+    "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Spaces/1-Project/我的面试指南/mysql/redolog.md",
     "Extras/Draws/readView示意图.md",
+    "Calendar/Daily notes/2023-03-03.md",
     "Spaces/1-Project/我的面试指南/mysql/readview.md",
     "Spaces/1-Project/我的面试指南/mysql/MVCC.md",
     "Spaces/1-Project/我的面试指南/杂文/threadlocal.md",
@@ -229,7 +247,6 @@
     "Calendar/Daily notes/2023-03-02.md",
     "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
     "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
     "Spaces/1-Project/我的面试指南/mysql/死锁.md",
     "Spaces/1-Project/我的面试指南/mysql/索引.md",
     "Spaces/1-Project/我的面试指南/mysql/本地事务.md",
@@ -238,10 +255,6 @@
     "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
     "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
     "Spaces/1-Project/我的面试指南/mysql/MDL.md",
-    "Calendar/Daily notes/2023-03-01.md",
-    "Spaces/1-Project/我的面试指南/mysql/一条简单SQL的加锁实现分析.md",
-    "Spaces/1-Project/我的面试指南/mysql/锁.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引下推.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引覆盖.md"
+    "Calendar/Daily notes/2023-03-01.md"
   ]
 }

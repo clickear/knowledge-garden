@@ -33,7 +33,7 @@ readview包含3部分:
 
 ## 可见性分析
 
-结合[[MVCC]]可知，会有个[[undolog]]链，首节点是最新的，尾节点是旧记录。在[[快照读]]时，会获取[[Spaces/1-Project/我的面试指南/mysql/readview]]。readview是使用本事务第一次获取的readview还是获取最新的readvew，需要根据[[事务隔离级别]]，[[可重复读|RR]]使用第一次获取的readview，[[读已提交|RC]]则是每次都进行获取最新readview
+结合[[MVCC]]可知，会有个[[undolog]]链，首节点是最新的，尾节点是旧记录。在[[快照读]]时，会获取[[readview]]。readview是使用本事务第一次获取的readview还是获取最新的readvew，需要根据[[事务隔离级别]]，[[可重复读|RR]]使用第一次获取的readview，[[读已提交|RC]]则是每次都进行获取最新readview
 
 步骤:  
 DB_TRX_ID， 当前undolog记录的事务id。

@@ -2,12 +2,13 @@
 aliases:
   - 事务日志
 date created: 2022-09-07
-date modified: 2022-09-09
+date modified: 2023-03-06
 title: redolog
 ---
 
 > [!TIP] 记录数据被修改后的样子💡  
-> 。因为[[changebuffer]]是存在内存中的，万一机器重启，change buffer中的更改没有来得及更新到磁盘，就需要根据[[redolog]]来找回这些更新。
+> 因为[[changebuffer]]是存在内存中的，万一机器重启，change buffer中的更改没有来得及更新到磁盘，就需要根据[[redolog]]来找回这些更新。  
+> redo log里记录了数据页的修改以及change buffer新写入的信息。
 
 redo log包括两部分：一是内存中的日志缓冲(redo log buffer)，该部分日志是易失性的；二是磁盘上的重做日志文件(redo log file)，该部分日志是持久的，并且是事务的记录是顺序追加的，性能非常高(磁盘的[[顺序读写 |顺序写性能]]逼内存的写性能差不了太多)。
 
