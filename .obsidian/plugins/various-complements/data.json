@@ -378,8 +378,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 17,
-          "lastUpdated": 1678100733154
+          "count": 18,
+          "lastUpdated": 1678246407838
         }
       }
     },
@@ -662,8 +662,16 @@
     "changebuffer": {
       "changebuffer": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1678100884274
+          "count": 3,
+          "lastUpdated": 1678242829110
+        }
+      }
+    },
+    "changbuffer": {
+      "changbuffer": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1678246661661
         }
       }
     }

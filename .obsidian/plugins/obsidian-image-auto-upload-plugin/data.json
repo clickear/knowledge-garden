@@ -4,7 +4,7 @@
   "uploadServer": "http://127.0.0.1:36677/upload",
   "picgoCorePath": "",
   "menuMode": "auto",
-  "workOnNetWork": true,
+  "workOnNetWork": false,
   "fixPath": false,
   "applyImage": true
 }

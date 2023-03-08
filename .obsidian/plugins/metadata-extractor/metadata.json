@@ -13414,7 +13414,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
     "frontmatter": {
       "date created": "2022-09-07",
-      "date modified": "2022-09-09",
+      "date modified": "2023-03-08",
       "title": "更新语句执行",
       "position": {
         "start": {
@@ -13432,6 +13432,10 @@
     "headings": [
       {
         "heading": ":: 流程",
+        "level": 2
+      },
+      {
+        "heading": ":: 带[[changebuffer]]的更新过程 [^1]",
         "level": 2
       }
     ],
@@ -13455,6 +13459,10 @@
       {
         "link": "binlog",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/binlog.md"
+      },
+      {
+        "link": "changebuffer",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md"
       }
     ],
     "backlinks": [
@@ -13467,6 +13475,13 @@
         "fileName": "§ mysql目录",
         "link": "更新语句执行",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md"
+      },
+      {
+        "fileName": "changebuffer",
+        "link": "更新语句执行#:: 带 changebuffer 的更新过程 [ 1",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
+        "cleanLink": "更新语句执行",
+        "displayText": "更新语句执行 > :: 带 changebuffer 的更新过程 [ 1"
       }
     ]
   },
@@ -14948,7 +14963,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
     "frontmatter": {
       "date created": "2022-09-07",
-      "date modified": "2023-03-01",
+      "date modified": "2023-03-06",
       "title": "∑ mysql",
       "position": {
         "start": {
@@ -15598,7 +15613,7 @@
         "level": 2
       },
       {
-        "heading": "merge操作(磁盘的数据不是最新的，需要与changebuffer进行合并恢复到缓冲池中)",
+        "heading": "merge操作(磁盘的数据不是最新的，需要与changebuffer进行合并恢复到缓冲池中，即)",
         "level": 3
       },
       {
@@ -15620,6 +15635,10 @@
       {
         "heading": "::QA",
         "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
       }
     ],
     "links": [
@@ -15631,6 +15650,10 @@
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
       },
       {
+        "link": "changebuffer",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md"
+      },
+      {
         "link": "redolog",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/redolog.md"
       },
@@ -15639,17 +15662,22 @@
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md"
       },
       {
-        "link": "顺序读写"
-      },
-      {
-        "link": "随机读书"
-      },
-      {
         "link": "changebuffer",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/changebuffer.md"
+      },
+      {
+        "link": "更新语句执行#:: 带 changebuffer 的更新过程 [ 1",
+        "cleanLink": "更新语句执行",
+        "displayText": "更新语句执行 > :: 带 changebuffer 的更新过程 [ 1",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md"
       }
     ],
     "backlinks": [
+      {
+        "fileName": "更新语句执行",
+        "link": "changebuffer",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md"
+      },
       {
         "fileName": "更新语句执行",
         "link": "changebuffer",
@@ -20564,16 +20592,6 @@
         "fileName": "2023-02-02",
         "link": "vpn",
         "relativePath": "Calendar/Daily notes/2023-02-02.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2023-03-02",
-    "relativePath": "Calendar/Daily notes/2023-03-02.md",
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
       }
     ]
   },

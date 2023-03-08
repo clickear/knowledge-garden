@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-07
-date modified: 2023-03-06
+date modified: 2023-03-08
 title: changebuffer
 ---
 
@@ -31,6 +31,10 @@ title: changebuffer
 1. 原始数据页加载到 Buffer Pool 时
 2. 系统后台定时触发 merge 操作
 3. MySQL 数据库正常关闭时。
+
+## 带changebuffer的更新过程
+
+![[更新语句执行#:: 带 changebuffer 的更新过程 [ 1]]
 
 ### 持久化操作
 
