@@ -88,6 +88,8 @@ function getFocusInfo(el) {
     } else if (cursor.tagName === "LI") {
       focusType = "LI";
       focusTarget = cursor;
+    } else if (cursor.hasClass("heading-collapse-indicator")) {
+      return null;
     }
     if ((_a = cursor.parentElement) == null ? void 0 : _a.hasClass("markdown-preview-section")) {
       focusBlock = cursor;
@@ -152,6 +154,10 @@ var FocusManager = class {
         }
       });
     });
+    this.init();
+  }
+  init() {
+    this.clearAll();
     document.body.classList.add(this.classes["enabled"]);
   }
   dim(elements, animation) {
@@ -338,7 +344,7 @@ var FocusManager = class {
     this.undim(Array.from(pane.querySelectorAll(`.${this.classes["dimmed"]}`)), animation);
     this.paneInfo.delete(pane);
   }
-  clearAll(animation = true) {
+  clearAll(animation = false) {
     this.undim(Array.from(document.querySelectorAll(`.${this.classes["dimmed"]}`)), animation);
     this.paneInfo = /* @__PURE__ */ new WeakMap();
   }
@@ -354,13 +360,17 @@ var DEFAULT_SETTINGS = {
   contentBehavior: "none",
   focusScope: "content",
   enableList: false,
-  focusSensitivity: 1600
+  focusSensitivity: 1600,
+  indicator: true,
+  isEnabled: true
 };
 var FocusPlugin = class extends import_obsidian.Plugin {
   constructor() {
     super(...arguments);
     this.focusManager = new FocusManager();
     this.lastClick = 0;
+    this.indicator = null;
+    this.indicatorEl = document.createElement("div");
   }
   getPaneState() {
     let view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
@@ -381,6 +391,13 @@ var FocusPlugin = class extends import_obsidian.Plugin {
           this.focusManager.clearAll();
         }
       });
+      this.addCommand({
+        id: "toggle-focus-mode",
+        name: "Toggle Focus Mode",
+        callback: () => {
+          this.toggle();
+        }
+      });
       this.addSettingTab(new FocusPluginSettingTab(this.app, this));
       this.registerEvent(this.app.workspace.on("layout-change", () => {
         let paneState = this.getPaneState();
@@ -398,6 +415,8 @@ var FocusPlugin = class extends import_obsidian.Plugin {
         this.lastClick = evt.timeStamp;
       });
       this.registerDomEvent(document, "pointerup", (evt) => {
+        if (!this.settings.isEnabled)
+          return;
         if (evt.timeStamp - this.lastClick > this.settings.focusSensitivity)
           return;
         if (!(evt.target instanceof Element))
@@ -451,17 +470,44 @@ var FocusPlugin = class extends import_obsidian.Plugin {
   onunload() {
     this.focusManager.destroy();
   }
+  settingsPreprocessor(settings) {
+    return __async(this, null, function* () {
+      this.focusManager.clearAll();
+      this.focusManager.includeBody = settings.focusScope === "content";
+      if (settings.indicator && !this.indicator) {
+        this.indicator = this.addStatusBarItem();
+        this.indicator.appendChild(this.indicatorEl);
+        this.indicator.classList.add("mod-clickable");
+        this.indicator.onclick = () => this.toggle();
+      } else if (!settings.indicator && this.indicator) {
+        this.indicator.remove();
+        this.indicator = null;
+      }
+      if (settings.isEnabled) {
+        this.indicatorEl.innerHTML = "Focus: on";
+        this.focusManager.init();
+      } else {
+        this.indicatorEl.innerHTML = "Focus: off";
+        this.focusManager.destroy();
+      }
+    });
+  }
   loadSettings() {
     return __async(this, null, function* () {
       this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
-      this.focusManager.includeBody = this.settings.focusScope === "content";
+      yield this.settingsPreprocessor(this.settings);
     });
   }
   saveSettings() {
     return __async(this, null, function* () {
       yield this.saveData(this.settings);
-      this.focusManager.includeBody = this.settings.focusScope === "content";
-      this.focusManager.clearAll();
+      yield this.settingsPreprocessor(this.settings);
+    });
+  }
+  toggle() {
+    return __async(this, null, function* () {
+      this.settings.isEnabled = !this.settings.isEnabled;
+      yield this.saveSettings();
     });
   }
 };
@@ -474,6 +520,11 @@ var FocusPluginSettingTab = class extends import_obsidian.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Focus and Highlight Settings" });
+    new import_obsidian.Setting(containerEl).setName("Enabled Focus Mode").setDesc("Enable the focus feature").addToggle((toggle) => toggle.setValue(this.plugin.settings.isEnabled).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.isEnabled = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "isEnable changed to " + value);
+    })));
     new import_obsidian.Setting(containerEl).setName("Clear Method").setDesc("How to clear the focused elements").addDropdown((dropdown) => dropdown.addOptions({
       "click-again": "Click again",
       "click-outside": "Click outside"
@@ -503,6 +554,11 @@ var FocusPluginSettingTab = class extends import_obsidian.PluginSettingTab {
       this.plugin.settings.enableList = value;
       yield this.plugin.saveSettings();
       FocusPluginLogger.log("Debug", "enable list changed to " + value);
+    })));
+    new import_obsidian.Setting(containerEl).setName("Enable Status Indicator").setDesc("Show the status indicator in the status bar").addToggle((toggle) => toggle.setValue(this.plugin.settings.indicator).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.indicator = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "indicator changed to " + value);
     })));
     new import_obsidian.Setting(containerEl).setName("Focus Sensitivity").setDesc("Focus only when the mouse is 'not' still for a while (larger means longer)").addSlider((slider) => slider.setLimits(100, 10100, 500).setValue(this.plugin.settings.focusSensitivity).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.focusSensitivity = value;
