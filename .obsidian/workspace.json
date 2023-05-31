@@ -4,60 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "920c742f75dfabf8",
+        "id": "1ba2cfad90d20376",
         "type": "tabs",
         "children": [
           {
-            "id": "436b6ca117999447",
+            "id": "c027e70fedfd8d63",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Extras/Templates/其他/mermaid模板/mermaid模板.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c38238a73477e22f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/readview.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "17398c9bf7d91345",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Extras/Draws/readView示意图.md"
-              }
-            }
-          },
-          {
-            "id": "95bcf94341b2a746",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -87,7 +45,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "readview",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -106,9 +64,16 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "0a5a9c00e85d8f5d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -120,9 +85,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Extras/Draws/readView示意图.md"
-              }
+              "state": {}
             }
           },
           {
@@ -131,7 +94,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Extras/Draws/readView示意图.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +105,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Extras/Draws/readView示意图.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -166,7 +127,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.9689116517249272,
+                  "scale": 1.2525891417847768,
                   "close": true
                 }
               }
@@ -178,7 +139,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Extras/Draws/readView示意图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,11 +150,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 577.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -228,7 +188,6 @@
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
-      "obsidian-projects:Open projects": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "janitor:Janitor: scan vault": false,
       "obsidian42-brat:BRAT": false,
@@ -236,15 +195,33 @@
       "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "obsidian-stille:Toggle Stille": false,
-      "obsidian-weread-plugin:Weread": false
+      "obsidian-weread-plugin:Weread": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "17398c9bf7d91345",
+  "active": "a4d1994dfc9f1870",
   "lastOpenFiles": [
-    "Spaces/1-Project/我的面试指南/mysql/readview.md",
-    "Extras/Draws/readView示意图.md",
+    "Sources/临时文档/日志脱敏.md",
+    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-门店配送.md",
+    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-附近门店列表.md",
+    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/∑ 舌尖-瑞幸门店服务设计.md",
+    "Calendar/Daily notes/2023-05-31.md",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "Spaces/2-Area/java/springboot/spring中事务处理.md",
+    "Calendar/Daily notes/2023-05-04.md",
+    "未命名.canvas",
+    "Calendar/Daily notes/2023-04-23.md",
     "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
     "Extras/Templates/其他/mermaid模板/mermaid模板.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
+    "Spaces/1-Project/我的面试指南/mysql/readview.md",
+    "Calendar/Daily notes/2023-04-21.md",
+    "Sources/临时文档/workflow/工作流使用手册1.0.md",
+    "Sources/临时文档/workflow/工作流.md",
+    "Extras/Templates/其他/工作流模板.md",
+    "Sources/临时文档/workflow/工作流扩展功能.md",
+    "Extras/Draws/readView示意图.md",
     "Calendar/Daily notes/2023-04-03.md",
     "Calendar/Daily notes/2023-04-01.md",
     "Calendar/Daily notes/2023-03-10.md",
@@ -253,22 +230,8 @@
     "Spaces/1-Project/我的面试指南/mysql/redolog.md",
     "Calendar/Daily notes/2023-03-03.md",
     "Spaces/1-Project/我的面试指南/mysql/MVCC.md",
-    "Spaces/1-Project/我的面试指南/杂文/threadlocal.md",
-    "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
-    "Spaces/1-Project/我的面试指南/杂文/零拷贝.md",
-    "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
     "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
     "Extras/Draws/excalibrain.svg",
-    "Extras/Draws/excalibrain.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
-    "Extras/Draws/readView示意图.svg",
-    "Calendar/Daily notes/2023-03-02.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
-    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/1-Project/我的面试指南/mysql/死锁.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引.md",
-    "Spaces/1-Project/我的面试指南/mysql/本地事务.md",
-    "Spaces/1-Project/我的面试指南/mysql/两阶段锁.md",
-    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md"
+    "Extras/Draws/readView示意图.svg"
   ]
 }

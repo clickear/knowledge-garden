@@ -10,8 +10,8 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJS = (cb, mod2) => function __require() {
-  return mod2 || (0, cb[__getOwnPropNames(cb)[0]])((mod2 = { exports: {} }).exports, mod2), mod2.exports;
+var __commonJS = (cb, mod) => function __require() {
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __export = (target, all) => {
   for (var name in all)
@@ -25,8 +25,8 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod2, isNodeMode, target) => (target = mod2 != null ? __create(__getProtoOf(mod2)) : {}, __copyProps(isNodeMode || !mod2 || !mod2.__esModule ? __defProp(target, "default", { value: mod2, enumerable: true }) : target, mod2));
-var __toCommonJS = (mod2) => __copyProps(__defProp({}, "__esModule", { value: true }), mod2);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // node_modules/obsidian-daily-notes-interface/dist/main.js
 var require_main = __commonJS({
@@ -1151,15 +1151,15 @@ var require_lib = __commonJS({
     var PolyDateFormatter = class {
       constructor(dt, intl, opts) {
         this.opts = opts;
-        let z = void 0;
+        let z2 = void 0;
         if (dt.zone.isUniversal) {
           const gmtOffset = -1 * (dt.offset / 60);
           const offsetZ = gmtOffset >= 0 ? `Etc/GMT+${gmtOffset}` : `Etc/GMT${gmtOffset}`;
           if (dt.offset !== 0 && IANAZone.create(offsetZ).valid) {
-            z = offsetZ;
+            z2 = offsetZ;
             this.dt = dt;
           } else {
-            z = "UTC";
+            z2 = "UTC";
             if (opts.timeZoneName) {
               this.dt = dt;
             } else {
@@ -1170,10 +1170,10 @@ var require_lib = __commonJS({
           this.dt = dt;
         } else {
           this.dt = dt;
-          z = dt.zone.name;
+          z2 = dt.zone.name;
         }
         const intlOpts = { ...this.opts };
-        intlOpts.timeZone = intlOpts.timeZone || z;
+        intlOpts.timeZone = intlOpts.timeZone || z2;
         this.dtf = getCachedDTF(intl, intlOpts);
       }
       format() {
@@ -4906,7 +4906,7 @@ var require_lib = __commonJS({
             if (typeof n3 != "string")
               throw new Error("not a string: " + n3);
           }
-          var q = 2, A = 3, I = 8, F = 5 * I, M = 4 * I, z = "  ";
+          var q = 2, A = 3, I = 8, F = 5 * I, M = 4 * I, z2 = "  ";
           function R(n3, t2) {
             return new Array(t2 + 1).join(n3);
           }
@@ -4945,8 +4945,8 @@ var require_lib = __commonJS({
             }
             var m2 = e2 - o2.from;
             return w(n3) && (f2 = (8 * (o2.to > 0 ? o2.to - 1 : o2.to)).toString(16).length) < 2 && (f2 = 2), i(function(t3, e3, u3) {
-              var i2, a2 = u3 === m2, c3 = a2 ? "> " : z;
-              return i2 = w(n3) ? U((8 * (o2.from + u3)).toString(16), f2, "0") : U((o2.from + u3 + 1).toString(), f2, " "), [].concat(t3, [c3 + i2 + " | " + e3], a2 ? [z + R(" ", f2) + " | " + U("", r2, " ") + R("^", l3)] : []);
+              var i2, a2 = u3 === m2, c3 = a2 ? "> " : z2;
+              return i2 = w(n3) ? U((8 * (o2.from + u3)).toString(16), f2, "0") : U((o2.from + u3 + 1).toString(), f2, " "), [].concat(t3, [c3 + i2 + " | " + e3], a2 ? [z2 + R(" ", f2) + " | " + U("", r2, " ") + R("^", l3)] : []);
             }, [], u2).join("\n");
           }
           function N(n3, t2) {
@@ -5328,7 +5328,7 @@ var require_lib = __commonJS({
         }]);
       });
     })(parsimmon_umd_min);
-    var emojiRegex = () => {
+    var emojiRegex2 = () => {
       return /(?:[#*0-9]\uFE0F?\u20E3|[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u23CF\u23ED-\u23EF\u23F1\u23F2\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB\u25FC\u25FE\u2600-\u2604\u260E\u2611\u2614\u2615\u2618\u2620\u2622\u2623\u2626\u262A\u262E\u262F\u2638-\u263A\u2640\u2642\u2648-\u2653\u265F\u2660\u2663\u2665\u2666\u2668\u267B\u267E\u267F\u2692\u2694-\u2697\u2699\u269B\u269C\u26A0\u26A7\u26AA\u26B0\u26B1\u26BD\u26BE\u26C4\u26C8\u26CF\u26D1\u26D3\u26E9\u26F0-\u26F5\u26F7\u26F8\u26FA\u2702\u2708\u2709\u270F\u2712\u2714\u2716\u271D\u2721\u2733\u2734\u2744\u2747\u2757\u2763\u27A1\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B55\u3030\u303D\u3297\u3299]\uFE0F?|[\u261D\u270C\u270D](?:\uFE0F|\uD83C[\uDFFB-\uDFFF])?|[\u270A\u270B](?:\uD83C[\uDFFB-\uDFFF])?|[\u23E9-\u23EC\u23F0\u23F3\u25FD\u2693\u26A1\u26AB\u26C5\u26CE\u26D4\u26EA\u26FD\u2705\u2728\u274C\u274E\u2753-\u2755\u2795-\u2797\u27B0\u27BF\u2B50]|\u26F9(?:\uFE0F|\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|\u2764\uFE0F?(?:\u200D(?:\uD83D\uDD25|\uD83E\uDE79))?|\uD83C(?:[\uDC04\uDD70\uDD71\uDD7E\uDD7F\uDE02\uDE37\uDF21\uDF24-\uDF2C\uDF36\uDF7D\uDF96\uDF97\uDF99-\uDF9B\uDF9E\uDF9F\uDFCD\uDFCE\uDFD4-\uDFDF\uDFF5\uDFF7]\uFE0F?|[\uDF85\uDFC2\uDFC7](?:\uD83C[\uDFFB-\uDFFF])?|[\uDFC3\uDFC4\uDFCA](?:\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|[\uDFCB\uDFCC](?:\uFE0F|\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|[\uDCCF\uDD8E\uDD91-\uDD9A\uDE01\uDE1A\uDE2F\uDE32-\uDE36\uDE38-\uDE3A\uDE50\uDE51\uDF00-\uDF20\uDF2D-\uDF35\uDF37-\uDF7C\uDF7E-\uDF84\uDF86-\uDF93\uDFA0-\uDFC1\uDFC5\uDFC6\uDFC8\uDFC9\uDFCF-\uDFD3\uDFE0-\uDFF0\uDFF8-\uDFFF]|\uDDE6\uD83C[\uDDE8-\uDDEC\uDDEE\uDDF1\uDDF2\uDDF4\uDDF6-\uDDFA\uDDFC\uDDFD\uDDFF]|\uDDE7\uD83C[\uDDE6\uDDE7\uDDE9-\uDDEF\uDDF1-\uDDF4\uDDF6-\uDDF9\uDDFB\uDDFC\uDDFE\uDDFF]|\uDDE8\uD83C[\uDDE6\uDDE8\uDDE9\uDDEB-\uDDEE\uDDF0-\uDDF5\uDDF7\uDDFA-\uDDFF]|\uDDE9\uD83C[\uDDEA\uDDEC\uDDEF\uDDF0\uDDF2\uDDF4\uDDFF]|\uDDEA\uD83C[\uDDE6\uDDE8\uDDEA\uDDEC\uDDED\uDDF7-\uDDFA]|\uDDEB\uD83C[\uDDEE-\uDDF0\uDDF2\uDDF4\uDDF7]|\uDDEC\uD83C[\uDDE6\uDDE7\uDDE9-\uDDEE\uDDF1-\uDDF3\uDDF5-\uDDFA\uDDFC\uDDFE]|\uDDED\uD83C[\uDDF0\uDDF2\uDDF3\uDDF7\uDDF9\uDDFA]|\uDDEE\uD83C[\uDDE8-\uDDEA\uDDF1-\uDDF4\uDDF6-\uDDF9]|\uDDEF\uD83C[\uDDEA\uDDF2\uDDF4\uDDF5]|\uDDF0\uD83C[\uDDEA\uDDEC-\uDDEE\uDDF2\uDDF3\uDDF5\uDDF7\uDDFC\uDDFE\uDDFF]|\uDDF1\uD83C[\uDDE6-\uDDE8\uDDEE\uDDF0\uDDF7-\uDDFB\uDDFE]|\uDDF2\uD83C[\uDDE6\uDDE8-\uDDED\uDDF0-\uDDFF]|\uDDF3\uD83C[\uDDE6\uDDE8\uDDEA-\uDDEC\uDDEE\uDDF1\uDDF4\uDDF5\uDDF7\uDDFA\uDDFF]|\uDDF4\uD83C\uDDF2|\uDDF5\uD83C[\uDDE6\uDDEA-\uDDED\uDDF0-\uDDF3\uDDF7-\uDDF9\uDDFC\uDDFE]|\uDDF6\uD83C\uDDE6|\uDDF7\uD83C[\uDDEA\uDDF4\uDDF8\uDDFA\uDDFC]|\uDDF8\uD83C[\uDDE6-\uDDEA\uDDEC-\uDDF4\uDDF7-\uDDF9\uDDFB\uDDFD-\uDDFF]|\uDDF9\uD83C[\uDDE6\uDDE8\uDDE9\uDDEB-\uDDED\uDDEF-\uDDF4\uDDF7\uDDF9\uDDFB\uDDFC\uDDFF]|\uDDFA\uD83C[\uDDE6\uDDEC\uDDF2\uDDF3\uDDF8\uDDFE\uDDFF]|\uDDFB\uD83C[\uDDE6\uDDE8\uDDEA\uDDEC\uDDEE\uDDF3\uDDFA]|\uDDFC\uD83C[\uDDEB\uDDF8]|\uDDFD\uD83C\uDDF0|\uDDFE\uD83C[\uDDEA\uDDF9]|\uDDFF\uD83C[\uDDE6\uDDF2\uDDFC]|\uDFF3\uFE0F?(?:\u200D(?:\u26A7\uFE0F?|\uD83C\uDF08))?|\uDFF4(?:\u200D\u2620\uFE0F?|\uDB40\uDC67\uDB40\uDC62\uDB40(?:\uDC65\uDB40\uDC6E\uDB40\uDC67|\uDC73\uDB40\uDC63\uDB40\uDC74|\uDC77\uDB40\uDC6C\uDB40\uDC73)\uDB40\uDC7F)?)|\uD83D(?:[\uDC3F\uDCFD\uDD49\uDD4A\uDD6F\uDD70\uDD73\uDD76-\uDD79\uDD87\uDD8A-\uDD8D\uDDA5\uDDA8\uDDB1\uDDB2\uDDBC\uDDC2-\uDDC4\uDDD1-\uDDD3\uDDDC-\uDDDE\uDDE1\uDDE3\uDDE8\uDDEF\uDDF3\uDDFA\uDECB\uDECD-\uDECF\uDEE0-\uDEE5\uDEE9\uDEF0\uDEF3]\uFE0F?|[\uDC42\uDC43\uDC46-\uDC50\uDC66\uDC67\uDC6B-\uDC6D\uDC72\uDC74-\uDC76\uDC78\uDC7C\uDC83\uDC85\uDC8F\uDC91\uDCAA\uDD7A\uDD95\uDD96\uDE4C\uDE4F\uDEC0\uDECC](?:\uD83C[\uDFFB-\uDFFF])?|[\uDC6E\uDC70\uDC71\uDC73\uDC77\uDC81\uDC82\uDC86\uDC87\uDE45-\uDE47\uDE4B\uDE4D\uDE4E\uDEA3\uDEB4-\uDEB6](?:\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|[\uDD74\uDD90](?:\uFE0F|\uD83C[\uDFFB-\uDFFF])?|[\uDC00-\uDC07\uDC09-\uDC14\uDC16-\uDC3A\uDC3C-\uDC3E\uDC40\uDC44\uDC45\uDC51-\uDC65\uDC6A\uDC79-\uDC7B\uDC7D-\uDC80\uDC84\uDC88-\uDC8E\uDC90\uDC92-\uDCA9\uDCAB-\uDCFC\uDCFF-\uDD3D\uDD4B-\uDD4E\uDD50-\uDD67\uDDA4\uDDFB-\uDE2D\uDE2F-\uDE34\uDE37-\uDE44\uDE48-\uDE4A\uDE80-\uDEA2\uDEA4-\uDEB3\uDEB7-\uDEBF\uDEC1-\uDEC5\uDED0-\uDED2\uDED5-\uDED7\uDEDD-\uDEDF\uDEEB\uDEEC\uDEF4-\uDEFC\uDFE0-\uDFEB\uDFF0]|\uDC08(?:\u200D\u2B1B)?|\uDC15(?:\u200D\uD83E\uDDBA)?|\uDC3B(?:\u200D\u2744\uFE0F?)?|\uDC41\uFE0F?(?:\u200D\uD83D\uDDE8\uFE0F?)?|\uDC68(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D(?:[\uDC68\uDC69]\u200D\uD83D(?:\uDC66(?:\u200D\uD83D\uDC66)?|\uDC67(?:\u200D\uD83D[\uDC66\uDC67])?)|[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uDC66(?:\u200D\uD83D\uDC66)?|\uDC67(?:\u200D\uD83D[\uDC66\uDC67])?)|\uD83E[\uDDAF-\uDDB3\uDDBC\uDDBD])|\uD83C(?:\uDFFB(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D\uDC68\uD83C[\uDFFC-\uDFFF])))?|\uDFFC(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D\uDC68\uD83C[\uDFFB\uDFFD-\uDFFF])))?|\uDFFD(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D\uDC68\uD83C[\uDFFB\uDFFC\uDFFE\uDFFF])))?|\uDFFE(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D\uDC68\uD83C[\uDFFB-\uDFFD\uDFFF])))?|\uDFFF(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?\uDC68\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D\uDC68\uD83C[\uDFFB-\uDFFE])))?))?|\uDC69(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:\uDC8B\u200D\uD83D)?[\uDC68\uDC69]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D(?:[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uDC66(?:\u200D\uD83D\uDC66)?|\uDC67(?:\u200D\uD83D[\uDC66\uDC67])?|\uDC69\u200D\uD83D(?:\uDC66(?:\u200D\uD83D\uDC66)?|\uDC67(?:\u200D\uD83D[\uDC66\uDC67])?))|\uD83E[\uDDAF-\uDDB3\uDDBC\uDDBD])|\uD83C(?:\uDFFB(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:[\uDC68\uDC69]|\uDC8B\u200D\uD83D[\uDC68\uDC69])\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D[\uDC68\uDC69]\uD83C[\uDFFC-\uDFFF])))?|\uDFFC(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:[\uDC68\uDC69]|\uDC8B\u200D\uD83D[\uDC68\uDC69])\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D[\uDC68\uDC69]\uD83C[\uDFFB\uDFFD-\uDFFF])))?|\uDFFD(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:[\uDC68\uDC69]|\uDC8B\u200D\uD83D[\uDC68\uDC69])\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D[\uDC68\uDC69]\uD83C[\uDFFB\uDFFC\uDFFE\uDFFF])))?|\uDFFE(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:[\uDC68\uDC69]|\uDC8B\u200D\uD83D[\uDC68\uDC69])\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D[\uDC68\uDC69]\uD83C[\uDFFB-\uDFFD\uDFFF])))?|\uDFFF(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D\uD83D(?:[\uDC68\uDC69]|\uDC8B\u200D\uD83D[\uDC68\uDC69])\uD83C[\uDFFB-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83D[\uDC68\uDC69]\uD83C[\uDFFB-\uDFFE])))?))?|\uDC6F(?:\u200D[\u2640\u2642]\uFE0F?)?|\uDD75(?:\uFE0F|\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|\uDE2E(?:\u200D\uD83D\uDCA8)?|\uDE35(?:\u200D\uD83D\uDCAB)?|\uDE36(?:\u200D\uD83C\uDF2B\uFE0F?)?)|\uD83E(?:[\uDD0C\uDD0F\uDD18-\uDD1F\uDD30-\uDD34\uDD36\uDD77\uDDB5\uDDB6\uDDBB\uDDD2\uDDD3\uDDD5\uDEC3-\uDEC5\uDEF0\uDEF2-\uDEF6](?:\uD83C[\uDFFB-\uDFFF])?|[\uDD26\uDD35\uDD37-\uDD39\uDD3D\uDD3E\uDDB8\uDDB9\uDDCD-\uDDCF\uDDD4\uDDD6-\uDDDD](?:\uD83C[\uDFFB-\uDFFF])?(?:\u200D[\u2640\u2642]\uFE0F?)?|[\uDDDE\uDDDF](?:\u200D[\u2640\u2642]\uFE0F?)?|[\uDD0D\uDD0E\uDD10-\uDD17\uDD20-\uDD25\uDD27-\uDD2F\uDD3A\uDD3F-\uDD45\uDD47-\uDD76\uDD78-\uDDB4\uDDB7\uDDBA\uDDBC-\uDDCC\uDDD0\uDDE0-\uDDFF\uDE70-\uDE74\uDE78-\uDE7C\uDE80-\uDE86\uDE90-\uDEAC\uDEB0-\uDEBA\uDEC0-\uDEC2\uDED0-\uDED9\uDEE0-\uDEE7]|\uDD3C(?:\u200D[\u2640\u2642]\uFE0F?|\uD83C[\uDFFB-\uDFFF])?|\uDDD1(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1))|\uD83C(?:\uDFFB(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D(?:\uD83D\uDC8B\u200D)?\uD83E\uDDD1\uD83C[\uDFFC-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1\uD83C[\uDFFB-\uDFFF])))?|\uDFFC(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D(?:\uD83D\uDC8B\u200D)?\uD83E\uDDD1\uD83C[\uDFFB\uDFFD-\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1\uD83C[\uDFFB-\uDFFF])))?|\uDFFD(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D(?:\uD83D\uDC8B\u200D)?\uD83E\uDDD1\uD83C[\uDFFB\uDFFC\uDFFE\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1\uD83C[\uDFFB-\uDFFF])))?|\uDFFE(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D(?:\uD83D\uDC8B\u200D)?\uD83E\uDDD1\uD83C[\uDFFB-\uDFFD\uDFFF]|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1\uD83C[\uDFFB-\uDFFF])))?|\uDFFF(?:\u200D(?:[\u2695\u2696\u2708]\uFE0F?|\u2764\uFE0F?\u200D(?:\uD83D\uDC8B\u200D)?\uD83E\uDDD1\uD83C[\uDFFB-\uDFFE]|\uD83C[\uDF3E\uDF73\uDF7C\uDF84\uDF93\uDFA4\uDFA8\uDFEB\uDFED]|\uD83D[\uDCBB\uDCBC\uDD27\uDD2C\uDE80\uDE92]|\uD83E(?:[\uDDAF-\uDDB3\uDDBC\uDDBD]|\uDD1D\u200D\uD83E\uDDD1\uD83C[\uDFFB-\uDFFF])))?))?|\uDEF1(?:\uD83C(?:\uDFFB(?:\u200D\uD83E\uDEF2\uD83C[\uDFFC-\uDFFF])?|\uDFFC(?:\u200D\uD83E\uDEF2\uD83C[\uDFFB\uDFFD-\uDFFF])?|\uDFFD(?:\u200D\uD83E\uDEF2\uD83C[\uDFFB\uDFFC\uDFFE\uDFFF])?|\uDFFE(?:\u200D\uD83E\uDEF2\uD83C[\uDFFB-\uDFFD\uDFFF])?|\uDFFF(?:\u200D\uD83E\uDEF2\uD83C[\uDFFB-\uDFFE])?))?))/g;
     };
     function normalizeDuration(dur) {
@@ -5343,8 +5343,8 @@ var require_lib = __commonJS({
         path = path.substring(0, path.length - 3);
       return path;
     }
-    parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u).map((str) => str.toLocaleLowerCase()), parsimmon_umd_min.exports.whitespace.map((_) => "-"), parsimmon_umd_min.exports.any.map((_) => "")).many().map((result) => result.join(""));
-    var HEADER_CANONICALIZER = parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u), parsimmon_umd_min.exports.whitespace.map((_) => " "), parsimmon_umd_min.exports.any.map((_) => " ")).many().map((result) => {
+    parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex2(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u).map((str) => str.toLocaleLowerCase()), parsimmon_umd_min.exports.whitespace.map((_) => "-"), parsimmon_umd_min.exports.any.map((_) => "")).many().map((result) => result.join(""));
+    var HEADER_CANONICALIZER = parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex2(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u), parsimmon_umd_min.exports.whitespace.map((_) => " "), parsimmon_umd_min.exports.any.map((_) => " ")).many().map((result) => {
       return result.join("").split(/\s+/).join(" ").trim();
     });
     function normalizeHeaderForLink(header) {
@@ -5915,7 +5915,7 @@ var require_lib = __commonJS({
       }
       Sources2.empty = empty;
     })(Sources || (Sources = {}));
-    var EMOJI_REGEX = new RegExp(emojiRegex(), "");
+    var EMOJI_REGEX = new RegExp(emojiRegex2(), "");
     var DURATION_TYPES = {
       year: Duration.fromObject({ years: 1 }),
       years: Duration.fromObject({ years: 1 }),
@@ -6345,6 +6345,15 @@ var util;
     return value;
   };
 })(util || (util = {}));
+var objectUtil;
+(function(objectUtil2) {
+  objectUtil2.mergeShapes = (first, second) => {
+    return {
+      ...first,
+      ...second
+    };
+  };
+})(objectUtil || (objectUtil = {}));
 var ZodParsedType = util.arrayToEnum([
   "string",
   "nan",
@@ -6554,7 +6563,12 @@ var errorMap = (issue, _ctx) => {
       break;
     case ZodIssueCode.invalid_string:
       if (typeof issue.validation === "object") {
-        if ("startsWith" in issue.validation) {
+        if ("includes" in issue.validation) {
+          message = `Invalid input: must include "${issue.validation.includes}"`;
+          if (typeof issue.validation.position === "number") {
+            message = `${message} at one or more positions greater than or equal to ${issue.validation.position}`;
+          }
+        } else if ("startsWith" in issue.validation) {
           message = `Invalid input: must start with "${issue.validation.startsWith}"`;
         } else if ("endsWith" in issue.validation) {
           message = `Invalid input: must end with "${issue.validation.endsWith}"`;
@@ -6575,7 +6589,7 @@ var errorMap = (issue, _ctx) => {
       else if (issue.type === "number")
         message = `Number must be ${issue.exact ? `exactly equal to ` : issue.inclusive ? `greater than or equal to ` : `greater than `}${issue.minimum}`;
       else if (issue.type === "date")
-        message = `Date must be ${issue.exact ? `exactly equal to ` : issue.inclusive ? `greater than or equal to ` : `greater than `}${new Date(issue.minimum)}`;
+        message = `Date must be ${issue.exact ? `exactly equal to ` : issue.inclusive ? `greater than or equal to ` : `greater than `}${new Date(Number(issue.minimum))}`;
       else
         message = "Invalid input";
       break;
@@ -6586,8 +6600,10 @@ var errorMap = (issue, _ctx) => {
         message = `String must contain ${issue.exact ? `exactly` : issue.inclusive ? `at most` : `under`} ${issue.maximum} character(s)`;
       else if (issue.type === "number")
         message = `Number must be ${issue.exact ? `exactly` : issue.inclusive ? `less than or equal to` : `less than`} ${issue.maximum}`;
+      else if (issue.type === "bigint")
+        message = `BigInt must be ${issue.exact ? `exactly` : issue.inclusive ? `less than or equal to` : `less than`} ${issue.maximum}`;
       else if (issue.type === "date")
-        message = `Date must be ${issue.exact ? `exactly` : issue.inclusive ? `smaller than or equal to` : `smaller than`} ${new Date(issue.maximum)}`;
+        message = `Date must be ${issue.exact ? `exactly` : issue.inclusive ? `smaller than or equal to` : `smaller than`} ${new Date(Number(issue.maximum))}`;
       else
         message = "Invalid input";
       break;
@@ -6717,13 +6733,21 @@ var errorUtil;
 })(errorUtil || (errorUtil = {}));
 var ParseInputLazyPath = class {
   constructor(parent, value, path, key) {
+    this._cachedPath = [];
     this.parent = parent;
     this.data = value;
     this._path = path;
     this._key = key;
   }
   get path() {
-    return this._path.concat(this._key);
+    if (!this._cachedPath.length) {
+      if (this._key instanceof Array) {
+        this._cachedPath.push(...this._path, ...this._key);
+      } else {
+        this._cachedPath.push(...this._path, this._key);
+      }
+    }
+    return this._cachedPath;
   }
 };
 var handleResult = (ctx, result) => {
@@ -6733,8 +6757,16 @@ var handleResult = (ctx, result) => {
     if (!ctx.common.issues.length) {
       throw new Error("Validation failed but no issues detected.");
     }
-    const error = new ZodError(ctx.common.issues);
-    return { success: false, error };
+    return {
+      success: false,
+      get error() {
+        if (this._error)
+          return this._error;
+        const error = new ZodError(ctx.common.issues);
+        this._error = error;
+        return this._error;
+      }
+    };
   }
 };
 function processCreateParams(params) {
@@ -6997,8 +7029,12 @@ var ZodType = class {
 };
 var cuidRegex = /^c[^\s-]{8,}$/i;
 var cuid2Regex = /^[a-z][a-z0-9]*$/;
+var ulidRegex = /[0-9A-HJKMNP-TV-Z]{26}/;
 var uuidRegex = /^([a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[a-f0-9]{4}-[a-f0-9]{12}|00000000-0000-0000-0000-000000000000)$/i;
-var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|([^-]([a-zA-Z0-9-]*\.)+[a-zA-Z]{2,}))$/;
+var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\])|(\[IPv6:(([a-f0-9]{1,4}:){7}|::([a-f0-9]{1,4}:){0,6}|([a-f0-9]{1,4}:){1}:([a-f0-9]{1,4}:){0,5}|([a-f0-9]{1,4}:){2}:([a-f0-9]{1,4}:){0,4}|([a-f0-9]{1,4}:){3}:([a-f0-9]{1,4}:){0,3}|([a-f0-9]{1,4}:){4}:([a-f0-9]{1,4}:){0,2}|([a-f0-9]{1,4}:){5}:([a-f0-9]{1,4}:){0,1})([a-f0-9]{1,4}|(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2})))\])|([A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])*(\.[A-Za-z]{2,})+))$/;
+var emojiRegex = /^(\p{Extended_Pictographic}|\p{Emoji_Component})+$/u;
+var ipv4Regex = /^(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))$/;
+var ipv6Regex = /^(([a-f0-9]{1,4}:){7}|::([a-f0-9]{1,4}:){0,6}|([a-f0-9]{1,4}:){1}:([a-f0-9]{1,4}:){0,5}|([a-f0-9]{1,4}:){2}:([a-f0-9]{1,4}:){0,4}|([a-f0-9]{1,4}:){3}:([a-f0-9]{1,4}:){0,3}|([a-f0-9]{1,4}:){4}:([a-f0-9]{1,4}:){0,2}|([a-f0-9]{1,4}:){5}:([a-f0-9]{1,4}:){0,1})([a-f0-9]{1,4}|(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2})))$/;
 var datetimeRegex = (args) => {
   if (args.precision) {
     if (args.offset) {
@@ -7020,6 +7056,15 @@ var datetimeRegex = (args) => {
     }
   }
 };
+function isValidIP(ip, version) {
+  if ((version === "v4" || !version) && ipv4Regex.test(ip)) {
+    return true;
+  }
+  if ((version === "v6" || !version) && ipv6Regex.test(ip)) {
+    return true;
+  }
+  return false;
+}
 var ZodString = class extends ZodType {
   constructor() {
     super(...arguments);
@@ -7032,6 +7077,14 @@ var ZodString = class extends ZodType {
     this.trim = () => new ZodString({
       ...this._def,
       checks: [...this._def.checks, { kind: "trim" }]
+    });
+    this.toLowerCase = () => new ZodString({
+      ...this._def,
+      checks: [...this._def.checks, { kind: "toLowerCase" }]
+    });
+    this.toUpperCase = () => new ZodString({
+      ...this._def,
+      checks: [...this._def.checks, { kind: "toUpperCase" }]
     });
   }
   _parse(input) {
@@ -7113,6 +7166,16 @@ var ZodString = class extends ZodType {
           });
           status.dirty();
         }
+      } else if (check.kind === "emoji") {
+        if (!emojiRegex.test(input.data)) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            validation: "emoji",
+            code: ZodIssueCode.invalid_string,
+            message: check.message
+          });
+          status.dirty();
+        }
       } else if (check.kind === "uuid") {
         if (!uuidRegex.test(input.data)) {
           ctx = this._getOrReturnCtx(input, ctx);
@@ -7138,6 +7201,16 @@ var ZodString = class extends ZodType {
           ctx = this._getOrReturnCtx(input, ctx);
           addIssueToContext(ctx, {
             validation: "cuid2",
+            code: ZodIssueCode.invalid_string,
+            message: check.message
+          });
+          status.dirty();
+        }
+      } else if (check.kind === "ulid") {
+        if (!ulidRegex.test(input.data)) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            validation: "ulid",
             code: ZodIssueCode.invalid_string,
             message: check.message
           });
@@ -7169,6 +7242,20 @@ var ZodString = class extends ZodType {
         }
       } else if (check.kind === "trim") {
         input.data = input.data.trim();
+      } else if (check.kind === "includes") {
+        if (!input.data.includes(check.value, check.position)) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            code: ZodIssueCode.invalid_string,
+            validation: { includes: check.value, position: check.position },
+            message: check.message
+          });
+          status.dirty();
+        }
+      } else if (check.kind === "toLowerCase") {
+        input.data = input.data.toLowerCase();
+      } else if (check.kind === "toUpperCase") {
+        input.data = input.data.toUpperCase();
       } else if (check.kind === "startsWith") {
         if (!input.data.startsWith(check.value)) {
           ctx = this._getOrReturnCtx(input, ctx);
@@ -7200,6 +7287,16 @@ var ZodString = class extends ZodType {
           });
           status.dirty();
         }
+      } else if (check.kind === "ip") {
+        if (!isValidIP(input.data, check.version)) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            validation: "ip",
+            code: ZodIssueCode.invalid_string,
+            message: check.message
+          });
+          status.dirty();
+        }
       } else {
         util.assertNever(check);
       }
@@ -7218,6 +7315,9 @@ var ZodString = class extends ZodType {
   url(message) {
     return this._addCheck({ kind: "url", ...errorUtil.errToObj(message) });
   }
+  emoji(message) {
+    return this._addCheck({ kind: "emoji", ...errorUtil.errToObj(message) });
+  }
   uuid(message) {
     return this._addCheck({ kind: "uuid", ...errorUtil.errToObj(message) });
   }
@@ -7226,6 +7326,12 @@ var ZodString = class extends ZodType {
   }
   cuid2(message) {
     return this._addCheck({ kind: "cuid2", ...errorUtil.errToObj(message) });
+  }
+  ulid(message) {
+    return this._addCheck({ kind: "ulid", ...errorUtil.errToObj(message) });
+  }
+  ip(options) {
+    return this._addCheck({ kind: "ip", ...errorUtil.errToObj(options) });
   }
   datetime(options) {
     var _a;
@@ -7249,6 +7355,14 @@ var ZodString = class extends ZodType {
       kind: "regex",
       regex,
       ...errorUtil.errToObj(message)
+    });
+  }
+  includes(value, options) {
+    return this._addCheck({
+      kind: "includes",
+      value,
+      position: options === null || options === void 0 ? void 0 : options.position,
+      ...errorUtil.errToObj(options === null || options === void 0 ? void 0 : options.message)
     });
   }
   startsWith(value, message) {
@@ -7295,6 +7409,9 @@ var ZodString = class extends ZodType {
   get isURL() {
     return !!this._def.checks.find((ch) => ch.kind === "url");
   }
+  get isEmoji() {
+    return !!this._def.checks.find((ch) => ch.kind === "emoji");
+  }
   get isUUID() {
     return !!this._def.checks.find((ch) => ch.kind === "uuid");
   }
@@ -7303,6 +7420,12 @@ var ZodString = class extends ZodType {
   }
   get isCUID2() {
     return !!this._def.checks.find((ch) => ch.kind === "cuid2");
+  }
+  get isULID() {
+    return !!this._def.checks.find((ch) => ch.kind === "ulid");
+  }
+  get isIP() {
+    return !!this._def.checks.find((ch) => ch.kind === "ip");
   }
   get minLength() {
     let min = null;
@@ -7513,6 +7636,19 @@ var ZodNumber = class extends ZodType {
       message: errorUtil.toString(message)
     });
   }
+  safe(message) {
+    return this._addCheck({
+      kind: "min",
+      inclusive: true,
+      value: Number.MIN_SAFE_INTEGER,
+      message: errorUtil.toString(message)
+    })._addCheck({
+      kind: "max",
+      inclusive: true,
+      value: Number.MAX_SAFE_INTEGER,
+      message: errorUtil.toString(message)
+    });
+  }
   get minValue() {
     let min = null;
     for (const ch of this._def.checks) {
@@ -7561,26 +7697,166 @@ ZodNumber.create = (params) => {
   });
 };
 var ZodBigInt = class extends ZodType {
+  constructor() {
+    super(...arguments);
+    this.min = this.gte;
+    this.max = this.lte;
+  }
   _parse(input) {
     if (this._def.coerce) {
       input.data = BigInt(input.data);
     }
     const parsedType = this._getType(input);
     if (parsedType !== ZodParsedType.bigint) {
-      const ctx = this._getOrReturnCtx(input);
-      addIssueToContext(ctx, {
+      const ctx2 = this._getOrReturnCtx(input);
+      addIssueToContext(ctx2, {
         code: ZodIssueCode.invalid_type,
         expected: ZodParsedType.bigint,
-        received: ctx.parsedType
+        received: ctx2.parsedType
       });
       return INVALID;
     }
-    return OK(input.data);
+    let ctx = void 0;
+    const status = new ParseStatus();
+    for (const check of this._def.checks) {
+      if (check.kind === "min") {
+        const tooSmall = check.inclusive ? input.data < check.value : input.data <= check.value;
+        if (tooSmall) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            code: ZodIssueCode.too_small,
+            type: "bigint",
+            minimum: check.value,
+            inclusive: check.inclusive,
+            message: check.message
+          });
+          status.dirty();
+        }
+      } else if (check.kind === "max") {
+        const tooBig = check.inclusive ? input.data > check.value : input.data >= check.value;
+        if (tooBig) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            code: ZodIssueCode.too_big,
+            type: "bigint",
+            maximum: check.value,
+            inclusive: check.inclusive,
+            message: check.message
+          });
+          status.dirty();
+        }
+      } else if (check.kind === "multipleOf") {
+        if (input.data % check.value !== BigInt(0)) {
+          ctx = this._getOrReturnCtx(input, ctx);
+          addIssueToContext(ctx, {
+            code: ZodIssueCode.not_multiple_of,
+            multipleOf: check.value,
+            message: check.message
+          });
+          status.dirty();
+        }
+      } else {
+        util.assertNever(check);
+      }
+    }
+    return { status: status.value, value: input.data };
+  }
+  gte(value, message) {
+    return this.setLimit("min", value, true, errorUtil.toString(message));
+  }
+  gt(value, message) {
+    return this.setLimit("min", value, false, errorUtil.toString(message));
+  }
+  lte(value, message) {
+    return this.setLimit("max", value, true, errorUtil.toString(message));
+  }
+  lt(value, message) {
+    return this.setLimit("max", value, false, errorUtil.toString(message));
+  }
+  setLimit(kind, value, inclusive, message) {
+    return new ZodBigInt({
+      ...this._def,
+      checks: [
+        ...this._def.checks,
+        {
+          kind,
+          value,
+          inclusive,
+          message: errorUtil.toString(message)
+        }
+      ]
+    });
+  }
+  _addCheck(check) {
+    return new ZodBigInt({
+      ...this._def,
+      checks: [...this._def.checks, check]
+    });
+  }
+  positive(message) {
+    return this._addCheck({
+      kind: "min",
+      value: BigInt(0),
+      inclusive: false,
+      message: errorUtil.toString(message)
+    });
+  }
+  negative(message) {
+    return this._addCheck({
+      kind: "max",
+      value: BigInt(0),
+      inclusive: false,
+      message: errorUtil.toString(message)
+    });
+  }
+  nonpositive(message) {
+    return this._addCheck({
+      kind: "max",
+      value: BigInt(0),
+      inclusive: true,
+      message: errorUtil.toString(message)
+    });
+  }
+  nonnegative(message) {
+    return this._addCheck({
+      kind: "min",
+      value: BigInt(0),
+      inclusive: true,
+      message: errorUtil.toString(message)
+    });
+  }
+  multipleOf(value, message) {
+    return this._addCheck({
+      kind: "multipleOf",
+      value,
+      message: errorUtil.toString(message)
+    });
+  }
+  get minValue() {
+    let min = null;
+    for (const ch of this._def.checks) {
+      if (ch.kind === "min") {
+        if (min === null || ch.value > min)
+          min = ch.value;
+      }
+    }
+    return min;
+  }
+  get maxValue() {
+    let max = null;
+    for (const ch of this._def.checks) {
+      if (ch.kind === "max") {
+        if (max === null || ch.value < max)
+          max = ch.value;
+      }
+    }
+    return max;
   }
 };
 ZodBigInt.create = (params) => {
   var _a;
   return new ZodBigInt({
+    checks: [],
     typeName: ZodFirstPartyTypeKind.ZodBigInt,
     coerce: (_a = params === null || params === void 0 ? void 0 : params.coerce) !== null && _a !== void 0 ? _a : false,
     ...processCreateParams(params)
@@ -7952,15 +8228,6 @@ ZodArray.create = (schema, params) => {
     ...processCreateParams(params)
   });
 };
-var objectUtil;
-(function(objectUtil2) {
-  objectUtil2.mergeShapes = (first, second) => {
-    return {
-      ...first,
-      ...second
-    };
-  };
-})(objectUtil || (objectUtil = {}));
 function deepPartialify(schema) {
   if (schema instanceof ZodObject) {
     const newShape = {};
@@ -7973,7 +8240,10 @@ function deepPartialify(schema) {
       shape: () => newShape
     });
   } else if (schema instanceof ZodArray) {
-    return ZodArray.create(deepPartialify(schema.element));
+    return new ZodArray({
+      ...schema._def,
+      type: deepPartialify(schema.element)
+    });
   } else if (schema instanceof ZodOptional) {
     return ZodOptional.create(deepPartialify(schema.unwrap()));
   } else if (schema instanceof ZodNullable) {
@@ -8129,7 +8399,10 @@ var ZodObject = class extends ZodType {
     const merged = new ZodObject({
       unknownKeys: merging._def.unknownKeys,
       catchall: merging._def.catchall,
-      shape: () => objectUtil.mergeShapes(this._def.shape(), merging._def.shape()),
+      shape: () => ({
+        ...this._def.shape(),
+        ...merging._def.shape()
+      }),
       typeName: ZodFirstPartyTypeKind.ZodObject
     });
     return merged;
@@ -9236,28 +9509,41 @@ ZodDefault.create = (type, params) => {
 var ZodCatch = class extends ZodType {
   _parse(input) {
     const { ctx } = this._processInputParams(input);
+    const newCtx = {
+      ...ctx,
+      common: {
+        ...ctx.common,
+        issues: []
+      }
+    };
     const result = this._def.innerType._parse({
-      data: ctx.data,
-      path: ctx.path,
+      data: newCtx.data,
+      path: newCtx.path,
       parent: {
-        ...ctx,
-        common: {
-          ...ctx.common,
-          issues: []
-        }
+        ...newCtx
       }
     });
     if (isAsync(result)) {
       return result.then((result2) => {
         return {
           status: "valid",
-          value: result2.status === "valid" ? result2.value : this._def.catchValue()
+          value: result2.status === "valid" ? result2.value : this._def.catchValue({
+            get error() {
+              return new ZodError(newCtx.common.issues);
+            },
+            input: newCtx.data
+          })
         };
       });
     } else {
       return {
         status: "valid",
-        value: result.status === "valid" ? result.value : this._def.catchValue()
+        value: result.status === "valid" ? result.value : this._def.catchValue({
+          get error() {
+            return new ZodError(newCtx.common.issues);
+          },
+          input: newCtx.data
+        })
       };
     }
   }
@@ -9367,10 +9653,12 @@ var ZodPipeline = class extends ZodType {
 var custom = (check, params = {}, fatal) => {
   if (check)
     return ZodAny.create().superRefine((data, ctx) => {
+      var _a, _b;
       if (!check(data)) {
-        const p = typeof params === "function" ? params(data) : params;
+        const p = typeof params === "function" ? params(data) : typeof params === "string" ? { message: params } : params;
+        const _fatal = (_b = (_a = p.fatal) !== null && _a !== void 0 ? _a : fatal) !== null && _b !== void 0 ? _b : true;
         const p2 = typeof p === "string" ? { message: p } : p;
-        ctx.addIssue({ code: "custom", ...p2, fatal });
+        ctx.addIssue({ code: "custom", ...p2, fatal: _fatal });
       }
     });
   return ZodAny.create();
@@ -9418,7 +9706,7 @@ var ZodFirstPartyTypeKind;
 })(ZodFirstPartyTypeKind || (ZodFirstPartyTypeKind = {}));
 var instanceOfType = (cls, params = {
   message: `Input not instance of ${cls.name}`
-}) => custom((data) => data instanceof cls, params, true);
+}) => custom((data) => data instanceof cls, params);
 var stringType = ZodString.create;
 var numberType = ZodNumber.create;
 var nanType = ZodNaN.create;
@@ -9467,7 +9755,7 @@ var coerce = {
   date: (arg) => ZodDate.create({ ...arg, coerce: true })
 };
 var NEVER = INVALID;
-var mod = /* @__PURE__ */ Object.freeze({
+var z = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   defaultErrorMap: errorMap,
   setErrorMap,
@@ -9486,6 +9774,9 @@ var mod = /* @__PURE__ */ Object.freeze({
   get util() {
     return util;
   },
+  get objectUtil() {
+    return objectUtil;
+  },
   ZodParsedType,
   getParsedType,
   ZodType,
@@ -9502,9 +9793,6 @@ var mod = /* @__PURE__ */ Object.freeze({
   ZodNever,
   ZodVoid,
   ZodArray,
-  get objectUtil() {
-    return objectUtil;
-  },
   ZodObject,
   ZodUnion,
   ZodDiscriminatedUnion,
@@ -9736,8 +10024,8 @@ async function getNoteDetails(filepath) {
   };
 }
 function sanitizeFilePath(filename, isFolder = false) {
-  filename = filename.replace(/[\\:]/g, "-");
-  filename = (0, import_obsidian.normalizePath)(filename).replace(/^[\/\.]+/, "").trim();
+  filename = filename.replace(/[:#^[]|]/g, "-");
+  filename = (0, import_obsidian.normalizePath)(filename).split("/").map((seg) => seg.trim()).join("/").replace(/^[\/\.]+/g, "");
   return isFolder || extname(filename).toLowerCase() === ".md" ? filename : `${filename}.md`;
 }
 async function searchAndReplaceInNote(filepath, searchTerm, replacement) {
@@ -9894,24 +10182,24 @@ function extname(path) {
 }
 
 // src/utils/zod.ts
-var zodOptionalBoolean = mod.preprocess((param) => {
+var zodOptionalBoolean = z.preprocess((param) => {
   if (typeof param === "string") {
     return param !== "false" && param !== "";
   }
   return false;
-}, mod.boolean().optional());
-var zodSanitizedFilePath = mod.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file));
-var zodSanitizedFolderPath = mod.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file, true));
-var zodAlwaysFalse = mod.preprocess((param) => false, mod.boolean().optional());
+}, z.boolean().optional());
+var zodSanitizedFilePath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file));
+var zodSanitizedFolderPath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file, true));
+var zodAlwaysFalse = z.preprocess((param) => false, z.boolean().optional());
 
 // src/schemata.ts
-var incomingBaseParams = mod.object({
-  action: mod.string(),
-  vault: mod.string().min(1, { message: "can't be empty" }),
+var incomingBaseParams = z.object({
+  action: z.string(),
+  vault: z.string().min(1, { message: "can't be empty" }),
   "debug-mode": zodOptionalBoolean,
-  "x-error": mod.string().url().optional(),
-  "x-success": mod.string().url().optional(),
-  "x-source": mod.string().optional()
+  "x-error": z.string().url().optional(),
+  "x-success": z.string().url().optional(),
+  "x-source": z.string().optional()
 });
 
 // src/utils/ui.ts
@@ -9972,41 +10260,42 @@ async function handleHello(data) {
 
 // src/routes/daily-note.ts
 var listParams = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var readParams = incomingBaseParams.extend({
   silent: zodOptionalBoolean,
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var openParams = incomingBaseParams.extend({
   silent: zodAlwaysFalse
 });
 var createParams = incomingBaseParams.extend({
-  content: mod.string().optional(),
-  overwrite: zodOptionalBoolean,
-  silent: zodOptionalBoolean
+  content: z.string().optional(),
+  silent: zodOptionalBoolean,
+  "if-exists": z.enum(["overwrite", "skip", ""]).optional(),
+  overwrite: zodOptionalBoolean
 });
 var writeParams = incomingBaseParams.extend({
-  content: mod.string().optional(),
+  content: z.string().optional(),
   silent: zodOptionalBoolean
 });
 var appendParams = incomingBaseParams.extend({
-  content: mod.string(),
+  content: z.string(),
   silent: zodOptionalBoolean,
   "ensure-newline": zodOptionalBoolean
 });
 var prependParams = incomingBaseParams.extend({
-  content: mod.string(),
+  content: z.string(),
   silent: zodOptionalBoolean,
   "ensure-newline": zodOptionalBoolean,
   "ignore-front-matter": zodOptionalBoolean
 });
 var searchAndReplaceParams = incomingBaseParams.extend({
   silent: zodOptionalBoolean,
-  search: mod.string().min(1, { message: "can't be empty" }),
-  replace: mod.string()
+  search: z.string().min(1, { message: "can't be empty" }),
+  replace: z.string()
 });
 var routePath = {
   "/daily-note": [
@@ -10091,23 +10380,25 @@ async function handleCreate(incomingParams) {
   }
   const { content } = params;
   const dailyNote = getCurrentDailyNote();
+  if (!params["if-exists"] && params.overwrite) {
+    params["if-exists"] = "overwrite";
+  }
   if (dailyNote instanceof import_obsidian4.TFile) {
-    if (!params.overwrite) {
-      return {
-        isSuccess: false,
-        errorCode: 405,
-        errorMessage: STRINGS.daily_note.create_note_already_exists
-      };
+    switch (params["if-exists"]) {
+      case "skip":
+        return await getNoteDetails(dailyNote.path);
+        break;
+      case "overwrite":
+        app.vault.trash(dailyNote, false);
+        break;
+      default:
+        return {
+          isSuccess: false,
+          errorCode: 409,
+          errorMessage: STRINGS.daily_note.create_note_already_exists
+        };
+        break;
     }
-    if (typeof content !== "string") {
-      return {
-        isSuccess: false,
-        errorCode: 406,
-        errorMessage: STRINGS.daily_note.create_note_no_content
-      };
-    }
-    const resFile2 = await createOrOverwriteNote(dailyNote.path, content);
-    return resFile2.isSuccess ? await getNoteDetails(resFile2.result.path) : resFile2;
   }
   const newNote = await (0, import_obsidian_daily_notes_interface2.createDailyNote)(window.moment());
   if (!(newNote instanceof import_obsidian4.TFile)) {
@@ -10208,9 +10499,9 @@ async function getMostRecentDailyNote() {
 // src/routes/dataview.ts
 var import_obsidian_dataview = __toESM(require_lib());
 var readParams2 = incomingBaseParams.extend({
-  "dql": mod.string(),
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "dql": z.string(),
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var routePath2 = {
   "/dataview": [
@@ -10263,8 +10554,8 @@ async function handleDataviewQuery(type, incomingParams) {
 // src/routes/folder.ts
 var import_obsidian5 = require("obsidian");
 var listParams2 = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var createParams2 = incomingBaseParams.extend({
   folder: zodSanitizedFolderPath
@@ -10341,14 +10632,14 @@ var import_obsidian6 = require("obsidian");
 
 // src/plugin-info.ts
 var PLUGIN_INFO = {
-  "pluginVersion": "0.16.4",
-  "pluginReleasedAt": "2023-02-15T17:10:41+0100"
+  "pluginVersion": "0.18.0",
+  "pluginReleasedAt": "2023-04-14T18:06:12+0200"
 };
 
 // src/routes/info.ts
 var defaultParams = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var routePath4 = {
   "/info": [
@@ -10384,33 +10675,34 @@ async function handleInfo(incomingParams) {
 
 // src/routes/note.ts
 var listParams3 = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var readParams3 = incomingBaseParams.extend({
   file: zodSanitizedFilePath,
   silent: zodOptionalBoolean,
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var openParams2 = incomingBaseParams.extend({
   file: zodSanitizedFilePath,
   silent: zodAlwaysFalse
 });
 var createParams3 = incomingBaseParams.extend({
-  content: mod.string().optional(),
+  content: z.string().optional(),
   file: zodSanitizedFilePath,
-  overwrite: zodOptionalBoolean,
-  silent: zodOptionalBoolean
+  silent: zodOptionalBoolean,
+  "if-exists": z.enum(["overwrite", "skip", ""]).optional(),
+  overwrite: zodOptionalBoolean
 });
 var appendParams2 = incomingBaseParams.extend({
-  content: mod.string(),
+  content: z.string(),
   file: zodSanitizedFilePath,
   silent: zodOptionalBoolean,
   "ensure-newline": zodOptionalBoolean
 });
 var prependParams2 = incomingBaseParams.extend({
-  content: mod.string(),
+  content: z.string(),
   file: zodSanitizedFilePath,
   silent: zodOptionalBoolean,
   "ensure-newline": zodOptionalBoolean,
@@ -10419,8 +10711,8 @@ var prependParams2 = incomingBaseParams.extend({
 var searchAndReplaceParams2 = incomingBaseParams.extend({
   file: zodSanitizedFilePath,
   silent: zodOptionalBoolean,
-  search: mod.string().min(1, { message: "can't be empty" }),
-  replace: mod.string()
+  search: z.string().min(1, { message: "can't be empty" }),
+  replace: z.string()
 });
 var deleteParams2 = incomingBaseParams.extend({
   file: zodSanitizedFilePath
@@ -10479,9 +10771,27 @@ async function handleOpen(incomingParams) {
 }
 async function handleCreate3(incomingParams) {
   const params = incomingParams;
-  const { file, content, overwrite } = params;
-  const res = overwrite ? await createOrOverwriteNote(file, content || "") : await createNote(file, content || "");
-  return res.isSuccess ? await getNoteDetails(file) : res;
+  const { file, content } = params;
+  if (!params["if-exists"] && params.overwrite) {
+    params["if-exists"] = "overwrite";
+  }
+  const res = await getNoteFile(file);
+  if (res.isSuccess) {
+    console.log(params["if-exists"]);
+    switch (params["if-exists"]) {
+      case "skip":
+        return await getNoteDetails(file);
+        break;
+      case "overwrite":
+        const res1 = await createOrOverwriteNote(file, content || "");
+        return res1.isSuccess ? await getNoteDetails(res1.result.path) : res1;
+        break;
+      default:
+        break;
+    }
+  }
+  const res2 = await createNote(file, content || "");
+  return res2.isSuccess ? await getNoteDetails(res2.result.path) : res2;
 }
 async function handleAppend2(incomingParams) {
   const params = incomingParams;
@@ -10568,7 +10878,7 @@ var noteParams = incomingBaseParams.extend({
   silent: zodAlwaysFalse
 });
 var searchParams = incomingBaseParams.extend({
-  query: mod.string().min(1, { message: "can't be empty" }),
+  query: z.string().min(1, { message: "can't be empty" }),
   silent: zodAlwaysFalse
 });
 var routePath6 = {
@@ -10618,14 +10928,18 @@ async function doSearch(query) {
 
 // src/routes/search.ts
 var defaultParams2 = incomingBaseParams.extend({
-  query: mod.string().min(1, { message: "can't be empty" }),
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  query: z.string().min(1, { message: "can't be empty" }),
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
+});
+var openParams3 = incomingBaseParams.extend({
+  query: z.string().min(1, { message: "can't be empty" })
 });
 var routePath8 = {
   "/search": [
     helloRoute(),
-    { path: "/all-notes", schema: defaultParams2, handler: handleSearch2 }
+    { path: "/all-notes", schema: defaultParams2, handler: handleSearch2 },
+    { path: "/open", schema: openParams3, handler: handleOpen2 }
   ]
 };
 async function handleSearch2(incomingParams) {
@@ -10636,17 +10950,25 @@ async function handleSearch2(incomingParams) {
     result: res.result
   } : res;
 }
+async function handleOpen2(incomingParams) {
+  const params = incomingParams;
+  window.open("obsidian://search?vault=" + encodeURIComponent(window.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim()));
+  return {
+    isSuccess: true,
+    result: { message: "Opened search" }
+  };
+}
 
 // src/routes/vault.ts
 var import_obsidian7 = require("obsidian");
 var defaultParams3 = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var routePath9 = {
   "/vault": [
     helloRoute(),
-    { path: "/open", schema: defaultParams3, handler: handleOpen2 },
+    { path: "/open", schema: defaultParams3, handler: handleOpen3 },
     { path: "/close", schema: defaultParams3, handler: handleClose },
     { path: "/info", schema: defaultParams3, handler: handleInfo2 },
     {
@@ -10666,7 +10988,7 @@ var routePath9 = {
     }
   ]
 };
-async function handleOpen2(incomingParams) {
+async function handleOpen3(incomingParams) {
   return {
     isSuccess: true,
     result: {}
@@ -10740,8 +11062,8 @@ async function handleListFilesExceptNotes(incomingParams) {
 
 // src/routes/tags.ts
 var listParams4 = incomingBaseParams.extend({
-  "x-error": mod.string().url(),
-  "x-success": mod.string().url()
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
 });
 var routePath10 = {
   "/tags": [
