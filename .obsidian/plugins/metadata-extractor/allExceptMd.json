@@ -97,10 +97,6 @@
       "relativePath": "Sources/Talks"
     },
     {
-      "name": "临时文档",
-      "relativePath": "Sources/临时文档"
-    },
-    {
       "name": "4-Archive",
       "relativePath": "Spaces/4-Archive"
     },
@@ -213,24 +209,12 @@
       "relativePath": "Sources/Articles/思维工具阅读笔记"
     },
     {
-      "name": "workflow",
-      "relativePath": "Sources/临时文档/workflow"
-    },
-    {
       "name": "读书笔记",
       "relativePath": "Sources/Books/读书笔记"
     },
     {
       "name": "常青笔记阅读笔记",
       "relativePath": "Sources/Articles/常青笔记阅读笔记"
-    },
-    {
-      "name": "流程文档",
-      "relativePath": "Sources/临时文档/流程文档"
-    },
-    {
-      "name": "可参考信息",
-      "relativePath": "Sources/临时文档/可参考信息"
     },
     {
       "name": "PMP",
@@ -413,10 +397,6 @@
       "relativePath": "Sources/Books/微信读书同步/精品小说"
     },
     {
-      "name": "舌尖-瑞幸门店服务设计",
-      "relativePath": "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计"
-    },
-    {
       "name": "文章发布模板",
       "relativePath": "Extras/Templates/Calendar模板/文章发布模板"
     },
@@ -539,6 +519,10 @@
     {
       "name": "字符串",
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表/字符串"
+    },
+    {
+      "name": "数据库",
+      "relativePath": "Spaces/2-Area/数据库"
     }
   ],
   "nonMdFiles": [
@@ -688,16 +672,6 @@
       "relativePath": "Extras/Media/Pasted Image 20220821142616_556.png"
     },
     {
-      "name": "工作流SDK.pdf",
-      "basename": "工作流SDK",
-      "relativePath": "Sources/临时文档/workflow/工作流SDK.pdf"
-    },
-    {
-      "name": "工作流后台使用说明书.pdf",
-      "basename": "工作流后台使用说明书",
-      "relativePath": "Sources/临时文档/workflow/工作流后台使用说明书.pdf"
-    },
-    {
       "name": "img_fastthreadlocal.svg",
       "basename": "img_fastthreadlocal",
       "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.svg"
@@ -706,11 +680,6 @@
       "name": "img_threadlocal.svg",
       "basename": "img_threadlocal",
       "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.svg"
-    },
-    {
-      "name": "未命名.canvas",
-      "basename": "未命名",
-      "relativePath": "未命名.canvas"
     }
   ]
 }

@@ -11,11 +11,43 @@
             "id": "c027e70fedfd8d63",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4e1005c8d8da5cf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8737eb4235cf3952",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md"
+              }
             }
           },
           {
@@ -94,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,6 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -139,6 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/2-Area/数据库/§ 数据库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,8 +236,16 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "a4d1994dfc9f1870",
+  "active": "4e1005c8d8da5cf0",
   "lastOpenFiles": [
+    "Spaces/2-Area/数据库/数据库领域.md",
+    "Spaces/2-Area/数据库/§ 数据库.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
+    "Spaces/2-Area/java/§ java.md",
+    "Spaces/2-Area/java/java基础/§ java基础.md",
+    "Spaces/2-Area/计算机科学专题/∑ 计算机科学.md",
+    "Sources/临时文档/文档备份.md",
+    "Spaces/2-Area/数据库",
     "Sources/临时文档/日志脱敏.md",
     "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-门店配送.md",
     "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-附近门店列表.md",
@@ -223,13 +268,6 @@
     "Sources/临时文档/workflow/工作流扩展功能.md",
     "Extras/Draws/readView示意图.md",
     "Calendar/Daily notes/2023-04-03.md",
-    "Calendar/Daily notes/2023-04-01.md",
-    "Calendar/Daily notes/2023-03-10.md",
-    "Spaces/1-Project/我的面试指南/mysql/changebuffer.md",
-    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
-    "Spaces/1-Project/我的面试指南/mysql/redolog.md",
-    "Calendar/Daily notes/2023-03-03.md",
-    "Spaces/1-Project/我的面试指南/mysql/MVCC.md",
     "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
     "Extras/Draws/excalibrain.svg",
     "Extras/Draws/readView示意图.svg"
