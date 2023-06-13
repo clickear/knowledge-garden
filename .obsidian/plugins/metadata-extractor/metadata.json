@@ -2317,6 +2317,23 @@
   {
     "fileName": "软考-数据库",
     "relativePath": "Spaces/4-Archive/软考/软考-数据库.md",
+    "frontmatter": {
+      "title": "三级模式-二级映像",
+      "date created": "2022-05-23",
+      "date modified": "2023-06-08",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 75
+        }
+      }
+    },
     "headings": [
       {
         "heading": "三级模式-二级映像",
@@ -2339,7 +2356,7 @@
         "level": 3
       },
       {
-        "heading": "关系代数",
+        "heading": "[[关系代数]]",
         "level": 1
       },
       {
@@ -2461,6 +2478,12 @@
       {
         "heading": "大数据",
         "level": 1
+      }
+    ],
+    "links": [
+      {
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/关系代数.md"
       }
     ]
   },
@@ -4507,16 +4530,667 @@
     ]
   },
   {
-    "fileName": "未命名",
-    "relativePath": "Spaces/2-Area/数据库/未命名.md"
+    "fileName": "lock和latch的区别",
+    "relativePath": "Spaces/2-Area/数据库/lock和latch的区别.md",
+    "frontmatter": {
+      "title": "lock和latch的区别",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 79
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "lock和latch的区别",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
   },
   {
-    "fileName": "§ 数据库",
-    "relativePath": "Spaces/2-Area/数据库/§ 数据库.md",
+    "fileName": "存储结构",
+    "relativePath": "Spaces/2-Area/数据库/存储结构.md",
     "frontmatter": {
-      "title": "§ 数据库",
-      "date created": "2023-05-31",
-      "date modified": "2023-05-31",
+      "title": "存储结构",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "存储结构的共性",
+        "level": 2
+      },
+      {
+        "heading": "[[B+树]]，相对于[[B树]]，加强了1，IO尽量少并且一次读取连续区域。",
+        "level": 2
+      },
+      {
+        "heading": "[[LSM树]]",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "B树"
+      },
+      {
+        "link": "SMO"
+      },
+      {
+        "link": "B+树"
+      },
+      {
+        "link": "B树"
+      },
+      {
+        "link": "B树"
+      },
+      {
+        "link": "B-link树"
+      },
+      {
+        "link": "Bw树"
+      },
+      {
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/LSM树.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "存储结构",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "LSM树",
+    "relativePath": "Spaces/2-Area/数据库/LSM树.md",
+    "frontmatter": {
+      "title": "LSM树",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "存储结构",
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/存储结构.md"
+      },
+      {
+        "fileName": "Log-structured",
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      },
+      {
+        "fileName": "Log-structured",
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Tuple-oriented",
+    "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md",
+    "frontmatter": {
+      "title": "Tuple-oriented",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 80
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "存储布局",
+        "level": 2
+      },
+      {
+        "heading": "strawman idea(基本不用)",
+        "level": 3
+      },
+      {
+        "heading": "slotted pages——有点像操作系统里的页表（采用）",
+        "level": 3
+      },
+      {
+        "heading": "[[tuple-layout]]",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md"
+      },
+      {
+        "link": "In-place update structure"
+      },
+      {
+        "link": "B+树"
+      },
+      {
+        "link": "tuple-layout"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "数据库page",
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Log-structured",
+    "relativePath": "Spaces/2-Area/数据库/Log-structured.md",
+    "frontmatter": {
+      "title": "Log-structured",
+      "date created": "2023-06-12",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 80
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "[[LSM树]]",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "out-place-update-structure"
+      },
+      {
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/LSM树.md"
+      },
+      {
+        "link": "顺序写"
+      },
+      {
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/LSM树.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "数据库page",
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "列存储",
+    "relativePath": "Spaces/2-Area/数据库/列存储.md",
+    "frontmatter": {
+      "alias": [
+        "DSM"
+      ],
+      "title": "列存储",
+      "date created": "2023-06-12",
+      "date modified": "2023-06-12",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "col": 3,
+          "offset": 84
+        }
+      }
+    },
+    "aliases": [
+      "DSM"
+    ],
+    "headings": [
+      {
+        "heading": "列压缩",
+        "level": 4
+      },
+      {
+        "heading": "列存储(如何跟踪每个 tuple的不同属性)",
+        "level": 4
+      },
+      {
+        "heading": "Fixed-length Offsets：对于一列中的每一个值来说，他们的长度都是固定的，直接靠 offset 来跟踪。（常用）如果变长怎么处理？使用最大长度进行填充",
+        "level": 5
+      },
+      {
+        "heading": "Embedded Tuple Ids：在每个 attribute 前面都加上 tupleID",
+        "level": 5
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "列存储",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "列存储",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "行存储",
+    "relativePath": "Spaces/2-Area/数据库/行存储.md",
+    "frontmatter": {
+      "alias": [
+        "NSM"
+      ],
+      "title": "行存储",
+      "date created": "2023-06-12",
+      "date modified": "2023-06-12",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "col": 3,
+          "offset": 84
+        }
+      }
+    },
+    "aliases": [
+      "NSM"
+    ],
+    "links": [
+      {
+        "link": "OLTP"
+      },
+      {
+        "link": "B+树"
+      },
+      {
+        "link": "olap"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "数据库page",
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "数据库page",
+    "relativePath": "Spaces/2-Area/数据库/数据库page.md",
+    "frontmatter": {
+      "title": "数据库page",
+      "date created": "2023-06-12",
+      "date modified": "2023-06-12",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 73
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "页的管理",
+        "level": 2
+      },
+      {
+        "heading": "Heap File Organization",
+        "level": 3
+      },
+      {
+        "heading": "链表(基本不用）",
+        "level": 4
+      },
+      {
+        "heading": "[[page directory]]页目录，标记哪些是没被使用过的",
+        "level": 4
+      },
+      {
+        "heading": "数据页的布局",
+        "level": 2
+      },
+      {
+        "heading": "header",
+        "level": 3
+      },
+      {
+        "heading": "data",
+        "level": 3
+      },
+      {
+        "heading": "[[Tuple-oriented]]（存数据）",
+        "level": 4
+      },
+      {
+        "heading": "[[Log-structured]](存日志)",
+        "level": 4
+      },
+      {
+        "heading": "Tuple layout",
+        "level": 2
+      },
+      {
+        "heading": "tuple storage：如何使用tuple来表示数据",
+        "level": 2
+      },
+      {
+        "heading": "溢出页 overflow page",
+        "level": 3
+      },
+      {
+        "heading": "数据库的元数据怎么存储? 使用系统表",
+        "level": 3
+      },
+      {
+        "heading": "存储模式",
+        "level": 2
+      },
+      {
+        "heading": "WorkLoad",
+        "level": 3
+      },
+      {
+        "heading": "Data Storage Models（数据存储模型）",
+        "level": 2
+      },
+      {
+        "heading": "[[行存储]]：N-ary Storage Model (NSM)",
+        "level": 3
+      },
+      {
+        "heading": "DSM",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "局部性原理",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/局部性原理.md"
+      },
+      {
+        "link": "§ mysql目录",
+        "displayText": "mysql",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md"
+      },
+      {
+        "link": "DoubleWrite"
+      },
+      {
+        "link": "page directory"
+      },
+      {
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md"
+      },
+      {
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      },
+      {
+        "link": "mysql行格式"
+      },
+      {
+        "link": "oltp"
+      },
+      {
+        "link": "oltp"
+      },
+      {
+        "link": "列族数据库"
+      },
+      {
+        "link": "HTAP"
+      },
+      {
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/行存储.md"
+      },
+      {
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md"
+      },
+      {
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      },
+      {
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/行存储.md"
+      },
+      {
+        "link": "列存储",
+        "relativePath": "Spaces/2-Area/数据库/列存储.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "数据库page",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "在文件中表示数据库",
+    "relativePath": "Spaces/2-Area/数据库/在文件中表示数据库.md",
+    "frontmatter": {
+      "title": "在文件中表示数据库",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 75
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "在文件中表示数据库",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md",
+        "displayText": "使用磁盘文件来表示数据库的数据。(元数据、索引、数据表等)"
+      }
+    ]
+  },
+  {
+    "fileName": "为什么不用OS的磁盘管理？",
+    "relativePath": "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md",
+    "frontmatter": {
+      "title": "为什么不用OS的磁盘管理？",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 79
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "mmap"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "磁盘管理",
+        "link": "为什么不用OS的磁盘管理？",
+        "relativePath": "Spaces/2-Area/数据库/磁盘管理.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "为什么不用OS的磁盘管理？",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "磁盘管理",
+    "relativePath": "Spaces/2-Area/数据库/磁盘管理.md",
+    "frontmatter": {
+      "title": "磁盘管理",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "为什么不用OS的磁盘管理？",
+        "relativePath": "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md"
+      },
+      {
+        "link": "计算机存储",
+        "relativePath": "Spaces/2-Area/数据库/计算机存储.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "磁盘管理",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "计算机存储",
+    "relativePath": "Spaces/2-Area/数据库/计算机存储.md",
+    "frontmatter": {
+      "title": "计算机存储",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-09",
       "position": {
         "start": {
           "line": 0,
@@ -4532,20 +5206,679 @@
     },
     "headings": [
       {
-        "heading": "入门指南",
-        "level": 2
-      },
-      {
-        "heading": "优秀zi",
+        "heading": "磁盘读写速度",
         "level": 2
       }
     ],
     "links": [
       {
-        "link": "mysql领域",
-        "relativePath": "Spaces/1-Project/我的面试指南/mysql/mysql领域.md"
+        "link": "存储技术"
+      },
+      {
+        "link": "计算机组成原理"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "磁盘管理",
+        "link": "计算机存储",
+        "relativePath": "Spaces/2-Area/数据库/磁盘管理.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "计算机存储",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
       }
     ]
+  },
+  {
+    "fileName": "cmu15445",
+    "relativePath": "Spaces/2-Area/数据库/cmu15445.md",
+    "frontmatter": {
+      "title": "cmu15445",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 74
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "为什么需要数据库？",
+        "relativePath": "Spaces/2-Area/数据库/为什么需要数据库？.md"
+      },
+      {
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "link": "关系型数据库"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "NoSQL"
+      },
+      {
+        "link": "键值数据库"
+      },
+      {
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+      },
+      {
+        "link": "图数据库"
+      },
+      {
+        "link": "neo4j"
+      },
+      {
+        "link": "文档数据库"
+      },
+      {
+        "link": "monogodb"
+      },
+      {
+        "link": "列族数据库"
+      },
+      {
+        "link": "hbase"
+      },
+      {
+        "link": "矩阵数据库"
+      },
+      {
+        "link": "DML",
+        "relativePath": "Spaces/2-Area/数据库/DML.md"
+      },
+      {
+        "link": "Procedural",
+        "displayText": "过程式"
+      },
+      {
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/关系代数.md"
+      },
+      {
+        "link": "声明式"
+      },
+      {
+        "link": "DDL"
+      },
+      {
+        "link": "存储引擎",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/存储引擎.md"
+      },
+      {
+        "link": "磁盘管理",
+        "relativePath": "Spaces/2-Area/数据库/磁盘管理.md"
+      },
+      {
+        "link": "计算机存储",
+        "relativePath": "Spaces/2-Area/数据库/计算机存储.md"
+      },
+      {
+        "link": "为什么不用OS的磁盘管理？",
+        "relativePath": "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md"
+      },
+      {
+        "link": "在文件中表示数据库",
+        "displayText": "使用磁盘文件来表示数据库的数据。(元数据、索引、数据表等)",
+        "relativePath": "Spaces/2-Area/数据库/在文件中表示数据库.md"
+      },
+      {
+        "link": "数据库bufferpool"
+      },
+      {
+        "link": "数据库page",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "link": "局部性原理",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/局部性原理.md"
+      },
+      {
+        "link": "DoubleWrite"
+      },
+      {
+        "link": "page directory"
+      },
+      {
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md"
+      },
+      {
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      },
+      {
+        "link": "顺序写"
+      },
+      {
+        "link": "oltp"
+      },
+      {
+        "link": "行存储",
+        "relativePath": "Spaces/2-Area/数据库/行存储.md"
+      },
+      {
+        "link": "olap"
+      },
+      {
+        "link": "列存储",
+        "relativePath": "Spaces/2-Area/数据库/列存储.md"
+      },
+      {
+        "link": "Tuple-oriented",
+        "relativePath": "Spaces/2-Area/数据库/Tuple-oriented.md"
+      },
+      {
+        "link": "In-place update structure"
+      },
+      {
+        "link": "B+树"
+      },
+      {
+        "link": "Log-structured",
+        "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
+      },
+      {
+        "link": "out-place-update-structure"
+      },
+      {
+        "link": "存储结构",
+        "relativePath": "Spaces/2-Area/数据库/存储结构.md"
+      },
+      {
+        "link": "lock和latch的区别",
+        "relativePath": "Spaces/2-Area/数据库/lock和latch的区别.md"
+      },
+      {
+        "link": "数据库bufferpool"
+      }
+    ]
+  },
+  {
+    "fileName": "∑ 数据库",
+    "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md",
+    "frontmatter": {
+      "title": "∑ 数据库",
+      "date created": "2023-06-09",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 71
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "DBMS的提出",
+        "level": 2
+      },
+      {
+        "heading": "分离逻辑层和物理层",
+        "level": 3
+      },
+      {
+        "heading": "[[数据模型]]",
+        "level": 3
+      },
+      {
+        "heading": "关系模型",
+        "level": 3
+      },
+      {
+        "heading": "主键",
+        "level": 4
+      },
+      {
+        "heading": "外键，某一个属性是其它表的主键，即为外键。",
+        "level": 4
+      },
+      {
+        "heading": "数据操作语言([[DML]] ) data manipulation languages",
+        "level": 4
+      },
+      {
+        "heading": "DDL，对数据定义语言",
+        "level": 4
+      }
+    ],
+    "links": [
+      {
+        "link": "为什么需要数据库？",
+        "relativePath": "Spaces/2-Area/数据库/为什么需要数据库？.md"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "存储引擎",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/存储引擎.md"
+      },
+      {
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "link": "关系型数据库"
+      },
+      {
+        "link": "NoSQL"
+      },
+      {
+        "link": "键值数据库"
+      },
+      {
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+      },
+      {
+        "link": "图数据库"
+      },
+      {
+        "link": "neo4j"
+      },
+      {
+        "link": "文档数据库"
+      },
+      {
+        "link": "monogodb"
+      },
+      {
+        "link": "列族数据库"
+      },
+      {
+        "link": "hbase"
+      },
+      {
+        "link": "矩阵数据库"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "DML",
+        "relativePath": "Spaces/2-Area/数据库/DML.md"
+      }
+    ]
+  },
+  {
+    "fileName": "关系代数",
+    "relativePath": "Spaces/2-Area/数据库/关系代数.md",
+    "frontmatter": {
+      "title": "关系代数",
+      "date created": "2023-06-08",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "选择 （Selection）",
+        "level": 2
+      },
+      {
+        "heading": "投影(Projection) 即select 哪些列",
+        "level": 3
+      },
+      {
+        "heading": "集合(union)",
+        "level": 2
+      },
+      {
+        "heading": "交集(Intersection)",
+        "level": 2
+      },
+      {
+        "heading": "差集(difference)",
+        "level": 2
+      },
+      {
+        "heading": "全集(product)",
+        "level": 2
+      },
+      {
+        "heading": "连接（Join）",
+        "level": 3
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "软考-数据库",
+        "link": "关系代数",
+        "relativePath": "Spaces/4-Archive/软考/软考-数据库.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "DML",
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/DML.md",
+        "displayText": "relational algebra"
+      },
+      {
+        "fileName": "DML",
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/DML.md"
+      }
+    ]
+  },
+  {
+    "fileName": "relational algebra",
+    "relativePath": "Spaces/2-Area/数据库/relational algebra.md",
+    "frontmatter": {
+      "title": "relational algebra",
+      "date created": "2023-06-08",
+      "date modified": "2023-06-08",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 84
+        }
+      }
+    }
+  },
+  {
+    "fileName": "DML",
+    "relativePath": "Spaces/2-Area/数据库/DML.md",
+    "frontmatter": {
+      "title": "DML",
+      "date created": "2023-06-08",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 69
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "区别例子",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "Procedural",
+        "displayText": "过程式"
+      },
+      {
+        "link": "关系代数",
+        "displayText": "relational algebra",
+        "relativePath": "Spaces/2-Area/数据库/关系代数.md"
+      },
+      {
+        "link": "Declareative",
+        "displayText": "声明式"
+      },
+      {
+        "link": "releational calculus"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "关系代数",
+        "relativePath": "Spaces/2-Area/数据库/关系代数.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "DML",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "DML",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      }
+    ]
+  },
+  {
+    "fileName": "数据模型",
+    "relativePath": "Spaces/2-Area/数据库/数据模型.md",
+    "frontmatter": {
+      "title": "数据模型",
+      "date created": "2023-06-06",
+      "date modified": "2023-06-06",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 70
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "关系型数据库"
+      },
+      {
+        "link": "mysql"
+      },
+      {
+        "link": "NoSQL"
+      },
+      {
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+      },
+      {
+        "link": "hbase"
+      },
+      {
+        "link": "monogodb"
+      },
+      {
+        "link": "neo4j"
+      },
+      {
+        "link": "janusgrap"
+      },
+      {
+        "link": "键值数据库"
+      },
+      {
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+      },
+      {
+        "link": "图数据库"
+      },
+      {
+        "link": "文档数据库"
+      },
+      {
+        "link": "monogodb"
+      },
+      {
+        "link": "列族数据库"
+      },
+      {
+        "link": "hbase"
+      },
+      {
+        "link": "矩阵数据库"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "数据模型",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      }
+    ]
+  },
+  {
+    "fileName": "为什么需要数据库？",
+    "relativePath": "Spaces/2-Area/数据库/为什么需要数据库？.md",
+    "frontmatter": {
+      "title": "为什么需要数据库？",
+      "date created": "2023-06-06",
+      "date modified": "2023-06-06",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 75
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "MVCC",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/MVCC.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "为什么需要数据库？",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "为什么需要数据库？",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      }
+    ]
+  },
+  {
+    "fileName": "数据库领域",
+    "relativePath": "Spaces/2-Area/数据库/数据库领域.md",
+    "frontmatter": {
+      "title": "数据库领域",
+      "date created": "2023-05-31",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 71
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "层层递进",
+        "level": 2
+      },
+      {
+        "heading": "视频",
+        "level": 2
+      },
+      {
+        "heading": "科普文",
+        "level": 2
+      },
+      {
+        "heading": "中文书",
+        "level": 2
+      },
+      {
+        "heading": "原版书",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "§ 数据库",
+    "relativePath": "Spaces/2-Area/数据库/§ 数据库.md",
+    "frontmatter": {
+      "title": "§ 数据库",
+      "date created": "2023-05-31",
+      "date modified": "2023-06-09",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 71
+        }
+      }
+    }
   },
   {
     "fileName": "∑ 运动与健康",
@@ -11440,6 +12773,26 @@
     ],
     "backlinks": [
       {
+        "fileName": "cmu15445",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      },
+      {
+        "fileName": "数据模型",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "fileName": "数据模型",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
         "fileName": "§ 分布式",
         "link": "redis",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
@@ -17384,6 +18737,16 @@
     },
     "backlinks": [
       {
+        "fileName": "数据库page",
+        "link": "局部性原理",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "局部性原理",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
         "fileName": "bufferpool",
         "link": "局部性原理",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
@@ -17525,6 +18888,16 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "存储引擎",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "存储引擎",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      },
       {
         "fileName": "mysql架构",
         "link": "存储引擎",
@@ -18375,11 +19748,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "§ 数据库",
-        "link": "mysql领域",
-        "relativePath": "Spaces/2-Area/数据库/§ 数据库.md"
-      },
-      {
         "fileName": "2023年度计划",
         "link": "mysql领域",
         "relativePath": "Spaces/1-Project/时间管理/2023年度计划.md"
@@ -18391,7 +19759,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
     "frontmatter": {
       "date created": "2022-09-07",
-      "date modified": "2022-09-21",
+      "date modified": "2023-06-12",
       "title": "§ mysql目录",
       "position": {
         "start": {
@@ -18400,12 +19768,15 @@
           "offset": 0
         },
         "end": {
-          "line": 4,
+          "line": 6,
           "col": 3,
-          "offset": 75
+          "offset": 94
         }
       }
     },
+    "aliases": [
+      "mysql"
+    ],
     "links": [
       {
         "link": "索引覆盖",
@@ -18633,6 +20004,12 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "§ mysql目录",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md",
+        "displayText": "mysql"
+      },
       {
         "fileName": "AboutTheGarden",
         "link": "§ mysql目录",
@@ -19291,6 +20668,11 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "为什么需要数据库？",
+        "link": "MVCC",
+        "relativePath": "Spaces/2-Area/数据库/为什么需要数据库？.md"
+      },
       {
         "fileName": "可重复读",
         "link": "MVCC",
@@ -48079,6 +49461,73 @@
     "links": [
       {
         "link": "ACCESS 笔记组织法"
+      }
+    ]
+  },
+  {
+    "fileName": "2023-06-13",
+    "relativePath": "Calendar/Daily notes/2023-06-13.md",
+    "frontmatter": {
+      "title": "2023-06-13",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-13",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 76
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2023-06-12",
+    "relativePath": "Calendar/Daily notes/2023-06-12.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2023-06-09",
+    "relativePath": "Calendar/Daily notes/2023-06-09.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2023-06-08",
+    "relativePath": "Calendar/Daily notes/2023-06-08.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2023-06-06",
+    "relativePath": "Calendar/Daily notes/2023-06-06.md",
+    "headings": [
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
       }
     ]
   },

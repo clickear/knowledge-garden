@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c027e70fedfd8d63",
+            "id": "d211217cf990ae84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "file": "Spaces/2-Area/数据库/数据库领域.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "4e1005c8d8da5cf0",
+            "id": "fa422bb792c88f59",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "file": "Spaces/2-Area/数据库/Tuple-oriented.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,20 +34,123 @@
             }
           },
           {
-            "id": "8737eb4235cf3952",
+            "id": "7f1bb179ec630b27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
+                "file": "Spaces/2-Area/数据库/数据库page.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8969264975cd5578",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/Log-structured.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76cbd3bcef779f35",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/数据库page.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "19cf7a97d7077001",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/mysql/索引.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b7ade5b60033ebe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/列存储.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eb73e3778d424f9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/行存储.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "426cb0442c82408e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/数据库page.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c8a7c5c0285003c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/数据库page.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "478dbcaf8a7416d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/关系代数.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +221,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md"
+                "file": "Spaces/2-Area/数据库/数据库领域.md"
               }
             }
           },
@@ -128,7 +231,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "file": "Spaces/2-Area/数据库/数据库领域.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +243,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "file": "Spaces/2-Area/数据库/数据库领域.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -163,7 +266,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.2525891417847768,
+                  "scale": 1.4831326668375011,
                   "close": true
                 }
               }
@@ -175,7 +278,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/数据库/§ 数据库.md",
+                "file": "Spaces/2-Area/数据库/数据库领域.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +294,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 577.5
+    "width": 254.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -236,38 +339,39 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "4e1005c8d8da5cf0",
+  "active": "d211217cf990ae84",
   "lastOpenFiles": [
-    "Spaces/2-Area/数据库/数据库领域.md",
-    "Spaces/2-Area/数据库/§ 数据库.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysql领域.md",
-    "Spaces/2-Area/java/§ java.md",
-    "Spaces/2-Area/java/java基础/§ java基础.md",
-    "Spaces/2-Area/计算机科学专题/∑ 计算机科学.md",
-    "Sources/临时文档/文档备份.md",
-    "Spaces/2-Area/数据库",
-    "Sources/临时文档/日志脱敏.md",
-    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-门店配送.md",
-    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/舌尖-瑞幸门店服务设计-附近门店列表.md",
-    "Sources/临时文档/可参考信息/舌尖-瑞幸门店服务设计/∑ 舌尖-瑞幸门店服务设计.md",
-    "Calendar/Daily notes/2023-05-31.md",
+    "Spaces/2-Area/数据库/LSM树.md",
+    "Spaces/2-Area/数据库/Tuple-oriented.md",
+    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
+    "Spaces/2-Area/数据库/存储结构.md",
+    "Calendar/Daily notes/2023-06-13.md",
+    "Spaces/2-Area/数据库/lock和latch的区别.md",
+    "Spaces/2-Area/数据库/cmu15445.md",
+    "Spaces/2-Area/数据库/Log-structured.md",
+    "Spaces/2-Area/数据库/数据库page.md",
+    "Calendar/Daily notes/2023-06-12.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引.md",
+    "Spaces/2-Area/数据库/行存储.md",
+    "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md",
+    "Spaces/2-Area/数据库/列存储.md",
+    "Calendar/Daily notes/2023-02-03.md",
+    "Spaces/2-Area/数据库/磁盘管理.md",
+    "未命名 3.canvas",
+    "Spaces/1-Project/我的面试指南/mysql/存储引擎.md",
+    "Spaces/2-Area/数据库/关系代数.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql.md",
     "未命名 2.canvas",
+    "Spaces/2-Area/数据库/mysql.md",
     "未命名 1.canvas",
-    "Spaces/2-Area/java/springboot/spring中事务处理.md",
-    "Calendar/Daily notes/2023-05-04.md",
+    "Calendar/Daily notes/2023-06-09.md",
+    "Spaces/2-Area/数据库/为什么需要数据库？.md",
+    "Spaces/2-Area/数据库/数据模型.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysql架构.md",
     "未命名.canvas",
-    "Calendar/Daily notes/2023-04-23.md",
-    "Spaces/1-Project/我的面试指南/mysql/更新语句执行.md",
-    "Extras/Templates/其他/mermaid模板/mermaid模板.md",
-    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
-    "Spaces/1-Project/我的面试指南/mysql/readview.md",
-    "Calendar/Daily notes/2023-04-21.md",
-    "Sources/临时文档/workflow/工作流使用手册1.0.md",
-    "Sources/临时文档/workflow/工作流.md",
-    "Extras/Templates/其他/工作流模板.md",
-    "Sources/临时文档/workflow/工作流扩展功能.md",
-    "Extras/Draws/readView示意图.md",
-    "Calendar/Daily notes/2023-04-03.md",
+    "Spaces/2-Area/数据库/∑ 数据库.md",
+    "Spaces/2-Area/数据库",
     "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
     "Extras/Draws/excalibrain.svg",
     "Extras/Draws/readView示意图.svg"

@@ -1,6 +1,10 @@
 {
   "strategy": "chinese",
+  "cedictPath": "./cedict_ts.u8",
   "matchStrategy": "prefix",
+  "fuzzyMatch": true,
+  "matchingWithoutEmoji": true,
+  "treatAccentDiacriticsAsAlphabeticCharacters": false,
   "maxNumberOfSuggestions": 24,
   "maxNumberOfWordsAsPhrase": 5,
   "minNumberOfCharactersTriggered": 0,
@@ -10,6 +14,11 @@
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^-",
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
   "showMatchStrategy": false,
   "showComplementAutomatically": false,
   "showIndexingStatus": false,
@@ -38,6 +47,12 @@
   "enableInternalLinkComplement": true,
   "suggestInternalLinkWithAlias": true,
   "excludeInternalLinkPathPrefixPatterns": "",
+  "updateInternalLinksOnSave": true,
+  "insertAliasTransformedFromDisplayedInternalLink": {
+    "enabled": false,
+    "beforeRegExp": "",
+    "after": ""
+  },
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": false,
@@ -45,6 +60,7 @@
     "maxDaysToKeepHistory": 0,
     "maxNumberOfHistoryToKeep": 0
   },
+  "disableOnMobile": false,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
     "233": {
@@ -378,8 +394,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 19,
-          "lastUpdated": 1680342906647
+          "count": 28,
+          "lastUpdated": 1686586343378
         }
       }
     },
@@ -598,8 +614,8 @@
     "mysql领域": {
       "mysql领域": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1675678742930
+          "count": 2,
+          "lastUpdated": 1686238351488
         }
       }
     },
@@ -672,6 +688,158 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1678246661661
+        }
+      }
+    },
+    "MVCC": {
+      "MVCC": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686053585364
+        }
+      }
+    },
+    "存储引擎": {
+      "存储引擎": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686054065767
+        }
+      }
+    },
+    "图数据库": {
+      "图数据库": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686055225948
+        }
+      }
+    },
+    "hbase": {
+      "hbase": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686055289567
+        }
+      }
+    },
+    "矩阵数据库": {
+      "矩阵数据库": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686055300149
+        }
+      }
+    },
+    "Auto_increment": {
+      "Auto_increment": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1686238345601
+        }
+      }
+    },
+    "mysql": {
+      "mysql": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1686238921027
+        }
+      }
+    },
+    "关系代数": {
+      "关系代数": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686240716006
+        }
+      }
+    },
+    "为什么需要数据库？": {
+      "为什么需要数据库？": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686241435548
+        }
+      }
+    },
+    "DML": {
+      "DML": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686241826694
+        }
+      }
+    },
+    "DDL": {
+      "DDL": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1686241859890
+        }
+      }
+    },
+    "B+树": {
+      "B+树": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686583269795
+        }
+      }
+    },
+    "局部性原理": {
+      "局部性原理": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686583840861
+        }
+      }
+    },
+    "DoubleWrite": {
+      "DoubleWrite": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686583907808
+        }
+      }
+    },
+    "page directory": {
+      "page directory": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686584186325
+        }
+      }
+    },
+    "alias": {
+      "alias": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1686585012686
+        }
+      }
+    },
+    "列存储": {
+      "列存储": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686585051926
+        }
+      }
+    },
+    "B树": {
+      "B树": {
+        "internalLink": {
+          "count": 3,
+          "lastUpdated": 1686587420388
+        }
+      }
+    },
+    "Log-structured": {
+      "Log-structured": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1686586354851
         }
       }
     }

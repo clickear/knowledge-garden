@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "未命名.canvas",
+    "basename": "未命名",
+    "relativePath": "未命名.canvas"
+  },
+  {
+    "name": "未命名 1.canvas",
+    "basename": "未命名 1",
+    "relativePath": "未命名 1.canvas"
+  },
+  {
+    "name": "未命名 2.canvas",
+    "basename": "未命名 2",
+    "relativePath": "未命名 2.canvas"
+  },
+  {
+    "name": "未命名 3.canvas",
+    "basename": "未命名 3",
+    "relativePath": "未命名 3.canvas"
+  }
+]

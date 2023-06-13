@@ -1,6 +1,8 @@
 ---
+aliases:
+  - mysql
 date created: 2022-09-07
-date modified: 2022-09-21
+date modified: 2023-06-12
 title: § mysql目录
 ---
 
