@@ -394,8 +394,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 28,
-          "lastUpdated": 1686586343378
+          "count": 33,
+          "lastUpdated": 1686650036006
         }
       }
     },
@@ -742,8 +742,8 @@
     "mysql": {
       "mysql": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1686238921027
+          "count": 3,
+          "lastUpdated": 1686653188899
         }
       }
     },
@@ -840,6 +840,86 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1686586354851
+        }
+      }
+    },
+    "frames": {
+      "frames": {
+        "internalLink": {
+          "count": 4,
+          "lastUpdated": 1686650202954
+        }
+      }
+    },
+    "pagetable": {
+      "pagetable": {
+        "internalLink": {
+          "count": 8,
+          "lastUpdated": 1686649923186
+        }
+      }
+    },
+    "latch": {
+      "latch": {
+        "internalLink": {
+          "count": 4,
+          "lastUpdated": 1686648126203
+        }
+      }
+    },
+    "HashMap": {
+      "HashMap": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686648166094
+        }
+      }
+    },
+    "bufferpool": {
+      "bufferpool": {
+        "internalLink": {
+          "count": 5,
+          "lastUpdated": 1686667898227
+        }
+      }
+    },
+    "Postgresql": {
+      "Postgresql": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1686650365168
+        }
+      }
+    },
+    "LRU": {
+      "LRU": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1686650661939
+        }
+      }
+    },
+    "缓冲池污染": {
+      "缓冲池污染": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1686653409735
+        }
+      }
+    },
+    "多缓存池": {
+      "多缓存池": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686653435471
+        }
+      }
+    },
+    "LRU-K": {
+      "LRU-K": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686667908332
         }
       }
     }
