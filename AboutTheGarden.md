@@ -1,11 +1,11 @@
 ---
 comments: true
 date created: 2022-08-06
-date modified: 2023-02-17
+date modified: 2023-06-15
 id: home
 layout: page
 permalink: /
-tags: tutorial
+tags: [tutorial]
 title: AboutTheGarden
 status: 完成
 ---
@@ -19,6 +19,7 @@ status: 完成
 + [ ] [[§ mq面试]]
 + [ ] [[∑ 分布式算法]]
 + [ ] [[§ 分布式]]
++ [ ] [[cmu15445]]
 
 ## 团队管理
 
