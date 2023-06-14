@@ -394,8 +394,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 33,
-          "lastUpdated": 1686650036006
+          "count": 42,
+          "lastUpdated": 1686758860983
         }
       }
     },
@@ -466,8 +466,8 @@
     "co-example": {
       "co-example": {
         "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1669982974953
+          "count": 2,
+          "lastUpdated": 1686756744283
         }
       }
     },
@@ -742,8 +742,8 @@
     "mysql": {
       "mysql": {
         "internalLink": {
-          "count": 3,
-          "lastUpdated": 1686653188899
+          "count": 4,
+          "lastUpdated": 1686709011915
         }
       }
     },
@@ -878,8 +878,8 @@
     "bufferpool": {
       "bufferpool": {
         "internalLink": {
-          "count": 5,
-          "lastUpdated": 1686667898227
+          "count": 7,
+          "lastUpdated": 1686708968358
         }
       }
     },
@@ -902,8 +902,8 @@
     "缓冲池污染": {
       "缓冲池污染": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1686653409735
+          "count": 3,
+          "lastUpdated": 1686709256087
         }
       }
     },
@@ -920,6 +920,62 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1686667908332
+        }
+      }
+    },
+    "mysqlLRU": {
+      "mysqlLRU": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686709046377
+        }
+      }
+    },
+    "innodb": {
+      "innodb": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686754252583
+        }
+      }
+    },
+    "bitmap": {
+      "bitmap": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1686754713483
+        }
+      }
+    },
+    "这里": {
+      "这里": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1686755569636
+        }
+      }
+    },
+    "COMPACT": {
+      "COMPACT": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1686758115766
+        }
+      }
+    },
+    "表示": {
+      "表示": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1686758731863
+        }
+      }
+    },
+    "页边": {
+      "页边": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1686758817873
         }
       }
     }

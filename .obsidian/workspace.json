@@ -21,6 +21,45 @@
             }
           },
           {
+            "id": "7970cad1f104dba7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "29104e901f0dd32b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "62cd87468a467f0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/数据库page.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "97a990c6ea573136",
             "type": "leaf",
             "state": {
@@ -144,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md"
+                "file": "Spaces/2-Area/数据库/mysql行格式.md"
               }
             }
           },
@@ -154,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
+                "file": "Spaces/2-Area/数据库/mysql行格式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +205,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
+                "file": "Spaces/2-Area/数据库/mysql行格式.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -201,7 +240,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
+                "file": "Spaces/2-Area/数据库/mysql行格式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -262,10 +301,15 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "97a990c6ea573136",
+  "active": "7970cad1f104dba7",
   "lastOpenFiles": [
     "Spaces/2-Area/数据库/cmu15445.md",
     "Spaces/2-Area/数据库/数据库bufferpool.md",
+    "Spaces/2-Area/数据库/mysql行格式.md",
+    "Spaces/2-Area/数据库/数据库page.md",
+    "Spaces/2-Area/数据库/缓冲池污染.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
+    "Calendar/Daily notes/2023-06-14.md",
     "Spaces/2-Area/数据库/Tuple-oriented.md",
     "Calendar/Daily notes/2023-06-13.md",
     "Spaces/2-Area/数据库/数据库领域.md",
@@ -277,7 +321,6 @@
     "Spaces/2-Area/数据库/存储结构.md",
     "Spaces/2-Area/数据库/lock和latch的区别.md",
     "Spaces/2-Area/数据库/Log-structured.md",
-    "Spaces/2-Area/数据库/数据库page.md",
     "Calendar/Daily notes/2023-06-12.md",
     "Spaces/1-Project/我的面试指南/mysql/索引.md",
     "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md",
@@ -287,12 +330,8 @@
     "未命名 3.canvas",
     "Spaces/1-Project/我的面试指南/mysql/存储引擎.md",
     "Spaces/2-Area/数据库/关系代数.md",
-    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysql.md",
     "未命名 2.canvas",
-    "Spaces/2-Area/数据库/mysql.md",
     "未命名 1.canvas",
-    "Calendar/Daily notes/2023-06-09.md",
     "未命名.canvas",
     "Spaces/2-Area/数据库",
     "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",

@@ -4507,12 +4507,173 @@
     ]
   },
   {
+    "fileName": "缓冲池污染",
+    "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md",
+    "frontmatter": {
+      "title": "缓冲池污染",
+      "date created": "2023-06-14",
+      "date modified": "2023-06-14",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 71
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "解决方案",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "bufferpool",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
+      },
+      {
+        "link": "bufferpool",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
+      },
+      {
+        "link": "§ mysql目录",
+        "displayText": "mysql",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md"
+      },
+      {
+        "link": "bufferpool",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
+      },
+      {
+        "link": "mysqlLRU",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md"
+      },
+      {
+        "fileName": "数据库bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md"
+      },
+      {
+        "fileName": "数据库bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md"
+      },
+      {
+        "fileName": "数据库bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "mysqlLRU",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md"
+      },
+      {
+        "fileName": "bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
+      },
+      {
+        "fileName": "bufferpool",
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
+      }
+    ]
+  },
+  {
+    "fileName": "mysql行格式",
+    "relativePath": "Spaces/2-Area/数据库/mysql行格式.md",
+    "frontmatter": {
+      "title": "mysql行格式",
+      "date created": "2023-06-14",
+      "date modified": "2023-06-14",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 74
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "[[COMPACT]]行格式",
+        "level": 2
+      },
+      {
+        "heading": "变长字段列表",
+        "level": 3
+      },
+      {
+        "heading": "NULL值处理(bitmap)",
+        "level": 3
+      },
+      {
+        "heading": "[[REDUNDANT]]格式(已废弃)",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "innodb"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "RE"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库page",
+        "link": "mysql行格式",
+        "relativePath": "Spaces/2-Area/数据库/数据库page.md"
+      }
+    ]
+  },
+  {
     "fileName": "数据库bufferpool",
     "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md",
     "frontmatter": {
       "title": "数据库bufferpool",
       "date created": "2023-06-13",
-      "date modified": "2023-06-13",
+      "date modified": "2023-06-14",
       "position": {
         "start": {
           "line": 0,
@@ -4576,24 +4737,44 @@
         "level": 2
       },
       {
-        "heading": "[[LRU]]",
+        "heading": "替换策略，重点需要处理问题",
         "level": 3
       },
       {
-        "heading": "Clock（时钟置换算法，近似LRU)",
+        "heading": "[[缓冲池污染]]",
+        "level": 4
+      },
+      {
+        "heading": "[[预读]]",
+        "level": 4
+      },
+      {
+        "heading": "算法",
         "level": 3
+      },
+      {
+        "heading": "[[LRU]]",
+        "level": 4
+      },
+      {
+        "heading": "Clock（时钟置换算法，近似LRU)",
+        "level": 4
       },
       {
         "heading": "解决[[缓冲池污染]],即进阶的替换策略",
         "level": 3
       },
       {
+        "heading": "[[LRU-K]]",
+        "level": 4
+      },
+      {
         "heading": "[[多缓存池]]",
-        "level": 3
+        "level": 4
       },
       {
         "heading": "优先级提示 Priority Hints",
-        "level": 3
+        "level": 4
       },
       {
         "heading": "脏页回刷",
@@ -4674,19 +4855,27 @@
         "link": "frames"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
+      },
+      {
+        "link": "预读",
+        "relativePath": "Spaces/1-Project/我的面试指南/mysql/预读.md"
       },
       {
         "link": "LRU"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       },
       {
         "link": "LRU-K"
@@ -5111,7 +5300,7 @@
     "frontmatter": {
       "title": "数据库page",
       "date created": "2023-06-12",
-      "date modified": "2023-06-12",
+      "date modified": "2023-06-13",
       "position": {
         "start": {
           "line": 0,
@@ -5224,7 +5413,8 @@
         "relativePath": "Spaces/2-Area/数据库/Log-structured.md"
       },
       {
-        "link": "mysql行格式"
+        "link": "mysql行格式",
+        "relativePath": "Spaces/2-Area/数据库/mysql行格式.md"
       },
       {
         "link": "oltp"
@@ -5425,7 +5615,7 @@
     "frontmatter": {
       "title": "cmu15445",
       "date created": "2023-06-09",
-      "date modified": "2023-06-13",
+      "date modified": "2023-06-14",
       "position": {
         "start": {
           "line": 0,
@@ -5641,6 +5831,10 @@
       },
       {
         "link": "frames"
+      },
+      {
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       },
       {
         "link": "LRU"
@@ -17420,6 +17614,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "数据库bufferpool",
+        "link": "预读",
+        "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md"
+      },
+      {
         "fileName": "bufferpool",
         "link": "预读",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/bufferpool.md"
@@ -20265,6 +20464,12 @@
     ],
     "backlinks": [
       {
+        "fileName": "缓冲池污染",
+        "link": "§ mysql目录",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md",
+        "displayText": "mysql"
+      },
+      {
         "fileName": "数据库bufferpool",
         "link": "§ mysql目录",
         "relativePath": "Spaces/2-Area/数据库/数据库bufferpool.md",
@@ -20640,7 +20845,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
     "frontmatter": {
       "date created": "2022-09-08",
-      "date modified": "2022-09-08",
+      "date modified": "2023-06-14",
       "title": "mysqlLRU",
       "position": {
         "start": {
@@ -20657,10 +20862,22 @@
     },
     "links": [
       {
-        "link": "传统LRU"
+        "link": "LRU-K"
+      },
+      {
+        "link": "LRU"
+      },
+      {
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       }
     ],
     "backlinks": [
+      {
+        "fileName": "缓冲池污染",
+        "link": "mysqlLRU",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
+      },
       {
         "fileName": "冷热数据分离",
         "link": "mysqlLRU",
@@ -21117,7 +21334,8 @@
         "link": "传统LRU"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       },
       {
         "link": "冷热数据分离",
@@ -21136,10 +21354,26 @@
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md"
       },
       {
-        "link": "缓冲池污染"
+        "link": "缓冲池污染",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
       }
     ],
     "backlinks": [
+      {
+        "fileName": "缓冲池污染",
+        "link": "bufferpool",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
+      },
+      {
+        "fileName": "缓冲池污染",
+        "link": "bufferpool",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
+      },
+      {
+        "fileName": "缓冲池污染",
+        "link": "bufferpool",
+        "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md"
+      },
       {
         "fileName": "数据库bufferpool",
         "link": "bufferpool",
@@ -49751,8 +49985,8 @@
     ]
   },
   {
-    "fileName": "2023-06-13",
-    "relativePath": "Calendar/Daily notes/2023-06-13.md",
+    "fileName": "2023-06-14",
+    "relativePath": "Calendar/Daily notes/2023-06-14.md",
     "headings": [
       {
         "heading": "今天的灵感或闪念",
