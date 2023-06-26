@@ -1,7 +1,7 @@
 ---
-title: 存储结构
+title: Trees
 date created: 2023-06-13
-date modified: 2023-06-13
+date modified: 2023-06-19
 ---
 
 参考: [B+树,B-link树,LSM树...一个视频带你了解常用存储引擎数据结构（合集）\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1se4y1U7Dn/?buvid=XU395E039B5DE558C9710D2DB3A55AC3F6F33&is_story_h5=false&mid=H0ejNYFOat6NVNeix6q0Vw%3D%3D&p=1&plat_id=114&share_from=ugc&share_medium=android&share_plat=android&share_session_id=73a47f18-5673-4ea9-8970-0fbbd9b6b0de&share_source=WEIXIN&share_tag=s_i&timestamp=1686585416&unique_k=qp21WwT&up_id=61981458)

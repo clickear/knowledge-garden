@@ -4507,6 +4507,260 @@
     ]
   },
   {
+    "fileName": "跳跃表",
+    "relativePath": "Spaces/2-Area/数据库/跳跃表.md",
+    "frontmatter": {
+      "title": "跳跃表",
+      "alias": [
+        "skip lists"
+      ],
+      "date created": "2023-06-19",
+      "date modified": "2023-06-26",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "col": 3,
+          "offset": 91
+        }
+      }
+    },
+    "aliases": [
+      "skip lists"
+    ],
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "跳跃表",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "哈希表",
+    "relativePath": "Spaces/2-Area/数据库/哈希表.md",
+    "frontmatter": {
+      "title": "哈希表",
+      "date created": "2023-06-19",
+      "date modified": "2023-06-21",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 69
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "哈希函数",
+        "level": 2
+      },
+      {
+        "heading": "哈希冲突解决方案",
+        "level": 2
+      },
+      {
+        "heading": "静态哈希方案(需要预判最终数据量大小)",
+        "level": 3
+      },
+      {
+        "heading": "线性探测法",
+        "level": 3
+      },
+      {
+        "heading": "罗宾汉Hash法(劫富济贫，)",
+        "level": 4
+      },
+      {
+        "heading": "动态哈希方案(按需扩容)",
+        "level": 3
+      },
+      {
+        "heading": "链式地址法(#### Chained Hashing)",
+        "level": 4
+      },
+      {
+        "heading": "Extendible Hashing（扩展哈希表）",
+        "level": 4
+      },
+      {
+        "heading": "Linear Hashing（线性散列）",
+        "level": 4
+      }
+    ],
+    "links": [
+      {
+        "link": "HashMap",
+        "relativePath": "Spaces/2-Area/java/java基础/HashMap.md"
+      },
+      {
+        "link": "pagetable"
+      },
+      {
+        "link": "page directory"
+      },
+      {
+        "link": "MurmurHash"
+      },
+      {
+        "link": "MD5"
+      },
+      {
+        "link": "threadlocal",
+        "relativePath": "Spaces/1-Project/我的面试指南/杂文/threadlocal.md"
+      },
+      {
+        "link": "HashMap",
+        "relativePath": "Spaces/2-Area/java/java基础/HashMap.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "access method",
+        "link": "哈希表",
+        "relativePath": "Spaces/2-Area/数据库/access method.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "哈希表",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Trees",
+    "relativePath": "Spaces/2-Area/数据库/Trees.md",
+    "frontmatter": {
+      "title": "Trees",
+      "date created": "2023-06-13",
+      "date modified": "2023-06-19",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 71
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "存储结构的共性",
+        "level": 2
+      },
+      {
+        "heading": "[[B+树]]，相对于[[B树]]，加强了1，IO尽量少并且一次读取连续区域。",
+        "level": 2
+      },
+      {
+        "heading": "[[LSM树]]",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "B树"
+      },
+      {
+        "link": "SMO"
+      },
+      {
+        "link": "B+树"
+      },
+      {
+        "link": "B树"
+      },
+      {
+        "link": "B树"
+      },
+      {
+        "link": "B-link树"
+      },
+      {
+        "link": "Bw树"
+      },
+      {
+        "link": "LSM树",
+        "relativePath": "Spaces/2-Area/数据库/LSM树.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "access method",
+        "link": "trees",
+        "relativePath": "Spaces/2-Area/数据库/access method.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Trees",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "Trees",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
+    "fileName": "access method",
+    "relativePath": "Spaces/2-Area/数据库/access method.md",
+    "frontmatter": {
+      "title": "access method",
+      "date created": "2023-06-19",
+      "date modified": "2023-06-19",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 79
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "哈希表",
+        "relativePath": "Spaces/2-Area/数据库/哈希表.md"
+      },
+      {
+        "link": "trees",
+        "relativePath": "Spaces/2-Area/数据库/Trees.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "cmu15445",
+        "link": "access method",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      }
+    ]
+  },
+  {
     "fileName": "缓冲池污染",
     "relativePath": "Spaces/2-Area/数据库/缓冲池污染.md",
     "frontmatter": {
@@ -4604,7 +4858,7 @@
     "frontmatter": {
       "title": "mysql行格式",
       "date created": "2023-06-14",
-      "date modified": "2023-06-14",
+      "date modified": "2023-06-15",
       "position": {
         "start": {
           "line": 0,
@@ -4634,6 +4888,30 @@
       {
         "heading": "[[REDUNDANT]]格式(已废弃)",
         "level": 2
+      },
+      {
+        "heading": "字段长度偏移列表",
+        "level": 3
+      },
+      {
+        "heading": "NULL值处理。 高位表示",
+        "level": 3
+      },
+      {
+        "heading": "怎么判断是1个字节还是2个字节",
+        "level": 3
+      },
+      {
+        "heading": "溢出页处理方式",
+        "level": 3
+      },
+      {
+        "heading": "[[DYNAMIC]](默认行格式)",
+        "level": 2
+      },
+      {
+        "heading": "文章",
+        "level": 2
       }
     ],
     "links": [
@@ -4641,6 +4919,30 @@
         "link": "innodb"
       },
       {
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "DYNAMIC"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "COMPRESSED"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
         "link": "COMPACT"
       },
       {
@@ -4656,7 +4958,28 @@
         "link": "REDUNDANT"
       },
       {
-        "link": "RE"
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "REDUNDANT"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "DYNAMIC"
+      },
+      {
+        "link": "COMPACT"
+      },
+      {
+        "link": "COMPRESSED"
+      },
+      {
+        "link": "DYNAMIC"
+      },
+      {
+        "link": "DYNAMIC"
       }
     ],
     "backlinks": [
@@ -4935,75 +5258,6 @@
     ]
   },
   {
-    "fileName": "存储结构",
-    "relativePath": "Spaces/2-Area/数据库/存储结构.md",
-    "frontmatter": {
-      "title": "存储结构",
-      "date created": "2023-06-13",
-      "date modified": "2023-06-13",
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 4,
-          "col": 3,
-          "offset": 70
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "存储结构的共性",
-        "level": 2
-      },
-      {
-        "heading": "[[B+树]]，相对于[[B树]]，加强了1，IO尽量少并且一次读取连续区域。",
-        "level": 2
-      },
-      {
-        "heading": "[[LSM树]]",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "B树"
-      },
-      {
-        "link": "SMO"
-      },
-      {
-        "link": "B+树"
-      },
-      {
-        "link": "B树"
-      },
-      {
-        "link": "B树"
-      },
-      {
-        "link": "B-link树"
-      },
-      {
-        "link": "Bw树"
-      },
-      {
-        "link": "LSM树",
-        "relativePath": "Spaces/2-Area/数据库/LSM树.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "cmu15445",
-        "link": "存储结构",
-        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
-      }
-    ]
-  },
-  {
     "fileName": "LSM树",
     "relativePath": "Spaces/2-Area/数据库/LSM树.md",
     "frontmatter": {
@@ -5025,9 +5279,9 @@
     },
     "backlinks": [
       {
-        "fileName": "存储结构",
+        "fileName": "Trees",
         "link": "LSM树",
-        "relativePath": "Spaces/2-Area/数据库/存储结构.md"
+        "relativePath": "Spaces/2-Area/数据库/Trees.md"
       },
       {
         "fileName": "Log-structured",
@@ -5615,7 +5869,7 @@
     "frontmatter": {
       "title": "cmu15445",
       "date created": "2023-06-09",
-      "date modified": "2023-06-14",
+      "date modified": "2023-06-21",
       "position": {
         "start": {
           "line": 0,
@@ -5775,8 +6029,8 @@
         "link": "out-place-update-structure"
       },
       {
-        "link": "存储结构",
-        "relativePath": "Spaces/2-Area/数据库/存储结构.md"
+        "link": "Trees",
+        "relativePath": "Spaces/2-Area/数据库/Trees.md"
       },
       {
         "link": "lock和latch的区别",
@@ -5850,7 +6104,42 @@
         "link": "LRU-K"
       },
       {
+        "link": "access method",
+        "relativePath": "Spaces/2-Area/数据库/access method.md"
+      },
+      {
+        "link": "哈希表",
+        "relativePath": "Spaces/2-Area/数据库/哈希表.md"
+      },
+      {
+        "link": "pagetable"
+      },
+      {
+        "link": "page directory"
+      },
+      {
+        "link": "Trees",
+        "relativePath": "Spaces/2-Area/数据库/Trees.md"
+      },
+      {
+        "link": "跳跃表",
+        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
+      },
+      {
+        "link": "radixTree"
+      },
+      {
+        "link": "trie"
+      },
+      {
         "link": "冯诺依曼结构"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "AboutTheGarden",
+        "link": "cmu15445",
+        "relativePath": "AboutTheGarden.md"
       }
     ]
   },
@@ -7790,6 +8079,16 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "哈希表",
+        "link": "HashMap",
+        "relativePath": "Spaces/2-Area/数据库/哈希表.md"
+      },
+      {
+        "fileName": "哈希表",
+        "link": "HashMap",
+        "relativePath": "Spaces/2-Area/数据库/哈希表.md"
+      },
       {
         "fileName": "数据库bufferpool",
         "link": "HashMap",
@@ -10787,6 +11086,11 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "哈希表",
+        "link": "threadlocal",
+        "relativePath": "Spaces/2-Area/数据库/哈希表.md"
+      },
       {
         "fileName": "§ 并发",
         "link": "threadlocal",
@@ -49788,7 +50092,7 @@
     "frontmatter": {
       "comments": true,
       "date created": "2022-08-06",
-      "date modified": "2023-02-17",
+      "date modified": "2023-06-15",
       "id": "home",
       "layout": "page",
       "permalink": "/",
@@ -49803,7 +50107,7 @@
         "end": {
           "line": 10,
           "col": 3,
-          "offset": 156
+          "offset": 158
         }
       }
     },
@@ -49841,6 +50145,10 @@
       {
         "link": "§ 分布式",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
+      },
+      {
+        "link": "cmu15445",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
       },
       {
         "link": "团队管理",
@@ -49985,8 +50293,8 @@
     ]
   },
   {
-    "fileName": "2023-06-14",
-    "relativePath": "Calendar/Daily notes/2023-06-14.md",
+    "fileName": "2023-06-19",
+    "relativePath": "Calendar/Daily notes/2023-06-19.md",
     "headings": [
       {
         "heading": "今天的灵感或闪念",

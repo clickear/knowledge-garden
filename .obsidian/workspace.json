@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e1e29ba459a2495e",
+            "id": "6443326db9c2cee3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,12 +21,90 @@
             }
           },
           {
-            "id": "7970cad1f104dba7",
+            "id": "8fdf53e0d92dd5d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "file": "Spaces/2-Area/数据库/跳跃表.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d394d30b41ea67ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/跳跃表.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6acf571bbd539c0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/哈希表.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3f257ce4cc5b3591",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/Trees.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d76e4088b5d3930",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/Trees.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d1f13bb570802540",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/access method.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "223a7a04eb194259",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/数据库/Trees.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -142,7 +220,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "fastthre",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -170,7 +248,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "92910ae8836a7b22",
@@ -183,7 +262,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md"
+                "file": "Spaces/2-Area/数据库/跳跃表.md"
               }
             }
           },
@@ -193,7 +272,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "file": "Spaces/2-Area/数据库/跳跃表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,7 +284,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "file": "Spaces/2-Area/数据库/跳跃表.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -240,7 +319,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md",
+                "file": "Spaces/2-Area/数据库/跳跃表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -301,35 +380,35 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "7970cad1f104dba7",
+  "active": "8fdf53e0d92dd5d7",
   "lastOpenFiles": [
     "Spaces/2-Area/数据库/cmu15445.md",
-    "Spaces/2-Area/数据库/数据库bufferpool.md",
+    "Spaces/2-Area/数据库/跳跃表.md",
+    "Spaces/2-Area/数据库/Trees.md",
+    "Spaces/2-Area/数据库/哈希表.md",
+    "Spaces/1-Project/我的面试指南/杂文/threadlocal.md",
+    "Calendar/Daily notes/2023-06-19.md",
+    "Spaces/2-Area/数据库/access method.md",
+    "Spaces/2-Area/数据库/数据库领域.md",
+    "AboutTheGarden.md",
+    "HOMEPAGE.md",
     "Spaces/2-Area/数据库/mysql行格式.md",
+    "Spaces/2-Area/数据库/数据库bufferpool.md",
     "Spaces/2-Area/数据库/数据库page.md",
     "Spaces/2-Area/数据库/缓冲池污染.md",
     "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
     "Calendar/Daily notes/2023-06-14.md",
     "Spaces/2-Area/数据库/Tuple-oriented.md",
     "Calendar/Daily notes/2023-06-13.md",
-    "Spaces/2-Area/数据库/数据库领域.md",
     "Spaces/2-Area/数据库/∑ 数据库.md",
     "Spaces/2-Area/数据库/§ 数据库.md",
     "Spaces/2-Area/数据库/行存储.md",
     "Spaces/2-Area/数据库/LSM树.md",
     "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/2-Area/数据库/存储结构.md",
     "Spaces/2-Area/数据库/lock和latch的区别.md",
     "Spaces/2-Area/数据库/Log-structured.md",
     "Calendar/Daily notes/2023-06-12.md",
-    "Spaces/1-Project/我的面试指南/mysql/索引.md",
-    "Spaces/2-Area/数据库/为什么不用OS的磁盘管理？.md",
-    "Spaces/2-Area/数据库/列存储.md",
-    "Calendar/Daily notes/2023-02-03.md",
-    "Spaces/2-Area/数据库/磁盘管理.md",
     "未命名 3.canvas",
-    "Spaces/1-Project/我的面试指南/mysql/存储引擎.md",
-    "Spaces/2-Area/数据库/关系代数.md",
     "未命名 2.canvas",
     "未命名 1.canvas",
     "未命名.canvas",
