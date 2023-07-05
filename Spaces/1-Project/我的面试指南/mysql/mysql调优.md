@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-13
-date modified: 2023-02-15
+date modified: 2023-07-05
 title: mysql调优
 ---
 
@@ -74,13 +74,11 @@ select * from user where sex = 1; -- 不走索引
 
 [[索引覆盖]]，不进行[[回表]]。可以索引的字段信息，就以及满足查询需求了，不需要进行查其他字段信息。索引包含（或者说覆盖）所有需要查询的字段。
 
-  
   ```sql
 select * from user where age = 1; -- extra 为null  
 select age from user where age = 1; -- extra 为using index。 因为直接使用索引就可以，不用进行查询
 select id,user_code from user where user_code = 't'; -- 与是否为使用唯一索引无关
 ```
-  
 
 ### using index; using where
 
@@ -143,9 +141,15 @@ select * from user where name = 'xx' and age > 12 and sex = 1;
 >----索引不需要服务端过滤(select \* ) ** 索引下推, using index condition ;**  
 >---- 索引需要服务端过滤(and sex = 1) **索引下推 + where, using index condition; using where**
 
-		
+## 调优案例
 
-   
+### order by limit 导致选错最优索引
+
+[记录一次数据库CPU被打满的排查过程 - 文章详情](https://z.itpub.net/article/detail/E173EE6D88E2C876A556854F394FB6E4)
+
+### 大分页
+
+### 类型不匹配，不走索引
 
 ## 资料
 
