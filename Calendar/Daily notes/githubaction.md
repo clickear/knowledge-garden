@@ -1,7 +1,7 @@
 ---
 title: githubaction
 date created: 2023-08-01
-date modified: 2023-08-01
+date modified: 2023-08-07
 ---
 
 ## githubaction的妙用
@@ -147,6 +147,54 @@ jobs:
 
 ### 定时触发
 
+[build.yml](https://github.com/requireCool/stealth.min.js/blob/main/.github/workflows/build.yml)  
+每天自动打包
+
+``` yaml
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Clone repository
+        run: git clone https://github.com/berstend/puppeteer-extra.git puppeteer-extra --depth=1
+        
+      - name: 'Fix for: error fsevents@2.1.2: The platform "linux" is incompatible with this module.'
+        run: cd puppeteer-extra && npx json -I -f package.json -e 'this.resolutions={}'
+
+      - name: Build packages
+        run: |
+          cd puppeteer-extra
+          yarn install
+          yarn bootstrap
+          yarn build
+          
+      - name: Extract stealth.min.js
+        run: |
+          cd puppeteer-extra/packages/extract-stealth-evasions
+          node index.js
+          cp stealth.min.js ../../../
+      
+      - name: Commit stealth.min.js
+        uses: EndBug/add-and-commit@v4
+        with:
+          add: 'stealth.min.js'
+          force: true
+          ref: 'main'
+          message: 'Auto-updated stealth.min.js with newest evasions'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
 ## 常用指南
 
 ``` yaml
@@ -185,3 +233,10 @@ jobs:
           files: |
             release.zip
 ```
+
+[开源项目 pyqt 软件自动更新框架 | Python 技术论坛](https://learnku.com/articles/70609)
+
+## 参考文章
+
+[如何评价 GitHub Actions？ - 知乎](https://www.zhihu.com/question/306195033/answer/2280620253)  
+[开源项目 pyqt 软件自动更新框架 | Python 技术论坛](https://learnku.com/articles/70609)
