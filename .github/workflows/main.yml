@@ -29,7 +29,7 @@ jobs:
           cd dg3
           git submodule update --init --recursive
           echo "$(pwd)"
-          git checkout hugo
+          git checkout v4
           upStream=https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}
           echo "upStream=$upStream" >> $GITHUB_ENV
           commit=$(curl -sL $upStream/commits/${{ matrix.branchName }} |grep -o "/${{ matrix.userName }}/${{ matrix.repoName }}/commit/[a-z0-9]\+" |head -1 | cut -d\/ -f5)
@@ -50,5 +50,5 @@ jobs:
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           git add --all
           git commit -m "${{ env.commit }}"
-          git push -u -f origin hugo
+          git push -u -f origin v4
         working-directory: ../dg3
