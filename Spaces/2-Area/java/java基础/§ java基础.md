@@ -1,7 +1,7 @@
 ---
 title: § java基础
 date created: 2023-01-19
-date modified: 2023-01-20
+date modified: 2023-09-07
 tags: [task]
 ---
 
@@ -13,4 +13,5 @@ tags: [task]
 + [[自动拆装箱]]
 + [[java集合]]
 + [[零拷贝]]
-+ [[NIO]]
++ [[NIO]]  
++[[AtomicLongMap]]
