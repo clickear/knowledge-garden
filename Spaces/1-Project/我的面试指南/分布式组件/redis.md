@@ -1,8 +1,32 @@
 ---
+mindmap-plugin: basic
 date created: 2022-09-15
-date modified: 2022-09-21
-title: 资料
+date modified: 2023-09-08
+title: redis
 ---
+
+# redis
+
+## 数据类型
+
+命名前缀:
+
+> [!TIP] 技巧💡
+>  + Set commands start with `s`
+>  + Hash commands start with `h`
+>  + List commands start with `l`
+>  + Sorted set commands start with `z`.[^1](为什么是z前缀
+>  + Stream commands start with `x`
+>  + Hyperloglog commands start with `pf` [^2]
+
+| 类型   | 作用 | 命名 |     |
+|:------ |:---- |:---- |:--- |
+| String |  value: 可以是字符串、数值、浮点数。支持自增、自减操作   | get: 获取<br> set: 设置 <br> del: 删除，所有类型都不支持  |     |
+| List   |  数组，类比ArrayList    | lpush lpop lrange lindex rpush rpop  |     |
+| Set    |  set,类比HashSet    |   sadd,SMEMBERS, SISMEMBER, SREM   |     |
+| Hash   |  map, 类比hashmap    |   HSET，HGET, HGETALL, HDEL   |     |
+| ZSET   |  有序的set,类比 TreeSet  |   ZADD, ZRANGE, ZRAGEBYSCORE, ZREM   |     |
+|        |      |      |     |
 
 ## 高性能
 
@@ -126,7 +150,11 @@ Redis Cluster 方案采用哈希槽（Hash Slot），来处理数据和实例之
 
 [[MQ]]
 
-# 资料
+## 资料
 
 - [](https://book.clickear.top/%E6%8B%89%E5%8B%BE_%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95%E7%B2%BE%E8%AE%B2/13%20%7C%20%E7%BC%93%E5%AD%98%E5%8E%9F%E7%90%86%EF%BC%9A%E5%BA%94%E5%AF%B9%E9%9D%A2%E8%AF%95%E4%BD%A0%E8%A6%81%E6%8E%8C%E6%8F%A1%20Redis%20%E5%93%AA%E4%BA%9B%E5%8E%9F%E7%90%86%EF%BC%9F.html)[https://book.clickear.top/拉勾_架构设计面试精讲/13](https://book.clickear.top/%E6%8B%89%E5%8B%BE_%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95%E7%B2%BE%E8%AE%B2/13) | 缓存原理：应对面试你要掌握 Redis 哪些原理？.html
 - [](https://book.clickear.top/%E6%8B%89%E5%8B%BE_%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95%E7%B2%BE%E8%AE%B2/14%20%7C%20%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%EF%BC%9A%E9%9D%A2%E8%AF%95%E4%B8%AD%E5%A6%82%E4%BD%95%E5%9B%9E%E7%AD%94%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E3%80%81%E9%9B%AA%E5%B4%A9%E7%AD%89%E9%97%AE%E9%A2%98%EF%BC%9F.html)[https://book.clickear.top/拉勾_架构设计面试精讲/14](https://book.clickear.top/%E6%8B%89%E5%8B%BE_%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95%E7%B2%BE%E8%AE%B2/14) | 缓存策略：面试中如何回答缓存穿透、雪崩等问题？.html
+
+[^1]: [python - Why Redis 'Zset' means 'Sorted Set'? - Stack Overflow](https://stackoverflow.com/questions/64020570/why-redis-zset-means-sorted-set)
+
+[^2]: [初识Redis的数据类型HyperLogLog-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1650031)
