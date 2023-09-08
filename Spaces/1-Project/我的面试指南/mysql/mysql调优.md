@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-13
-date modified: 2023-07-05
+date modified: 2023-09-09
 title: mysql调优
 ---
 
@@ -18,24 +18,108 @@ title: mysql调优
 
 ![](http://image.clickear.top/20220913175031.png)  
 
+### 访问方法
+
+- 使用全表扫描查询：表的每一行记录都进行一次查询
+- 使用索引进行查询
+    - 针对主键和唯一二级索引
+    - 针对普通二级索引
+    - 索引的范围查询
+    - 直接扫描整个索引
+
+mysql查询语句就是访问方法的类型。同一个语句可能会有不同的路线
+
 ## type
 
 > [!TIP] 技巧💡  
 > system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL ）。最少要到range级别
 
-1) system：表只有一行记录（等于系统表），是 const 类型的特例，平时不会出现。[^2]
+```mysql
+CREATE TABLE single_table (
+	id INT NOT NULL AUTO_INCREMENT,
+	key1 VARCHAR(100),
+	key2 INT,
+	key3 VARCHAR(100),
+	key_part1 VARCHAR(100),
+	key_part2 VARCHAR(100),
+	key_part3 VARCHAR(100),
+	common_field VARCHAR(100),
+	PRIMARY KEY (id),
+	KEY idx_key1 (key1),
+	UNIQUE KEY idx_key2 (key2),
+	KEY idx_key3 (key3),
+	KEY idx_key_part (key_part1,
+		key_part2,
+		key_part3)) Engine = InnoDB CHARSET = utf8;
+```
 
-2) const：**唯一性索引的等值查找**,表示通过索引一次就找到了，const 用于比较 primary key 或 unique 索引，因为只要匹配一行数据，所以很快，如将主键置于 where 列表中，mysql 就能将该查询转换为一个常量。可以认为是通过唯一性索引[^3]进行查找。
+### system
 
-3) eq_ref：**唯一性索引的等值关联**，唯一性索引扫描，对于每个索引键，表中只有一条记录与之匹配，常见于主键或唯一索引扫描。[^eq_ref和const的区别]
+system：表只有一行记录（等于系统表），是 const 类型的特例，平时不会出现。[^2]
 
-4) ref：**非唯一性索引的等值扫描**,非唯一性索引扫描，范围匹配某个单独值得所有行。本质上也是一种索引访问，他返回所有匹配某个单独值的行，然而，它可能也会找到多个符合条件的行，多以他应该属于查找和扫描的混合体
+### const(唯一索引或者主键索引=某个值)
 
-5) range：**范围查找，不指定唯一索引还是普通索引**只检索给定范围的行，使用一个索引来选择行。key列显示使用了哪个索引，一般就是在你的where语句中出现了between、<、>、in等的查询，这种范围扫描索引比全表扫描要好，因为它只需开始于索引的某一点，而结束于另一点，不用扫描全部索引
+const：**唯一性索引的等值查找**,表示通过索引一次就找到了，const 用于比较 primary key 或 unique 索引，因为只要匹配一行数据，所以很快，如将主键置于 where 列表中，mysql 就能将该查询转换为一个常量。可以认为是通过唯一性索引[^3]进行查找。
 
-6) index：Full Index Scan，index于ALL区别为index类型只遍历索引树。通常比ALL快，因为索引文件通常比数据文件小。（也就是说虽然all和index都是读全表，但index是从索引中读取的，而all是从硬盘中读的）
+```sql
+SELECT * FROM single_table WHERE id = 1438;
+```
 
-7) ALL：Full Table Scan，将遍历全表找到匹配的行
+主键索引  
+![image.png](http://image.clickear.top/20230909002505.png)  
+唯一索引  
+
+1. 先定位查找id，后[[回表]]  
+![image.png](http://image.clickear.top/20230909002759.png)
+
+### eq_ref( 和eq类似，主要是用于关联查询join)
+
+ eq_ref：**唯一性索引的等值关联**，唯一性索引扫描，对于每个索引键，表中只有一条记录与之匹配，常见于主键或唯一索引扫描。[^eq_ref和const的区别]
+
+### ref(普通索引=某个单独值)
+
+ref：**非唯一性索引的等值扫描**,非唯一性索引扫描，范围匹配某个单独值得所有行。本质上也是一种索引访问，他返回所有匹配某个单独值的行，然而，它可能也会找到多个符合条件的行，多以他应该属于查找和扫描的混合体
+
+```mysql
+SELECT * FROM single_table WHERE key1 = ‘abc’;
+```
+
+- 普通二级索引的索引列和常数的等值比较
+- 普通索引并不会限制记录的唯一性，所以可能会查询到多条，那么他的查询代价取决于这个值到底有多少个记录，然后进行回表
+- 二级索引如果访问的key1 is null都是ref的级别，也就是查询多个  
+![image.png](http://image.clickear.top/20230909003207.png)  
+![image.png](http://image.clickear.top/20230909003215.png)
+
+### ref_is_null(与ref类型，key1='abc' or key1 is null)
+
+- 这种就是等值列+null的查询，也是扫描好几条数据
+
+```mysql
+SELECT * FROM single_demo WHERE key1 = ‘abc’ OR key1 IS NULL;
+```
+
+![image.png](http://image.clickear.top/20230909003323.png)  
+![image.png](http://image.clickear.top/20230909003329.png)
+
+### range(范围查询)
+
+```mysql
+SELECT * FROM single_table WHERE key2 IN (1438, 6328) OR (key2 >= 38 AND key2 <= 79);
+```
+
+ range：**范围查找，不指定唯一索引还是普通索引**只检索给定范围的行，使用一个索引来选择行。key列显示使用了哪个索引，一般就是在你的where语句中出现了between、<、>、in等的查询，这种范围扫描索引比全表扫描要好，因为它只需开始于索引的某一点，而结束于另一点，不用扫描全部索引
+
+### index
+
+```mysql
+SELECT key_part1, key_part2, key_part3 FROM single_table WHERE key_part2 = ‘abc’;
+```
+
+ index：Full Index Scan，index于ALL区别为index类型只遍历索引树。通常比ALL快，因为索引文件通常比数据文件小。（也就是说虽然all和index都是读全表，但index是从索引中读取的，而all是从硬盘中读的）
+
+### all
+
+ALL：Full Table Scan，将遍历全表找到匹配的行
 
 缺点：  
 
@@ -44,6 +128,108 @@ title: mysql调优
 - EXPLAIN不能显示MySQL在执行查询时所作的优化工作  
 - 部分统计信息是估算的，并非精确值  
 - EXPLAIN只能解释SELECT操作，其他操作要重写为SELECT后查看执行计划
+
+## 如何推算是否会用到哪些索引?
+
+> [!TIP] 守则💡  
+>  and: where expr1 and expr2. 取**交集** 。  
+>  如where a >100 and a>200 等价于 a>200  
+>  or: where expr1 or expr2。取**并集**。  
+>  如where a >100 or a>200 等价于 a>100。这也解释了，为什么很多地方，说只有有or就不走索引。可能是因为 a>100 or b>200。 如果是这种情况，假设a有索引，b没索引。这个等式，等价于 b>200( 扫描行数更多)，即等价于不走索引了。
+>  
+>  exp1 and true --> exp1
+>  
+>  exp1 or true --> true
+>  
+>  exp1 or false --> exp1
+
+### 所有条件，都可以走索引
+
+#### and(交集)
+
+```mysql
+SELECT * FROM single_table WHERE key2 > 100 AND key2 > 200;
+```
+
+![image.png](http://image.clickear.top/20230909004339.png)
+
+#### or(并集)
+
+```mysql
+SELECT * FROM single_table WHERE key2 > 100 OR key2 > 200;
+```
+
+![image.png](http://image.clickear.top/20230909004347.png)
+
+### 有的查询条件无法使用的情况
+
+```mysql
+SELECT * FROM single_table WHERE key2 > 100 AND common_field = 'abc';
+```
+
+索引idx_key2并不包括common_field = ‘abc’;这个条件相当于就是[[回表]]的时候才会去使用，也就是在索引上不会过滤这个条件，他也没办法过滤  
+SELECT * FROM single_table WHERE key2 > 100 AND TRUE;在索引上面这个common_field = ‘abc’;就变成了这个查询，也就是不加以判断。即等价于 key2>100
+
+#### 不走索引
+
+```mysql
+SELECT * FROM single_table WHERE key2 > 100 OR common_field = 'abc';
+```
+
++ 等价于 key2>100 or true. --> true
+
+### 复杂搜索条件找出的范围匹配区间
+
+```mysql
+ SELECT * FROM single_table WHERE (key1 > 'xyz' AND key2 = 748 ) 
+ OR (key1 < 'abc' AND key1 > 'lmn') 
+ OR (key1 LIKE '%suf' AND key1 > 'zzz' AND (key2 < 8000 OR common_field = 'abc'))
+```
+
+结论: 使用 key1索引  
+![image.png](http://image.clickear.top/20230909004853.png)
+
+猜测，可能使用key1或者key2索引。
+
+1. 假设使用key1索引，则 key2和common_field都是全表扫描。则
+
+```mysql
+-- 第一个条件
+key1 > 'xyz' AND key2 = 748 --> key1>'xyz' ADN true --> key1>'xyz'
+-- 第二个条件
+(key1 < 'abc' AND key1 > 'lmn') --> 因为没有交集，所以这个 --> false
+-- 第三个条件
+(key1 LIKE '%suf' AND key1 > 'zzz' AND (key2 < 8000 OR common_field = 'abc'))
+--> key1 LIKE '%suf' AND key1 > 'zzz' AND (true or true)
+--> key1 LIKE '%suf' AND key1 > 'zzz'
+--> true and key1 > 'zzz'
+--> key1 > 'zzz'
+
+-- 规整后
+key1>'xyz' or false or key1 > 'zzz'
+--> key1>'xyz' or key1 > 'zzz'
+--> key1>'xyz'
+```
+
+所以，最后的扫描区间为 xyz --> 正无穷
+
+2. 假设使用key2作为索引，则key1和common_field都是全表扫描。
+
+```mysql
+-- 第一个条件
+(key1 > 'xyz' AND key2 = 748 ) --> true and key2 = 748 --> 
+-- 第二个条件
+(key1 < 'abc' AND key1 > 'lmn') --> true and true --> true
+-- 第三个条件
+(key1 LIKE '%suf' AND key1 > 'zzz' AND (key2 < 8000 OR common_field = 'abc'))
+--> true and true and (key2 < 8000 or true)
+--> true and true and true
+--> true
+-- 规整后
+key2 = 748 or true or true --> true
+```
+
+这意味着，如果使用key2作为索引，需要进行扫描区间，为负无穷到正无穷。并且还要进行回表获取其他字段信息。得不偿丧。
 
 ## extra(扩展信息)
 
@@ -156,6 +342,8 @@ select * from user where name = 'xx' and age > 12 and sex = 1;
 [MySQL 三万字精华总结 + 面试100 问，和面试官扯皮绰绰有余（收藏系列） - 掘金](https://juejin.cn/post/6850037271233331208)
 
 [SQL中的where条件，在数据库中提取与应用浅析](https://www.jianshu.com/p/89ec04641e72)
+
+[《MySQL是怎么运行的：从根儿上理解MySQL》(8-10)学习总结\_从根上理解mysql第八章\_月亮的-影子的博客-CSDN博客](https://blog.csdn.net/m0_46388866/article/details/121090089)
 
 [^1]: [MySQL 执行计划中Extra(Using where,Using index,Using index condition,Using index,Using where)的浅析 - 潇湘隐者 - 博客园](https://www.cnblogs.com/kerrycode/p/9909093.html)
 
