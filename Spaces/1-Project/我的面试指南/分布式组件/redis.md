@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-15
-date modified: 2023-10-12
+date modified: 2023-10-13
 title: redis
 ---
 
@@ -8,9 +8,13 @@ title: redis
 
 ## 数据类型
 
-[[redis-数据类型.svg]]
+![[redis-数据类型.svg]]
 
 ![[redis-数据类型]]
+
+[[sds]]
+
+
 
 命名前缀:
 

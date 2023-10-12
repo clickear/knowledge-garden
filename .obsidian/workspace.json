@@ -8,7 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4f93895194b51224",
+            "id": "68806d08517bd244",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e297575950e596ea",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -18,17 +31,20 @@
             }
           },
           {
-            "id": "68806d08517bd244",
+            "id": "d758f5c3848389af",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Extras/Draws/redis-数据类型.md"
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Extras/Draws/redis-数据类型.md"
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/sds.md"
               }
             }
           },
@@ -110,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Extras/Draws/redis-数据类型.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Extras/Draws/redis-数据类型.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -157,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Extras/Draws/redis-数据类型.md",
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -218,14 +234,18 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "68806d08517bd244",
+  "active": "d758f5c3848389af",
   "lastOpenFiles": [
+    "Extras/Draws/redis-数据类型.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
+    "Calendar/Daily notes/2023-10-13.md",
+    "Extras/Media/Pasted Image 20231013020457_509.png",
+    "Extras/Media/Pasted Image 20231013020412_053.png",
+    "Extras/Draws/redis-底层数据结构.md",
     "Extras/Media/Pasted Image 20231013013948_800.png",
     "Extras/Media/Pasted Image 20231013011808_219.png",
-    "Extras/Draws/redis-底层数据结构.md",
     "Extras/Draws/redis-底层数据结构.svg",
-    "Extras/Draws/redis-数据类型.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
     "Extras/Draws/redis-数据类型.svg",
     "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
     "未命名.canvas",
@@ -249,14 +269,10 @@
     "Notion/知识图谱/博客/工作流.md",
     "Notion/知识图谱/博客/圈x使用.md",
     "Notion/知识图谱/博客/mac下 应用降级.md",
-    "Notion/知识图谱/博客/越狱/Untitled Database/aReo.md",
     "Extras/Media/Untitled 22.png",
     "Extras/Media/Untitled 5 3.png",
     "Extras/Media/Untitled 4 3.png",
     "Extras/Media/Untitled 3 6.png",
-    "Extras/Media/Untitled 2 9.png",
-    "Extras/Media/Untitled 1 9.png",
-    "Extras/Media/Untitled 21.png",
     "Extras/Media/MySQL.pdf",
     "Extras/Media/0531V3.0.pptx",
     "Extras/Media/MQ_12_07.pdf",

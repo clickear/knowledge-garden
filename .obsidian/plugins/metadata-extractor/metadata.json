@@ -9459,6 +9459,49 @@
     ]
   },
   {
+    "fileName": "sds",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
+    "frontmatter": {
+      "title": "sds",
+      "date created": "2023-10-13",
+      "date modified": "2023-10-13"
+    },
+    "headings": [
+      {
+        "heading": "sds",
+        "level": 1
+      },
+      {
+        "heading": "基本结构",
+        "level": 2
+      },
+      {
+        "heading": "紧凑型:",
+        "level": 2
+      },
+      {
+        "heading": "encoding中raw和embstr的区别",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "redis",
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+      },
+      {
+        "fileName": "redis-数据类型",
+        "link": "SDS",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ]
+  },
+  {
     "fileName": "分布式锁",
     "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
     "frontmatter": {
@@ -9875,7 +9918,7 @@
     "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
     "frontmatter": {
       "date created": "2022-09-15",
-      "date modified": "2023-10-12",
+      "date modified": "2023-10-13",
       "title": "redis"
     },
     "headings": [
@@ -9997,6 +10040,10 @@
       }
     ],
     "links": [
+      {
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md"
+      },
       {
         "link": "分布式锁",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
@@ -41028,6 +41075,12 @@
         "level": 1
       }
     ],
+    "links": [
+      {
+        "link": "SDS",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md"
+      }
+    ],
     "backlinks": [
       {
         "fileName": "redis",
@@ -41397,18 +41450,8 @@
     ]
   },
   {
-    "fileName": "2022-09-07",
-    "relativePath": "Calendar/Daily notes/2022-09-07.md",
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2023-09-26",
-    "relativePath": "Calendar/Daily notes/2023-09-26.md",
+    "fileName": "2023-10-13",
+    "relativePath": "Calendar/Daily notes/2023-10-13.md",
     "headings": [
       {
         "heading": "今天的灵感或闪念",
@@ -41790,16 +41833,6 @@
         "fileName": "2023-01-18",
         "link": "SMART",
         "relativePath": "Calendar/Daily notes/2023-01-18.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2023-09-21",
-    "relativePath": "Calendar/Daily notes/2023-09-21.md",
-    "headings": [
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
       }
     ]
   },
