@@ -43,5 +43,7 @@
   "obsidian-table-generator",
   "emoji-shortcodes",
   "better-fn",
-  "obsidian-footnotes"
+  "obsidian-footnotes",
+  "obsidian-markmind",
+  "obsidian-importer"
 ]

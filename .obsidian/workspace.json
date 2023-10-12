@@ -4,188 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "1ba2cfad90d20376",
+        "id": "e27c2ce6eb478fc7",
         "type": "tabs",
         "children": [
           {
-            "id": "6443326db9c2cee3",
+            "id": "4f93895194b51224",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Spaces/2-Area/数据库/cmu15445.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Extras/Draws/redis-数据类型.md"
               }
             }
           },
           {
-            "id": "8fdf53e0d92dd5d7",
+            "id": "68806d08517bd244",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d394d30b41ea67ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6acf571bbd539c0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/哈希表.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3f257ce4cc5b3591",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/Trees.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7d76e4088b5d3930",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/Trees.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1f13bb570802540",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/access method.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "223a7a04eb194259",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/Trees.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "29104e901f0dd32b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/mysql行格式.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "62cd87468a467f0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/数据库page.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "97a990c6ea573136",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7ad356f12bd72df3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6860bec34564f23b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f5a41ffc494ed67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/数据库/数据库bufferpool.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Extras/Draws/redis-数据类型.md"
               }
             }
           }
@@ -202,7 +40,7 @@
       {
         "id": "987dbc5670d8f4fa",
         "type": "tabs",
-        "dimension": 54.41008018327606,
+        "dimension": 57.792946530147894,
         "children": [
           {
             "id": "a4d1994dfc9f1870",
@@ -220,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fastthre",
+                "query": "redis",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -254,7 +92,7 @@
       {
         "id": "92910ae8836a7b22",
         "type": "tabs",
-        "dimension": 45.58991981672394,
+        "dimension": 42.207053469852106,
         "children": [
           {
             "id": "e3c3bc13cb0131c1",
@@ -262,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md"
+                "file": "Extras/Draws/redis-数据类型.md"
               }
             }
           },
@@ -272,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md",
+                "file": "Extras/Draws/redis-数据类型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -284,7 +122,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md",
+                "file": "Extras/Draws/redis-数据类型.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -307,7 +145,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.4831326668375011,
+                  "scale": 1.3737247862305928,
                   "close": true
                 }
               }
@@ -319,8 +157,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/数据库/跳跃表.md",
-                "collapseAll": false,
+                "file": "Extras/Draws/redis-数据类型.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -330,8 +168,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -369,7 +206,6 @@
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "janitor:Janitor: scan vault": false,
       "obsidian42-brat:BRAT": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
@@ -377,44 +213,62 @@
       "obsidian-spaced-repetition:复习卡片": false,
       "obsidian-stille:Toggle Stille": false,
       "obsidian-weread-plugin:Weread": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-importer:Open Importer": false,
+      "obsidian-projects:Open projects": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8fdf53e0d92dd5d7",
+  "active": "68806d08517bd244",
   "lastOpenFiles": [
-    "Spaces/2-Area/数据库/cmu15445.md",
-    "Spaces/2-Area/数据库/跳跃表.md",
-    "Spaces/2-Area/数据库/Trees.md",
-    "Spaces/2-Area/数据库/哈希表.md",
-    "Spaces/1-Project/我的面试指南/杂文/threadlocal.md",
-    "Calendar/Daily notes/2023-06-19.md",
-    "Spaces/2-Area/数据库/access method.md",
-    "Spaces/2-Area/数据库/数据库领域.md",
-    "AboutTheGarden.md",
-    "HOMEPAGE.md",
-    "Spaces/2-Area/数据库/mysql行格式.md",
-    "Spaces/2-Area/数据库/数据库bufferpool.md",
-    "Spaces/2-Area/数据库/数据库page.md",
-    "Spaces/2-Area/数据库/缓冲池污染.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
-    "Calendar/Daily notes/2023-06-14.md",
-    "Spaces/2-Area/数据库/Tuple-oriented.md",
-    "Calendar/Daily notes/2023-06-13.md",
-    "Spaces/2-Area/数据库/∑ 数据库.md",
-    "Spaces/2-Area/数据库/§ 数据库.md",
-    "Spaces/2-Area/数据库/行存储.md",
-    "Spaces/2-Area/数据库/LSM树.md",
+    "Extras/Media/Pasted Image 20231013013948_800.png",
+    "Extras/Media/Pasted Image 20231013011808_219.png",
+    "Extras/Draws/redis-底层数据结构.md",
+    "Extras/Draws/redis-底层数据结构.svg",
+    "Extras/Draws/redis-数据类型.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
+    "Extras/Draws/redis-数据类型.svg",
+    "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
+    "未命名.canvas",
     "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
-    "Spaces/2-Area/数据库/lock和latch的区别.md",
-    "Spaces/2-Area/数据库/Log-structured.md",
-    "Calendar/Daily notes/2023-06-12.md",
-    "未命名 3.canvas",
+    "Calendar/Daily notes/2023-09-26.md",
+    "Calendar/Daily notes/2022-09-07.md",
+    "Spaces/1-Project/我的面试指南/mysql/索引.md",
+    "Spaces/1-Project/我的面试指南/团队管理/团队管理.md",
+    "Calendar/Daily notes/2023-09-21.md",
+    "Spaces/2-Area/软技能/软技能.md",
+    "AboutTheGarden.md",
+    "Notion/知识图谱/每日任务.md",
+    "Notion/知识图谱/学习计划/简历编写.md",
+    "Notion/Notion Projects.md",
+    "Notion/Notion Projects/Projects/Sample Project- User Education.md",
+    "Notion/Notion Projects/Projects/Sample Project- Performance.md",
+    "Notion/Notion Projects/Projects/New Project.md",
+    "Notion/Notion Projects/Projects/Getting started with Projects & Tasks.md",
+    "Notion/知识图谱/学习计划/分布式.md",
+    "Notion/知识图谱/学习计划/编译原理.md",
+    "Notion/知识图谱/博客/工作流.md",
+    "Notion/知识图谱/博客/圈x使用.md",
+    "Notion/知识图谱/博客/mac下 应用降级.md",
+    "Notion/知识图谱/博客/越狱/Untitled Database/aReo.md",
+    "Extras/Media/Untitled 22.png",
+    "Extras/Media/Untitled 5 3.png",
+    "Extras/Media/Untitled 4 3.png",
+    "Extras/Media/Untitled 3 6.png",
+    "Extras/Media/Untitled 2 9.png",
+    "Extras/Media/Untitled 1 9.png",
+    "Extras/Media/Untitled 21.png",
+    "Extras/Media/MySQL.pdf",
+    "Extras/Media/0531V3.0.pptx",
+    "Extras/Media/MQ_12_07.pdf",
+    "Extras/Media/RocketMQ.pptx",
+    "Extras/Media/RocketMQ.pdf",
+    "Extras/Media/《如何阅读一本书》_美_莫提默J.艾德勒.mobi",
+    "Extras/Media/17.pdf",
+    "Extras/Media/31.pdf",
+    "Extras/Media/贫穷的本质：我们为什么摆脱不了贫穷.mobi",
+    "Extras/Media/算法基础.pptx",
     "未命名 2.canvas",
     "未命名 1.canvas",
-    "未命名.canvas",
-    "Spaces/2-Area/数据库",
-    "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
-    "Extras/Draws/excalibrain.svg",
-    "Extras/Draws/readView示意图.svg"
+    "未命名 3.canvas"
   ]
 }

@@ -64,6 +64,9 @@
               }
             ]
           },
+          "sort": {
+            "criteria": []
+          },
           "id": "db7aabc3-8233-4ad0-9744-67d3c4ebedd2",
           "name": "Table",
           "type": "table"
@@ -109,6 +112,9 @@
                 }
               }
             ]
+          },
+          "sort": {
+            "criteria": []
           },
           "id": "f0350ec5-403b-4c2d-bd5c-9adbd2883046",
           "name": "看板",
@@ -181,6 +187,9 @@
               }
             ]
           },
+          "sort": {
+            "criteria": []
+          },
           "id": "b0d83f35-1861-4b80-80bc-51d4a61c2388",
           "name": "Table",
           "type": "table"
@@ -227,6 +236,9 @@
               }
             ]
           },
+          "sort": {
+            "criteria": []
+          },
           "id": "73f21139-a6b2-48cf-b90d-a6b94a5af18e",
           "name": "看板",
           "type": "board"
@@ -241,6 +253,7 @@
     "frontmatter": {
       "quoteStrings": "PLAIN"
     },
-    "commands": []
+    "commands": [],
+    "linkBehavior": "open-editor"
   }
 }

@@ -1,7 +1,7 @@
 ---
 comments: true
 date created: 2022-08-06
-date modified: 2023-08-01
+date modified: 2023-08-14
 id: home
 layout: page
 permalink: /
@@ -20,6 +20,9 @@ status: 完成
 + [ ] [[∑ 分布式算法]]
 + [ ] [[§ 分布式]]
 + [ ] [[cmu15445]]
+
+## 数据分析
+
 
 ## 团队管理
 
