@@ -1,12 +1,14 @@
 ---
 date created: 2022-09-15
-date modified: 2023-10-09
+date modified: 2023-10-12
 title: redis
 ---
 
 # redis
 
 ## 数据类型
+
+[[redis-数据类型.svg]]
 
 ![[redis-数据类型]]
 
@@ -102,6 +104,8 @@ decr
 #### Hash
 
 类似java中的`haspmap<string,string>`，value类型只能是string(注意，这里说的string是redis中的string，代表可以是number,float，text等)。value中不能包含list,set等。这也是与rejson的一个区别。
+
+## 数据结构
 
 ## 高性能
 
@@ -224,6 +228,10 @@ Redis Cluster 方案采用哈希槽（Hash Slot），来处理数据和实例之
 ## 队列
 
 [[MQ]]
+
+## redis源码
+
+[Mac 下 vscode 调试 redis](https://www.shishao.site/mac-vscode-redis-bgv5x)
 
 ## 资料
 
