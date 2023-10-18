@@ -1,20 +1,11 @@
 ---
 date created: 2022-09-15
-date modified: 2023-10-13
+date modified: 2023-10-18
 title: redis
+tags: []
 ---
 
 # redis
-
-## 数据类型
-
-![[redis-数据类型.svg]]
-
-![[redis-数据类型]]
-
-[[sds]]
-
-
 
 命名前缀:
 
@@ -34,6 +25,16 @@ title: redis
 | Hash   |  map, 类比hashmap    |   HSET，HGET, HGETALL, HDEL   |     |
 | ZSET   |  有序的set,类比 TreeSet  |   ZADD, ZRANGE, ZRAGEBYSCORE, ZREM   |     |
 |        |      |      |     |
+
+## 数据类型
+
+redis提供了多种数据类型，比如string、list、set、hash、zset等。但是底层结构真正使用的是另外一套结构。可以根据内容的长度等选择合理的底层数据结构，尽可能的提供效率。底层数据结构对使用者来说，是透明的。使用者无需知道底层是用什么数据结构进行存储。  
+通过 `type key`可以查看类型  
+通过`object encoding key` 查看底层的数据结构
+
+![[redis-数据类型.svg]]
+
+![[Extras/Draws/redis-数据类型.md#^group=ok3REH94jl1pS-S21xfRS|redis-数据类型]]
 
 ### Keys & Expiration
 
@@ -105,11 +106,23 @@ incr key ==> incrby key 1
 incrby key count  
 decr
 
-#### Hash
+### Hash
 
-类似java中的`haspmap<string,string>`，value类型只能是string(注意，这里说的string是redis中的string，代表可以是number,float，text等)。value中不能包含list,set等。这也是与rejson的一个区别。
+类似java中的`haspmap<string,string>`，value类型只能是string(注意，这里说的string是redis中的[[sds]]，代表可以是number,float，text等)。value中不能包含list,set等。这也是与rejson的一个区别。
 
-## 数据结构
+## [[redis-底层结构]]
+
+![[Extras/Draws/redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n]]
+
+### [[sds]] 简单动态字符串
+
+### [[ziplist]]
+
+[[intset]]
+
+### [[跳跃表|skip lists]]
+
+
 
 ## 高性能
 

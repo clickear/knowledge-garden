@@ -1,7 +1,7 @@
 ---
 title: jrebel
 date created: 2022-12-07
-date modified: 2023-09-01
+date modified: 2023-10-17
 tags: []
 ---
 
@@ -47,6 +47,10 @@ tags: []
 > 2. 使用https，会报 连接失败 如 https://xxxx
 > 3. 如只是本地使用，可直接 http://127.0.0.1:8081/xxxx 即可
 > 4. 正确示例: http://jrebel-license.clickear.top:80/5642b2b6-ac60-457f-8186-56c1af40eb4b
+
+#### 使用docker
+
+[jrebel-server docker镜像](https://hub.docker.com/r/cliod/jrebel-server)
 
 ## 使用中的坑
 
