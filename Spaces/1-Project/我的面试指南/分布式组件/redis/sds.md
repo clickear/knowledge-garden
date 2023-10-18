@@ -1,7 +1,7 @@
 ---
 title: sds
 date created: 2023-10-13
-date modified: 2023-10-13
+date modified: 2023-10-18
 tag: [redis/数据结构]
 ---
 
@@ -66,7 +66,8 @@ struct __attribute__ ((__packed__)) sdshdr64 { // 对应的字符串长度小于
 ![image.png](http://image.clickear.top/20231013171501.png)
 
 embstr: 在分配内存的时候，是直接和sds分配的，而不是额外分配。 避免内存碎片和两次内存分配的开销了。  
-![image.png](http://image.clickear.top/20231013023425.png)
+
+![image.png](http://image.clickear.top/20231018190953.png)
 
 + 如果长度<=44字节，则分配的内存与sds是连续的。
 + 如果长度>44自己，则额外指针指向buf

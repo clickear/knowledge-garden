@@ -527,6 +527,18 @@
     {
       "name": "字符串",
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表/字符串"
+    },
+    {
+      "name": "Scripts",
+      "relativePath": "Extras/Draws/Scripts"
+    },
+    {
+      "name": "Downloaded",
+      "relativePath": "Extras/Draws/Scripts/Downloaded"
+    },
+    {
+      "name": "redis",
+      "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis"
     }
   ],
   "nonMdFiles": [
@@ -726,11 +738,6 @@
       "relativePath": "Extras/Draws/redis-数据类型.svg"
     },
     {
-      "name": "redis-底层数据结构.svg",
-      "basename": "redis-底层数据结构",
-      "relativePath": "Extras/Draws/redis-底层数据结构.svg"
-    },
-    {
       "name": "Pasted Image 20231013020412_053.png",
       "basename": "Pasted Image 20231013020412_053",
       "relativePath": "Extras/Media/Pasted Image 20231013020412_053.png"
@@ -739,6 +746,86 @@
       "name": "Pasted Image 20231013020457_509.png",
       "basename": "Pasted Image 20231013020457_509",
       "relativePath": "Extras/Media/Pasted Image 20231013020457_509.png"
+    },
+    {
+      "name": "Box Each Selected Groups.svg",
+      "basename": "Box Each Selected Groups",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Box Each Selected Groups.svg"
+    },
+    {
+      "name": "Box Selected Elements.svg",
+      "basename": "Box Selected Elements",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Box Selected Elements.svg"
+    },
+    {
+      "name": "Change shape of selected elements.svg",
+      "basename": "Change shape of selected elements",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Change shape of selected elements.svg"
+    },
+    {
+      "name": "Create DrawIO file.svg",
+      "basename": "Create DrawIO file",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Create DrawIO file.svg"
+    },
+    {
+      "name": "Create new markdown file and embed into active drawing.svg",
+      "basename": "Create new markdown file and embed into active drawing",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Create new markdown file and embed into active drawing.svg"
+    },
+    {
+      "name": "Elbow connectors.svg",
+      "basename": "Elbow connectors",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Elbow connectors.svg"
+    },
+    {
+      "name": "Excalidraw Collaboration Frame.svg",
+      "basename": "Excalidraw Collaboration Frame",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Excalidraw Collaboration Frame.svg"
+    },
+    {
+      "name": "Expand rectangles horizontally keep text centered.svg",
+      "basename": "Expand rectangles horizontally keep text centered",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg"
+    },
+    {
+      "name": "Expand rectangles horizontally.svg",
+      "basename": "Expand rectangles horizontally",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally.svg"
+    },
+    {
+      "name": "Expand rectangles vertically keep text centered.svg",
+      "basename": "Expand rectangles vertically keep text centered",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically keep text centered.svg"
+    },
+    {
+      "name": "Expand rectangles vertically.svg",
+      "basename": "Expand rectangles vertically",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically.svg"
+    },
+    {
+      "name": "Grid Selected Images.svg",
+      "basename": "Grid Selected Images",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Grid Selected Images.svg"
+    },
+    {
+      "name": "Mindmap connector.svg",
+      "basename": "Mindmap connector",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Mindmap connector.svg"
+    },
+    {
+      "name": "Mindmap format.svg",
+      "basename": "Mindmap format",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Mindmap format.svg"
+    },
+    {
+      "name": "Set Font Family.svg",
+      "basename": "Set Font Family",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Set Font Family.svg"
+    },
+    {
+      "name": "Auto Layout.svg",
+      "basename": "Auto Layout",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Auto Layout.svg"
     }
   ]
 }

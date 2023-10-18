@@ -185,17 +185,32 @@
   },
   {
     "tag": "excalidraw",
-    "tagCount": 9,
+    "tagCount": 8,
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
       "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
-      "Extras/Draws/redis-底层数据结构.md",
       "Extras/Draws/redis-数据类型.md",
       "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
       "Extras/Draws/readView示意图.md",
       "Extras/Draws/excalibrain.md",
       "Extras/Draws/README 2022-08-21.md",
       "Calendar/Daily notes/白板 2022-11-23.md"
+    ]
+  },
+  {
+    "tag": "redis/数据结构",
+    "tagCount": 5,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+    ]
+  },
+  {
+    "tag": "redis/源码",
+    "tagCount": 2,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
     ]
   },
   {

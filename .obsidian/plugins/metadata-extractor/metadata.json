@@ -4056,13 +4056,14 @@
     "links": [
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "zset"
       },
       {
-        "link": "ziplist"
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
       }
     ],
     "backlinks": [
@@ -4070,6 +4071,17 @@
         "fileName": "cmu15445",
         "link": "跳跃表",
         "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "ziplist",
+        "link": "跳跃表",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "fileName": "redis",
+        "link": "跳跃表",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+        "displayText": "skip lists"
       }
     ]
   },
@@ -4293,7 +4305,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "hbase"
@@ -4312,7 +4324,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "图数据库"
@@ -5113,7 +5125,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "图数据库"
@@ -5378,7 +5390,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "图数据库"
@@ -7697,14 +7709,14 @@
     ],
     "backlinks": [
       {
+        "fileName": "redis",
+        "link": "缓存和数据库一致性",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      },
+      {
         "fileName": "§ 分布式",
         "link": "缓存和数据库一致性",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
-      },
-      {
-        "fileName": "redis",
-        "link": "缓存和数据库一致性",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
       },
       {
         "fileName": "缓存",
@@ -9459,12 +9471,218 @@
     ]
   },
   {
+    "fileName": "redis-底层数据结构",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+    "tags": [
+      "redis/数据结构",
+      "redis/源码"
+    ],
+    "frontmatter": {
+      "title": "redis-底层数据结构",
+      "date created": "2023-10-18",
+      "date modified": "2023-10-18"
+    },
+    "headings": [
+      {
+        "heading": "redis-底层数据结构",
+        "level": 2
+      },
+      {
+        "heading": "redis关键结构",
+        "level": 2
+      },
+      {
+        "heading": "数据类型与底层数据结构的关系",
+        "level": 2
+      },
+      {
+        "heading": "String",
+        "level": 2
+      },
+      {
+        "heading": "List",
+        "level": 2
+      },
+      {
+        "heading": "Hash",
+        "level": 2
+      },
+      {
+        "heading": "转换条件",
+        "level": 3
+      },
+      {
+        "heading": "[#](#集合对象)",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      },
+      {
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "link": "hashtable"
+      },
+      {
+        "link": "#集合对象",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+        "cleanLink": "redis-底层数据结构",
+        "displayText": "#"
+      },
+      {
+        "link": "redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "redis",
+        "link": "redis-底层数据结构",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      }
+    ]
+  },
+  {
+    "fileName": "intset",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md",
+    "frontmatter": {
+      "title": "intset",
+      "date created": "2023-10-18",
+      "date modified": "2023-10-18"
+    },
+    "headings": [
+      {
+        "heading": "intset",
+        "level": 1
+      }
+    ],
+    "links": [
+      {
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      },
+      {
+        "link": "redis-数据类型.md#^frame=eJlwPA3-ds9YoMr9Y_bVE",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=eJlwPA3-ds9YoMr9Y_bVE",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "redis",
+        "link": "intset",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      },
+      {
+        "fileName": "redis-数据类型",
+        "link": "intset",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ]
+  },
+  {
+    "fileName": "ziplist",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md",
+    "tags": [
+      "redis/数据结构"
+    ],
+    "frontmatter": {
+      "title": "ziplist",
+      "date created": "2023-10-13",
+      "date modified": "2023-10-18"
+    },
+    "headings": [
+      {
+        "heading": "ziplist",
+        "level": 1
+      },
+      {
+        "heading": "方案1，双向链表",
+        "level": 3
+      },
+      {
+        "heading": "ziplist(可变长数组)",
+        "level": 3
+      },
+      {
+        "heading": "quicklist(链表 + ziplist)",
+        "level": 3
+      },
+      {
+        "heading": "listpack(ziplist的变种，存储当前entry长度)",
+        "level": 3
+      },
+      {
+        "heading": "反向查询",
+        "level": 3
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "link": "跳跃表",
+        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "跳跃表",
+        "link": "ziplist",
+        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
+      },
+      {
+        "fileName": "redis-底层数据结构",
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
+      },
+      {
+        "fileName": "redis-底层数据结构",
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
+      },
+      {
+        "fileName": "redis",
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      }
+    ]
+  },
+  {
     "fileName": "sds",
-    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md",
+    "tags": [
+      "redis/数据结构"
+    ],
     "frontmatter": {
       "title": "sds",
       "date created": "2023-10-13",
-      "date modified": "2023-10-13"
+      "date modified": "2023-10-13",
+      "tag": [
+        "redis/数据结构"
+      ]
     },
     "headings": [
       {
@@ -9484,20 +9702,356 @@
         "level": 2
       },
       {
+        "heading": "embstr",
+        "level": 3
+      },
+      {
+        "heading": "raw",
+        "level": 3
+      },
+      {
+        "heading": "为什么是 44 字节？",
+        "level": 3
+      },
+      {
         "heading": "资料",
         "level": 2
       }
     ],
+    "links": [
+      {
+        "link": "redisObject",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md"
+      },
+      {
+        "link": "redis-数据类型.md#^frame=BcZ8yBMPgvszNx2Zg5YPp",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "sds",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ],
     "backlinks": [
+      {
+        "fileName": "redis-底层数据结构",
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
+      },
+      {
+        "fileName": "intset",
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md"
+      },
       {
         "fileName": "redis",
         "link": "sds",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      },
+      {
+        "fileName": "redis",
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "fileName": "redis-数据类型",
-        "link": "SDS",
+        "link": "sds",
         "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ]
+  },
+  {
+    "fileName": "reids集群模式",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/reids集群模式.md",
+    "frontmatter": {
+      "date created": "2022-09-15",
+      "date modified": "2022-09-22",
+      "title": "reids集群模式"
+    },
+    "headings": [
+      {
+        "heading": "主从模式（不怎么用，）",
+        "level": 2
+      },
+      {
+        "heading": "Sentinel（哨兵）模式，自动版主从复制。副本存储",
+        "level": 2
+      },
+      {
+        "heading": "Cluster 模式(推荐)，分片存储",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "哈希槽"
+      },
+      {
+        "link": "一致性hash算法"
+      }
+    ]
+  },
+  {
+    "fileName": "redisObject",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
+    "frontmatter": {
+      "title": "redisObject",
+      "date created": "2023-10-13",
+      "date modified": "2023-10-13"
+    },
+    "links": [
+      {
+        "link": "redisObject",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "sds",
+        "link": "redisObject",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      }
+    ]
+  },
+  {
+    "fileName": "redis",
+    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+    "frontmatter": {
+      "date created": "2022-09-15",
+      "date modified": "2023-10-18",
+      "title": "redis"
+    },
+    "headings": [
+      {
+        "heading": "redis",
+        "level": 1
+      },
+      {
+        "heading": "数据类型",
+        "level": 2
+      },
+      {
+        "heading": "Keys & Expiration",
+        "level": 3
+      },
+      {
+        "heading": "String",
+        "level": 3
+      },
+      {
+        "heading": "缓存",
+        "level": 4
+      },
+      {
+        "heading": "分布式锁",
+        "level": 4
+      },
+      {
+        "heading": "counter",
+        "level": 4
+      },
+      {
+        "heading": "Hash",
+        "level": 3
+      },
+      {
+        "heading": "[[redis-底层数据结构]]",
+        "level": 2
+      },
+      {
+        "heading": "[[sds]] 简单动态字符串",
+        "level": 3
+      },
+      {
+        "heading": "[[ziplist]]",
+        "level": 3
+      },
+      {
+        "heading": "[[跳跃表|skip lists]]",
+        "level": 3
+      },
+      {
+        "heading": "高性能",
+        "level": 2
+      },
+      {
+        "heading": "线程模型（核心读写操作 | 单线程 持久化、集群同步、处理网络请求 | 多线程）",
+        "level": 3
+      },
+      {
+        "heading": "快的原因",
+        "level": 4
+      },
+      {
+        "heading": "高可用",
+        "level": 2
+      },
+      {
+        "heading": "持久化(RDB + AOF)",
+        "level": 3
+      },
+      {
+        "heading": "AOF 日志（Append Only File，文件追加方式）",
+        "level": 4
+      },
+      {
+        "heading": "**RDB 快照（Redis DataBase）**：",
+        "level": 4
+      },
+      {
+        "heading": "**RDB 做快照时会阻塞线程吗?会，类似jvm stw**",
+        "level": 5
+      },
+      {
+        "heading": "**RDB 做快照的时候数据能修改吗？**",
+        "level": 5
+      },
+      {
+        "heading": "**混合持久化方式(游戏中的暂存点功能)**",
+        "level": 4
+      },
+      {
+        "heading": "数据复制（副本或者分片）",
+        "level": 3
+      },
+      {
+        "heading": "主从同步 (主从复制)，无法自动恢复，难在线扩容",
+        "level": 4
+      },
+      {
+        "heading": "Sentinel（哨兵模式）自动版主从复制。副本存储",
+        "level": 4
+      },
+      {
+        "heading": "**Redis Cluster（集群）**",
+        "level": 4
+      },
+      {
+        "heading": "使用场景",
+        "level": 2
+      },
+      {
+        "heading": "缓存",
+        "level": 3
+      },
+      {
+        "heading": "分布式锁CP",
+        "level": 3
+      },
+      {
+        "heading": "队列",
+        "level": 2
+      },
+      {
+        "heading": "redis源码",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "分布式锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
+      },
+      {
+        "link": "缓存和数据库一致性",
+        "relativePath": "Spaces/1-Project/我的面试指南/杂文/缓存和数据库一致性.md"
+      },
+      {
+        "link": "AtomicLong"
+      },
+      {
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      },
+      {
+        "link": "redis-底层数据结构",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
+      },
+      {
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      },
+      {
+        "link": "ziplist",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md"
+      },
+      {
+        "link": "intset",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md"
+      },
+      {
+        "link": "跳跃表",
+        "displayText": "skip lists",
+        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
+      },
+      {
+        "link": "分布式锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
+      },
+      {
+        "link": "MQ",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式系统/MQ.md"
+      },
+      {
+        "link": "redis-数据类型.md#^group=ok3REH94jl1pS-S21xfRS",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "redis-数据类型",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      },
+      {
+        "link": "redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "relativePath": "Extras/Draws/redis-数据类型.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "跳跃表",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
+      },
+      {
+        "fileName": "数据模型",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "fileName": "数据模型",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "fileName": "∑ 数据库",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
+      },
+      {
+        "fileName": "cmu15445",
+        "link": "redis",
+        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
+      },
+      {
+        "fileName": "§ 分布式",
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
+      },
+      {
+        "fileName": "§ 分布式",
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
+      },
+      {
+        "fileName": "∑ 面试计划",
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+      },
+      {
+        "fileName": "∑ 面试计划",
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
       }
     ]
   },
@@ -9575,6 +10129,16 @@
     ],
     "backlinks": [
       {
+        "fileName": "redis",
+        "link": "分布式锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      },
+      {
+        "fileName": "redis",
+        "link": "分布式锁",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
+      },
+      {
         "fileName": "§ 分布式",
         "link": "分布式锁",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
@@ -9583,16 +10147,6 @@
         "fileName": "zooKeeper",
         "link": "分布式锁",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/zooKeeper.md"
-      },
-      {
-        "fileName": "redis",
-        "link": "分布式锁",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
-      },
-      {
-        "fileName": "redis",
-        "link": "分布式锁",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
       }
     ]
   },
@@ -9724,7 +10278,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "缓存和数据库一致性",
@@ -9738,7 +10292,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "分布式锁",
@@ -9879,240 +10433,6 @@
         "fileName": "ZAB",
         "link": "ZooKeeper",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式系统/ZAB.md"
-      }
-    ]
-  },
-  {
-    "fileName": "reids集群模式",
-    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/reids集群模式.md",
-    "frontmatter": {
-      "date created": "2022-09-15",
-      "date modified": "2022-09-22",
-      "title": "reids集群模式"
-    },
-    "headings": [
-      {
-        "heading": "主从模式（不怎么用，）",
-        "level": 2
-      },
-      {
-        "heading": "Sentinel（哨兵）模式，自动版主从复制。副本存储",
-        "level": 2
-      },
-      {
-        "heading": "Cluster 模式(推荐)，分片存储",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "哈希槽"
-      },
-      {
-        "link": "一致性hash算法"
-      }
-    ]
-  },
-  {
-    "fileName": "redis",
-    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md",
-    "frontmatter": {
-      "date created": "2022-09-15",
-      "date modified": "2023-10-13",
-      "title": "redis"
-    },
-    "headings": [
-      {
-        "heading": "redis",
-        "level": 1
-      },
-      {
-        "heading": "数据类型",
-        "level": 2
-      },
-      {
-        "heading": "Keys & Expiration",
-        "level": 3
-      },
-      {
-        "heading": "String",
-        "level": 3
-      },
-      {
-        "heading": "缓存",
-        "level": 4
-      },
-      {
-        "heading": "分布式锁",
-        "level": 4
-      },
-      {
-        "heading": "counter",
-        "level": 4
-      },
-      {
-        "heading": "Hash",
-        "level": 4
-      },
-      {
-        "heading": "数据结构",
-        "level": 2
-      },
-      {
-        "heading": "高性能",
-        "level": 2
-      },
-      {
-        "heading": "线程模型（核心读写操作 | 单线程 持久化、集群同步、处理网络请求 | 多线程）",
-        "level": 3
-      },
-      {
-        "heading": "快的原因",
-        "level": 4
-      },
-      {
-        "heading": "高可用",
-        "level": 2
-      },
-      {
-        "heading": "持久化(RDB + AOF)",
-        "level": 3
-      },
-      {
-        "heading": "AOF 日志（Append Only File，文件追加方式）",
-        "level": 4
-      },
-      {
-        "heading": "**RDB 快照（Redis DataBase）**：",
-        "level": 4
-      },
-      {
-        "heading": "**RDB 做快照时会阻塞线程吗?会，类似jvm stw**",
-        "level": 5
-      },
-      {
-        "heading": "**RDB 做快照的时候数据能修改吗？**",
-        "level": 5
-      },
-      {
-        "heading": "**混合持久化方式(游戏中的暂存点功能)**",
-        "level": 4
-      },
-      {
-        "heading": "数据复制（副本或者分片）",
-        "level": 3
-      },
-      {
-        "heading": "主从同步 (主从复制)，无法自动恢复，难在线扩容",
-        "level": 4
-      },
-      {
-        "heading": "Sentinel（哨兵模式）自动版主从复制。副本存储",
-        "level": 4
-      },
-      {
-        "heading": "**Redis Cluster（集群）**",
-        "level": 4
-      },
-      {
-        "heading": "使用场景",
-        "level": 2
-      },
-      {
-        "heading": "缓存",
-        "level": 3
-      },
-      {
-        "heading": "分布式锁CP",
-        "level": 3
-      },
-      {
-        "heading": "队列",
-        "level": 2
-      },
-      {
-        "heading": "redis源码",
-        "level": 2
-      },
-      {
-        "heading": "资料",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "sds",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md"
-      },
-      {
-        "link": "分布式锁",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
-      },
-      {
-        "link": "缓存和数据库一致性",
-        "relativePath": "Spaces/1-Project/我的面试指南/杂文/缓存和数据库一致性.md"
-      },
-      {
-        "link": "AtomicLong"
-      },
-      {
-        "link": "分布式锁",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
-      },
-      {
-        "link": "MQ",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式系统/MQ.md"
-      },
-      {
-        "link": "redis-数据类型",
-        "relativePath": "Extras/Draws/redis-数据类型.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "跳跃表",
-        "link": "redis",
-        "relativePath": "Spaces/2-Area/数据库/跳跃表.md"
-      },
-      {
-        "fileName": "数据模型",
-        "link": "redis",
-        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
-      },
-      {
-        "fileName": "数据模型",
-        "link": "redis",
-        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
-      },
-      {
-        "fileName": "∑ 数据库",
-        "link": "redis",
-        "relativePath": "Spaces/2-Area/数据库/∑ 数据库.md"
-      },
-      {
-        "fileName": "cmu15445",
-        "link": "redis",
-        "relativePath": "Spaces/2-Area/数据库/cmu15445.md"
-      },
-      {
-        "fileName": "§ 分布式",
-        "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
-      },
-      {
-        "fileName": "§ 分布式",
-        "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md"
-      },
-      {
-        "fileName": "∑ 面试计划",
-        "link": "Redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
-      },
-      {
-        "fileName": "∑ 面试计划",
-        "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
       }
     ]
   },
@@ -10282,8 +10602,8 @@
         "relativePath": "Spaces/1-Project/我的面试指南/mq/§ mq面试.md"
       },
       {
-        "link": "Redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "link": "redis",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "RPC框架"
@@ -10316,7 +10636,7 @@
       },
       {
         "link": "redis",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "link": "es"
@@ -12109,7 +12429,7 @@
       {
         "fileName": "redis",
         "link": "MQ",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md"
       },
       {
         "fileName": "∑ 面试计划",
@@ -41041,20 +41361,86 @@
     ]
   },
   {
-    "fileName": "redis-底层数据结构",
-    "relativePath": "Extras/Draws/redis-底层数据结构.md",
-    "tags": [
-      "excalidraw"
-    ],
-    "frontmatter": {
-      "excalidraw-plugin": "parsed"
-    },
+    "fileName": "Auto Layout",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Auto Layout.md"
+  },
+  {
+    "fileName": "Set Font Family",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Set Font Family.md"
+  },
+  {
+    "fileName": "Mindmap format",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Mindmap format.md",
     "headings": [
       {
-        "heading": "Text Elements",
+        "heading": "tree",
+        "level": 1
+      },
+      {
+        "heading": "sort",
+        "level": 1
+      },
+      {
+        "heading": "setting",
+        "level": 1
+      },
+      {
+        "heading": "problem",
         "level": 1
       }
     ]
+  },
+  {
+    "fileName": "Mindmap connector",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Mindmap connector.md"
+  },
+  {
+    "fileName": "Grid Selected Images",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Grid Selected Images.md"
+  },
+  {
+    "fileName": "Expand rectangles vertically",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically.md"
+  },
+  {
+    "fileName": "Expand rectangles vertically keep text centered",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically keep text centered.md"
+  },
+  {
+    "fileName": "Expand rectangles horizontally",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally.md"
+  },
+  {
+    "fileName": "Expand rectangles horizontally keep text centered",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally keep text centered.md"
+  },
+  {
+    "fileName": "Excalidraw Collaboration Frame",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Excalidraw Collaboration Frame.md"
+  },
+  {
+    "fileName": "Elbow connectors",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Elbow connectors.md"
+  },
+  {
+    "fileName": "Create new markdown file and embed into active drawing",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Create new markdown file and embed into active drawing.md"
+  },
+  {
+    "fileName": "Create DrawIO file",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Create DrawIO file.md"
+  },
+  {
+    "fileName": "Change shape of selected elements",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Change shape of selected elements.md"
+  },
+  {
+    "fileName": "Box Selected Elements",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Box Selected Elements.md"
+  },
+  {
+    "fileName": "Box Each Selected Groups",
+    "relativePath": "Extras/Draws/Scripts/Downloaded/Box Each Selected Groups.md"
   },
   {
     "fileName": "redis-数据类型",
@@ -41077,15 +41463,49 @@
     ],
     "links": [
       {
-        "link": "SDS",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/sds.md"
+        "link": "sds",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      },
+      {
+        "link": "intset",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md"
       }
     ],
     "backlinks": [
       {
+        "fileName": "redis-底层数据结构",
+        "link": "redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=3EEHNlLLgI9kw1Y0YbY0n"
+      },
+      {
+        "fileName": "intset",
+        "link": "redis-数据类型.md#^frame=eJlwPA3-ds9YoMr9Y_bVE",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=eJlwPA3-ds9YoMr9Y_bVE"
+      },
+      {
+        "fileName": "sds",
+        "link": "redis-数据类型.md#^frame=BcZ8yBMPgvszNx2Zg5YPp",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "sds"
+      },
+      {
         "fileName": "redis",
-        "link": "redis-数据类型",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis.md"
+        "link": "redis-数据类型.md#^group=ok3REH94jl1pS-S21xfRS",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "redis-数据类型"
+      },
+      {
+        "fileName": "redis",
+        "link": "redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+        "cleanLink": "redis-数据类型.md",
+        "displayText": "Extras/Draws/redis-数据类型.md > ^frame=3EEHNlLLgI9kw1Y0YbY0n"
       }
     ]
   },
@@ -41452,6 +41872,11 @@
   {
     "fileName": "2023-10-13",
     "relativePath": "Calendar/Daily notes/2023-10-13.md",
+    "frontmatter": {
+      "title": "2023-10-13",
+      "date created": "2023-10-13",
+      "date modified": "2023-10-13"
+    },
     "headings": [
       {
         "heading": "今天的灵感或闪念",
@@ -41656,7 +42081,7 @@
     "frontmatter": {
       "title": "jrebel",
       "date created": "2022-12-07",
-      "date modified": "2023-09-01"
+      "date modified": "2023-10-17"
     },
     "headings": [
       {
@@ -41678,6 +42103,10 @@
       {
         "heading": "自行搭建激活服务",
         "level": 3
+      },
+      {
+        "heading": "使用docker",
+        "level": 4
       },
       {
         "heading": "使用中的坑",

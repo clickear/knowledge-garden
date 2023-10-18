@@ -110,7 +110,11 @@ decr
 
 类似java中的`haspmap<string,string>`，value类型只能是string(注意，这里说的string是redis中的[[sds]]，代表可以是number,float，text等)。value中不能包含list,set等。这也是与rejson的一个区别。
 
-## [[redis-底层结构]]
+
+
+
+
+## [[redis-底层数据结构]]
 
 ![[Extras/Draws/redis-数据类型.md#^frame=3EEHNlLLgI9kw1Y0YbY0n]]
 
