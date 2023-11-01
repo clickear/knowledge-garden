@@ -1,7 +1,7 @@
 ---
 title: redis-底层数据结构
 date created: 2023-10-18
-date modified: 2023-10-18
+date modified: 2023-11-01
 tags: [redis/数据结构, redis/源码]
 ---
 
@@ -70,6 +70,10 @@ hset profile career "Programmer"
 
 不能满足这两个条件的时候使用 hashtable 编码。以上两个条件也可以通过Redis配置文件`zset-max-ziplist-entries` 选项和 `zset-max-ziplist-value` 进行修改。
 
+### 利用zipList来替代大量的Key-Value.
+
+[选择合适Redis数据结构，减少80%的内存占用 - 知乎](https://zhuanlan.zhihu.com/p/98033960)
+
 ## Set
 
 [[intset]]和[[hashtable]]  
@@ -103,7 +107,7 @@ SADD Dfruits "apple" "banana" "cherry"
 
 ## Zset
 
-[[ziplist]] 或者 skiplist
+[[ziplist]] 或者 [[跳跃表]]
 
 ![image.png](http://image.clickear.top/20231018190634.png)
 
@@ -119,6 +123,10 @@ SADD Dfruits "apple" "banana" "cherry"
 2、保存的所有元素长度都小于64字节。
 
 不能满足上面两个条件的使用 skiplist 编码。以上两个条件也可以通过Redis配置文件`zset-max-ziplist-entries` 选项和 `zset-max-ziplist-value` 进行修改。
+
+## [[redis-stream|Stream]]
+
+为了节省内存空间，在 Stream 数据类型的底层数据结构中，采用了 **[[radixTree]] 和 [[listpack]]** 两种数据结构来保存消息.
 
 ## 资料
 

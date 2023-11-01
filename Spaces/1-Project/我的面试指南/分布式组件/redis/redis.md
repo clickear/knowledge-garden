@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-15
-date modified: 2023-10-18
+date modified: 2023-10-19
 title: redis
 tags: []
 ---
@@ -17,14 +17,16 @@ tags: []
 >  + Stream commands start with `x`
 >  + Hyperloglog commands start with `pf` [^2]
 
-| 类型   | 作用 | 命名 |     |
-|:------ |:---- |:---- |:--- |
-| String |  value: 可以是字符串、数值、浮点数。支持自增、自减操作   | get: 获取<br> set: 设置 <br> del: 删除，所有类型都不支持  |     |
-| List   |  数组，类比ArrayList    | lpush lpop lrange lindex rpush rpop  |     |
-| Set    |  set,类比HashSet    |   sadd,SMEMBERS, SISMEMBER, SREM   |     |
-| Hash   |  map, 类比hashmap    |   HSET，HGET, HGETALL, HDEL   |     |
-| ZSET   |  有序的set,类比 TreeSet  |   ZADD, ZRANGE, ZRAGEBYSCORE, ZREM   |     |
-|        |      |      |     |
+| 类型        | 作用                                                  | 命名                                                     | 使用场景                |              |
+|:----------- |:----------------------------------------------------- |:-------------------------------------------------------- |:----------------------- | ------------ |
+| String      | value: 可以是字符串、数值、浮点数。支持自增、自减操作 | get: 获取<br> set: 设置 <br> del: 删除，所有类型都不支持 | 缓存、分布式锁、counter |              |
+| List        | 数组，类比ArrayList                                   | lpush lpop lrange lindex rpush rpop                      | 消息队列                |              |
+| Set         | set,类比HashSet                                       | sadd,SMEMBERS, SISMEMBER, SREM                           | 添加tags                |              |
+| Hash        | map, 类比hashmap                                      | HSET，HGET, HGETALL, HDEL                                |                         | 散列存储json |
+| ZSET        | 有序的set,类比 TreeSet                                | ZADD, ZRANGE, ZRAGEBYSCORE, ZREM                         | 排行榜                  |              |
+| HyperLogLog | 基数统计                                              |                                                          | 基数统计                |              |
+| [[redis-stream\|Stream]]      | 简易消息队列                                          |                                                          |                         |              |
+| GEO            |                 地理位置相关                                      |                                                          |    LBS，附近的人                    |              |
 
 ## 数据类型
 
@@ -110,9 +112,13 @@ decr
 
 类似java中的`haspmap<string,string>`，value类型只能是string(注意，这里说的string是redis中的[[sds]]，代表可以是number,float，text等)。value中不能包含list,set等。这也是与rejson的一个区别。
 
+### List
 
+### Set
 
+### Zset
 
+### bit
 
 ## [[redis-底层数据结构]]
 
@@ -125,8 +131,6 @@ decr
 [[intset]]
 
 ### [[跳跃表|skip lists]]
-
-
 
 ## 高性能
 
