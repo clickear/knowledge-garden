@@ -1,6 +1,6 @@
 ---
 date created: 2022-01-26
-date modified: 2023-10-31
+date modified: 2023-11-02
 title: Raft
 tags: [uncomplete]
 ---
@@ -354,6 +354,10 @@ client 发送写操作请求给 Leader，Leader 接收完数据后开始向 Foll
 
  [GitHub - DanielJyc/raft-simple: raft协议的Java版本简单实现](https://github.com/DanielJyc/raft-simple)  
  [mit 6.824 源码实现raft.go](https://github.com/lawliet9712/MIT-6.824/blob/main/src/raft/raft.go)
+
+## 优秀ppt
+
+[分布式一致性raft实现原理ppt](https://github.com/clickear/share_ppt#%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7raft%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
 ## 资料
 
