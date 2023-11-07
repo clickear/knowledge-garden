@@ -1,7 +1,7 @@
 ---
 title: §redis
 date created: 2023-11-01
-date modified: 2023-11-02
+date modified: 2023-11-05
 ---
 
 + 基础使用
@@ -36,10 +36,12 @@ date modified: 2023-11-02
 		+ [[redis-数据复制]]
 	+ 高扩展
 		+ [[redis-集群]]
+	+ 分布式常见问题
+		+ [[redis-脑裂]]
 + 使用场景  
 	+ [[缓存]]
 	+ [[分布式锁]]  
-	+ [[reids-消息队列]]  
+	+ [[redis-消息队列]]  
 	+ [[redis-search]]  
 + 优化案例
 	+ [[redis-内存优化]]
