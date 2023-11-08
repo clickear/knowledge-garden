@@ -9,7 +9,26 @@ date modified: 2023-11-08
 > 定期删除: 是指每隔一段时间，随机获取一些key，判断是否过期，过期则删除。  
 > -- 为避免随机获取时，执行太长，或者执行循环检查。会限定执行时长，判断删除key占比>25%
 
-> [!TIP] 内存淘汰(Redis 的运行内存达到了某个阀值，就会触发**内存淘汰机制**)💡
+> [!TIP] 内存淘汰(Redis 的运行内存达到了某个阀值，就会触发**内存淘汰机制**)💡  
+> redis，需要配置了maxmemory 最大使用内存时。并且超过了这个值，才会进行内存淘汰。
+
+## 删除了数据是立即释放吗？
+
+删除了数据，并不是立即释放的。  
+[[redis-内存管理]]
+
+## 内存淘汰-maxmemory
+
+在 64bit 系统下，`maxmemory` 设置为 0 表示不限制 Redis 内存使用，在 32bit 系统下，`maxmemory` 隐式不能超过 3GB。 maxmemory_policy,淘汰策略。
+
+``` c
+// server.c
+if (server.arch_bits == 32 && server.maxmemory == 0) {
+	serverLog(LL_WARNING,"Warning: 32 bit instance detected but no memory limit set. Setting 3 GB maxmemory limit with 'noeviction' policy now.");
+	server.maxmemory = 3072LL*(1024*1024); /* 3 GB */
+	server.maxmemory_policy = MAXMEMORY_NO_EVICTION;
+}
+```
 
 ## 淘汰策略
 
@@ -26,7 +45,7 @@ date modified: 2023-11-08
 		+ **allkeys-lru**：淘汰整个键值中最久未使用的键值
 		+ **allkeys-lfu**（Redis 4.0 后新增的内存淘汰策略）：淘汰整个键值中最少使用的键值。
 
-## LUR和[[LFU]]
+### LUR和[[LFU]]
 
 **[[LRU]]** 全称是 Least Recently Used 翻译为**最近最少使用**，会选择淘汰最近最少使用的数据  
 [[redis-lru]]，每个对象记录最后访问时间，淘汰时，随机获取数据，淘汰最久没有使用的数据。  

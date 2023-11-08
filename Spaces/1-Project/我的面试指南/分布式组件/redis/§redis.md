@@ -21,13 +21,14 @@ date modified: 2023-11-08
 		+ [[redis-stream |stream]]
 		+ 对象机制
 			+ [[redisObject]]
-			+ 对象共享
+			+ [[redis-对象共享]]
 			+ [[reids-内存淘汰策略与删除 |对象淘汰]]
 	+ [[redis-底层数据结构]]
 + 核心知识
-	+ [[reids-内存淘汰策略与删除]]
-		+ [[redis-lru]] 最久未使用
-		+ [[redis-lfu]] 最少使用
+	+ [[redis-内存管理]]
+		+ [[reids-内存淘汰策略与删除]]
+			+ [[redis-lru]] 最久未使用
+			+ [[redis-lfu]] 最少使用
 	+ [[reids-事务]]
 	+ [[redis-订阅发布]]
 + 分布式  
