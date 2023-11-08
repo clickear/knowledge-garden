@@ -1,7 +1,7 @@
 ---
 title: redisObject
 date created: 2023-10-13
-date modified: 2023-10-13
+date modified: 2023-11-08
 ---
 > [!TIP] 技巧💡  
 > [[redisObject]]总共占用16byte
@@ -22,3 +22,16 @@ typedef struct redisObject {
 - lru：记录对象的 LRU(Least Recently Used 的缩写，即最近最少使用)信息，内存回收时会用到此属性，占用 24 bits(3 字节)；
 - refcount：引用计数器，占用 32 bits(4 字节)；
 - *ptr：对象指针用于指向具体的内容，占用 64 bits(8 字节)。
+
+### lru字段
+
+**在 [[redis-lru]]算法中**，Redis 对象头的 24 bits 的 lru 字段是用来记录 key 的访问时间戳，因此在 LRU 模式下，Redis可以根据对象头中的 lru 字段记录的值，来比较最后一次 key 的访问时间长，从而淘汰最久未被使用的 key。
+
+**在 [[redis-lfu]]算法中**，Redis对象头的 24 bits 的 lru 字段被分成两段来存储，高 16bit 存储 ldt(Last Decrement Time)，低 8bit 存储 logc(Logistic Counter)。
+
+![](https://cdn.xiaolincoding.com/gh/xiaolincoder/redis/%E8%BF%87%E6%9C%9F%E7%AD%96%E7%95%A5/lru%E5%AD%97%E6%AE%B5.png)
+
+- ldt 是用来记录 key 的访问时间戳；
+- logc 是用来记录 key 的访问频次，它的值越小表示使用频率越低，越容易淘汰，每个新加入的 key 的logc 初始值为 5。
+
+注意，logc 并不是单纯的访问次数，而是访问频次（访问频率），因为 **logc 会随时间推移而衰减的**

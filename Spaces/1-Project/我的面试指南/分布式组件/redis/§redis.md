@@ -1,7 +1,7 @@
 ---
 title: §redis
 date created: 2023-11-01
-date modified: 2023-11-05
+date modified: 2023-11-08
 ---
 
 + 基础使用
@@ -22,10 +22,12 @@ date modified: 2023-11-05
 		+ 对象机制
 			+ [[redisObject]]
 			+ 对象共享
-			+ 对象淘汰
+			+ [[reids-内存淘汰策略与删除 |对象淘汰]]
 	+ [[redis-底层数据结构]]
 + 核心知识
-	+ 内存淘汰策略
+	+ [[reids-内存淘汰策略与删除]]
+		+ [[redis-lru]] 最久未使用
+		+ [[redis-lfu]] 最少使用
 	+ [[reids-事务]]
 	+ [[redis-订阅发布]]
 + 分布式  
