@@ -248,6 +248,7 @@
       "name": "task"
     }
   ],
+  "archives": [],
   "preferences": {
     "projectSizeLimit": 1000,
     "frontmatter": {

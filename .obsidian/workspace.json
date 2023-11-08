@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e27c2ce6eb478fc7",
+        "id": "46c8317575380548",
         "type": "tabs",
         "children": [
           {
-            "id": "aef43701098c763e",
+            "id": "4e5873185ecdafa0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+                "file": "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,7 +21,111 @@
             }
           },
           {
-            "id": "34c8b67b05714193",
+            "id": "ee4c8f3726645b7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8aebb06b890ec0e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d9354ff7512f28b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ee793e00039e64ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AboutTheGarden.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f42a30093e8972f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bc3105bc11bef19d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e1e2253bf873adae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b265d3b6eec433e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ee98f8cedb1db6a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,20 +138,7 @@
             }
           },
           {
-            "id": "52172f8bb00ef8ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2b1fe28ed35cf430",
+            "id": "886893b4899e2224",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -57,28 +148,20 @@
             }
           },
           {
-            "id": "35d703ecba620069",
+            "id": "8797654bf876b11f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
+                "file": "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
-          },
-          {
-            "id": "f4268d6dadef1329",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,7 +191,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "redis",
+                "query": "符号",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -144,22 +227,12 @@
         "dimension": 42.207053469852106,
         "children": [
           {
-            "id": "e3c3bc13cb0131c1",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
-              }
-            }
-          },
-          {
             "id": "853ef9e400d6f719",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+                "file": "AboutTheGarden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +244,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+                "file": "AboutTheGarden.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -206,7 +279,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+                "file": "AboutTheGarden.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,11 +290,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 464.5
+    "width": 244.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -238,13 +312,31 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "6c97179dd2ed81fc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AboutTheGarden.md"
+              }
+            }
+          },
+          {
+            "id": "56b12484a240e8d5",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 263.5,
-    "collapsed": true
+    "width": 263.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -263,48 +355,50 @@
       "obsidian-stille:Toggle Stille": false,
       "obsidian-weread-plugin:Weread": false,
       "obsidian-importer:Open Importer": false,
-      "obsidian-projects:Open projects": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "34c8b67b05714193",
+  "active": "ee793e00039e64ee",
   "lastOpenFiles": [
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis.md",
-    "Extras/Draws/redis-数据类型.md",
-    "Extras/Draws/redis-底层数据结构.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md",
-    "Calendar/Daily notes/2023-10-18.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/intset.md",
-    "Calendar/Daily notes/jrebel.md",
-    "Spaces/2-Area/数据库/跳跃表.md",
-    "Calendar/Daily notes/2023-10-13.md",
-    "Extras/Templates/其他/dict/dict.md",
-    "Calendar/Daily notes/Untitled Diagram.svg",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/reids-内存淘汰策略与删除.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-对象共享.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
     "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
+    "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
+    "Calendar/Daily notes/2023-11-08.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+    "Extras/Draws/redis-数据类型.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-lfu.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-lru.md",
+    "Spaces/1-Project/我的面试指南/mysql/LRU.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/LFU.md",
+    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
+    "Spaces/1-Project/我的面试指南/解决方案/序列化器.md",
+    "Spaces/1-Project/我的面试指南/杂文/缓存和数据库一致性.md",
+    "Spaces/1-Project/我的面试指南/mysql/缓存.md",
+    "Spaces/1-Project/我的面试指南/解决方案/✨ 分布式锁.md",
+    "Calendar/Daily notes/2023-11-07.md",
+    "Spaces/1-Project/我的面试指南/解决方案/✨ 解决方案.md",
+    "Sources/Articles/flomo101阅读笔记/如何真正理解一个新概念.md",
+    "Spaces/1-Project/我的面试指南/解决方案",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-geo.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-消息队列.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-订阅发布.md",
+    "Spaces/1-Project/我的面试指南/分布式系统/脑裂.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型",
+    "Calendar/Daily notes/Untitled Diagram.svg",
     "Spaces/1-Project/我的面试指南/分布式组件/redis",
-    "Extras/Templates/anki卡片模板.md",
-    "Sources/Articles/flomo101阅读笔记/∑ flomo101阅读笔记.md",
-    "Extras/Draws/∑ excalidraw 白板创建入口.md",
-    "Calendar/Daily notes/todo.md",
-    "Calendar/Daily notes/§javaAgent.md",
-    "Sources/Articles/常青笔记阅读笔记/理解概念需与其尽力较量.md",
     "未命名.canvas",
     "Extras/Draws/Scripts/Downloaded/Auto Layout.svg",
-    "Extras/Draws/Scripts/Downloaded/Auto Layout.md",
     "Extras/Draws/Scripts/Downloaded/Set Font Family.svg",
-    "Extras/Draws/Scripts/Downloaded/Set Font Family.md",
     "Extras/Draws/Scripts/Downloaded/Mindmap format.svg",
-    "Extras/Draws/Scripts/Downloaded/Mindmap format.md",
     "Extras/Draws/Scripts/Downloaded/Mindmap connector.svg",
-    "Extras/Draws/Scripts/Downloaded/Mindmap connector.md",
     "Extras/Draws/Scripts/Downloaded/Grid Selected Images.svg",
-    "Extras/Draws/Scripts/Downloaded/Grid Selected Images.md",
     "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically.md",
     "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically keep text centered.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically keep text centered.md",
     "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally.svg",
     "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
     "Extras/Draws/Scripts/Downloaded",
@@ -314,8 +408,6 @@
     "Extras/Media/MQ_12_07.pdf",
     "Extras/Media/RocketMQ.pptx",
     "Extras/Media/RocketMQ.pdf",
-    "Extras/Media/《如何阅读一本书》_美_莫提默J.艾德勒.mobi",
-    "Extras/Media/17.pdf",
     "未命名 2.canvas",
     "未命名 1.canvas",
     "未命名 3.canvas"

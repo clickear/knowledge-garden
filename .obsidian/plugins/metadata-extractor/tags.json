@@ -24,8 +24,8 @@
     "tagCount": 11,
     "relativePaths": [
       "Spaces/About Spaces.md",
-      "Spaces/4-Archive/About Archive.md",
       "Spaces/3-Resource/About Resource.md",
+      "Spaces/4-Archive/About Archive.md",
       "Spaces/2-Area/About Area.md",
       "Spaces/1-Project/About Project.md",
       "Sources/About Sources.md",
@@ -34,21 +34,6 @@
       "Calendar/About Calendar.md",
       "Atlas/About Atlas.md",
       "AboutTheGarden.md"
-    ]
-  },
-  {
-    "tag": "todo",
-    "tagCount": 52,
-    "relativePaths": [
-      "Spaces/4-Archive/PMP/引论.md",
-      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/遗传算法.md",
-      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法/排序算法.md",
-      "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
-      "Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md",
-      "Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md",
-      "Sources/Articles/常青笔记阅读笔记/笔记标题建议使用完整的句子，避免模糊主张.md",
-      "Sources/Articles/常青笔记阅读笔记/单独的间隔重复记忆卡片是一种糟糕的交流媒介.md",
-      "Sources/Articles/常青笔记阅读笔记/助记媒介.md"
     ]
   },
   {
@@ -126,6 +111,32 @@
     ]
   },
   {
+    "tag": "todo",
+    "tagCount": 53,
+    "relativePaths": [
+      "Spaces/4-Archive/PMP/引论.md",
+      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/遗传算法.md",
+      "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法/排序算法.md",
+      "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
+      "Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md",
+      "Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md",
+      "Sources/Articles/常青笔记阅读笔记/笔记标题建议使用完整的句子，避免模糊主张.md",
+      "Sources/Articles/常青笔记阅读笔记/单独的间隔重复记忆卡片是一种糟糕的交流媒介.md",
+      "Sources/Articles/常青笔记阅读笔记/助记媒介.md"
+    ]
+  },
+  {
+    "tag": "redis/数据结构",
+    "tagCount": 7,
+    "relativePaths": [
+      "Spaces/2-Area/数据库/跳跃表.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-stream.md"
+    ]
+  },
+  {
     "tag": "todo/持续迭代",
     "tagCount": 11,
     "relativePaths": [
@@ -170,7 +181,7 @@
   },
   {
     "tag": "todo/continue",
-    "tagCount": 11,
+    "tagCount": 12,
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/杂文/reactor模式.md",
       "Spaces/1-Project/我的面试指南/杂文/netty.md",
@@ -189,8 +200,8 @@
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.md",
       "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.md",
-      "Extras/Draws/redis-数据类型.md",
       "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
+      "Extras/Draws/redis-数据类型.md",
       "Extras/Draws/readView示意图.md",
       "Extras/Draws/excalibrain.md",
       "Extras/Draws/README 2022-08-21.md",
@@ -198,12 +209,17 @@
     ]
   },
   {
-    "tag": "redis/数据结构",
-    "tagCount": 5,
+    "tag": "消息队列",
+    "tagCount": 2,
     "relativePaths": [
-      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
-      "Spaces/1-Project/我的面试指南/分布式组件/redis/ziplist.md",
-      "Spaces/1-Project/我的面试指南/分布式组件/redis/sds.md"
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-消息队列.md"
+    ]
+  },
+  {
+    "tag": "redis",
+    "tagCount": 11,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-消息队列.md"
     ]
   },
   {
@@ -211,13 +227,6 @@
     "tagCount": 2,
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md"
-    ]
-  },
-  {
-    "tag": "todo/面试",
-    "tagCount": 1,
-    "relativePaths": [
-      "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
     ]
   },
   {
@@ -237,10 +246,17 @@
   },
   {
     "tag": "uncomplete",
-    "tagCount": 2,
+    "tagCount": 3,
     "relativePaths": [
       "Spaces/1-Project/我的面试指南/分布式系统/ZAB.md",
       "Spaces/1-Project/我的面试指南/分布式系统/Raft.md"
+    ]
+  },
+  {
+    "tag": "todo/面试",
+    "tagCount": 1,
+    "relativePaths": [
+      "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
     ]
   },
   {
@@ -453,8 +469,8 @@
       "Sources/Books/微信读书同步/经济理财/周鸿祎自述：我的互联网方法论-周鸿祎.md",
       "Sources/Books/微信读书同步/经济理财/原则：应对变化中的世界秩序-瑞·达利欧.md",
       "Sources/Books/微信读书同步/经济理财/动物精神-罗伯特·希勒 乔治·阿克洛夫.md",
-      "Sources/Books/微信读书同步/经济理财/冯唐成事心法-冯唐.md",
       "Sources/Books/微信读书同步/经济理财/免费：商业的未来-克里斯·安德森.md",
+      "Sources/Books/微信读书同步/经济理财/冯唐成事心法-冯唐.md",
       "Sources/Books/微信读书同步/经济理财/伟大的博弈（珍藏版）-约翰·S·戈登.md",
       "Sources/Books/微信读书同步/精品小说/陆犯焉识（陈道明、巩俐主演）-严歌苓.md",
       "Sources/Books/微信读书同步/精品小说/长夜难明（廖凡、白宇主演《沉默的真相》原著）-紫金陈.md",
@@ -491,8 +507,8 @@
       "Sources/Books/微信读书同步/科学技术/思考的乐趣：Matrix67数学笔记-顾森.md",
       "Sources/Books/微信读书同步/科学技术/上帝掷骰子吗？：量子物理史话（升级版）-曹天元.md",
       "Sources/Books/微信读书同步/社会文化/自私的基因（40周年增订版）-理查德·道金斯.md",
-      "Sources/Books/微信读书同步/社会文化/未来简史：从智人到智神-尤瓦尔·赫拉利.md",
       "Sources/Books/微信读书同步/社会文化/枪炮、病菌与钢铁-贾雷德·戴蒙德.md",
+      "Sources/Books/微信读书同步/社会文化/未来简史：从智人到智神-尤瓦尔·赫拉利.md",
       "Sources/Books/微信读书同步/社会文化/有闲阶级论（译文经典）-索尔斯坦·凡勃仑.md",
       "Sources/Books/微信读书同步/社会文化/失控-凯文·凯利.md",
       "Sources/Books/微信读书同步/社会文化/刑法学讲义（法律男神罗翔的刑法普及课）-罗翔.md",
@@ -650,6 +666,13 @@
     "tagCount": 1,
     "relativePaths": [
       "Calendar/Daily notes/§javaAgent.md"
+    ]
+  },
+  {
+    "tag": "net/mac",
+    "tagCount": 2,
+    "relativePaths": [
+      "Calendar/Daily notes/mack下载网站.md"
     ]
   }
 ]

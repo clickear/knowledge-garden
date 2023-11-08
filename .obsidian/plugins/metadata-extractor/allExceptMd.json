@@ -45,6 +45,10 @@
       "relativePath": "Atlas/TOCs"
     },
     {
+      "name": "永久笔记",
+      "relativePath": "Cards/永久笔记"
+    },
+    {
       "name": "Daily notes",
       "relativePath": "Calendar/Daily notes"
     },
@@ -59,10 +63,6 @@
     {
       "name": "文章草稿",
       "relativePath": "Calendar/文章草稿"
-    },
-    {
-      "name": "永久笔记",
-      "relativePath": "Cards/永久笔记"
     },
     {
       "name": "Draws",
@@ -117,16 +117,20 @@
       "relativePath": "Spaces/2-Area"
     },
     {
-      "name": "3-Resource",
-      "relativePath": "Spaces/3-Resource"
-    },
-    {
       "name": "4-Archive",
       "relativePath": "Spaces/4-Archive"
     },
     {
+      "name": "3-Resource",
+      "relativePath": "Spaces/3-Resource"
+    },
+    {
       "name": "每周回顾",
       "relativePath": "Calendar/Plan & Review/每周回顾"
+    },
+    {
+      "name": "Scripts",
+      "relativePath": "Extras/Draws/Scripts"
     },
     {
       "name": "Atlas模板",
@@ -273,6 +277,14 @@
       "relativePath": "Spaces/2-Area/运动与健康"
     },
     {
+      "name": "PMP",
+      "relativePath": "Spaces/4-Archive/PMP"
+    },
+    {
+      "name": "软考",
+      "relativePath": "Spaces/4-Archive/软考"
+    },
+    {
       "name": "城市与旅行",
       "relativePath": "Spaces/3-Resource/城市与旅行"
     },
@@ -289,12 +301,8 @@
       "relativePath": "Spaces/3-Resource/王者荣耀"
     },
     {
-      "name": "PMP",
-      "relativePath": "Spaces/4-Archive/PMP"
-    },
-    {
-      "name": "软考",
-      "relativePath": "Spaces/4-Archive/软考"
+      "name": "Downloaded",
+      "relativePath": "Extras/Draws/Scripts/Downloaded"
     },
     {
       "name": "会议相关模板",
@@ -409,12 +417,12 @@
       "relativePath": "Sources/Courses/人文社科通识/金融学"
     },
     {
-      "name": "JVM",
-      "relativePath": "Spaces/1-Project/我的面试指南/JVM"
-    },
-    {
       "name": "CPA",
       "relativePath": "Spaces/1-Project/会计/CPA"
+    },
+    {
+      "name": "JVM",
+      "relativePath": "Spaces/1-Project/我的面试指南/JVM"
     },
     {
       "name": "mq",
@@ -505,6 +513,10 @@
       "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/dubbo"
     },
     {
+      "name": "redis",
+      "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis"
+    },
+    {
       "name": "基础算法",
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法"
     },
@@ -517,28 +529,24 @@
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/杂项算法"
     },
     {
-      "name": "排序算法",
-      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法"
+      "name": "数据类型",
+      "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型"
     },
     {
       "name": "线性表",
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表"
     },
     {
+      "name": "排序算法",
+      "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/基础算法/排序算法"
+    },
+    {
       "name": "字符串",
       "relativePath": "Spaces/1-Project/我的面试指南/数据结构与算法/数据结构/线性表/字符串"
     },
     {
-      "name": "Scripts",
-      "relativePath": "Extras/Draws/Scripts"
-    },
-    {
-      "name": "Downloaded",
-      "relativePath": "Extras/Draws/Scripts/Downloaded"
-    },
-    {
-      "name": "redis",
-      "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis"
+      "name": "解决方案",
+      "relativePath": "Spaces/1-Project/我的面试指南/解决方案"
     }
   ],
   "nonMdFiles": [
@@ -566,6 +574,11 @@
       "name": "readView示意图.svg",
       "basename": "readView示意图",
       "relativePath": "Extras/Draws/readView示意图.svg"
+    },
+    {
+      "name": "redis-数据类型.svg",
+      "basename": "redis-数据类型",
+      "relativePath": "Extras/Draws/redis-数据类型.svg"
     },
     {
       "name": "数字时代如何更好地工作与生活 - 图.svg",
@@ -668,6 +681,16 @@
       "relativePath": "Extras/Media/Pasted Image 20220821142616_556.png"
     },
     {
+      "name": "Pasted Image 20231013020412_053.png",
+      "basename": "Pasted Image 20231013020412_053",
+      "relativePath": "Extras/Media/Pasted Image 20231013020412_053.png"
+    },
+    {
+      "name": "Pasted Image 20231013020457_509.png",
+      "basename": "Pasted Image 20231013020457_509",
+      "relativePath": "Extras/Media/Pasted Image 20231013020457_509.png"
+    },
+    {
       "name": "Pasted image 20220902100327.png",
       "basename": "Pasted image 20220902100327",
       "relativePath": "Extras/Media/Pasted image 20220902100327.png"
@@ -723,29 +746,9 @@
       "relativePath": "Extras/Media/贫穷的本质：我们为什么摆脱不了贫穷.mobi"
     },
     {
-      "name": "img_fastthreadlocal.svg",
-      "basename": "img_fastthreadlocal",
-      "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.svg"
-    },
-    {
-      "name": "img_threadlocal.svg",
-      "basename": "img_threadlocal",
-      "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.svg"
-    },
-    {
-      "name": "redis-数据类型.svg",
-      "basename": "redis-数据类型",
-      "relativePath": "Extras/Draws/redis-数据类型.svg"
-    },
-    {
-      "name": "Pasted Image 20231013020412_053.png",
-      "basename": "Pasted Image 20231013020412_053",
-      "relativePath": "Extras/Media/Pasted Image 20231013020412_053.png"
-    },
-    {
-      "name": "Pasted Image 20231013020457_509.png",
-      "basename": "Pasted Image 20231013020457_509",
-      "relativePath": "Extras/Media/Pasted Image 20231013020457_509.png"
+      "name": "Auto Layout.svg",
+      "basename": "Auto Layout",
+      "relativePath": "Extras/Draws/Scripts/Downloaded/Auto Layout.svg"
     },
     {
       "name": "Box Each Selected Groups.svg",
@@ -823,9 +826,14 @@
       "relativePath": "Extras/Draws/Scripts/Downloaded/Set Font Family.svg"
     },
     {
-      "name": "Auto Layout.svg",
-      "basename": "Auto Layout",
-      "relativePath": "Extras/Draws/Scripts/Downloaded/Auto Layout.svg"
+      "name": "img_fastthreadlocal.svg",
+      "basename": "img_fastthreadlocal",
+      "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_fastthreadlocal.svg"
+    },
+    {
+      "name": "img_threadlocal.svg",
+      "basename": "img_threadlocal",
+      "relativePath": "Spaces/1-Project/我的面试指南/杂文/img_threadlocal.svg"
     }
   ]
 }
