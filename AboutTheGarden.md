@@ -1,7 +1,7 @@
 ---
 comments: true
 date created: 2022-08-06
-date modified: 2023-08-14
+date modified: 2023-11-08
 id: home
 layout: page
 permalink: /
@@ -14,6 +14,7 @@ status: 完成
 
 ## 计算机
 
++ [ ] [[§redis]]
 + [ ] [[§ JVM目录]]
 + [ ] [[§ mysql目录]]
 + [ ] [[§ mq面试]]
@@ -22,7 +23,6 @@ status: 完成
 + [ ] [[cmu15445]]
 
 ## 数据分析
-
 
 ## 团队管理
 
