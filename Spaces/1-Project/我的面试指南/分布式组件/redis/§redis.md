@@ -1,7 +1,7 @@
 ---
 title: §redis
 date created: 2023-11-01
-date modified: 2023-11-08
+date modified: 2023-11-11
 ---
 
 + 基础使用
@@ -48,4 +48,14 @@ date modified: 2023-11-08
 	+ [[redis-search]]  
 + 优化案例
 	+ [[redis-内存优化]]
+		+ [[序列化器]] + [[压缩算法]]
 	+ [[reids-选择合适数据结构，减少内存使用]]
+	+ [[redis-开发规范]]
++ 解决方案
+	+ [[✨分布式多级缓存]]
+	+ [[✨ redis-集群方案]]
+	+ [[✨ redis-延迟队列]]
++ 学习资料
+	+ [Redis 核心技术与实战](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Redis%20%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98) ⭐
+	+ [Redis 源码剖析与实战](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Redis%20%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98)
+	+ [Redis 核心原理与实战](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Redis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98)

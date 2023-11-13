@@ -1,11 +1,16 @@
 ---
 date created: 2022-09-15
-date modified: 2023-11-05
+date modified: 2023-11-09
 title: rocketMq
-tags: [todo/continue]
+tags: [todo/continue, todo/wait]
 ---
 
-#todo/continue  
+[【348期】面试官：Kafka和RocketMQ有什么区别？ - 知乎](https://zhuanlan.zhihu.com/p/423309452)
+
+[Kafka和RocketMQ文件存储机制对比](https://t1mek1ller.github.io/2019/11/13/kafka-rocketmq-storage/)  
+[Kafka文件存储机制那些事 - 美团技术团队](https://tech.meituan.com/2015/01/13/kafka-fs-design-theory.html)
+
+#todo/continue #todo/wait  
 RocketMQ 技术内幕
 
 ## 资料
