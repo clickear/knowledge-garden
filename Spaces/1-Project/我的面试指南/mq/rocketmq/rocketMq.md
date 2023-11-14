@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-15
-date modified: 2023-11-09
+date modified: 2023-11-13
 title: rocketMq
 tags: [todo/continue, todo/wait]
 ---
@@ -12,6 +12,8 @@ tags: [todo/continue, todo/wait]
 
 #todo/continue #todo/wait  
 RocketMQ 技术内幕
+
+[[rocketmq-延迟队列]]
 
 ## 资料
 

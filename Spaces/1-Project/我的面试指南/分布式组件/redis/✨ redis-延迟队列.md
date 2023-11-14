@@ -7,9 +7,9 @@ date modified: 2023-11-13
 >  首先，先界定讨论的边界。这里基于redis的延迟队列。可以用于
 >  1. 为不支持延迟队列的mq，进行开发延迟队列功能的二开方案。相当于消费者是重投到mq中。如果是重投服务的延迟队列，这里应要注意支持扩容，各个timer的负载，容错问题。当前仅仅讨论的是存储层的设计
 >  2. 消费者直接进行消费，如直接使用redission  
->  具体原因，可以看下[[redis-消息队列#^84080d]]，redis与专业的消息队列的区别
+>  不建议直接使用redis进行消费。具体原因，可以看下[[redis-消息队列#^84080d]]，redis与专业的消息队列的区别。可参考[[rocketmq-延迟队列]]
 
-## 思路，参考[千万级延时任务队列如何实现，看美图开源的-LMSTFY - 知乎](https://zhuanlan.zhihu.com/p/94082947)
+## 思路，参考[千万级延时任务队列如何实现](https://zhuanlan.zhihu.com/p/94082947)
 
 [processon](https://www.processon.com/diagraming/6551d0fa28841565d1d1be54)  
 ![延迟队列.jpg](http://image.clickear.top/%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97.jpg)
@@ -72,6 +72,11 @@ zset如何避免大key?
 加载临近时间区域的数据
 
 ## 开源实现分析
+
+|            | 存储数据的结构                                            | 获取zset数据方式                           | 共有实现 |     |
+|:---------- |:--------------------------------------------------------- |:------------------------------------------ |:-------- |:--- |
+| redission  | zset + list  + list(存储消息) + channel(通知最新消息变更) | 使用channel,只有最新一个task，放入时间轮中 | 使用lua，保证原子性         |     |
+| 美图lmstfy | zset+ list + string(存储消息)                             | 定时轮询zset数据                           |  使用lua，保证原子性        |     |
 
 ### redission的[DelayedQueue](https://www.nowcoder.com/discuss/459290197163823104) java
 
