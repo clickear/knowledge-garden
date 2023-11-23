@@ -1,10 +1,12 @@
 ---
 title: 二、命令使用
 date created: 2023-11-11
-date modified: 2023-11-11
+date modified: 2023-11-23
 ---
 
 ## 开发规范
+
+![image.png](http://image.clickear.top/20231123190052.png)
 
 ## key名设计
 
@@ -86,5 +88,7 @@ Sorted set类型：跟Set类型相似。
 但要注意控制一次批量操作的**元素个数**(例如500以内，实际也和元素字节数有关)。
 
 ## 参考文档
+
+[加餐 06 Redis的使用规范小建议](https://learn.lianglianglee.com/%e4%b8%93%e6%a0%8f/Redis%20%e6%a0%b8%e5%bf%83%e6%8a%80%e6%9c%af%e4%b8%8e%e5%ae%9e%e6%88%98/%e5%8a%a0%e9%a4%90%2006%20%20%20Redis%e7%9a%84%e4%bd%bf%e7%94%a8%e8%a7%84%e8%8c%83%e5%b0%8f%e5%bb%ba%e8%ae%ae.md) ⭐
 
 [阿里云Redis开发规范-阿里云开发者社区](https://developer.aliyun.com/article/531067)

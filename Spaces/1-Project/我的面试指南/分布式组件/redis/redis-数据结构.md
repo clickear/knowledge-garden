@@ -1,7 +1,7 @@
 ---
 title: redis-数据结构
 date created: 2023-11-02
-date modified: 2023-11-02
+date modified: 2023-11-23
 ---
 
 命名前缀:
@@ -24,6 +24,9 @@ date modified: 2023-11-02
 | HyperLogLog | 基数统计                                              |                                                          | 基数统计                |              |
 | [[redis-stream\|Stream]]      | 简易消息队列                                          |                                                          |                         |              |
 | [[redis-geo \|GEO]]           |                 地理位置相关                                      |                                                          |    LBS，附近的人                    |              |
+
+[redisdb数据结构](https://www.processon.com/diagraming/655ef9b50a22773d301201d3)  
+![redisdb结构.jpg](http://image.clickear.top/redisdb%E7%BB%93%E6%9E%84.jpg)
 
 ## 数据类型
 
