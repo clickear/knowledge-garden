@@ -31,6 +31,7 @@ date modified: 2023-11-23
 			+ [[redis-lfu]] 最少使用
 	+ [[reids-事务]]
 	+ [[redis-订阅发布]]
+	+ [[redis-阻塞点]]
 + 分布式  
 	+ 高性能
 		+ [[redis高性能]]
