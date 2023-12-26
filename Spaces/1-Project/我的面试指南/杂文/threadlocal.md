@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-26
-date modified: 2023-01-19
+date modified: 2023-12-07
 title: threadlocal
 ---
 
@@ -25,6 +25,16 @@ title: threadlocal
 
 > 内存泄露: 你申请完内存后, 你用完了但没有释放掉, 你自己没法用, 系统又没法回收.
 
+![[img_threadlocal]]  
+
+分析下，可能出现的内存泄漏。分析下堆中存在的对象。主要有 threadlocal、 threadmap（可不回收)、entry
+
+1. 堆中的threadlocal想要回收(这里说明下，一般编程时，是会设置成静态变量，所以一般是无)
+	1. 栈在threadLocalRef, 在使用时 threadLocal = null,或者离开栈时，会清空。
+	2. 如果 threadlocalmap中的entry对应的key -->堆 threalocal，是强引用的话。就算栈的引用断开了也没用。所以这里必须是弱引用。
+2. value 对象泄漏(主要问题)
+	1. 上面分析到，entry中的key，是弱引用。而value是强引用，为什么是强引用，参考下文。这里始终会存在这么个强引用。 为了尽可能释放内存，在get/set/remove时，会清空key为null的value对象。
+
 ThreadLocal内存泄露指的是: ThreadLocal被回收了, ThreadLocalMap Entry的key没有了指向。但Entry仍然有ThreadRef->Thread->ThreadLoalMap-> Entry value-> Object 这条引用一直存在导致内存泄露，从中可看**ThreadLocalMap是依附在Thread上的**, 只要Thread销毁, 那ThreadLocalMap也会销毁出。
 
 可能存在泄露的可能性:
@@ -46,11 +56,29 @@ ThreadLocal内存泄露指的是: ThreadLocal被回收了, ThreadLocalMap Entry�
 
 1. 使用完后，用remove方法
 
-### 为什么要将ThreadLocalMap的key设置为[[弱引用]]呢? 强引用不香吗?
+### value引用，为什么不是弱引用？  
+
+不设置为弱引用, 是因为不清楚这个Value除了map的引用还是否还存在其他引用, 如果不存在其他引用, 当GC的时候就会直接将这个Value干掉了, `而此时我们的ThreadLocal还处于使用期间, 就会造成Value为null的错误, 所以将其设置为强引用. `
+
+```java
+public static ThreadLocal<Person> tl = new ThreadLocal(); 
+tl.set(new Person());
+system.gc();
+// 如果 value是弱引用，那么value就会被回收，因为没有其他的强引用了。那么 tl.get()获取到的值，就会变成null了，明显不合理。
+```
+
+### 为什么要将ThreadLocalMap的key设置为[[弱引用]]呢? 强引用不香吗?是为了回收 堆中的threadlocal
+
+```主要目的，是为了回收堆中的threadlocal.
+如果是强引用，那么就存在2个强引用指向 堆中的threadlocal
+1. 栈中的 threadLocalRef --> 堆threadlocal
+2. threadMap中的key --> 堆threadlocal
+
+尽管
+```
 
 外界是通过ThreadLocal来对ThreadLocalMap进行操作的, 假设外界使用ThreadLocal的对象被置null了, 那ThreadLocalMap的强引用指向ThreadLocal也毫无意义。
 
-![[img_threadlocal]]  
 Thread在创建的时候, 会有栈引用指向Thread对象, Thread对象内部维护了ThreadLocalMap引用，而ThreadLocalMap的Key是ThreadLocal, value是传入的Object
 
 1):ThreadLocalRef->ThreadLocal(强引用)

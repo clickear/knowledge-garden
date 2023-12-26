@@ -1,11 +1,9 @@
 ---
 title: redis-底层数据结构
 date created: 2023-10-18
-date modified: 2023-11-01
+date modified: 2023-11-2401
 tags: [redis/数据结构, redis/源码]
 ---
-
-#redis/数据结构 #redis/源码
 
 ## redis-底层数据结构
 

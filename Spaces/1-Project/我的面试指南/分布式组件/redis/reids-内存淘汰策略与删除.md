@@ -1,7 +1,7 @@
 ---
 title: reids-内存淘汰策略与删除
 date created: 2023-11-08
-date modified: 2023-11-08
+date modified: 2023-11-28
 ---
 
 > [!TIP] 删除策略，是指到了过期时长未删除的💡  
@@ -45,7 +45,7 @@ if (server.arch_bits == 32 && server.maxmemory == 0) {
 		+ **allkeys-lru**：淘汰整个键值中最久未使用的键值
 		+ **allkeys-lfu**（Redis 4.0 后新增的内存淘汰策略）：淘汰整个键值中最少使用的键值。
 
-### LUR和[[LFU]]
+### LRU和[[LFU]]
 
 **[[LRU]]** 全称是 Least Recently Used 翻译为**最近最少使用**，会选择淘汰最近最少使用的数据  
 [[redis-lru]]，每个对象记录最后访问时间，淘汰时，随机获取数据，淘汰最久没有使用的数据。  
