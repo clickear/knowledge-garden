@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "46c8317575380548",
+        "id": "97285e0651b43ff0",
         "type": "tabs",
         "children": [
           {
-            "id": "4e5873185ecdafa0",
+            "id": "a4cbdb795e153e8a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
+                "file": "Sources/Books/极客时间/从0开始学架构.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "ee4c8f3726645b7e",
+            "id": "094d185fabee98b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
+                "file": "Sources/Books/极客时间/互联网演进模式.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "8aebb06b890ec0e4",
+            "id": "e625f3387eba583b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
+                "file": "Sources/Books/极客时间/康威定理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +47,12 @@
             }
           },
           {
-            "id": "9d9354ff7512f28b",
+            "id": "23b3512a9f934bf6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
+                "file": "Sources/Books/极客时间/康威定理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,108 +60,19 @@
             }
           },
           {
-            "id": "ee793e00039e64ee",
+            "id": "408154dc17a29126",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f42a30093e8972f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bc3105bc11bef19d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1e2253bf873adae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b265d3b6eec433e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ee98f8cedb1db6a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "886893b4899e2224",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Extras/Draws/redis-数据类型.md"
-              }
-            }
-          },
-          {
-            "id": "8797654bf876b11f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
+                "file": "Sources/Books/极客时间/SOA.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "符号",
+                "query": "从0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -219,7 +130,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "92910ae8836a7b22",
@@ -232,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Sources/Books/极客时间/从0开始学架构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -244,7 +156,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Sources/Books/极客时间/从0开始学架构.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -267,7 +179,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.9921256245242684,
+                  "scale": 1.9389977473223232,
                   "close": true
                 }
               }
@@ -279,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Sources/Books/极客时间/从0开始学架构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -295,7 +207,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 354.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -319,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AboutTheGarden.md"
+                "file": "Sources/Books/极客时间/从0开始学架构.md"
               }
             }
           },
@@ -330,68 +242,79 @@
               "type": "quiet-outline",
               "state": {}
             }
+          },
+          {
+            "id": "c426734a34611d68",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
       "canvas:新建白板": false,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "obsidian-repeat-plugin:Repeat due notes": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
       "janitor:Janitor: scan vault": false,
       "obsidian42-brat:BRAT": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "obsidian-stille:Toggle Stille": false,
       "obsidian-weread-plugin:Weread": false,
       "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "ee793e00039e64ee",
+  "active": "a4cbdb795e153e8a",
   "lastOpenFiles": [
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/reids-内存淘汰策略与删除.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-对象共享.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-内存管理.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redisObject.md",
-    "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
-    "Calendar/Daily notes/2023-11-08.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-底层数据结构.md",
-    "Extras/Draws/redis-数据类型.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-lfu.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-lru.md",
-    "Spaces/1-Project/我的面试指南/mysql/LRU.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/LFU.md",
-    "Spaces/1-Project/我的面试指南/mysql/mysqlLRU.md",
-    "Spaces/1-Project/我的面试指南/解决方案/序列化器.md",
-    "Spaces/1-Project/我的面试指南/杂文/缓存和数据库一致性.md",
-    "Spaces/1-Project/我的面试指南/mysql/缓存.md",
-    "Spaces/1-Project/我的面试指南/解决方案/✨ 分布式锁.md",
-    "Calendar/Daily notes/2023-11-07.md",
-    "Spaces/1-Project/我的面试指南/解决方案/✨ 解决方案.md",
-    "Sources/Articles/flomo101阅读笔记/如何真正理解一个新概念.md",
+    "Sources/Books/极客时间/互联网演进模式.md",
+    "Sources/Books/极客时间/从0开始学架构.md",
+    "Calendar/Daily notes/2024-05-08.md",
+    "Sources/Books/极客时间/微服务.md",
+    "Calendar/Daily notes/mack下载网站.md",
+    "Sources/Books/极客时间/SOA.md",
+    "Sources/Books/极客时间/微内核架构.md",
+    "Calendar/Daily notes/2024-05-07.md",
+    "Sources/Books/极客时间/sentinel.md",
+    "Sources/Books/极客时间/康威定理.md",
+    "Sources/Books/极客时间/限流算法.md",
+    "Sources/Books/极客时间/分层架构.md",
+    "Sources/Books/极客时间/FMEA.md",
+    "Calendar/Daily notes/2024-04-30.md",
+    "Sources/Books/极客时间/如何应对接口级故障.md",
+    "Sources/Books/极客时间/限流器设计.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/全文检索选型.md",
+    "Spaces/1-Project/我的面试指南/分布式系统/CAP定理.md",
+    "未命名.canvas",
+    "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型/redis-string.md",
+    "Spaces/1-Project/我的面试指南/mq/§ mq面试.md",
+    "Spaces/1-Project/我的面试指南/分布式系统/一致性.md",
+    "Spaces/2-Area/数据库/数据模型.md",
+    "Spaces/2-Area/数据库/cmu15445.md",
+    "Sources/Books/微信读书同步/文学/1984-乔治·奥威尔.md",
+    "Calendar/Daily notes/log配置.md",
+    "Sources/Books/读书笔记/认知红利",
+    "Sources/Books/极客时间",
+    "testloom.loom",
+    "test.loom.canvas",
     "Spaces/1-Project/我的面试指南/解决方案",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-geo.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-消息队列.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/redis-订阅发布.md",
-    "Spaces/1-Project/我的面试指南/分布式系统/脑裂.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md",
     "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型",
     "Calendar/Daily notes/Untitled Diagram.svg",
     "Spaces/1-Project/我的面试指南/分布式组件/redis",
-    "未命名.canvas",
     "Extras/Draws/Scripts/Downloaded/Auto Layout.svg",
     "Extras/Draws/Scripts/Downloaded/Set Font Family.svg",
     "Extras/Draws/Scripts/Downloaded/Mindmap format.svg",
@@ -405,9 +328,6 @@
     "Extras/Draws/Scripts",
     "Extras/Media/MySQL.pdf",
     "Extras/Media/0531V3.0.pptx",
-    "Extras/Media/MQ_12_07.pdf",
-    "Extras/Media/RocketMQ.pptx",
-    "Extras/Media/RocketMQ.pdf",
     "未命名 2.canvas",
     "未命名 1.canvas",
     "未命名 3.canvas"

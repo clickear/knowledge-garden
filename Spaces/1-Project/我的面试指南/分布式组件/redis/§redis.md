@@ -50,13 +50,14 @@ date modified: 2023-11-23
 + 优化案例
 	+ [[redis-内存优化]]
 		+ [[序列化器]] + [[压缩算法]]
+		+ [[redis-数据压缩调研]]
 	+ [[reids-选择合适数据结构，减少内存使用]]
 	+ [[redis-开发规范]]
 + 解决方案
 	+ [[✨分布式多级缓存]]
 	+ [[✨ redis-集群方案]]
 	+ [[✨ redis-延迟队列]]
-	+ [[✨ reids-秒杀]]
+	+ [[✨ redis-秒杀]]
 + 学习资料
 	+ [Redis 核心技术与实战](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Redis%20%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98) ⭐
 	+ [Redis 源码剖析与实战](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Redis%20%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%88%98)

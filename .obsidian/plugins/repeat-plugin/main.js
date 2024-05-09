@@ -4230,140 +4230,6 @@ function uniqByField(array, field) {
   }, /* @__PURE__ */ new Map()).values()];
 }
 
-// src/repeat/choices.ts
-var AM_REVIEW_TIME = 6;
-var PM_REVIEW_TIME = 18;
-var DISMISS_BUTTON_TEXT = "dismiss";
-var SKIP_PERIOD_MINUTES = 5;
-var SKIP_BUTTON_TEXT = `${SKIP_PERIOD_MINUTES} minutes (skip)`;
-function incrementRepeatDueAt({
-  repeatDueAt,
-  repeatPeriodUnit,
-  repeatPeriod,
-  repeatTimeOfDay
-}) {
-  const now2 = DateTime.now();
-  const dueAt = repeatDueAt != null ? repeatDueAt : now2.minus({ second: 1 });
-  let repetitions = 1;
-  if (dueAt <= now2) {
-    const overdueBy = now2.diff(dueAt);
-    const repeatPeriodDuration = Duration.fromObject({
-      [repeatPeriodUnit.toLowerCase()]: repeatPeriod
-    });
-    repetitions = Math.ceil(overdueBy / repeatPeriodDuration);
-  }
-  const nextRepeatDueAt = dueAt.plus({
-    [repeatPeriodUnit.toLowerCase()]: repetitions * repeatPeriod
-  }).set({
-    hour: repeatTimeOfDay === "AM" ? AM_REVIEW_TIME : PM_REVIEW_TIME,
-    minute: 0,
-    second: 0,
-    millisecond: 0
-  });
-  if (nextRepeatDueAt < now2) {
-    return nextRepeatDueAt.plus({
-      days: 1
-    });
-  }
-  return nextRepeatDueAt;
-}
-var getSkipDateTime = (now2) => now2.plus({
-  minutes: SKIP_PERIOD_MINUTES
-});
-function getPeriodicRepeatChoices(repetition, now2) {
-  const { repeatDueAt } = repetition;
-  if (repeatDueAt > now2 || !repeatDueAt) {
-    return [{
-      text: DISMISS_BUTTON_TEXT,
-      nextRepetition: null
-    }];
-  }
-  const nextRepeatDueAt = incrementRepeatDueAt({ ...repetition });
-  return [{
-    text: SKIP_BUTTON_TEXT,
-    nextRepetition: {
-      ...repetition,
-      repeatDueAt: getSkipDateTime(now2)
-    }
-  }, {
-    text: summarizeDueAt(nextRepeatDueAt, now2),
-    nextRepetition: {
-      ...repetition,
-      repeatDueAt: nextRepeatDueAt
-    }
-  }];
-}
-function getSpacedRepeatChoices(repetition, now2) {
-  const {
-    repeatPeriod,
-    repeatPeriodUnit,
-    repeatTimeOfDay
-  } = repetition;
-  const { repeatDueAt } = repetition;
-  if (repeatDueAt > now2 || !repeatDueAt) {
-    return [{
-      text: DISMISS_BUTTON_TEXT,
-      nextRepetition: null
-    }];
-  }
-  const multiplierChoices = [0.5, 1, 1.5, 2].map((multiplier) => {
-    let nextRepeatDueAt = now2.plus({
-      [repeatPeriodUnit]: multiplier * repeatPeriod
-    });
-    if (nextRepeatDueAt.minus({ days: 7 }) >= now2) {
-      nextRepeatDueAt = nextRepeatDueAt.set({
-        hour: repeatTimeOfDay === "AM" ? AM_REVIEW_TIME : PM_REVIEW_TIME,
-        minute: 0,
-        second: 0,
-        millisecond: 0
-      });
-    }
-    let { hours } = nextRepeatDueAt.diff(now2, "hours").values || {};
-    if (!hours || hours < 1) {
-      hours = 1;
-    }
-    hours = Math.round(hours);
-    return {
-      text: `${summarizeDueAt(nextRepeatDueAt, now2)} (x${multiplier})`,
-      nextRepetition: {
-        ...repetition,
-        repeatDueAt: nextRepeatDueAt,
-        repeatPeriod: hours,
-        repeatPeriodUnit: "HOUR"
-      }
-    };
-  });
-  return uniqByField([
-    {
-      text: SKIP_BUTTON_TEXT,
-      nextRepetition: {
-        ...repetition,
-        repeatDueAt: getSkipDateTime(now2),
-        repeatPeriod,
-        repeatPeriodUnit: "HOUR"
-      }
-    },
-    ...multiplierChoices
-  ], "text");
-}
-function getRepeatChoices(repetition) {
-  if (!repetition) {
-    return [];
-  }
-  const { repeatStrategy } = repetition;
-  const now2 = DateTime.now();
-  if (repeatStrategy === "PERIODIC") {
-    return getPeriodicRepeatChoices(repetition, now2);
-  }
-  if (repeatStrategy === "SPACED") {
-    return getSpacedRepeatChoices(repetition, now2);
-  }
-  return [{
-    text: DISMISS_BUTTON_TEXT,
-    nextRepetition: null
-  }];
-}
-
 // src/repeat/parsers.ts
 var import_obsidian = require("obsidian");
 var joinedUnits = "hour|day|week|month|year";
@@ -4484,6 +4350,157 @@ function parseHiddenFieldFromMarkdown(markdown) {
   }
   return false;
 }
+function parseTime(twentyFourHourTime) {
+  const [hourString, minuteString] = twentyFourHourTime.split(":");
+  return {
+    hour: parseInt(hourString),
+    minute: parseInt(minuteString)
+  };
+}
+
+// src/repeat/choices.ts
+var DISMISS_BUTTON_TEXT = "dismiss";
+var SKIP_PERIOD_MINUTES = 5;
+var SKIP_BUTTON_TEXT = `${SKIP_PERIOD_MINUTES} minutes (skip)`;
+function incrementRepeatDueAt({
+  repeatDueAt,
+  repeatPeriodUnit,
+  repeatPeriod,
+  repeatTimeOfDay
+}, settings) {
+  const now2 = DateTime.now();
+  const dueAt = repeatDueAt != null ? repeatDueAt : now2.minus({ second: 1 });
+  let repetitions = 1;
+  if (dueAt <= now2) {
+    const overdueBy = now2.diff(dueAt);
+    const repeatPeriodDuration = Duration.fromObject({
+      [repeatPeriodUnit.toLowerCase()]: repeatPeriod
+    });
+    repetitions = Math.ceil(overdueBy / repeatPeriodDuration);
+  }
+  const morningReviewTime = parseTime(settings.morningReviewTime);
+  const eveningReviewTime = parseTime(settings.eveningReviewTime);
+  const nextRepeatDueAt = dueAt.plus({
+    [repeatPeriodUnit.toLowerCase()]: repetitions * repeatPeriod
+  }).set(repeatTimeOfDay === "AM" ? {
+    hour: morningReviewTime.hour,
+    minute: morningReviewTime.minute,
+    second: 0,
+    millisecond: 0
+  } : {
+    hour: eveningReviewTime.hour,
+    minute: eveningReviewTime.minute,
+    second: 0,
+    millisecond: 0
+  });
+  if (nextRepeatDueAt < now2) {
+    return nextRepeatDueAt.plus({
+      days: 1
+    });
+  }
+  return nextRepeatDueAt;
+}
+var getSkipDateTime = (now2) => now2.plus({
+  minutes: SKIP_PERIOD_MINUTES
+});
+function getPeriodicRepeatChoices(repetition, now2, settings) {
+  const { repeatDueAt } = repetition;
+  if (repeatDueAt > now2 || !repeatDueAt) {
+    return [{
+      text: DISMISS_BUTTON_TEXT,
+      nextRepetition: null
+    }];
+  }
+  const nextRepeatDueAt = incrementRepeatDueAt({ ...repetition }, settings);
+  return [{
+    text: SKIP_BUTTON_TEXT,
+    nextRepetition: {
+      ...repetition,
+      repeatDueAt: getSkipDateTime(now2)
+    }
+  }, {
+    text: summarizeDueAt(nextRepeatDueAt, now2),
+    nextRepetition: {
+      ...repetition,
+      repeatDueAt: nextRepeatDueAt
+    }
+  }];
+}
+function getSpacedRepeatChoices(repetition, now2, settings) {
+  const {
+    repeatPeriod,
+    repeatPeriodUnit,
+    repeatTimeOfDay
+  } = repetition;
+  const { repeatDueAt } = repetition;
+  if (repeatDueAt > now2 || !repeatDueAt) {
+    return [{
+      text: DISMISS_BUTTON_TEXT,
+      nextRepetition: null
+    }];
+  }
+  const morningReviewTime = parseTime(settings.morningReviewTime);
+  const eveningReviewTime = parseTime(settings.eveningReviewTime);
+  const multiplierChoices = [0.5, 1, 1.5, 2].map((multiplier) => {
+    let nextRepeatDueAt = now2.plus({
+      [repeatPeriodUnit]: multiplier * repeatPeriod
+    });
+    if (nextRepeatDueAt.minus({ days: 7 }) >= now2) {
+      nextRepeatDueAt = nextRepeatDueAt.set(repeatTimeOfDay === "AM" ? {
+        hour: morningReviewTime.hour,
+        minute: morningReviewTime.minute,
+        second: 0,
+        millisecond: 0
+      } : {
+        hour: eveningReviewTime.hour,
+        minute: eveningReviewTime.minute,
+        second: 0,
+        millisecond: 0
+      });
+    }
+    let { hours } = nextRepeatDueAt.diff(now2, "hours").values || {};
+    if (!hours || hours < 1) {
+      hours = 1;
+    }
+    hours = Math.round(hours);
+    return {
+      text: `${summarizeDueAt(nextRepeatDueAt, now2)} (x${multiplier})`,
+      nextRepetition: {
+        ...repetition,
+        repeatDueAt: nextRepeatDueAt,
+        repeatPeriod: hours,
+        repeatPeriodUnit: "HOUR"
+      }
+    };
+  });
+  return uniqByField([
+    {
+      text: SKIP_BUTTON_TEXT,
+      nextRepetition: {
+        ...repetition,
+        repeatDueAt: getSkipDateTime(now2)
+      }
+    },
+    ...multiplierChoices
+  ], "text");
+}
+function getRepeatChoices(repetition, settings) {
+  if (!repetition) {
+    return [];
+  }
+  const { repeatStrategy } = repetition;
+  const now2 = DateTime.now();
+  if (repeatStrategy === "PERIODIC") {
+    return getPeriodicRepeatChoices(repetition, now2, settings);
+  }
+  if (repeatStrategy === "SPACED") {
+    return getSpacedRepeatChoices(repetition, now2, settings);
+  }
+  return [{
+    text: DISMISS_BUTTON_TEXT,
+    nextRepetition: null
+  }];
+}
 
 // src/repeat/queries.ts
 function getNotesDue(dv, ignoreFolderPath, ignoreFilePath) {
@@ -4533,7 +4550,7 @@ var EmbedType = /* @__PURE__ */ ((EmbedType2) => {
   return EmbedType2;
 })(EmbedType || {});
 var embedTypeToAcceptedExtensions = {
-  ["Image" /* Image */]: ["png", "jpg", "jpeg", "gif", "bmp", "svg"],
+  ["Image" /* Image */]: ["png", "webp", "jpg", "jpeg", "gif", "bmp", "svg"],
   ["Audio" /* Audio */]: ["mp3", "webm", "wav", "m4a", "ogg", "3gp", "flac"],
   ["Video" /* Video */]: ["mp4", "webm", "ogv", "mov", "mkv"],
   ["PDF" /* PDF */]: ["pdf"]
@@ -4677,7 +4694,7 @@ async function renderTitleElement(container, file, vault) {
   embedTitle.setText(file.basename);
   const embedLink = createEl("a", { cls: "markdown-embed-link" });
   embedLink.href = getNoteUri(vault, file.path);
-  (0, import_obsidian2.setIcon)(embedLink, "link", 20);
+  (0, import_obsidian2.setIcon)(embedLink, "link");
   container.appendChild(embedTitle);
   container.appendChild(embedLink);
 }
@@ -4686,7 +4703,7 @@ async function renderTitleElement(container, file, vault) {
 var MODIFY_DEBOUNCE_MS = 1 * 1e3;
 var REPEATING_NOTES_DUE_VIEW = "repeating-notes-due-view";
 var RepeatView = class extends import_obsidian3.ItemView {
-  constructor(leaf, ignoreFolderPath) {
+  constructor(leaf, settings) {
     super(leaf);
     this.icon = "clock";
     this.addRepeatButton = this.addRepeatButton.bind(this);
@@ -4700,7 +4717,7 @@ var RepeatView = class extends import_obsidian3.ItemView {
     this.resetView = this.resetView.bind(this);
     this.component = new import_obsidian3.Component();
     this.dv = (0, import_obsidian_dataview.getAPI)(this.app);
-    this.ignoreFolderPath = ignoreFolderPath;
+    this.settings = settings;
     this.root = this.containerEl.children[1];
     this.indexPromise = new Promise((resolve, reject) => {
       const resolver = () => resolve(null);
@@ -4776,7 +4793,7 @@ var RepeatView = class extends import_obsidian3.ItemView {
     await this.indexPromise;
     this.setMessage("");
     this.messageContainer.style.display = "none";
-    const page = getNextDueNote(this.dv, this.ignoreFolderPath, ignoreFilePath);
+    const page = getNextDueNote(this.dv, this.settings.ignoreFolderPath, ignoreFilePath);
     if (!page) {
       this.setMessage("All done for now!");
       this.buttonsContainer.createEl("button", {
@@ -4791,7 +4808,7 @@ var RepeatView = class extends import_obsidian3.ItemView {
     }
     const dueFilePath = (page == null ? void 0 : page.file).path;
     this.currentDueFilePath = dueFilePath;
-    const choices = getRepeatChoices(page.repetition);
+    const choices = getRepeatChoices(page.repetition, this.settings);
     const matchingMarkdowns = this.app.vault.getMarkdownFiles().filter((file2) => (file2 == null ? void 0 : file2.path) === dueFilePath);
     if (!matchingMarkdowns) {
       this.setMessage(`Error: Could not find due note ${dueFilePath}. Reopen this view to retry.`);
@@ -4859,10 +4876,11 @@ var formatDateTimeForPicker = (dt) => [
   dt.toFormat("HH:mm")
 ].join("");
 var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
-  constructor(app, onSubmit, initialValue) {
+  constructor(app, onSubmit, settings, initialValue) {
     super(app);
     this.onSubmit = onSubmit;
     this.updateResult = this.updateResult.bind(this);
+    this.settings = settings;
     this.result = initialValue ? { ...initialValue } : {
       repeatStrategy: "SPACED",
       repeatPeriod: 1,
@@ -4883,7 +4901,7 @@ var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
     this.result.repeatDueAt = incrementRepeatDueAt({
       ...this.result,
       repeatDueAt: void 0
-    });
+    }, this.settings);
     this.result.summary = summarizeDueAtWithPrefix(this.result.repeatDueAt);
     if (this.datetimePickerEl) {
       this.datetimePickerEl.value = formatDateTimeForPicker(this.result.repeatDueAt);
@@ -4928,8 +4946,8 @@ var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
       console.error(e);
     }
     const timeOfDayEl = new import_obsidian4.Setting(contentEl).addDropdown((dropdown) => {
-      dropdown.addOption("AM", `at ${AM_REVIEW_TIME} AM in the morning`);
-      dropdown.addOption("PM", `at ${PM_REVIEW_TIME % 12} PM in the evening`);
+      dropdown.addOption("AM", `in the morning at ${this.settings.morningReviewTime}`);
+      dropdown.addOption("PM", `in the evening at ${this.settings.eveningReviewTime}`);
       dropdown.setValue(this.result.repeatTimeOfDay);
       dropdown.onChange((value) => {
         this.updateResult("repeatTimeOfDay", value);
@@ -4982,7 +5000,9 @@ var RepeatNoteSetupModal_default = RepeatNoteSetupModal;
 var DEFAULT_SETTINGS = {
   showDueCountInStatusBar: true,
   showRibbonIcon: true,
-  ignoreFolderPath: ""
+  ignoreFolderPath: "",
+  morningReviewTime: "06:00",
+  eveningReviewTime: "18:00"
 };
 
 // src/main.ts
@@ -5060,7 +5080,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
       checkCallback: (checking) => {
         const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
         const onSubmit = (result) => {
-          if (!markdownView) {
+          if (!markdownView || !markdownView.file) {
             return;
           }
           const { editor, file } = markdownView;
@@ -5076,7 +5096,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
               const content = editor.getValue();
               repetition = parseRepetitionFromMarkdown(content);
             }
-            new RepeatNoteSetupModal_default(this.app, onSubmit, repetition).open();
+            new RepeatNoteSetupModal_default(this.app, onSubmit, this.settings, repetition).open();
           }
           return true;
         }
@@ -5096,7 +5116,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
         name: `Repeat this note every ${unit}`,
         checkCallback: (checking) => {
           const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
-          if (markdownView) {
+          if (markdownView && !!markdownView.file) {
             if (!checking) {
               const { editor, file } = markdownView;
               const content = editor.getValue();
@@ -5109,7 +5129,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
               const repeatDueAt = incrementRepeatDueAt({
                 ...repeat,
                 repeatDueAt: void 0
-              });
+              }, this.settings);
               const newContent = updateRepetitionMetadata(content, serializeRepetition({
                 ...repeat,
                 hidden: parseHiddenFieldFromMarkdown(content),
@@ -5129,7 +5149,7 @@ var RepeatPlugin = class extends import_obsidian5.Plugin {
     this.makeRepeatRibbonIcon();
     this.manageStatusBarItem();
     this.registerCommands();
-    this.registerView(REPEATING_NOTES_DUE_VIEW, (leaf) => new RepeatView_default(leaf, this.settings.ignoreFolderPath));
+    this.registerView(REPEATING_NOTES_DUE_VIEW, (leaf) => new RepeatView_default(leaf, this.settings));
     this.addSettingTab(new RepeatPluginSettingTab(this.app, this));
   }
   onunload() {
@@ -5153,9 +5173,31 @@ var RepeatPluginSettingTab = class extends import_obsidian5.PluginSettingTab {
       this.plugin.settings.showRibbonIcon = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian5.Setting(containerEl).setName("Ignore folder path").setDesc("Notes in this folder and its subfolders will not become due. Useful for templates.").addText((component) => component.setValue(this.plugin.settings.ignoreFolderPath).onChange(async (value) => {
+    new import_obsidian5.Setting(containerEl).setName("Ignore folder path").setDesc("Notes in this folder and its subfolders will not become due. Useful to avoid reviewing templates.").addText((component) => component.setValue(this.plugin.settings.ignoreFolderPath).onChange(async (value) => {
       this.plugin.settings.ignoreFolderPath = value;
       await this.plugin.saveSettings();
     }));
+    new import_obsidian5.Setting(containerEl).setName("Morning review time").setDesc("When morning and long-term notes become due in the morning.").addText((component) => {
+      component.inputEl.type = "time";
+      component.inputEl.addClass("repeat-date_picker");
+      component.setValue(this.plugin.settings.morningReviewTime);
+      component.onChange(async (value) => {
+        const usedValue = value >= "12:00" ? "11:59" : value;
+        this.plugin.settings.morningReviewTime = usedValue;
+        component.setValue(usedValue);
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian5.Setting(containerEl).setName("Evening review time").setDesc("When evening notes become due in the afternoon.").addText((component) => {
+      component.inputEl.type = "time";
+      component.inputEl.addClass("repeat-date_picker");
+      component.setValue(this.plugin.settings.eveningReviewTime);
+      component.onChange(async (value) => {
+        const usedValue = value < "12:00" ? "12:00" : value;
+        this.plugin.settings.eveningReviewTime = usedValue;
+        component.setValue(usedValue);
+        await this.plugin.saveSettings();
+      });
+    });
   }
 };

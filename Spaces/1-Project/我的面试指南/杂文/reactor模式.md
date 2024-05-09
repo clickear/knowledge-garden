@@ -1,7 +1,8 @@
 ---
 date created: 2022-09-19
-date modified: 2022-09-22
+date modified: 2024-04-29
 title: 资料
+tags: [todo/continue]
 ---
 
 > [!TIP] 技巧💡
@@ -13,6 +14,11 @@ title: 资料
 >    compute: 业务处理  
 >    encode: 编码  
 >    send: 发送，回复内容
+
+> [!TIP] reactor💡  
+> reactor, I/O 多路复用结合线程池。  
+> 事件反应，即来了一个事件我就有相应的反应。I/O 多路复用统一监听事件，收到事件后分配（Dispatch）给某个进程/线程。  
+> Reactor 模式的核心组成部分包括 Reactor 和处理资源池（进程池或线程池），其中 Reactor 负责监听和分配事件，处理资源池负责处理事件
 
 ## 发展史
 
@@ -47,7 +53,7 @@ new thread(socket);
 
 > 资源要求太高，系统中创建线程是需要比较高的系统资源的，如果连接数太高，系统无法承受，而且，线程的反复创建-销毁也需要代价。（就算用线程池，也是治标不治本。）
 
-### reactor模式(基于事件驱动的非阻塞IO)
+### [reactor模式](https://b.geekbang.org/member/course/detail/8805)(基于事件驱动的非阻塞IO)
 
 **采用基于事件驱动的设计，当有事件触发时，才会调用处理器进行数据处理**
 
@@ -55,24 +61,56 @@ new thread(socket);
 
 #todo/continue epollo模型
 
-#### 单reactor模式（redis早期版本）
+可以服务器采取的并发模型的关键设计点:
+
+ + 服务器如何管理连接。accept
++ 服务器如何处理请求 . read --> decode --> compute(业务处理) --> encode --> send
+
+Reactor 模式的核心组成部分包括 Reactor 和处理资源池（进程池或线程池），其中
+
++ Reactor 负责监听和分配事件，
++ 处理资源池负责处理事件。  
+reactor可以单个可以多个，处理资源池，可以是单线程，多线程。则两两组合。可以有
+
++ 单 Reactor 单进程 / 线程。
++ 单 Reactor 多线程。
++ 多 Reactor 多进程 / 线程。  
+因为 多Reactor 单线程，实现比 单 Reactor 单进程，又复杂又没什么性能优势。所以基本上没使用。  
+单 Reactor 多进程， 这个实现复杂。
+
+#### 单 Reactor 单进程 / 线程（redis早期版本）
 
 连接，IO事件等都在一个线程。  
-![](http://image.clickear.top/20220919152128.png)
+![](http://image.clickear.top/20220919152128.png)  
+![image.png](http://image.clickear.top/20240429172146.png)
 
-#### 多线程reactor模式（**使用多线程处理业务逻辑**）
++ Reactor 对象通过 select 监控连接事件，收到事件后通过 dispatch 进行分发。
++ 如果是连接建立的事件，则由 Acceptor 处理，Acceptor 通过 accept 接受连接，并创建一个 Handler 来处理连接后续的各种事件。
++ 如果不是连接建立事件，则 Reactor 会调用连接对应的 Handler（第 2 步中创建的 Handler）来进行响应。
++ Handler 会完成 read-> 业务处理 ->send 的完整业务流程
+
+#### 单 Reactor 多线程,(**使用多线程处理业务逻辑**)
 
 ![](http://image.clickear.top/20220919152230.png)
 
-将decode、compute、encode等处理器的执行放入线程池，多线程进行业务处理。但Reactor仍为单个线程。
-
+将decode、compute、encode等处理器的执行放入线程池，多线程进行业务处理。但Reactor仍为单个线程。  
 Redis 6.0（单 Reactor 多线程模型）进行了优化，引入了 **IO多线程**，把读写请求数据的逻辑，用多线程处理，提升并发性能
 
-#### 主从reactor模式 (对于多个CPU的机器，为充分利用系统资源，将Reactor拆分为两部分)
+![image.png](http://image.clickear.top/20240429172401.png)
 
-![](http://image.clickear.top/20220919152446.png)
+#### 多reactor多线程/进程 (主从reactor模式，对于多个CPU的机器，为充分利用系统资源，将Reactor拆分为两部分)
 
-mainReactor负责监听连接，accept连接给subReactor处理，为什么要单独分一个Reactor来处理监听呢？因为像TCP这样需要经过3次握手才能建立连接，这个建立连接的过程也是要耗时间和资源的，单独分一个Reactor来处理，可以提高性能。
+![](http://image.clickear.top/20220919152446.png)  
+![image.png](http://image.clickear.top/20240429172635.png)  
+mainReactor负责监听连接，accept连接给subReactor处理，为什么要单独分一个Reactor来处理监听呢？因为像TCP这样需要经过3次握手才能建立连接，这个建立连接的过程也是要耗时间和资源的，单独分一个Reactor来处理，可以提高性能。  
+详细流程:
+
++ 父进程中 mainReactor 对象通过 select 监控连接建立事件，收到事件后通过 Acceptor 接收，将新的连接分配给某个子进程。
++ 子进程的 subReactor 将 mainReactor 分配的连接加入连接队列进行监听，并创建一个 Handler 用于处理连接的各种事件。
++ 当有新的事件发生时，subReactor 会调用连接对应的 Handler（即第 2 步中创建的 Handler）来进行响应。
++ Handler 完成 read→业务处理→send 的完整业务流程。
+
+案例:
 
 - Nginx：多 Reactor 多进程模型。主Reacotr不处理网络IO，只用来初始化 socket，由 Wroker子进程 accept 连接，之后这个连接的所有处理都在子进程中完成。每个Wroker进程是一个独立的单Reacotr单线程模型。
 - Netty：多 Reactor 多线程模型。主Reacotr只负责建立连接，然后把建立好的连接给从Reactor，从Reactor负责IO读写。
@@ -98,3 +136,4 @@ mainReactor负责监听连接，accept连接给subReactor处理，为什么要�
 + rocketmq中的netty使用: [29 从 RocketMQ 学 Netty 网络编程技巧.md](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/RocketMQ%20%E5%AE%9E%E6%88%98%E4%B8%8E%E8%BF%9B%E9%98%B6%EF%BC%88%E5%AE%8C%EF%BC%89/29%20%E4%BB%8E%20RocketMQ%20%E5%AD%A6%20Netty%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7.md)
 + reactor发展史: [高性能IO之Reactor模式 - 时间朋友 - 博客园](https://www.cnblogs.com/doit8791/p/7461479.html)
 + rocketMQ线程模式: [分布式消息队列 RocketMQ 源码分析 —— RPC 通信（二)](https://blog.51cto.com/u_15310381/3233658)
++ 单服务器高性能模式：Reactor与Proactor [单服务器高性能模式：Reactor与Proactor](https://b.geekbang.org/member/course/detail/8805)

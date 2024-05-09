@@ -1,7 +1,8 @@
 ---
 date created: 2022-09-06
-date modified: 2022-09-22
+date modified: 2024-04-12
 title: JVM调优
+tags: [todo/continue]
 ---
 
 ## ::我的理解
@@ -265,7 +266,7 @@ YGC 时间变长
 3. 启动参数新增 -verbose:class，发现fastjson有个类频繁创建
 4. fastjson序列化，用使用asm创建动态代理类，导致动态代理类激增
   > 每个SerializeConfig实例若序列化相同的类, 都会找到之前生成的该类的代理类, 来进行序列化. 们的服务在每次接口被调用时, 都实例化一个ParseConfig对象来配置Fastjson反序列的设置, 而未禁用ASM代理的情况下, 由于每次调用ParseConfig都是一个新的实例, 因此永远也检查不到已经创建的代理类, 所以Fastjson便不断的创建新的代理类, 并加载到metaspace中, 最终导致metaspace不断扩张, 将机器的内存耗尽
-   
+
    ```java
 /**
    * 返回Json字符串.驼峰转_
@@ -281,7 +282,6 @@ public static String buildData(Object bean) {
     }
 }
 ```
-   
 
 [一次完整的JVM堆外内存泄漏java故障排查记录 - 知乎](https://zhuanlan.zhihu.com/p/432258798)
 
@@ -292,6 +292,16 @@ public static String buildData(Object bean) {
 [线上服务的FGC问题排查，看这篇就够了！ | HeapDump性能社区](https://heapdump.cn/article/1870333)
 
 [一次由JVM参数、中间件配置引起的FGC性能调优 | HeapDump性能社区](https://heapdump.cn/article/3685964)
+
+### HashMap错误设置size,导致List占用过大
+
+![image.png](http://image.clickear.top/20240412104547.png)
+
+List占用了500MB,正常使用仅2MB  
+![image.png](http://image.clickear.top/20240412104602.png)
+
+[[wiki:88648630]]  
+[几百万数据放入内存不会把系统撑爆吗？ - Mr.墨斗的博客 | MoDou Blog](http://modouxiansheng.top/2019/12/21/%E4%B8%8D%E5%AD%A6%E6%97%A0%E6%95%B0-%E5%87%A0%E7%99%BE%E4%B8%87%E6%95%B0%E6%8D%AE%E6%94%BE%E5%85%A5%E5%86%85%E5%AD%98%E4%B8%8D%E4%BC%9A%E6%8A%8A%E7%B3%BB%E7%BB%9F%E6%92%91%E7%88%86%E5%90%97-2019/)
 
 ## :: 大厂真题
 
@@ -320,7 +330,6 @@ public static String buildData(Object bean) {
 - 空间分配担保：在YGC之前，会先检查老年代最大可用的连续空间是否大于新生代所有对象的总空间。如果小于，说明YGC是不安全的，则会查看参数 HandlePromotionFailure 是否被设置成了允许担保失败，如果不允许则直接触发Full GC；如果允许，那么会进一步检查老年代最大可用的连续空间是否大于历次晋升到老年代对象的平均大小，如果小于也会触发 Full GC。
 - Metaspace（元空间）在空间不足时会进行扩容，当扩容到了-XX:MetaspaceSize 参数的指定值时，也会触发FGC。
 - System.gc() 或者Runtime.gc() 被显式调用时，触发FGC。
-    
 
 ### 在什么情况下，GC会对程序产生影响？
 

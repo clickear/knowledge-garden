@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-09
-date modified: 2022-09-09
+date modified: 2024-02-29
 title: MVCC
 ---
 > [!TIP] 技巧💡  
@@ -60,4 +60,5 @@ title: MVCC
 
 ## 资料
 
+[还不懂mysql的undo log和mvcc？算我输！ - 码小D - 博客园](https://www.cnblogs.com/rongdi/p/13378892.html) ⭐  
 [MySQL - MySQL InnoDB的MVCC实现机制 | Java 全栈知识体系](https://pdai.tech/md/db/sql-mysql/sql-mysql-mvcc.html)

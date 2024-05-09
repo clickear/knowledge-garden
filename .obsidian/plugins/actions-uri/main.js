@@ -10,6 +10,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -34,6 +35,10 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
 
 // node_modules/obsidian-dataview/lib/index.js
 var require_lib = __commonJS({
@@ -5932,11 +5937,14 @@ var require_lib = __commonJS({
         enableDataviewJs: false,
         enableInlineDataviewJs: false,
         prettyRenderInlineFields: true,
+        prettyRenderInlineFieldsInLivePreview: true,
         dataviewJsKeyword: "dataviewjs"
       }
     });
     var Success = class {
       constructor(value) {
+        __publicField(this, "value");
+        __publicField(this, "successful");
         this.value = value;
         this.successful = true;
       }
@@ -5964,6 +5972,8 @@ var require_lib = __commonJS({
     };
     var Failure = class {
       constructor(error) {
+        __publicField(this, "error");
+        __publicField(this, "successful");
         this.error = error;
         this.successful = false;
       }
@@ -6802,7 +6812,7 @@ var require_lib = __commonJS({
           case "link":
             let link1 = wrap1.value;
             let link2 = wrap2.value;
-            let normalize = linkNormalizer !== null && linkNormalizer !== void 0 ? linkNormalizer : (x) => x;
+            let normalize = linkNormalizer != null ? linkNormalizer : (x) => x;
             let pathCompare = normalize(link1.path).localeCompare(normalize(link2.path));
             if (pathCompare != 0)
               return pathCompare;
@@ -6815,7 +6825,7 @@ var require_lib = __commonJS({
               return -1;
             if (!link1.subpath && !link2.subpath)
               return 0;
-            return ((_a = link1.subpath) !== null && _a !== void 0 ? _a : "").localeCompare((_b = link2.subpath) !== null && _b !== void 0 ? _b : "");
+            return ((_a = link1.subpath) != null ? _a : "").localeCompare((_b = link2.subpath) != null ? _b : "");
           case "date":
             return wrap1.value < wrap2.value ? -1 : wrap1.value.equals(wrap2.value) ? 0 : 1;
           case "duration":
@@ -6854,7 +6864,7 @@ var require_lib = __commonJS({
       Values2.compareValue = compareValue;
       function typeOf(val) {
         var _a;
-        return (_a = wrapValue(val)) === null || _a === void 0 ? void 0 : _a.type;
+        return (_a = wrapValue(val)) == null ? void 0 : _a.type;
       }
       Values2.typeOf = typeOf;
       function isTruthy(field) {
@@ -6981,6 +6991,19 @@ var require_lib = __commonJS({
       Groupings2.count = count;
     })(Groupings || (Groupings = {}));
     var Link = class {
+      constructor(fields) {
+        /** The file path this link points to. */
+        __publicField(this, "path");
+        /** The display name associated with the link. */
+        __publicField(this, "display");
+        /** The block ID or header this link points to within a file, if relevant. */
+        __publicField(this, "subpath");
+        /** Is this link an embedded link (!)? */
+        __publicField(this, "embed");
+        /** The type of this link, which determines what 'subpath' refers to, if anything. */
+        __publicField(this, "type");
+        Object.assign(this, fields);
+      }
       /** Create a link to a specific file. */
       static file(path, embed = false, display) {
         return new Link({
@@ -7023,9 +7046,6 @@ var require_lib = __commonJS({
       }
       static fromObject(object) {
         return new Link(object);
-      }
-      constructor(fields) {
-        Object.assign(this, fields);
       }
       /** Checks for link equality (i.e., that the links are pointing to the same exact location). */
       equals(other) {
@@ -7094,11 +7114,11 @@ var require_lib = __commonJS({
       /** Convert the inner part of the link to something that Obsidian can open / understand. */
       obsidianLink() {
         var _a, _b;
-        const escaped = this.path.replace("|", "\\|");
+        const escaped = this.path.replaceAll("|", "\\|");
         if (this.type == "header")
-          return escaped + "#" + ((_a = this.subpath) === null || _a === void 0 ? void 0 : _a.replace("|", "\\|"));
+          return escaped + "#" + ((_a = this.subpath) == null ? void 0 : _a.replaceAll("|", "\\|"));
         if (this.type == "block")
-          return escaped + "#^" + ((_b = this.subpath) === null || _b === void 0 ? void 0 : _b.replace("|", "\\|"));
+          return escaped + "#^" + ((_b = this.subpath) == null ? void 0 : _b.replaceAll("|", "\\|"));
         else
           return escaped;
       }
@@ -7109,12 +7129,15 @@ var require_lib = __commonJS({
     };
     var Widget = class {
       constructor($widget) {
+        __publicField(this, "$widget");
         this.$widget = $widget;
       }
     };
     var ListPairWidget = class extends Widget {
       constructor(key, value) {
         super("dataview:list-pair");
+        __publicField(this, "key");
+        __publicField(this, "value");
         this.key = key;
         this.value = value;
       }
@@ -7125,12 +7148,14 @@ var require_lib = __commonJS({
     var ExternalLinkWidget = class extends Widget {
       constructor(url, display) {
         super("dataview:external-link");
+        __publicField(this, "url");
+        __publicField(this, "display");
         this.url = url;
         this.display = display;
       }
       markdown() {
         var _a;
-        return `[${(_a = this.display) !== null && _a !== void 0 ? _a : this.url}](${this.url})`;
+        return `[${(_a = this.display) != null ? _a : this.url}](${this.url})`;
       }
     };
     var Widgets;
@@ -7533,6 +7558,14 @@ var require_lib = __commonJS({
       // Simple atom parsing, like words, identifiers, numbers.
       queryType: (q) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/TABLE|LIST|TASK|CALENDAR/i)).map((str) => str.toLowerCase()).desc("query type ('TABLE', 'LIST', 'TASK', or 'CALENDAR')"),
       explicitNamedField: (q) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.whitespace), parsimmon_umd_minExports.regexp(/AS/i).skip(parsimmon_umd_minExports.whitespace), EXPRESSION.identifier.or(EXPRESSION.string), (field, _as, ident) => QueryFields.named(ident, field)),
+      comment: () => parsimmon_umd_minExports.Parser((input, i) => {
+        let line = input.substring(i);
+        if (!line.startsWith("//"))
+          return parsimmon_umd_minExports.makeFailure(i, "Not a comment");
+        line = line.split("\n")[0];
+        let comment = line.substring(2).trim();
+        return parsimmon_umd_minExports.makeSuccess(i + line.length, comment);
+      }),
       namedField: (q) => parsimmon_umd_minExports.alt(q.explicitNamedField, captureRaw(EXPRESSION.field).map(([value, text]) => QueryFields.named(stripNewlines(text), value))),
       sortField: (q) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.regexp(/ASCENDING|DESCENDING|ASC|DESC/i).atMost(1), (field, dir) => {
         let direction = dir.length == 0 ? "ascending" : dir[0].toLowerCase();
@@ -7592,7 +7625,7 @@ var require_lib = __commonJS({
       }).desc("GROUP BY <value> [AS <name>]"),
       // Full query parsing.
       clause: (q) => parsimmon_umd_minExports.alt(q.fromClause, q.whereClause, q.sortByClause, q.limitClause, q.groupByClause, q.flattenClause),
-      query: (q) => parsimmon_umd_minExports.seqMap(q.headerClause.trim(parsimmon_umd_minExports.optWhitespace), q.fromClause.trim(parsimmon_umd_minExports.optWhitespace).atMost(1), q.clause.trim(parsimmon_umd_minExports.optWhitespace).many(), (header, from, clauses) => {
+      query: (q) => parsimmon_umd_minExports.seqMap(q.headerClause.trim(optionalWhitespaceOrComment), q.fromClause.trim(optionalWhitespaceOrComment).atMost(1), q.clause.trim(optionalWhitespaceOrComment).many(), (header, from, clauses) => {
         return {
           header,
           source: from.length == 0 ? Sources.folder("") : from[0],
@@ -7601,10 +7634,11 @@ var require_lib = __commonJS({
         };
       })
     });
+    var optionalWhitespaceOrComment = parsimmon_umd_minExports.alt(parsimmon_umd_minExports.whitespace, QUERY_LANGUAGE.comment).many().map((arr) => arr.join(""));
     var getAPI2 = (app2) => {
       var _a;
       if (app2)
-        return (_a = app2.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
+        return (_a = app2.plugins.plugins.dataview) == null ? void 0 : _a.api;
       else
         return window.DataviewAPI;
     };
@@ -8237,7 +8271,7 @@ __export(main_exports, {
   default: () => ActionsURI
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 
 // src/constants.ts
 var URI_NAMESPACE = "actions-uri";
@@ -8253,6 +8287,8 @@ var STRINGS = {
   dataview_dql_must_start_with_table: 'DQL must start with "TABLE"',
   dataview_plugin_not_available: "Dataview plugin is not active",
   delete_done: "Successfully deleted",
+  file_not_found: "File couldn't be found",
+  file_opened: "File opened",
   folder_created: "Folder created",
   global_search_feature_not_available: "Global Search plugin is not active",
   monthly_note: {
@@ -8266,6 +8302,9 @@ var STRINGS = {
   note_opened: "Note opened",
   omnisearch_plugin_not_available: "Omnisearch plugin is not active",
   prepend_done: "Note was prepended",
+  properties: {
+    key_not_found: "Key not found"
+  },
   quarterly_note: {
     create_note_already_exists: "Quarterly note already exists",
     create_note_no_content: "Quarterly note couldn't be overwritten, no content specified",
@@ -8278,6 +8317,7 @@ var STRINGS = {
   search_pattern_not_found: "Search pattern wasn't found, nothing replaced",
   search_pattern_unparseable: "Search pattern is not correctly formed",
   search_string_not_found: "Search string wasn't found, nothing replaced",
+  touch_done: "Successfully touched",
   trash_done: "Successfully moved to trash",
   unable_to_read_note: "Can't read note file",
   unable_to_write_note: "Can't write note file",
@@ -12036,10 +12076,10 @@ var z = /* @__PURE__ */ Object.freeze({
 });
 
 // src/utils/zod.ts
-var import_obsidian2 = require("obsidian");
+var import_obsidian3 = require("obsidian");
 
 // src/utils/file-handling.ts
-var import_obsidian = require("obsidian");
+var import_obsidian2 = require("obsidian");
 
 // src/utils/results-handling.ts
 function success(result, processedFilepath) {
@@ -12062,6 +12102,10 @@ function isCommunityPluginEnabled(pluginID) {
 }
 function getEnabledCommunityPlugin(pluginID) {
   return isCommunityPluginEnabled(pluginID) ? success(window.app.plugins.getPlugin(pluginID)) : failure(404, `Community plugin ${pluginID} is not enabled.`);
+}
+function isCorePluginEnabled(pluginID) {
+  var _a;
+  return !!((_a = window.app.internalPlugins) == null ? void 0 : _a.getEnabledPluginById(pluginID));
 }
 function getEnabledCorePlugin(pluginID) {
   var _a;
@@ -12125,12 +12169,63 @@ async function pause(milliseconds) {
   });
 }
 
+// src/utils/ui.ts
+var import_obsidian = require("obsidian");
+function allWorkspaceRootSplitLeaves() {
+  const allLeaves = [];
+  activeWorkspace().iterateRootLeaves((leaf) => {
+    allLeaves.push(leaf);
+  });
+  return allLeaves;
+}
+function showBrandedNotice(msg) {
+  new import_obsidian.Notice(`[Actions URI] ${msg}`);
+}
+function logToConsole(...data) {
+  console.log("[Actions URI]", ...data);
+}
+function logErrorToConsole(...data) {
+  console.error("[Actions URI]", ...data);
+}
+function focusLeafWithFile(filepath) {
+  const leaf = allWorkspaceRootSplitLeaves().find((leaf2) => {
+    var _a;
+    return ((_a = leaf2.view.file) == null ? void 0 : _a.path) === filepath;
+  });
+  if (!leaf) {
+    return failure(405, "File currently not open");
+  }
+  activeWorkspace().setActiveLeaf(leaf, { focus: true });
+  return success("Open file found and focussed");
+}
+async function focusOrOpenFile(filepath) {
+  const res = focusLeafWithFile(filepath);
+  if (res.isSuccess) {
+    return res;
+  }
+  const res1 = await getFile(filepath);
+  if (res1.isSuccess) {
+    activeWorkspace().getLeaf(true).openFile(res1.result);
+    return success(STRINGS.note_opened);
+  }
+  return failure(404, STRINGS.note_not_found);
+}
+
 // src/utils/file-handling.ts
+function app() {
+  return window.app;
+}
+function activeVault() {
+  return app().vault;
+}
+function activeWorkspace() {
+  return app().workspace;
+}
 async function createNote(filepath, content) {
   filepath = sanitizeFilePath(filepath);
-  const { vault } = window.app;
+  const vault = activeVault();
   let file = vault.getAbstractFileByPath(filepath);
-  let doesFileExist = file instanceof import_obsidian.TFile;
+  let doesFileExist = file instanceof import_obsidian2.TFile;
   if (doesFileExist) {
     const currentNumSuffix = filepath.match(/( (\d+))?\.md$/)[2];
     let numSuffix = currentNumSuffix ? +currentNumSuffix : 0;
@@ -12138,19 +12233,19 @@ async function createNote(filepath, content) {
       numSuffix++;
       filepath = filepath.replace(/( \d+)?\.md$/, ` ${numSuffix}.md`);
       file = vault.getAbstractFileByPath(filepath);
-      doesFileExist = file instanceof import_obsidian.TFile;
+      doesFileExist = file instanceof import_obsidian2.TFile;
     } while (doesFileExist);
   }
   await createFolderIfNecessary(dirname(filepath));
   await createAndPause(filepath, content);
   const newFile = vault.getAbstractFileByPath(filepath);
-  return newFile instanceof import_obsidian.TFile ? success(newFile) : failure(400, STRINGS.unable_to_write_note);
+  return newFile instanceof import_obsidian2.TFile ? success(newFile) : failure(400, STRINGS.unable_to_write_note);
 }
 async function createOrOverwriteNote(filepath, content) {
   filepath = sanitizeFilePath(filepath);
-  const { vault } = window.app;
+  const vault = activeVault();
   const file = vault.getAbstractFileByPath(filepath);
-  if (file instanceof import_obsidian.TFile) {
+  if (file instanceof import_obsidian2.TFile) {
     await pause(500);
     await vault.modify(file, content);
     return success(vault.getAbstractFileByPath(filepath));
@@ -12158,11 +12253,11 @@ async function createOrOverwriteNote(filepath, content) {
   await createFolderIfNecessary(dirname(filepath));
   await createAndPause(filepath, content);
   const newFile = vault.getAbstractFileByPath(filepath);
-  return newFile instanceof import_obsidian.TFile ? success(newFile) : failure(400, STRINGS.unable_to_write_note);
+  return newFile instanceof import_obsidian2.TFile ? success(newFile) : failure(400, STRINGS.unable_to_write_note);
 }
 async function getNoteContent(filepath) {
-  const { vault } = window.app;
-  const res = await getNoteFile(filepath);
+  const vault = activeVault();
+  const res = await getNote(filepath);
   if (!res.isSuccess) {
     return res;
   }
@@ -12170,26 +12265,67 @@ async function getNoteContent(filepath) {
   return typeof noteContent === "string" ? success(noteContent) : failure(400, STRINGS.unable_to_read_note);
 }
 async function getNoteDetails(filepath) {
-  const res = await getNoteContent(filepath);
+  const res = await getNote(filepath);
   if (!res.isSuccess) {
     return res;
   }
-  const content = res.result;
+  const res2 = await getNoteContent(filepath);
+  if (!res2.isSuccess) {
+    return res2;
+  }
+  const file = res.result;
+  const content = res2.result;
   const { body, frontMatter } = extractNoteContentParts(content);
-  return success(
-    {
-      filepath,
-      content,
-      body,
-      frontMatter: unwrapFrontMatter(frontMatter)
-    },
-    filepath
-  );
+  return success({
+    filepath,
+    content,
+    body,
+    frontMatter: unwrapFrontMatter(frontMatter),
+    properties: propertiesForFile(file)
+  });
 }
-function sanitizeFilePath(filename, isFolder = false) {
+function sanitizeFilePath(filename, isNote = true) {
   filename = filename.replace(/[:#^[]|]/g, "-");
-  filename = (0, import_obsidian.normalizePath)(filename).split("/").map((seg) => seg.trim()).join("/").replace(/^[\/\.]+/g, "");
-  return isFolder || /\.(md|canvas)/i.test(extname(filename)) ? filename : `${filename}.md`;
+  filename = (0, import_obsidian2.normalizePath)(filename).split("/").map((seg) => seg.trim()).join("/").replace(/^[\/\.]+/g, "");
+  return isNote && !/\.(md|canvas)/i.test(extname(filename)) ? `${filename}.md` : filename;
+}
+async function updateNote(filepath, newFrontMatter, newBody) {
+  const res = await getNote(filepath);
+  if (!res.isSuccess) {
+    return res;
+  }
+  const res2 = await getNoteDetails(filepath);
+  if (!res2.isSuccess) {
+    return res2;
+  }
+  if (typeof newFrontMatter !== "string" && typeof newBody !== "string") {
+    return res2;
+  }
+  const file = res.result;
+  const noteDetails = res2.result;
+  const body = typeof newBody === "string" ? newBody : noteDetails.body;
+  let frontMatter = typeof newFrontMatter === "string" ? newFrontMatter : noteDetails.frontMatter;
+  frontMatter = frontMatter.trim();
+  const newNoteContent = frontMatter !== "" ? ["---", frontMatter, "---", body].join("\n") : body;
+  await activeVault().modify(file, newNoteContent);
+  await pause(200);
+  return success({
+    filepath,
+    content: newNoteContent,
+    body,
+    frontMatter,
+    properties: propertiesForFile(file)
+  });
+}
+async function touchNote(filepath) {
+  const res = await getNote(filepath);
+  if (!res.isSuccess)
+    return res;
+  const res2 = await getNoteDetails(filepath);
+  if (!res2.isSuccess)
+    return res2;
+  await activeVault().modify(res.result, res2.result.content);
+  return res;
 }
 async function searchAndReplaceInNote(filepath, searchTerm, replacement) {
   const res = await getNoteContent(filepath);
@@ -12222,13 +12358,13 @@ async function appendNoteBelowHeadline(filepath, belowHeadline, textToAppend) {
     return res;
   }
   const newContent = res.result.split(/(?=^#+ )/m).map((section) => {
+    var _a;
     if (!section.startsWith(belowHeadline)) {
       return section;
     }
-    if (!section.includes("\n")) {
-      section += "\n";
-    }
-    return endStringWithNewline(section + textToAppend);
+    return endStringWithNewline(
+      section.trim() + "\n" + textToAppend + ((_a = section.match(/\n+$/)) == null ? void 0 : _a[0]) || ""
+    );
   }).join("");
   const resFile = await createOrOverwriteNote(filepath, newContent);
   if (resFile.isSuccess) {
@@ -12279,18 +12415,47 @@ async function prependNoteBelowHeadline(filepath, belowHeadline, textToPrepend, 
   return resFile;
 }
 function getFileMap() {
-  const { vault } = window.app;
+  const vault = activeVault();
   const { fileMap } = vault;
   return Object.values(fileMap);
 }
-async function getNoteFile(filepath) {
-  const { vault } = window.app;
-  const file = vault.getAbstractFileByPath(sanitizeFilePath(filepath));
-  return file instanceof import_obsidian.TFile ? success(file) : failure(404, STRINGS.note_not_found);
+async function getFile(filepath) {
+  const cleanPath = sanitizeFilePath(filepath, false);
+  const file = activeVault().getAbstractFileByPath(cleanPath);
+  return file instanceof import_obsidian2.TFile ? success(file) : failure(404, STRINGS.note_not_found);
+}
+async function getNote(filepath) {
+  const cleanPath = sanitizeFilePath(filepath);
+  const file = activeVault().getAbstractFileByPath(cleanPath);
+  return file instanceof import_obsidian2.TFile ? success(file) : failure(404, STRINGS.note_not_found);
+}
+async function applyCorePluginTemplate(templateFile, note) {
+  const pluginRes = getEnabledCorePlugin("templates");
+  if (!pluginRes.isSuccess)
+    return pluginRes;
+  const pluginInstance = pluginRes.result;
+  await focusOrOpenFile(note.path);
+  try {
+    const activeView = activeWorkspace().getActiveViewOfType(import_obsidian2.MarkdownView);
+    if (activeView && (activeView == null ? void 0 : activeView.getMode()) !== "source") {
+      await activeView.setState(
+        { ...activeView.getState(), mode: "source" },
+        { history: false }
+      );
+    }
+  } catch (error) {
+    const msg = error.message;
+    showBrandedNotice(msg);
+    logErrorToConsole(msg);
+    return failure(500, msg);
+  }
+  await pause(200);
+  await pluginInstance.insertTemplate(templateFile);
+  return success(true);
 }
 async function trashFilepath(filepath, deleteImmediately = false) {
   var _a;
-  const { vault } = window.app;
+  const vault = activeVault();
   const fileOrFolder = vault.getAbstractFileByPath(filepath);
   if (!fileOrFolder) {
     return failure(404, STRINGS.not_found);
@@ -12304,7 +12469,7 @@ async function trashFilepath(filepath, deleteImmediately = false) {
   return success(STRINGS.trash_done);
 }
 async function renameFilepath(filepath, newFilepath) {
-  const { vault } = window.app;
+  const vault = activeVault();
   const fileOrFolder = vault.getAbstractFileByPath(filepath);
   if (!fileOrFolder) {
     return failure(404, STRINGS.not_found);
@@ -12321,26 +12486,30 @@ async function renameFilepath(filepath, newFilepath) {
   return success(STRINGS.rename_done);
 }
 async function createFolderIfNecessary(folder) {
-  const { vault } = window.app;
-  folder = sanitizeFilePath(folder, true);
+  const vault = activeVault();
+  folder = sanitizeFilePath(folder, false);
   if (folder === "" || folder === ".")
     return;
-  if (vault.getAbstractFileByPath(folder) instanceof import_obsidian.TFolder)
+  if (vault.getAbstractFileByPath(folder) instanceof import_obsidian2.TFolder)
     return;
   await vault.createFolder(folder);
 }
+function propertiesForFile(file) {
+  var _a;
+  return ((_a = app().metadataCache.getFileCache(file)) == null ? void 0 : _a.frontmatter) || {};
+}
 async function createAndPause(filepath, content) {
-  await window.app.vault.create(filepath, content);
-  if (isCommunityPluginEnabled("templater-obsidian")) {
-    await pause(500);
+  await activeVault().create(filepath, content);
+  if (isCorePluginEnabled("templates") || isCommunityPluginEnabled("templater-obsidian")) {
+    await pause(300);
   }
 }
 function dirname(path) {
-  path = (0, import_obsidian.normalizePath)(path);
+  path = (0, import_obsidian2.normalizePath)(path);
   return path.indexOf("/") === -1 ? "." : path.replace(/\/[^/]*$/, "");
 }
 function extname(path) {
-  const filename = (0, import_obsidian.normalizePath)(path).split("/").pop() || "";
+  const filename = (0, import_obsidian2.normalizePath)(path).split("/").pop() || "";
   return filename.includes(".") ? `.${filename.split(".").pop()}` : "";
 }
 
@@ -12354,8 +12523,9 @@ var zodOptionalBoolean = z.preprocess(
   },
   z.boolean().optional()
 );
-var zodSanitizedFilePath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file));
-var zodSanitizedFolderPath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file, true));
+var zodSanitizedNotePath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file));
+var zodSanitizedFilePath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file, false));
+var zodSanitizedFolderPath = z.string().min(1, { message: "can't be empty" }).transform((file) => sanitizeFilePath(file, false));
 var zodJsonStringArray = z.string().refine((str) => {
   try {
     const value = JSON.parse(str);
@@ -12366,14 +12536,53 @@ var zodJsonStringArray = z.string().refine((str) => {
 }, {
   message: "Input must be a JSON-encoded string array."
 }).transform((str) => JSON.parse(str));
+var zodJsonPropertiesObject = z.string().refine((str) => {
+  try {
+    const value = JSON.parse(str);
+    if (typeof value !== "object") {
+      return false;
+    }
+    const isValid2 = Object.values(value).every((item) => {
+      const type = typeof item;
+      if (["string", "number", "boolean"].includes(type) || item === null) {
+        return true;
+      }
+      if (Array.isArray(item)) {
+        return item.every((subItem) => typeof subItem === "string");
+      }
+      return false;
+    });
+    return isValid2;
+  } catch (error) {
+    return false;
+  }
+}, {
+  message: "Input must be a JSON-encoded object containing only values of type string, string array, number, boolean or null."
+}).transform((str) => JSON.parse(str));
 var zodCommaSeparatedStrings = z.string().min(1, { message: "can't be empty" }).transform((str) => str.split(",").map((item) => item.trim()));
+var zodExistingNotePath = z.preprocess(
+  lookupAbstractFileForNotePath,
+  z.instanceof(import_obsidian3.TFile, { message: "Note doesn't exist" })
+);
+var zodExistingTemplaterPath = z.preprocess(
+  lookupAbstractFileForTemplaterPath,
+  z.instanceof(import_obsidian3.TFile, {
+    message: "Template doesn't exist or Templater isn't enabled"
+  })
+);
+var zodExistingTemplatesPath = z.preprocess(
+  lookupAbstractFileForTemplatesPath,
+  z.instanceof(import_obsidian3.TFile, {
+    message: "Template doesn't exist or Templates isn't enabled"
+  })
+);
 var zodExistingFilePath = z.preprocess(
-  lookupAbstractFileForPath,
-  z.instanceof(import_obsidian2.TFile, { message: "File doesn't exist" })
+  lookupAbstractFileForFilePath,
+  z.instanceof(import_obsidian3.TFile, { message: "File doesn't exist" })
 );
 var zodExistingFolderPath = z.preprocess(
   lookupAbstractFolderForPath,
-  z.instanceof(import_obsidian2.TFolder, { message: "Folder doesn't exist" })
+  z.instanceof(import_obsidian3.TFolder, { message: "Folder doesn't exist" })
 );
 var zodAlwaysFalse = z.preprocess(
   (param) => false,
@@ -12381,18 +12590,47 @@ var zodAlwaysFalse = z.preprocess(
 );
 var zodUndefinedChangedToDefaultValue = (defaultValue) => z.undefined().refine((val) => val === void 0).transform(() => defaultValue);
 var zodEmptyStringChangedToDefaultString = (defaultString) => z.literal("").refine((val) => val === "").transform(() => defaultString);
-function lookupAbstractFileForPath(path) {
-  if (typeof path !== "string" || !path) {
-    return null;
-  }
-  const filepath = sanitizeFilePath(path);
-  return window.app.vault.getAbstractFileByPath(filepath);
+function lookupAbstractFileForNotePath(path) {
+  return typeof path === "string" && path.length > 0 ? sanitizeFilePathAndGetAbstractFile(path) : null;
+}
+function lookupAbstractFileForFilePath(path) {
+  return typeof path === "string" && path.length > 0 ? sanitizeFilePathAndGetAbstractFile(path, false) : null;
 }
 function lookupAbstractFolderForPath(path) {
+  return typeof path === "string" && path.length > 0 ? activeVault().getAbstractFileByPath(path) : null;
+}
+function sanitizeFilePathAndGetAbstractFile(path, isNote) {
+  return activeVault().getAbstractFileByPath(sanitizeFilePath(path, isNote));
+}
+function lookupAbstractFileForTemplaterPath(path) {
+  var _a;
   if (typeof path !== "string" || !path) {
     return null;
   }
-  return window.app.vault.getAbstractFileByPath(path);
+  const abstractFile = sanitizeFilePathAndGetAbstractFile(path, false) || sanitizeFilePathAndGetAbstractFile(`${path}.md`, false);
+  if (abstractFile)
+    return abstractFile;
+  const res = getEnabledCommunityPlugin("templater-obsidian");
+  if (res.isSuccess) {
+    const folder = (_a = res.result.settings) == null ? void 0 : _a.templates_folder;
+    return sanitizeFilePathAndGetAbstractFile(`${folder}/${path}`, false) || sanitizeFilePathAndGetAbstractFile(`${folder}/${path}.md`, false);
+  }
+  return null;
+}
+function lookupAbstractFileForTemplatesPath(path) {
+  var _a;
+  if (typeof path !== "string" || !path) {
+    return null;
+  }
+  const abstractFile = sanitizeFilePathAndGetAbstractFile(path, false) || sanitizeFilePathAndGetAbstractFile(`${path}.md`, false);
+  if (abstractFile)
+    return abstractFile;
+  const res = getEnabledCorePlugin("templates");
+  if (res.isSuccess) {
+    const folder = (_a = res.result.options) == null ? void 0 : _a.folder;
+    return sanitizeFilePathAndGetAbstractFile(`${folder}/${path}`, false) || sanitizeFilePathAndGetAbstractFile(`${folder}/${path}.md`, false);
+  }
+  return null;
 }
 
 // src/schemata.ts
@@ -12406,42 +12644,6 @@ var incomingBaseParams = z.object({
   "x-success": z.string().url().optional(),
   "x-source": z.string().optional()
 });
-
-// src/utils/ui.ts
-var import_obsidian3 = require("obsidian");
-function showBrandedNotice(msg) {
-  new import_obsidian3.Notice(`[Actions URI] ${msg}`);
-}
-function logToConsole(...data) {
-  console.log("[Actions URI]", ...data);
-}
-function logErrorToConsole(...data) {
-  console.error("[Actions URI]", ...data);
-}
-function focusLeafWithFile(filepath) {
-  const { workspace } = window.app;
-  const leaf = workspace.getLeavesOfType("markdown").find((leaf2) => {
-    var _a;
-    return ((_a = leaf2.view.file) == null ? void 0 : _a.path) === filepath;
-  });
-  if (!leaf) {
-    return failure(405, "File currently not open");
-  }
-  workspace.setActiveLeaf(leaf, { focus: true });
-  return success("Open file found and focussed");
-}
-async function focusOrOpenNote(filepath) {
-  const res = focusLeafWithFile(filepath);
-  if (res.isSuccess) {
-    return res;
-  }
-  const res1 = await getNoteFile(filepath);
-  if (res1.isSuccess) {
-    window.app.workspace.getLeaf(true).openFile(res1.result);
-    return success(STRINGS.note_opened);
-  }
-  return failure(404, STRINGS.note_not_found);
-}
 
 // src/utils/routing.ts
 function helloRoute(path = "/") {
@@ -12460,9 +12662,7 @@ var listParams = incomingBaseParams.extend({
 var executeParams = incomingBaseParams.extend({
   commands: zodCommaSeparatedStrings,
   "pause-in-secs": z.coerce.number().optional(),
-  silent: zodAlwaysFalse,
-  "x-error": z.string().url(),
-  "x-success": z.string().url()
+  silent: zodAlwaysFalse
 });
 var routePath = {
   "/command": [
@@ -12553,6 +12753,67 @@ function getArrayDimensions(input) {
   return dimensions;
 }
 
+// src/routes/file.ts
+var defaultParams = incomingBaseParams.extend({
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
+});
+var openParams = incomingBaseParams.extend({
+  file: zodExistingFilePath,
+  silent: zodAlwaysFalse
+});
+var deleteParams = incomingBaseParams.extend({
+  file: zodExistingFilePath
+});
+var renameParams = incomingBaseParams.extend({
+  file: zodExistingFilePath,
+  "new-filename": zodSanitizedFilePath,
+  silent: zodOptionalBoolean
+});
+var routePath3 = {
+  "/file": [
+    helloRoute(),
+    { path: "/list", schema: defaultParams, handler: handleList2 },
+    { path: "/get-active", schema: defaultParams, handler: handleGetActive },
+    { path: "/open", schema: openParams, handler: handleOpen },
+    { path: "/delete", schema: deleteParams, handler: handleDelete },
+    { path: "/trash", schema: deleteParams, handler: handleTrash },
+    { path: "/rename", schema: renameParams, handler: handleRename }
+  ]
+};
+async function handleList2(incomingParams) {
+  return success({
+    paths: activeVault().getFiles().map((t) => t.path).sort()
+  });
+}
+async function handleGetActive(incomingParams) {
+  const res = activeWorkspace().getActiveFile();
+  return res ? success({ filepath: res.path }) : failure(404, "No active file");
+}
+async function handleOpen(incomingParams) {
+  const { file } = incomingParams;
+  const res = await getFile(file.path);
+  return res.isSuccess ? success({ message: STRINGS.file_opened }, file.path) : res;
+}
+async function handleDelete(incomingParams) {
+  const { file } = incomingParams;
+  const filepath = file.path;
+  const res = await trashFilepath(filepath, true);
+  return res.isSuccess ? success({ message: res.result }, filepath) : res;
+}
+async function handleTrash(incomingParams) {
+  const { file } = incomingParams;
+  const filepath = file.path;
+  const res = await trashFilepath(filepath);
+  return res.isSuccess ? success({ message: res.result }, filepath) : res;
+}
+async function handleRename(incomingParams) {
+  const params = incomingParams;
+  const filepath = params.file.path;
+  const res = await renameFilepath(filepath, params["new-filename"]);
+  return res.isSuccess ? success({ message: res.result }, filepath) : res;
+}
+
 // src/routes/folder.ts
 var import_obsidian4 = require("obsidian");
 var listParams2 = incomingBaseParams.extend({
@@ -12562,24 +12823,24 @@ var listParams2 = incomingBaseParams.extend({
 var createParams = incomingBaseParams.extend({
   folder: zodSanitizedFolderPath
 });
-var deleteParams = incomingBaseParams.extend({
+var deleteParams2 = incomingBaseParams.extend({
   folder: zodExistingFolderPath
 });
-var renameParams = incomingBaseParams.extend({
+var renameParams2 = incomingBaseParams.extend({
   folder: zodExistingFolderPath,
   "new-foldername": zodSanitizedFolderPath
 });
-var routePath3 = {
+var routePath4 = {
   "/folder": [
     helloRoute(),
-    { path: "/list", schema: listParams2, handler: handleList2 },
+    { path: "/list", schema: listParams2, handler: handleList3 },
     { path: "/create", schema: createParams, handler: handleCreate },
-    { path: "/rename", schema: renameParams, handler: handleRename },
-    { path: "/delete", schema: deleteParams, handler: handleDelete },
-    { path: "/trash", schema: deleteParams, handler: handleTrash }
+    { path: "/rename", schema: renameParams2, handler: handleRename2 },
+    { path: "/delete", schema: deleteParams2, handler: handleDelete2 },
+    { path: "/trash", schema: deleteParams2, handler: handleTrash2 }
   ]
 };
-async function handleList2(incomingParams) {
+async function handleList3(incomingParams) {
   const paths = getFileMap().filter((t) => t instanceof import_obsidian4.TFolder).map((t) => t.path.endsWith("/") ? t.path : `${t.path}/`).sort();
   return success({ paths });
 }
@@ -12589,20 +12850,20 @@ async function handleCreate(incomingParams) {
   await createFolderIfNecessary(folder);
   return success({ message: STRINGS.folder_created }, folder);
 }
-async function handleRename(incomingParams) {
+async function handleRename2(incomingParams) {
   const params = incomingParams;
   const { folder } = params;
   const folderpath = folder.path;
   const res = await renameFilepath(folderpath, params["new-foldername"]);
   return res.isSuccess ? success({ message: res.result }, folderpath) : res;
 }
-async function handleDelete(incomingParams) {
+async function handleDelete2(incomingParams) {
   const { folder } = incomingParams;
   const folderpath = folder.path;
   const res = await trashFilepath(folderpath, true);
   return res.isSuccess ? success({ message: res.result }, folderpath) : res;
 }
-async function handleTrash(incomingParams) {
+async function handleTrash2(incomingParams) {
   const { folder } = incomingParams;
   const folderpath = folder.path;
   const res = await trashFilepath(folderpath);
@@ -12614,18 +12875,18 @@ var import_obsidian5 = require("obsidian");
 
 // src/plugin-info.ts
 var PLUGIN_INFO = {
-  "pluginVersion": "1.3.1",
-  "pluginReleasedAt": "2023-10-09T19:11:11+0200"
+  "pluginVersion": "1.5.1",
+  "pluginReleasedAt": "2024-03-27T11:54:23+0100"
 };
 
 // src/routes/info.ts
-var defaultParams = incomingBaseParams.extend({
+var defaultParams2 = incomingBaseParams.extend({
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var routePath4 = {
+var routePath5 = {
   "/info": [
-    { path: "/", schema: defaultParams, handler: handleInfo }
+    { path: "/", schema: defaultParams2, handler: handleInfo }
   ]
 };
 async function handleInfo(incomingParams) {
@@ -12658,17 +12919,36 @@ var listParams3 = incomingBaseParams.extend({
   "x-success": z.string().url()
 });
 var readParams2 = incomingBaseParams.extend({
-  file: zodSanitizedFilePath,
+  file: zodSanitizedNotePath,
   silent: zodOptionalBoolean,
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var openParams = incomingBaseParams.extend({
-  file: zodExistingFilePath,
+var readActiveParams = incomingBaseParams.extend({
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
+});
+var readNamedParams = incomingBaseParams.extend({
+  file: zodSanitizedNotePath,
+  "sort-by": z.enum([
+    "best-guess",
+    "path-asc",
+    "path-desc",
+    "ctime-asc",
+    "ctime-desc",
+    "mtime-asc",
+    "mtime-desc",
+    ""
+  ]).optional(),
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
+});
+var openParams2 = incomingBaseParams.extend({
+  file: zodExistingNotePath,
   silent: zodAlwaysFalse
 });
 var createBaseParams = incomingBaseParams.extend({
-  file: zodSanitizedFilePath,
+  file: zodSanitizedNotePath,
   "if-exists": z.enum(["overwrite", "skip", ""]).optional(),
   silent: zodOptionalBoolean
 });
@@ -12679,11 +12959,11 @@ var createParams2 = z.discriminatedUnion("apply", [
   }),
   createBaseParams.extend({
     apply: z.literal("templater"),
-    "template-file": zodExistingFilePath
+    "template-file": zodExistingTemplaterPath
   }),
   createBaseParams.extend({
     apply: z.literal("templates"),
-    "template-file": zodExistingFilePath
+    "template-file": zodExistingTemplatesPath
   }),
   createBaseParams.extend({
     apply: zodEmptyStringChangedToDefaultString("content"),
@@ -12696,7 +12976,7 @@ var createParams2 = z.discriminatedUnion("apply", [
 ]);
 var appendParams = incomingBaseParams.extend({
   content: z.string(),
-  file: zodSanitizedFilePath,
+  file: zodSanitizedNotePath,
   silent: zodOptionalBoolean,
   "below-headline": z.string().optional(),
   "create-if-not-found": zodOptionalBoolean,
@@ -12704,39 +12984,50 @@ var appendParams = incomingBaseParams.extend({
 });
 var prependParams = incomingBaseParams.extend({
   content: z.string(),
-  file: zodSanitizedFilePath,
+  file: zodSanitizedNotePath,
   silent: zodOptionalBoolean,
   "below-headline": z.string().optional(),
   "create-if-not-found": zodOptionalBoolean,
   "ensure-newline": zodOptionalBoolean,
   "ignore-front-matter": zodOptionalBoolean
 });
+var touchParams = incomingBaseParams.extend({
+  file: zodSanitizedNotePath,
+  silent: zodOptionalBoolean
+});
 var searchAndReplaceParams = incomingBaseParams.extend({
-  file: zodExistingFilePath,
+  file: zodExistingNotePath,
   silent: zodOptionalBoolean,
   search: z.string().min(1, { message: "can't be empty" }),
   replace: z.string()
 });
-var deleteParams2 = incomingBaseParams.extend({
-  file: zodExistingFilePath
+var deleteParams3 = incomingBaseParams.extend({
+  file: zodExistingNotePath
 });
-var renameParams2 = incomingBaseParams.extend({
-  file: zodExistingFilePath,
-  "new-filename": zodSanitizedFilePath,
+var renameParams3 = incomingBaseParams.extend({
+  file: zodExistingNotePath,
+  "new-filename": zodSanitizedNotePath,
   silent: zodOptionalBoolean
 });
-var routePath5 = {
+var routePath6 = {
   "/note": [
     helloRoute(),
-    { path: "/list", schema: listParams3, handler: handleList3 },
+    { path: "/list", schema: listParams3, handler: handleList4 },
     { path: "/get", schema: readParams2, handler: handleGet },
-    { path: "/open", schema: openParams, handler: handleOpen },
+    {
+      path: "/get-first-named",
+      schema: readNamedParams,
+      handler: handleGetNamed
+    },
+    { path: "/get-active", schema: readActiveParams, handler: handleGetActive2 },
+    { path: "/open", schema: openParams2, handler: handleOpen2 },
     { path: "/create", schema: createParams2, handler: handleCreate2 },
     { path: "/append", schema: appendParams, handler: handleAppend },
     { path: "/prepend", schema: prependParams, handler: handlePrepend },
-    { path: "/delete", schema: deleteParams2, handler: handleDelete2 },
-    { path: "/trash", schema: deleteParams2, handler: handleTrash2 },
-    { path: "/rename", schema: renameParams2, handler: handleRename2 },
+    { path: "/touch", schema: touchParams, handler: handleTouch },
+    { path: "/delete", schema: deleteParams3, handler: handleDelete3 },
+    { path: "/trash", schema: deleteParams3, handler: handleTrash3 },
+    { path: "/rename", schema: renameParams3, handler: handleRename3 },
     {
       path: "/search-string-and-replace",
       schema: searchAndReplaceParams,
@@ -12749,24 +13040,57 @@ var routePath5 = {
     }
   ]
 };
-async function handleList3(incomingParams) {
+async function handleList4(incomingParams) {
   return success({
-    paths: window.app.vault.getMarkdownFiles().map((t) => t.path).sort()
+    paths: activeVault().getMarkdownFiles().map((t) => t.path).sort()
   });
 }
 async function handleGet(incomingParams) {
-  const params = incomingParams;
-  return await getNoteDetails(params.file);
+  const { file, silent } = incomingParams;
+  const shouldFocusNote = !silent;
+  const res = await getNoteDetails(file);
+  if (res.isSuccess && shouldFocusNote)
+    await focusOrOpenFile(file);
+  return res;
 }
-async function handleOpen(incomingParams) {
+async function handleGetActive2(incomingParams) {
+  const res = activeWorkspace().getActiveFile();
+  if ((res == null ? void 0 : res.extension) !== "md")
+    return failure(404, "No active note");
+  const res1 = await getNoteDetails(res.path);
+  return res1.isSuccess ? res1 : failure(404, "No active note");
+}
+async function handleGetNamed(incomingParams) {
   const params = incomingParams;
-  const res = await getNoteFile(params.file.path);
+  const { file } = params;
+  const sortBy = params["sort-by"] || "best-guess";
+  if (sortBy === "best-guess") {
+    const res2 = app().metadataCache.getFirstLinkpathDest(sanitizeFilePath(file), "/");
+    return res2 ? await getNoteDetails(res2.path) : failure(404, "No note found with that name");
+  }
+  const sortFns = {
+    "path-asc": (a, b) => a.path.localeCompare(b.path),
+    "path-desc": (a, b) => b.path.localeCompare(a.path),
+    "ctime-asc": (a, b) => a.stat.ctime - b.stat.ctime,
+    "ctime-desc": (a, b) => b.stat.ctime - a.stat.ctime,
+    "mtime-asc": (a, b) => a.stat.mtime - b.stat.mtime,
+    "mtime-desc": (a, b) => b.stat.mtime - a.stat.mtime
+  };
+  const res = activeVault().getMarkdownFiles().sort(sortFns[sortBy]).find((tf) => tf.name === file);
+  if (!res)
+    return failure(404, "No note found with that name");
+  return await getNoteDetails(res.path);
+}
+async function handleOpen2(incomingParams) {
+  const { file } = incomingParams;
+  const res = await getNote(file.path);
   return res.isSuccess ? success({ message: STRINGS.note_opened }, res.result.path) : res;
 }
 async function handleCreate2(incomingParams) {
   const params = incomingParams;
-  const { apply, file } = params;
+  const { apply, file, silent } = params;
   const ifExists = params["if-exists"];
+  const shouldFocusNote = !silent;
   const templateFile = apply === "templater" || apply === "templates" ? params["template-file"] : void 0;
   const content = apply === "content" ? params.content || "" : "";
   var pluginInstance;
@@ -12781,120 +13105,213 @@ async function handleCreate2(incomingParams) {
       return pluginRes;
     pluginInstance = pluginRes.result;
   }
-  const res = await getNoteFile(file);
+  const res = await getNote(file);
   const noteExists = res.isSuccess;
   if (noteExists && ifExists === "skip") {
+    if (shouldFocusNote)
+      await focusOrOpenFile(file);
     return await getNoteDetails(file);
   }
   const res2 = noteExists && ifExists === "overwrite" ? await createOrOverwriteNote(file, content) : await createNote(file, content);
-  if (!res2.isSuccess) {
+  if (!res2.isSuccess)
     return res2;
-  }
   const newNote = res2.result;
   switch (apply) {
     case "templater":
       await pluginInstance.write_template_to_file(templateFile, newNote);
       break;
     case "templates":
-      await focusOrOpenNote(newNote.path);
-      await pause(100);
-      await pluginInstance.insertTemplate(templateFile);
+      await applyCorePluginTemplate(templateFile, newNote);
       break;
   }
+  if (shouldFocusNote)
+    await focusOrOpenFile(newNote.path);
   return await getNoteDetails(newNote.path);
 }
 async function handleAppend(incomingParams) {
   const params = incomingParams;
-  const { file, content } = params;
+  const { file, content, silent } = params;
   const belowHeadline = params["below-headline"];
-  const createIfNotFound = params["create-if-not-found"];
-  const ensureNewline = params["ensure-newline"];
+  const shouldCreateNote = params["create-if-not-found"];
+  const shouldEnsureNewline = params["ensure-newline"];
+  const shouldFocusNote = !silent;
   async function appendAsRequested() {
     if (belowHeadline) {
       return await appendNoteBelowHeadline(file, belowHeadline, content);
     }
-    return await appendNote(file, content, ensureNewline);
+    return await appendNote(file, content, shouldEnsureNewline);
   }
-  const res = await getNoteFile(file);
+  const res = await getNote(file);
   if (res.isSuccess) {
     const res1 = await appendAsRequested();
-    return res1.isSuccess ? success({ message: res1.result }, file) : res1;
-  } else if (!createIfNotFound) {
+    if (res1.isSuccess) {
+      if (shouldFocusNote)
+        await focusOrOpenFile(file);
+      return success({ message: res1.result }, file);
+    }
+    return res1;
+  } else if (!shouldCreateNote) {
     return res;
   }
   const res2 = await createNote(file, "");
-  if (!res2.isSuccess) {
+  if (!res2.isSuccess)
     return res2;
-  }
   const res3 = await appendAsRequested();
-  return res3.isSuccess ? success({ message: res3.result }, file) : res3;
+  if (!res3.isSuccess)
+    return res3;
+  if (shouldFocusNote)
+    await focusOrOpenFile(file);
+  return success({ message: res3.result }, file);
 }
 async function handlePrepend(incomingParams) {
   const params = incomingParams;
-  const { file, content } = params;
+  const { file, content, silent } = params;
   const belowHeadline = params["below-headline"];
-  const createIfNotFound = params["create-if-not-found"];
-  const ensureNewline = params["ensure-newline"];
-  const ignoreFrontMatter = params["ignore-front-matter"];
+  const shouldCreateNote = params["create-if-not-found"];
+  const shouldEnsureNewline = params["ensure-newline"];
+  const shouldFocusNote = !silent;
+  const shouldIgnoreFrontMatter = params["ignore-front-matter"];
   async function prependAsRequested() {
     if (belowHeadline) {
       return await prependNoteBelowHeadline(
         file,
         belowHeadline,
         content,
-        ensureNewline
+        shouldEnsureNewline
       );
     }
-    return await prependNote(file, content, ensureNewline, ignoreFrontMatter);
+    return await prependNote(
+      file,
+      content,
+      shouldEnsureNewline,
+      shouldIgnoreFrontMatter
+    );
   }
-  const res = await getNoteFile(file);
+  const res = await getNote(file);
   if (res.isSuccess) {
     const res1 = await prependAsRequested();
-    return res1.isSuccess ? success({ message: res1.result }, file) : res1;
-  } else if (!createIfNotFound) {
+    if (res1.isSuccess) {
+      if (shouldFocusNote)
+        await focusOrOpenFile(file);
+      return success({ message: res1.result }, file);
+    }
+    return res1;
+  } else if (!shouldCreateNote) {
     return res;
   }
   const res2 = await createNote(file, "");
-  if (!res2.isSuccess) {
+  if (!res2.isSuccess)
     return res2;
-  }
   const res3 = await prependAsRequested();
-  return res3.isSuccess ? success({ message: res3.result }, file) : res3;
+  if (!res3.isSuccess)
+    return res3;
+  if (shouldFocusNote)
+    await focusOrOpenFile(file);
+  return success({ message: res3.result }, file);
+}
+async function handleTouch(incomingParams) {
+  const { file, silent } = incomingParams;
+  const shouldFocusNote = !silent;
+  const res = await touchNote(file);
+  if (!res.isSuccess)
+    return res;
+  if (shouldFocusNote)
+    await focusOrOpenFile(file);
+  return success({ message: STRINGS.touch_done }, file);
 }
 async function handleSearchStringAndReplace(incomingParams) {
-  const { search, file, replace } = incomingParams;
+  const { search, file, replace, silent } = incomingParams;
   const filepath = file.path;
+  const shouldFocusNote = !silent;
   const res = await searchAndReplaceInNote(filepath, search, replace);
-  return res.isSuccess ? success({ message: res.result }, filepath) : res;
+  if (!res.isSuccess)
+    return res;
+  if (shouldFocusNote)
+    await focusOrOpenFile(filepath);
+  return success({ message: res.result }, filepath);
 }
 async function handleSearchRegexAndReplace(incomingParams) {
-  const { search, file, replace } = incomingParams;
+  const { search, file, replace, silent } = incomingParams;
   const filepath = file.path;
+  const shouldFocusNote = !silent;
   const resSir = parseStringIntoRegex(search);
-  if (!resSir.isSuccess) {
+  if (!resSir.isSuccess)
     return resSir;
-  }
   const res = await searchAndReplaceInNote(filepath, resSir.result, replace);
-  return res.isSuccess ? success({ message: res.result }, filepath) : res;
+  if (!res.isSuccess)
+    return res;
+  if (shouldFocusNote)
+    await focusOrOpenFile(filepath);
+  return success({ message: res.result }, filepath);
 }
-async function handleDelete2(incomingParams) {
+async function handleDelete3(incomingParams) {
   const { file } = incomingParams;
   const filepath = file.path;
   const res = await trashFilepath(filepath, true);
   return res.isSuccess ? success({ message: res.result }, filepath) : res;
 }
-async function handleTrash2(incomingParams) {
+async function handleTrash3(incomingParams) {
   const { file } = incomingParams;
   const filepath = file.path;
   const res = await trashFilepath(filepath);
   return res.isSuccess ? success({ message: res.result }, filepath) : res;
 }
-async function handleRename2(incomingParams) {
+async function handleRename3(incomingParams) {
   const params = incomingParams;
-  const { file } = params;
-  const filepath = file.path;
+  const filepath = params.file.path;
   const res = await renameFilepath(filepath, params["new-filename"]);
   return res.isSuccess ? success({ message: res.result }, filepath) : res;
+}
+
+// src/routes/note-properties.ts
+var import_obsidian6 = require("obsidian");
+var defaultParams3 = incomingBaseParams.extend({
+  file: zodExistingNotePath,
+  "x-error": z.string().url(),
+  "x-success": z.string().url()
+});
+var setParams = defaultParams3.extend({
+  properties: zodJsonPropertiesObject,
+  mode: z.enum(["overwrite", "update"]).optional()
+});
+var removeKeysParams = defaultParams3.extend({
+  keys: zodJsonStringArray
+});
+var routePath7 = {
+  "/note-properties": [
+    helloRoute(),
+    { path: "/get", schema: defaultParams3, handler: handleGet2 },
+    { path: "/set", schema: setParams, handler: handleSet },
+    { path: "/clear", schema: defaultParams3, handler: handleClear },
+    {
+      path: "/remove-keys",
+      schema: removeKeysParams,
+      handler: handleRemoveKeys
+    }
+  ]
+};
+async function handleGet2(incomingParams) {
+  const params = incomingParams;
+  const { file } = params;
+  return success({ properties: propertiesForFile(file) });
+}
+async function handleSet(incomingParams) {
+  const params = incomingParams;
+  const { file, mode, properties } = params;
+  const props = mode === "update" ? { ...propertiesForFile(file), ...properties } : properties;
+  return updateNote(file.path, (0, import_obsidian6.stringifyYaml)(props).trim());
+}
+async function handleClear(incomingParams) {
+  const params = incomingParams;
+  const { file } = params;
+  return updateNote(file.path, "");
+}
+async function handleRemoveKeys(incomingParams) {
+  const params = incomingParams;
+  const { file, keys } = params;
+  const props = propertiesForFile(file);
+  keys.forEach((key) => delete props[key]);
+  return updateNote(file.path, (0, import_obsidian6.stringifyYaml)(props).trim());
 }
 
 // src/utils/search.ts
@@ -12905,7 +13322,7 @@ async function doSearch(query) {
   }
   const pluginInstance = res.result;
   pluginInstance.openGlobalSearch(query);
-  const searchLeaf = window.app.workspace.getLeavesOfType("search")[0];
+  const searchLeaf = activeWorkspace().getLeavesOfType("search")[0];
   const searchView = await searchLeaf.open(searchLeaf.view);
   await pause(2e3);
   const rawSearchResult = searchView.dom.resultDomLookup;
@@ -12924,19 +13341,19 @@ async function doOmnisearch(query) {
 }
 
 // src/routes/omnisearch.ts
-var defaultParams2 = incomingBaseParams.extend({
+var defaultParams4 = incomingBaseParams.extend({
   query: z.string().min(1, { message: "can't be empty" }),
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var openParams2 = incomingBaseParams.extend({
+var openParams3 = incomingBaseParams.extend({
   query: z.string().min(1, { message: "can't be empty" })
 });
-var routePath6 = {
+var routePath8 = {
   "/omnisearch": [
     helloRoute(),
-    { path: "/all-notes", schema: defaultParams2, handler: handleSearch },
-    { path: "/open", schema: openParams2, handler: handleOpen2 }
+    { path: "/all-notes", schema: defaultParams4, handler: handleSearch },
+    { path: "/open", schema: openParams3, handler: handleOpen3 }
   ]
 };
 async function handleSearch(incomingParams) {
@@ -12944,16 +13361,16 @@ async function handleSearch(incomingParams) {
   const res = await doOmnisearch(params.query);
   return res.isSuccess ? success(res.result) : res;
 }
-async function handleOpen2(incomingParams) {
+async function handleOpen3(incomingParams) {
   const params = incomingParams;
   window.open(
-    "obsidian://omnisearch?vault=" + encodeURIComponent(window.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim())
+    "obsidian://omnisearch?vault=" + encodeURIComponent(activeVault().getName()) + "&query=" + encodeURIComponent(params.query.trim())
   );
   return success({ message: "Opened search" });
 }
 
 // src/routes/periodic-notes.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 var import_obsidian_daily_notes_interface = __toESM(require_main());
 var listParams4 = incomingBaseParams.extend({
   "x-error": z.string().url(),
@@ -12964,7 +13381,7 @@ var readParams3 = incomingBaseParams.extend({
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var openParams3 = incomingBaseParams.extend({
+var openParams4 = incomingBaseParams.extend({
   silent: zodAlwaysFalse
 });
 var createBaseParams2 = incomingBaseParams.extend({
@@ -12978,11 +13395,11 @@ var createParams3 = z.discriminatedUnion("apply", [
   }),
   createBaseParams2.extend({
     apply: z.literal("templater"),
-    "template-file": zodExistingFilePath
+    "template-file": zodExistingTemplaterPath
   }),
   createBaseParams2.extend({
     apply: z.literal("templates"),
-    "template-file": zodExistingFilePath
+    "template-file": zodExistingTemplatesPath
   }),
   createBaseParams2.extend({
     apply: zodEmptyStringChangedToDefaultString("content"),
@@ -13034,12 +13451,12 @@ for (const periodID of PERIOD_IDS) {
     },
     {
       path: "/open-current",
-      schema: openParams3,
+      schema: openParams4,
       handler: getHandleOpenCurrent(periodID)
     },
     {
       path: "/open-most-recent",
-      schema: openParams3,
+      schema: openParams4,
       handler: getHandleOpenMostRecent(periodID)
     },
     {
@@ -13069,9 +13486,9 @@ for (const periodID of PERIOD_IDS) {
     }
   ];
 }
-var routePath7 = routes;
+var routePath9 = routes;
 function getHandleList(periodID) {
-  return async function handleList5(incoming) {
+  return async function handleList6(incoming) {
     if (!appHasPeriodPluginLoaded(periodID)) {
       return failure(412, STRINGS[`${periodID}_note`].feature_not_available);
     }
@@ -13083,14 +13500,28 @@ function getHandleList(periodID) {
 }
 function getHandleGetCurrent(periodID) {
   return async function handleGetCurrent(incomingParams) {
+    const { silent } = incomingParams;
+    const shouldFocusNote = !silent;
     const res = getPeriodNotePathIfPluginIsAvailable(periodID);
-    return res.isSuccess ? await getNoteDetails(res.result) : res;
+    if (!res.isSuccess)
+      return res;
+    const filepath = res.result;
+    if (shouldFocusNote)
+      await focusOrOpenFile(filepath);
+    return await getNoteDetails(filepath);
   };
 }
 function getHandleGetMostRecent(periodID) {
   return async function handleGetMostRecent(incomingParams) {
+    const { silent } = incomingParams;
+    const shouldFocusNote = !silent;
     const res = await getMostRecentPeriodNote(periodID);
-    return res.isSuccess ? await getNoteDetails(res.result.path) : res;
+    if (!res.isSuccess)
+      return res;
+    const filepath = res.result.path;
+    if (shouldFocusNote)
+      await focusOrOpenFile(filepath);
+    return await getNoteDetails(filepath);
   };
 }
 function getHandleOpenCurrent(periodID) {
@@ -13108,8 +13539,9 @@ function getHandleOpenMostRecent(periodID) {
 function getHandleCreate(periodID) {
   return async function handleCreate3(incomingParams) {
     const params = incomingParams;
-    const { apply } = params;
+    const { apply, silent } = params;
     const ifExists = params["if-exists"];
+    const shouldFocusNote = !silent;
     const templateFile = apply === "templater" || apply === "templates" ? params["template-file"] : void 0;
     const content = apply === "content" ? params.content || "" : "";
     var pluginInstance;
@@ -13128,12 +13560,14 @@ function getHandleCreate(periodID) {
       pluginInstance = pluginRes.result;
     }
     const pNote = getCurrentPeriodNote(periodID);
-    if (pNote instanceof import_obsidian6.TFile) {
+    if (pNote instanceof import_obsidian7.TFile) {
       switch (ifExists) {
         case "skip":
+          if (shouldFocusNote)
+            await focusOrOpenFile(pNote.path);
           return await getNoteDetails(pNote.path);
         case "overwrite":
-          await app.vault.trash(pNote, false);
+          await activeVault().trash(pNote, false);
           break;
         default:
           return failure(
@@ -13143,11 +13577,11 @@ function getHandleCreate(periodID) {
       }
     }
     const newNote = await createPeriodNote(periodID);
-    if (!(newNote instanceof import_obsidian6.TFile)) {
+    if (!(newNote instanceof import_obsidian7.TFile)) {
       return failure(400, STRINGS.unable_to_write_note);
     }
     const filepath = newNote.path;
-    await pause(100);
+    await pause(200);
     switch (apply) {
       case "content":
         if (content !== "") {
@@ -13158,22 +13592,22 @@ function getHandleCreate(periodID) {
         await pluginInstance.write_template_to_file(templateFile, newNote);
         break;
       case "templates":
-        await createOrOverwriteNote(filepath, "");
-        await focusOrOpenNote(filepath);
-        await pause(100);
-        await pluginInstance.insertTemplate(templateFile);
+        await applyCorePluginTemplate(templateFile, newNote);
         break;
     }
+    if (shouldFocusNote)
+      await focusOrOpenFile(filepath);
     return await getNoteDetails(filepath);
   };
 }
 function getHandleAppend(periodID) {
   return async function handleAppend2(incomingParams) {
     const params = incomingParams;
-    const { content } = params;
+    const { content, silent } = params;
     const belowHeadline = params["below-headline"];
-    const createIfNotFound = params["create-if-not-found"];
-    const ensureNewline = params["ensure-newline"];
+    const shouldCreateNote = params["create-if-not-found"];
+    const shouldEnsureNewline = params["ensure-newline"];
+    const shouldFocusNote = !silent;
     async function appendAsRequested(filepath) {
       if (belowHeadline) {
         return await appendNoteBelowHeadline(
@@ -13182,24 +13616,30 @@ function getHandleAppend(periodID) {
           content
         );
       }
-      return await appendNote(filepath, content, ensureNewline);
+      return await appendNote(filepath, content, shouldEnsureNewline);
     }
     const resDNP = getPeriodNotePathIfPluginIsAvailable(periodID);
     if (resDNP.isSuccess) {
       const filepath = resDNP.result;
       const res = await appendAsRequested(filepath);
-      return res.isSuccess ? success({ message: res.result }, filepath) : res;
+      if (!res.isSuccess)
+        return res;
+      if (shouldFocusNote)
+        await focusOrOpenFile(filepath);
+      return success({ message: res.result }, filepath);
     }
-    if (resDNP.errorCode !== 404) {
+    if (resDNP.errorCode !== 404)
       return resDNP;
-    }
-    if (!createIfNotFound) {
+    if (!shouldCreateNote)
       return resDNP;
-    }
     const newNote = await createPeriodNote(periodID);
-    if (newNote instanceof import_obsidian6.TFile) {
+    if (newNote instanceof import_obsidian7.TFile) {
       const res = await appendAsRequested(newNote.path);
-      return res.isSuccess ? success({ message: res.result }, newNote.path) : res;
+      if (!res.isSuccess)
+        return res;
+      if (shouldFocusNote)
+        await focusOrOpenFile(newNote.path);
+      return success({ message: res.result }, newNote.path);
     }
     return failure(400, STRINGS.unable_to_write_note);
   };
@@ -13207,78 +13647,87 @@ function getHandleAppend(periodID) {
 function getHandlePrepend(periodID) {
   return async function handlePrepend2(incomingParams) {
     const params = incomingParams;
-    const { content } = params;
+    const { content, silent } = params;
     const belowHeadline = params["below-headline"];
-    const createIfNotFound = params["create-if-not-found"];
-    const ensureNewline = params["ensure-newline"];
-    const ignoreFrontMatter = params["ignore-front-matter"];
+    const shouldCreateNote = params["create-if-not-found"];
+    const shouldEnsureNewline = params["ensure-newline"];
+    const shouldFocusNote = !silent;
+    const shouldIgnoreFrontMatter = params["ignore-front-matter"];
     async function prependAsRequested(filepath) {
       if (belowHeadline) {
         return await prependNoteBelowHeadline(
           filepath,
           belowHeadline,
           content,
-          ensureNewline
+          shouldEnsureNewline
         );
       }
       return await prependNote(
         filepath,
         content,
-        ensureNewline,
-        ignoreFrontMatter
+        shouldEnsureNewline,
+        shouldIgnoreFrontMatter
       );
     }
     const resDNP = getPeriodNotePathIfPluginIsAvailable(periodID);
     if (resDNP.isSuccess) {
       const filepath = resDNP.result;
       const res = await prependAsRequested(filepath);
-      return res.isSuccess ? success({ message: res.result }, filepath) : res;
+      if (!res.isSuccess)
+        return res;
+      if (shouldFocusNote)
+        await focusOrOpenFile(filepath);
+      return success({ message: res.result }, filepath);
     }
-    if (resDNP.errorCode !== 404) {
+    if (resDNP.errorCode !== 404)
       return resDNP;
-    }
-    if (!createIfNotFound) {
+    if (!shouldCreateNote)
       return resDNP;
-    }
     const newNote = await createPeriodNote(periodID);
-    if (newNote instanceof import_obsidian6.TFile) {
+    if (newNote instanceof import_obsidian7.TFile) {
       const res = await prependAsRequested(newNote.path);
-      return res.isSuccess ? success({ message: res.result }, newNote.path) : res;
+      if (!res.isSuccess)
+        return res;
+      if (shouldFocusNote)
+        await focusOrOpenFile(newNote.path);
+      return success({ message: res.result }, newNote.path);
     }
     return failure(400, STRINGS.unable_to_write_note);
   };
 }
 function getHandleSearchStringAndReplace(periodID) {
   return async function handleSearchStringAndReplace2(incomingParams) {
-    const params = incomingParams;
+    const { search, replace, silent } = incomingParams;
+    const shouldFocusNote = !silent;
     const resDNP = getPeriodNotePathIfPluginIsAvailable(periodID);
-    if (!resDNP.isSuccess) {
+    if (!resDNP.isSuccess)
       return resDNP;
-    }
     const filepath = resDNP.result;
-    const { search, replace } = params;
     const res = await searchAndReplaceInNote(filepath, search, replace);
-    return res.isSuccess ? success({ message: res.result }, filepath) : res;
+    if (!res.isSuccess)
+      return res;
+    if (shouldFocusNote)
+      await focusOrOpenFile(filepath);
+    return success({ message: res.result }, filepath);
   };
 }
 function getHandleSearchRegexAndReplace(periodID) {
   return async function handleSearchRegexAndReplace2(incomingParams) {
-    const params = incomingParams;
+    const { search, replace, silent } = incomingParams;
+    const shouldFocusNote = !silent;
     const resDNP = getPeriodNotePathIfPluginIsAvailable(periodID);
-    if (!resDNP.isSuccess) {
+    if (!resDNP.isSuccess)
       return resDNP;
-    }
-    const resSir = parseStringIntoRegex(params.search);
-    if (!resSir.isSuccess) {
-      return resSir;
-    }
     const filepath = resDNP.result;
-    const res = await searchAndReplaceInNote(
-      filepath,
-      resSir.result,
-      params.replace
-    );
-    return res.isSuccess ? success({ message: res.result }, filepath) : res;
+    const resSir = parseStringIntoRegex(search);
+    if (!resSir.isSuccess)
+      return resSir;
+    const res = await searchAndReplaceInNote(filepath, resSir.result, replace);
+    if (!res.isSuccess)
+      return res;
+    if (shouldFocusNote)
+      await focusOrOpenFile(filepath);
+    return success({ message: res.result }, filepath);
   };
 }
 function appHasPeriodPluginLoaded(periodID) {
@@ -13381,30 +13830,30 @@ async function getMostRecentPeriodNote(periodID) {
     return failure(404, STRINGS.note_not_found);
   }
   const pNote = notes[mostRecentKey];
-  return await getNoteFile(pNote.path);
+  return await getNote(pNote.path);
 }
 
 // src/routes/root.ts
-var routePath8 = {
+var routePath10 = {
   "/": [
     helloRoute()
   ]
 };
 
 // src/routes/search.ts
-var defaultParams3 = incomingBaseParams.extend({
+var defaultParams5 = incomingBaseParams.extend({
   query: z.string().min(1, { message: "can't be empty" }),
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var openParams4 = incomingBaseParams.extend({
+var openParams5 = incomingBaseParams.extend({
   query: z.string().min(1, { message: "can't be empty" })
 });
-var routePath9 = {
+var routePath11 = {
   "/search": [
     helloRoute(),
-    { path: "/all-notes", schema: defaultParams3, handler: handleSearch2 },
-    { path: "/open", schema: openParams4, handler: handleOpen3 }
+    { path: "/all-notes", schema: defaultParams5, handler: handleSearch2 },
+    { path: "/open", schema: openParams5, handler: handleOpen4 }
   ]
 };
 async function handleSearch2(incomingParams) {
@@ -13412,55 +13861,50 @@ async function handleSearch2(incomingParams) {
   const res = await doSearch(params.query);
   return res.isSuccess ? success(res.result) : res;
 }
-async function handleOpen3(incomingParams) {
+async function handleOpen4(incomingParams) {
   const params = incomingParams;
   window.open(
-    "obsidian://search?vault=" + encodeURIComponent(window.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim())
+    "obsidian://search?vault=" + encodeURIComponent(activeVault().getName()) + "&query=" + encodeURIComponent(params.query.trim())
   );
   return success({ message: "Opened search" });
 }
 
 // src/routes/vault.ts
-var import_obsidian7 = require("obsidian");
-var defaultParams4 = incomingBaseParams.extend({
+var import_obsidian8 = require("obsidian");
+var defaultParams6 = incomingBaseParams.extend({
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var routePath10 = {
+var routePath12 = {
   "/vault": [
     helloRoute(),
-    { path: "/open", schema: incomingBaseParams, handler: handleOpen4 },
+    { path: "/open", schema: incomingBaseParams, handler: handleOpen5 },
     { path: "/close", schema: incomingBaseParams, handler: handleClose },
-    { path: "/info", schema: defaultParams4, handler: handleInfo2 },
-    {
-      path: "/list-folders",
-      schema: defaultParams4,
-      handler: handleListFolders
-    },
+    { path: "/info", schema: defaultParams6, handler: handleInfo2 },
     {
       path: "/list-all-files",
-      schema: defaultParams4,
+      schema: defaultParams6,
       handler: handleListFiles
     },
     {
       path: "/list-non-notes-files",
-      schema: defaultParams4,
+      schema: defaultParams6,
       handler: handleListFilesExceptNotes
     }
   ]
 };
-async function handleOpen4(incomingParams) {
+async function handleOpen5(incomingParams) {
   return success({});
 }
 async function handleClose(incomingParams) {
-  if (import_obsidian7.Platform.isMobileApp) {
+  if (import_obsidian8.Platform.isMobileApp) {
     return failure(405, STRINGS.not_available_on_mobile);
   }
   window.setTimeout(window.close, 600);
   return success({});
 }
 async function handleInfo2(incomingParams) {
-  const { vault } = window.app;
+  const vault = activeVault();
   const { config } = vault;
   const basePath = vault.adapter.basePath;
   if (!config || !basePath) {
@@ -13472,17 +13916,13 @@ async function handleInfo2(incomingParams) {
     newFileFolderPath: config.newFileLocation === "folder" ? `${basePath}/${config.newFileFolderPath}`.replace(/\/$/, "") : basePath
   });
 }
-async function handleListFolders(incomingParams) {
-  const paths = getFileMap().filter((t) => t instanceof import_obsidian7.TFolder).map((t) => t.path.endsWith("/") ? t.path : `${t.path}/`).sort();
-  return success({ paths });
-}
 async function handleListFiles(incomingParams) {
   return success({
-    paths: window.app.vault.getFiles().map((t) => t.path).sort()
+    paths: activeVault().getFiles().map((t) => t.path).sort()
   });
 }
 async function handleListFilesExceptNotes(incomingParams) {
-  const { vault } = window.app;
+  const vault = activeVault();
   const files = vault.getFiles().map((t) => t.path);
   const notes = vault.getMarkdownFiles().map((t) => t.path);
   return success({
@@ -13495,14 +13935,14 @@ var listParams5 = incomingBaseParams.extend({
   "x-error": z.string().url(),
   "x-success": z.string().url()
 });
-var routePath11 = {
+var routePath13 = {
   "/tags": [
     helloRoute(),
-    { path: "/list", schema: listParams5, handler: handleList4 }
+    { path: "/list", schema: listParams5, handler: handleList5 }
   ]
 };
-async function handleList4(incomingParams) {
-  const tags = app.metadataCache.getTags();
+async function handleList5(incomingParams) {
+  const tags = app().metadataCache.getTags();
   return success({
     tags: Object.keys(tags).sort((a, b) => a.localeCompare(b))
   });
@@ -13510,17 +13950,19 @@ async function handleList4(incomingParams) {
 
 // src/routes.ts
 var routes2 = {
-  ...routePath8,
+  ...routePath10,
   ...routePath,
   ...routePath2,
   ...routePath3,
   ...routePath4,
   ...routePath5,
-  ...routePath6,
   ...routePath7,
+  ...routePath6,
+  ...routePath8,
   ...routePath9,
   ...routePath11,
-  ...routePath10
+  ...routePath13,
+  ...routePath12
 };
 
 // node_modules/filter-obj/index.js
@@ -13555,8 +13997,9 @@ function excludeKeys(object, predicate) {
 }
 
 // src/utils/callbacks.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 function sendUrlCallback(baseURL, handlerRes, params) {
+  var _a;
   const url = new URL(baseURL);
   if (handlerRes.isSuccess) {
     addObjectToUrlSearchParams(handlerRes.result, url);
@@ -13565,7 +14008,7 @@ function sendUrlCallback(baseURL, handlerRes, params) {
     url.searchParams.set("errorCode", errorCode.toString());
     url.searchParams.set("errorMessage", errorMessage);
   }
-  if (params["x-source"] == "Actions for Obsidian") {
+  if (((_a = params["x-source"]) == null ? void 0 : _a.toLowerCase()) === "actions for obsidian") {
     url.searchParams.set("pv", PLUGIN_INFO.pluginVersion);
   }
   const returnParams = params["debug-mode"] ? excludeKeys(params, ["debug-mode", "x-success", "x-error"]) : {};
@@ -13582,7 +14025,7 @@ function addObjectToUrlSearchParams(obj, url, prefix = XCALLBACK_RESULT_PREFIX) 
     let val;
     if (typeof obj[key] === "string") {
       val = obj[key];
-    } else if (obj[key] instanceof import_obsidian8.TAbstractFile) {
+    } else if (obj[key] instanceof import_obsidian9.TAbstractFile) {
       val = obj[key].path;
     } else {
       val = JSON.stringify(obj[key]);
@@ -13595,7 +14038,7 @@ function addObjectToUrlSearchParams(obj, url, prefix = XCALLBACK_RESULT_PREFIX) 
 }
 
 // src/main.ts
-var ActionsURI = class extends import_obsidian9.Plugin {
+var ActionsURI = class extends import_obsidian10.Plugin {
   async onload() {
     this.app.workspace.onLayoutReady(() => this.registerRoutes(routes2));
   }
@@ -13616,10 +14059,10 @@ var ActionsURI = class extends import_obsidian9.Plugin {
    */
   registerRoutes(routeTree) {
     const registeredRoutes = [];
-    for (const [routePath12, routeSubpaths] of Object.entries(routeTree)) {
+    for (const [routePath14, routeSubpaths] of Object.entries(routeTree)) {
       for (const route of routeSubpaths) {
         const { path, schema, handler } = route;
-        const fullPath = (0, import_obsidian9.normalizePath)(`${URI_NAMESPACE}/${routePath12}/${path}`).replace(/\/$/, "");
+        const fullPath = (0, import_obsidian10.normalizePath)(`${URI_NAMESPACE}/${routePath14}/${path}`).replace(/\/$/, "");
         this.registerObsidianProtocolHandler(
           fullPath,
           async (incomingParams) => {
@@ -13655,13 +14098,26 @@ var ActionsURI = class extends import_obsidian9.Plugin {
       logErrorToConsole(msg);
     }
     const res = {
-      params,
+      params: this.prepParamsForConsole(params),
       handlerResult,
       sendCallbackResult: this.sendUrlCallbackIfNeeded(handlerResult, params),
       openResult: await this.openFileIfNeeded(handlerResult, params)
     };
     logToConsole("Call handled:", res);
     return res;
+  }
+  /**
+   * To prevent circular references and max call stack errors related to files,
+   * we'll to convert all `TAbstractFile` instances to path strings which is what
+   * they were in the original incoming call anyways.
+   */
+  prepParamsForConsole(params) {
+    const newParams = { ...params };
+    Object.keys(params).forEach((key) => {
+      const value = params[key];
+      newParams[key] = value instanceof import_obsidian10.TAbstractFile ? value.path : value;
+    });
+    return newParams;
   }
   /**
    * When the parameters of an incoming `x-callback-url` call fail to parse or
@@ -13735,6 +14191,6 @@ var ActionsURI = class extends import_obsidian9.Plugin {
         "No file to open, handler didn't return a `processedFilepath` property"
       );
     }
-    return await focusOrOpenNote(processedFilepath);
+    return await focusOrOpenFile(processedFilepath);
   }
 };

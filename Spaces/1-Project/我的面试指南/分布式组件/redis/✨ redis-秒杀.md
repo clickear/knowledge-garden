@@ -1,7 +1,7 @@
 ---
-title: ✨ reids-秒杀
+title: ✨ redis-秒杀
 date created: 2023-11-24
-date modified: 2023-11-24
+date modified: 2024-01-15
 ---
 > [!TIP] 技巧💡
 > 1. 分布式锁，限流
