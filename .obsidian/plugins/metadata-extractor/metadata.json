@@ -3747,6 +3747,140 @@
     ]
   },
   {
+    "fileName": "∑ es",
+    "relativePath": "Spaces/2-Area/es/∑ es.md",
+    "frontmatter": {
+      "title": "∑ es",
+      "date created": "2024-06-06",
+      "date modified": "2024-06-14"
+    },
+    "headings": [
+      {
+        "heading": "es 资料",
+        "level": 2
+      },
+      {
+        "heading": "why",
+        "level": 2
+      },
+      {
+        "heading": "where",
+        "level": 2
+      },
+      {
+        "heading": "what:",
+        "level": 2
+      },
+      {
+        "heading": "时间规划: WHEN & HOW 什么时候学，具体怎么学？",
+        "level": 2
+      },
+      {
+        "heading": "学习时",
+        "level": 2
+      },
+      {
+        "heading": "学习之后",
+        "level": 2
+      },
+      {
+        "heading": "复盘效果",
+        "level": 2
+      },
+      {
+        "heading": "大纲",
+        "level": 2
+      },
+      {
+        "heading": "安装",
+        "level": 3
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "文档数据库"
+      },
+      {
+        "link": "准实时"
+      },
+      {
+        "link": "文档数据库"
+      },
+      {
+        "link": "elk-arm安装",
+        "relativePath": "Calendar/Daily notes/elk-arm安装.md"
+      },
+      {
+        "link": "wiki: 270fbea1462f4479b565f8636bc39f8f_80048f64630041e083fefedaad8ec251 技术分享ppt"
+      },
+      {
+        "link": "wiki:156029603 订单索引"
+      }
+    ]
+  },
+  {
+    "fileName": "es",
+    "relativePath": "Spaces/2-Area/es/es.md",
+    "frontmatter": {
+      "title": "es",
+      "date created": "2023-11-01",
+      "date modified": "2023-11-01"
+    },
+    "headings": [
+      {
+        "heading": "性能优化",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "es性能优化",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es性能优化.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据模型",
+        "link": "es",
+        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
+      },
+      {
+        "fileName": "∑ 面试计划",
+        "link": "es",
+        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+      },
+      {
+        "fileName": "∑ 面试计划",
+        "link": "es",
+        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+      },
+      {
+        "fileName": "全文检索选型",
+        "link": "es",
+        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/全文检索选型.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "es",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "es",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "es",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
     "fileName": "∑ 运动与健康",
     "relativePath": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "tags": [
@@ -3766,12 +3900,56 @@
     ]
   },
   {
+    "fileName": "海绵学习法",
+    "relativePath": "Spaces/2-Area/软技能/海绵学习法.md",
+    "frontmatter": {
+      "title": "海绵学习法",
+      "date created": "2024-06-04",
+      "date modified": "2024-06-04"
+    },
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "软技能",
+        "link": "海绵学习法",
+        "relativePath": "Spaces/2-Area/软技能/软技能.md"
+      }
+    ]
+  },
+  {
+    "fileName": "如何学习",
+    "relativePath": "Spaces/2-Area/软技能/如何学习.md",
+    "frontmatter": {
+      "title": "如何学习",
+      "date created": "2024-06-04",
+      "date modified": "2024-06-04"
+    },
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "软技能",
+        "link": "如何学习",
+        "relativePath": "Spaces/2-Area/软技能/软技能.md"
+      }
+    ]
+  },
+  {
     "fileName": "软技能",
     "relativePath": "Spaces/2-Area/软技能/软技能.md",
     "frontmatter": {
       "title": "软技能",
       "date created": "2023-01-19",
-      "date modified": "2023-01-19"
+      "date modified": "2024-06-04"
     },
     "links": [
       {
@@ -3790,6 +3968,14 @@
       },
       {
         "link": "刻意练习"
+      },
+      {
+        "link": "如何学习",
+        "relativePath": "Spaces/2-Area/软技能/如何学习.md"
+      },
+      {
+        "link": "海绵学习法",
+        "relativePath": "Spaces/2-Area/软技能/海绵学习法.md"
       }
     ]
   },
@@ -4426,8 +4612,18 @@
     "frontmatter": {
       "title": "数据模型",
       "date created": "2023-06-06",
-      "date modified": "2024-04-29"
+      "date modified": "2024-07-10"
     },
+    "headings": [
+      {
+        "heading": "文档数据库和网络数据模型的差异",
+        "level": 3
+      },
+      {
+        "heading": "关系型模式和文档数据库的差异",
+        "level": 3
+      }
+    ],
     "links": [
       {
         "link": "关系型数据库"
@@ -4441,7 +4637,7 @@
       },
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "关系型数据库"
@@ -4492,6 +4688,9 @@
       },
       {
         "link": "矩阵数据库"
+      },
+      {
+        "link": "文档数据库"
       }
     ],
     "backlinks": [
@@ -4513,7 +4712,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "数据模型",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -6732,7 +6931,7 @@
       },
       {
         "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       },
       {
         "link": "云原生"
@@ -7748,7 +7947,7 @@
     "frontmatter": {
       "title": "✨分布式多级缓存",
       "date created": "2023-11-07",
-      "date modified": "2023-11-11"
+      "date modified": "2024-06-06"
     },
     "headings": [
       {
@@ -7850,6 +8049,9 @@
       {
         "link": "分布式锁",
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/分布式锁.md"
+      },
+      {
+        "link": "wiki:34547618"
       }
     ],
     "backlinks": [
@@ -7871,7 +8073,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "✨分布式多级缓存",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -8211,7 +8413,7 @@
     ],
     "frontmatter": {
       "date created": "2022-09-19",
-      "date modified": "2024-04-29",
+      "date modified": "2024-05-09",
       "title": "资料"
     },
     "headings": [
@@ -8270,7 +8472,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "reactor模式",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -8282,7 +8484,7 @@
     ],
     "frontmatter": {
       "date created": "2022-09-15",
-      "date modified": "2022-09-19",
+      "date modified": "2024-06-05",
       "title": "netty"
     },
     "links": [
@@ -8478,7 +8680,7 @@
       },
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "分库分表",
@@ -8508,7 +8710,7 @@
       },
       {
         "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       },
       {
         "link": "数据结构和算法",
@@ -8525,7 +8727,7 @@
       },
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "运维devops"
@@ -10691,7 +10893,7 @@
     "links": [
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "redis-search",
@@ -11138,7 +11340,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "§redis",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "fileName": "AboutTheGarden",
@@ -12884,59 +13086,6 @@
     ]
   },
   {
-    "fileName": "es",
-    "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md",
-    "frontmatter": {
-      "title": "es",
-      "date created": "2023-11-01",
-      "date modified": "2023-11-01"
-    },
-    "headings": [
-      {
-        "heading": "性能优化",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "es性能优化",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es性能优化.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "数据模型",
-        "link": "es",
-        "relativePath": "Spaces/2-Area/数据库/数据模型.md"
-      },
-      {
-        "fileName": "∑ 面试计划",
-        "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
-      },
-      {
-        "fileName": "∑ 面试计划",
-        "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
-      },
-      {
-        "fileName": "全文检索选型",
-        "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/全文检索选型.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "es",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "es",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
     "fileName": "es性能优化",
     "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es性能优化.md",
     "frontmatter": {
@@ -12970,7 +13119,7 @@
       {
         "fileName": "es",
         "link": "es性能优化",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       }
     ]
   },
@@ -13237,7 +13386,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "脑裂",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -15134,7 +15283,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "CAP定理",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -15921,7 +16070,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "缓存",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -17043,7 +17192,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "分库分表",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -19261,7 +19410,7 @@
       {
         "fileName": "从0开始学架构",
         "link": "rocketMq",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -26198,6 +26347,11 @@
         "fileName": "∑ 读书笔记",
         "link": "📚金字塔原理",
         "relativePath": "Sources/Books/读书笔记/∑ 读书笔记.md"
+      },
+      {
+        "fileName": "晋升ppt框架",
+        "link": "📚金字塔原理",
+        "relativePath": "Sources/Books/极客时间/大厂晋升指南/晋升ppt框架.md"
       }
     ]
   },
@@ -28124,226 +28278,57 @@
     ]
   },
   {
-    "fileName": "互联网演进模式",
-    "relativePath": "Sources/Books/极客时间/互联网演进模式.md",
+    "fileName": "晋升ppt框架",
+    "relativePath": "Sources/Books/极客时间/大厂晋升指南/晋升ppt框架.md",
     "frontmatter": {
-      "title": "互联网演进模式",
-      "date created": "2024-05-08",
-      "date modified": "2024-05-08"
+      "title": "晋升ppt框架",
+      "date created": "2024-06-04",
+      "date modified": "2024-06-04"
     },
     "headings": [
       {
-        "heading": "资料",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "从0开始学架构",
-        "link": "互联网演进模式",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
-    "fileName": "微内核架构",
-    "relativePath": "Sources/Books/极客时间/微内核架构.md",
-    "frontmatter": {
-      "title": "微内核架构",
-      "date created": "2024-05-07",
-      "date modified": "2024-05-07"
-    },
-    "headings": [
-      {
-        "heading": "**引言**",
+        "heading": "自我介绍",
         "level": 2
       },
       {
-        "heading": "**一、基本架构**",
+        "heading": "自述材料",
         "level": 2
       },
       {
-        "heading": "**二、设计关键点**",
-        "level": 2
-      },
-      {
-        "heading": "**2.1 插件管理**",
+        "heading": "论据",
         "level": 3
       },
       {
-        "heading": "**2.2 插件连接**",
-        "level": 3
-      },
-      {
-        "heading": "**2.3 插件通信**",
-        "level": 3
-      },
-      {
-        "heading": "引用",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "从0开始学架构",
-        "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
-    "fileName": "康威定理",
-    "relativePath": "Sources/Books/极客时间/康威定理.md",
-    "frontmatter": {
-      "title": "康威定理",
-      "date created": "2024-05-07",
-      "date modified": "2024-05-07"
-    },
-    "headings": [
-      {
-        "heading": "资料",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "微服务",
-        "link": "康威定理",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
-      }
-    ]
-  },
-  {
-    "fileName": "微服务",
-    "relativePath": "Sources/Books/极客时间/微服务.md",
-    "frontmatter": {
-      "title": "微服务",
-      "date created": "2024-05-07",
-      "date modified": "2024-05-07"
-    },
-    "headings": [
-      {
-        "heading": "微服务",
-        "level": 2
-      },
-      {
-        "heading": "微服务与[[SOA]]的区别",
-        "level": 2
-      },
-      {
-        "heading": "微服务的陷阱",
-        "level": 2
-      },
-      {
-        "heading": "微服务最佳实践",
-        "level": 2
-      },
-      {
-        "heading": "微服务最佳实践(服务拆分)",
-        "level": 3
-      },
-      {
-        "heading": "服务颗粒度",
+        "heading": "核心论据（强相关）",
         "level": 4
       },
       {
-        "heading": "服务拆分",
+        "heading": "辅助论据",
         "level": 4
       },
       {
-        "heading": "微服务最佳实践(基础服务设施)",
+        "heading": "STAR",
         "level": 3
-      },
-      {
-        "heading": "资料",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/SOA.md"
-      },
-      {
-        "link": "熔断"
-      },
-      {
-        "link": "降级"
-      },
-      {
-        "link": "限流"
-      },
-      {
-        "link": "康威定理",
-        "relativePath": "Sources/Books/极客时间/康威定理.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "§ java",
-        "link": "微服务",
-        "relativePath": "Spaces/2-Area/java/§ java.md"
-      },
-      {
-        "fileName": "∑ 面试计划",
-        "link": "微服务",
-        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
-      },
-      {
-        "fileName": "SOA",
-        "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/SOA.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
-    "fileName": "SOA",
-    "relativePath": "Sources/Books/极客时间/SOA.md",
-    "frontmatter": {
-      "title": "SOA",
-      "date created": "2024-05-07",
-      "date modified": "2024-05-07"
-    },
-    "headings": [
-      {
-        "heading": "SOA",
-        "level": 2
       },
       {
         "heading": "背景",
-        "level": 3
+        "level": 4
       },
       {
-        "heading": "SOA如何解决?",
-        "level": 3
+        "heading": "任务(目标, 做什么)",
+        "level": 4
       },
       {
-        "heading": "服务",
-        "level": 3
+        "heading": "动作（方法，怎么做）",
+        "level": 4
       },
       {
-        "heading": "ESB(企业服务总线)",
-        "level": 3
+        "heading": "Result（结果）",
+        "level": 4
+      },
+      {
+        "heading": "辅助内容",
+        "level": 2
       },
       {
         "heading": "资料",
@@ -28352,62 +28337,97 @@
     ],
     "links": [
       {
-        "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
+        "link": "📚金字塔原理",
+        "relativePath": "Sources/Books/读书笔记/📚金字塔原理.md"
       }
     ],
     "backlinks": [
       {
-        "fileName": "微服务",
-        "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      },
-      {
-        "fileName": "从0开始学架构",
-        "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "fileName": "大厂晋升指南",
+        "link": "晋升ppt框架",
+        "relativePath": "Sources/Books/极客时间/大厂晋升指南/大厂晋升指南.md"
       }
     ]
   },
   {
-    "fileName": "分层架构",
-    "relativePath": "Sources/Books/极客时间/分层架构.md",
+    "fileName": "如何熟悉业务",
+    "relativePath": "Sources/Books/极客时间/大厂晋升指南/如何熟悉业务.md",
     "frontmatter": {
-      "title": "分层架构",
-      "date created": "2024-05-07",
-      "date modified": "2024-05-07"
+      "title": "如何熟悉业务",
+      "date created": "2024-06-03",
+      "date modified": "2024-06-03"
     },
     "headings": [
       {
-        "heading": "分层架构",
+        "heading": "如何熟悉业务",
         "level": 2
       },
       {
-        "heading": "资料",
+        "heading": "参考步骤(量化每个步骤的具体数据)",
         "level": 2
+      },
+      {
+        "heading": "典型应用",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "漏斗模型"
       }
     ],
     "backlinks": [
       {
-        "fileName": "从0开始学架构",
-        "link": "分层架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "fileName": "大厂晋升指南",
+        "link": "如何熟悉业务",
+        "relativePath": "Sources/Books/极客时间/大厂晋升指南/大厂晋升指南.md"
+      }
+    ]
+  },
+  {
+    "fileName": "大厂晋升指南",
+    "relativePath": "Sources/Books/极客时间/大厂晋升指南/大厂晋升指南.md",
+    "frontmatter": {
+      "title": "大厂晋升指南",
+      "date created": "2024-05-30",
+      "date modified": "2024-06-04"
+    },
+    "headings": [
+      {
+        "heading": "晋升体系",
+        "level": 2
       },
       {
-        "fileName": "从0开始学架构",
-        "link": "分层架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "heading": "晋升原则",
+        "level": 3
+      },
+      {
+        "heading": "晋升逻辑",
+        "level": 3
+      },
+      {
+        "heading": "能力模型",
+        "level": 3
+      },
+      {
+        "heading": "晋升技巧(ppt)",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "如何熟悉业务",
+        "relativePath": "Sources/Books/极客时间/大厂晋升指南/如何熟悉业务.md"
+      },
+      {
+        "link": "晋升ppt框架",
+        "relativePath": "Sources/Books/极客时间/大厂晋升指南/晋升ppt框架.md"
       }
     ]
   },
   {
     "fileName": "sentinel",
-    "relativePath": "Sources/Books/极客时间/sentinel.md",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/sentinel.md",
     "frontmatter": {
       "title": "sentinel",
       "date created": "2024-04-30",
@@ -28423,45 +28443,52 @@
       {
         "fileName": "如何应对接口级故障",
         "link": "sentinel",
-        "relativePath": "Sources/Books/极客时间/如何应对接口级故障.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/如何应对接口级故障.md"
       }
     ]
   },
   {
-    "fileName": "限流器设计",
-    "relativePath": "Sources/Books/极客时间/限流器设计.md",
+    "fileName": "FMEA",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/FMEA.md",
     "frontmatter": {
-      "title": "限流器设计",
+      "title": "FMEA",
       "date created": "2024-04-30",
       "date modified": "2024-04-30"
     },
     "headings": [
       {
-        "heading": "理论，参考 [[限流算法]]",
+        "heading": "案例",
         "level": 2
-      },
-      {
-        "heading": "资料",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "限流算法",
-        "relativePath": "Sources/Books/极客时间/限流算法.md"
       }
     ],
     "backlinks": [
       {
-        "fileName": "限流算法",
-        "link": "限流器设计",
-        "relativePath": "Sources/Books/极客时间/限流算法.md"
+        "fileName": "从0开始学架构",
+        "link": "FMEA",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "中台",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/中台.md",
+    "headings": [
+      {
+        "heading": "读书笔记分成3个文件",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "中台",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
   {
     "fileName": "限流算法",
-    "relativePath": "Sources/Books/极客时间/限流算法.md",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/限流算法.md",
     "frontmatter": {
       "title": "限流算法",
       "date created": "2024-04-30",
@@ -28512,25 +28539,265 @@
     "links": [
       {
         "link": "限流器设计",
-        "relativePath": "Sources/Books/极客时间/限流器设计.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/限流器设计.md"
       }
     ],
     "backlinks": [
       {
         "fileName": "限流器设计",
         "link": "限流算法",
-        "relativePath": "Sources/Books/极客时间/限流器设计.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/限流器设计.md"
       },
       {
         "fileName": "如何应对接口级故障",
         "link": "限流算法",
-        "relativePath": "Sources/Books/极客时间/如何应对接口级故障.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/如何应对接口级故障.md"
+      }
+    ]
+  },
+  {
+    "fileName": "限流器设计",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/限流器设计.md",
+    "frontmatter": {
+      "title": "限流器设计",
+      "date created": "2024-04-30",
+      "date modified": "2024-04-30"
+    },
+    "headings": [
+      {
+        "heading": "理论，参考 [[限流算法]]",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "限流算法",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/限流算法.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "限流算法",
+        "link": "限流器设计",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/限流算法.md"
+      }
+    ]
+  },
+  {
+    "fileName": "未命名",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/未命名.md",
+    "headings": [
+      {
+        "heading": "读书笔记分成3个文件",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "微内核架构",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/微内核架构.md",
+    "frontmatter": {
+      "title": "微内核架构",
+      "date created": "2024-05-07",
+      "date modified": "2024-05-07"
+    },
+    "headings": [
+      {
+        "heading": "**引言**",
+        "level": 2
+      },
+      {
+        "heading": "**一、基本架构**",
+        "level": 2
+      },
+      {
+        "heading": "**二、设计关键点**",
+        "level": 2
+      },
+      {
+        "heading": "**2.1 插件管理**",
+        "level": 3
+      },
+      {
+        "heading": "**2.2 插件连接**",
+        "level": 3
+      },
+      {
+        "heading": "**2.3 插件通信**",
+        "level": 3
+      },
+      {
+        "heading": "引用",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "微内核架构",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "微内核架构",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "微内核架构",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "微服务",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md",
+    "frontmatter": {
+      "title": "微服务",
+      "date created": "2024-05-07",
+      "date modified": "2024-05-07"
+    },
+    "headings": [
+      {
+        "heading": "微服务",
+        "level": 2
+      },
+      {
+        "heading": "微服务与[[SOA]]的区别",
+        "level": 2
+      },
+      {
+        "heading": "微服务的陷阱",
+        "level": 2
+      },
+      {
+        "heading": "微服务最佳实践",
+        "level": 2
+      },
+      {
+        "heading": "微服务最佳实践(服务拆分)",
+        "level": 3
+      },
+      {
+        "heading": "服务颗粒度",
+        "level": 4
+      },
+      {
+        "heading": "服务拆分",
+        "level": 4
+      },
+      {
+        "heading": "微服务最佳实践(基础服务设施)",
+        "level": 3
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "SOA",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/SOA.md"
+      },
+      {
+        "link": "熔断"
+      },
+      {
+        "link": "降级"
+      },
+      {
+        "link": "限流"
+      },
+      {
+        "link": "康威定理",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/康威定理.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "§ java",
+        "link": "微服务",
+        "relativePath": "Spaces/2-Area/java/§ java.md"
+      },
+      {
+        "fileName": "∑ 面试计划",
+        "link": "微服务",
+        "relativePath": "Spaces/1-Project/我的面试指南/∑ 面试计划.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "微服务",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "微服务",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "SOA",
+        "link": "微服务",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/SOA.md"
+      }
+    ]
+  },
+  {
+    "fileName": "什么是线程、进程",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/什么是线程、进程.md",
+    "frontmatter": {
+      "title": "什么是线程、进程",
+      "date created": "2024-03-13",
+      "date modified": "2024-03-13"
+    },
+    "headings": [
+      {
+        "heading": "进程和线程",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "什么是线程、进程",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "什么是线程、进程",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "如何阅读源码",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/如何阅读源码.md",
+    "frontmatter": {
+      "title": "如何阅读源码",
+      "date created": "2024-05-09",
+      "date modified": "2024-05-09"
+    },
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "如何阅读源码",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
   {
     "fileName": "如何应对接口级故障",
-    "relativePath": "Sources/Books/极客时间/如何应对接口级故障.md",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/如何应对接口级故障.md",
     "frontmatter": {
       "title": "如何应对接口级故障",
       "date created": "2024-04-30",
@@ -28557,7 +28824,7 @@
     "links": [
       {
         "link": "sentinel",
-        "relativePath": "Sources/Books/极客时间/sentinel.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/sentinel.md"
       },
       {
         "link": "降级"
@@ -28573,46 +28840,228 @@
       },
       {
         "link": "限流算法",
-        "relativePath": "Sources/Books/极客时间/限流算法.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/限流算法.md"
       }
     ],
     "backlinks": [
       {
         "fileName": "从0开始学架构",
         "link": "如何应对接口级故障",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
   {
-    "fileName": "FMEA",
-    "relativePath": "Sources/Books/极客时间/FMEA.md",
+    "fileName": "康威定理",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/康威定理.md",
     "frontmatter": {
-      "title": "FMEA",
-      "date created": "2024-04-30",
-      "date modified": "2024-04-30"
+      "title": "康威定理",
+      "date created": "2024-05-07",
+      "date modified": "2024-05-07"
     },
     "headings": [
       {
-        "heading": "案例",
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "微服务",
+        "link": "康威定理",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
+      }
+    ]
+  },
+  {
+    "fileName": "架构预研文档",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/架构预研文档.md",
+    "frontmatter": {
+      "title": "架构预研文档",
+      "date created": "2024-05-09",
+      "date modified": "2024-05-09"
+    },
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "架构预研文档",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "架构图谱",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/架构图谱.md",
+    "frontmatter": {
+      "title": "架构图谱",
+      "date created": "2024-05-09",
+      "date modified": "2024-05-09"
+    },
+    "headings": [
+      {
+        "heading": "资料",
         "level": 2
       }
     ],
     "backlinks": [
       {
         "fileName": "从0开始学架构",
-        "link": "FMEA",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "link": "架构图谱",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "架构设计文档模板",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/架构设计文档模板.md",
+    "frontmatter": {
+      "title": "架构设计文档模板",
+      "date created": "2024-05-30",
+      "date modified": "2024-05-30"
+    },
+    "headings": [
+      {
+        "heading": "备选方案模板",
+        "level": 2
+      },
+      {
+        "heading": "架构设计模板",
+        "level": 2
+      },
+      {
+        "heading": "通用模板",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "5W1H8C1D"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "架构设计文档模板",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "画架构图",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/画架构图.md",
+    "frontmatter": {
+      "title": "画架构图",
+      "date created": "2024-05-30",
+      "date modified": "2024-05-30"
+    },
+    "headings": [
+      {
+        "heading": "架构图",
+        "level": 2
+      },
+      {
+        "heading": "4+1视图(不好实践)",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "画架构图",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "互联网演进模式",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/互联网演进模式.md",
+    "frontmatter": {
+      "title": "互联网演进模式",
+      "date created": "2024-05-08",
+      "date modified": "2024-05-08"
+    },
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "互联网演进模式",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "分层架构",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/分层架构.md",
+    "frontmatter": {
+      "title": "分层架构",
+      "date created": "2024-05-07",
+      "date modified": "2024-05-07"
+    },
+    "headings": [
+      {
+        "heading": "分层架构",
+        "level": 2
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "分层架构",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
+      {
+        "fileName": "从0开始学架构",
+        "link": "分层架构",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      }
+    ]
+  },
+  {
+    "fileName": "从0开始学架构-每日习题思考",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构-每日习题思考.md",
+    "frontmatter": {
+      "title": "从0开始学架构-每日习题思考",
+      "date created": "2024-03-13",
+      "date modified": "2024-03-13"
+    },
+    "headings": [
+      {
+        "heading": "03 架构设计的目的",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "从0开始学架构",
+        "link": "从0开始学架构-每日习题思考",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
   {
     "fileName": "从0开始学架构",
-    "relativePath": "Sources/Books/极客时间/从0开始学架构.md",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md",
     "frontmatter": {
       "title": "从0开始学架构",
       "date created": "2024-03-12",
-      "date modified": "2024-05-08"
+      "date modified": "2024-05-30"
     },
     "headings": [
       {
@@ -28858,16 +29307,32 @@
       {
         "heading": "架构重构内功心法",
         "level": 2
+      },
+      {
+        "heading": "[[架构设计文档模板]]",
+        "level": 2
+      },
+      {
+        "heading": "[[画架构图]]",
+        "level": 2
+      },
+      {
+        "heading": "[[如何阅读源码]]",
+        "level": 2
+      },
+      {
+        "heading": "[[架构图谱]]",
+        "level": 2
       }
     ],
     "links": [
       {
         "link": "从0开始学架构-每日习题思考",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构-每日习题思考.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构-每日习题思考.md"
       },
       {
         "link": "什么是线程、进程",
-        "relativePath": "Sources/Books/极客时间/什么是线程、进程.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/什么是线程、进程.md"
       },
       {
         "link": "多数派"
@@ -28881,11 +29346,11 @@
       },
       {
         "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/微内核架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微内核架构.md"
       },
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "rocketMq",
@@ -28900,6 +29365,10 @@
         "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/§redis.md"
       },
       {
+        "link": "es",
+        "relativePath": "Spaces/2-Area/es/es.md"
+      },
+      {
         "link": "缓存",
         "relativePath": "Spaces/1-Project/我的面试指南/mysql/缓存.md"
       },
@@ -28909,7 +29378,7 @@
       },
       {
         "link": "什么是线程、进程",
-        "relativePath": "Sources/Books/极客时间/什么是线程、进程.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/什么是线程、进程.md"
       },
       {
         "link": "reactor模式",
@@ -28924,46 +29393,73 @@
       },
       {
         "link": "FMEA",
-        "relativePath": "Sources/Books/极客时间/FMEA.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/FMEA.md"
       },
       {
         "link": "zk"
       },
       {
         "link": "es",
-        "relativePath": "Spaces/1-Project/我的面试指南/分布式组件/redis/es.md"
+        "relativePath": "Spaces/2-Area/es/es.md"
       },
       {
         "link": "分层架构",
-        "relativePath": "Sources/Books/极客时间/分层架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/分层架构.md"
       },
       {
         "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       },
       {
         "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/SOA.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/SOA.md"
       },
       {
         "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/微内核架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微内核架构.md"
       },
       {
         "link": "分层架构",
-        "relativePath": "Sources/Books/极客时间/分层架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/分层架构.md"
       },
       {
         "link": "SOA",
-        "relativePath": "Sources/Books/极客时间/SOA.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/SOA.md"
       },
       {
         "link": "微服务",
-        "relativePath": "Sources/Books/极客时间/微服务.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       },
       {
         "link": "微内核架构",
-        "relativePath": "Sources/Books/极客时间/微内核架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微内核架构.md"
+      },
+      {
+        "link": "如何引入开源技术"
+      },
+      {
+        "link": "架构预研文档",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/架构预研文档.md"
+      },
+      {
+        "link": "架构设计文档模板",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/架构设计文档模板.md"
+      },
+      {
+        "link": "画架构图",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/画架构图.md"
+      },
+      {
+        "link": "如何阅读源码",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/如何阅读源码.md"
+      },
+      {
+        "link": "架构图谱",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/架构图谱.md"
+      },
+      {
+        "link": "中台",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/中台.md"
       },
       {
         "link": "分库分表",
@@ -28971,11 +29467,11 @@
       },
       {
         "link": "如何应对接口级故障",
-        "relativePath": "Sources/Books/极客时间/如何应对接口级故障.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/如何应对接口级故障.md"
       },
       {
         "link": "互联网演进模式",
-        "relativePath": "Sources/Books/极客时间/互联网演进模式.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/互联网演进模式.md"
       }
     ],
     "backlinks": [
@@ -29007,61 +29503,60 @@
     ]
   },
   {
-    "fileName": "从0开始学架构-每日习题思考",
-    "relativePath": "Sources/Books/极客时间/从0开始学架构-每日习题思考.md",
+    "fileName": "SOA",
+    "relativePath": "Sources/Books/极客时间/从0开始学架构/SOA.md",
     "frontmatter": {
-      "title": "从0开始学架构-每日习题思考",
-      "date created": "2024-03-13",
-      "date modified": "2024-03-13"
+      "title": "SOA",
+      "date created": "2024-05-07",
+      "date modified": "2024-05-07"
     },
     "headings": [
       {
-        "heading": "03 架构设计的目的",
+        "heading": "SOA",
         "level": 2
+      },
+      {
+        "heading": "背景",
+        "level": 3
+      },
+      {
+        "heading": "SOA如何解决?",
+        "level": 3
+      },
+      {
+        "heading": "服务",
+        "level": 3
+      },
+      {
+        "heading": "ESB(企业服务总线)",
+        "level": 3
+      },
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "微服务",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       }
     ],
     "backlinks": [
       {
-        "fileName": "从0开始学架构",
-        "link": "从0开始学架构-每日习题思考",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
-    "fileName": "什么是线程、进程",
-    "relativePath": "Sources/Books/极客时间/什么是线程、进程.md",
-    "frontmatter": {
-      "title": "什么是线程、进程",
-      "date created": "2024-03-13",
-      "date modified": "2024-03-13"
-    },
-    "headings": [
-      {
-        "heading": "进程和线程",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "从0开始学架构",
-        "link": "什么是线程、进程",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "fileName": "微服务",
+        "link": "SOA",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/微服务.md"
       },
       {
         "fileName": "从0开始学架构",
-        "link": "什么是线程、进程",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
-      }
-    ]
-  },
-  {
-    "fileName": "未命名",
-    "relativePath": "Sources/Books/极客时间/未命名.md",
-    "headings": [
+        "link": "SOA",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
+      },
       {
-        "heading": "读书笔记分成3个文件",
-        "level": 2
+        "fileName": "从0开始学架构",
+        "link": "SOA",
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       }
     ]
   },
@@ -46137,6 +46632,213 @@
     ]
   },
   {
+    "fileName": "2024-07-10",
+    "relativePath": "Calendar/Daily notes/2024-07-10.md",
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2024-07-01",
+    "relativePath": "Calendar/Daily notes/2024-07-01.md",
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2024-06-25",
+    "relativePath": "Calendar/Daily notes/2024-06-25.md",
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2024-06-13",
+    "relativePath": "Calendar/Daily notes/2024-06-13.md",
+    "frontmatter": {
+      "title": "2024-06-13",
+      "date created": "2024-06-13",
+      "date modified": "2024-06-13"
+    },
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "gradle"
+      },
+      {
+        "link": "jdk17"
+      }
+    ]
+  },
+  {
+    "fileName": "2024-06-05",
+    "relativePath": "Calendar/Daily notes/2024-06-05.md",
+    "frontmatter": {
+      "title": "2024-06-05",
+      "date created": "2024-06-05",
+      "date modified": "2024-06-05"
+    },
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2024-06-04",
+    "relativePath": "Calendar/Daily notes/2024-06-04.md",
+    "headings": [
+      {
+        "heading": "每日反思",
+        "level": 2
+      },
+      {
+        "heading": "待办事项",
+        "level": 2
+      },
+      {
+        "heading": "计划完成",
+        "level": 2
+      },
+      {
+        "heading": "实际完成",
+        "level": 2
+      },
+      {
+        "heading": "备注",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2024-06-03",
+    "relativePath": "Calendar/Daily notes/2024-06-03.md",
+    "frontmatter": {
+      "title": "2024-06-03",
+      "date created": "2024-06-03",
+      "date modified": "2024-06-03"
+    }
+  },
+  {
+    "fileName": "2024-05-30",
+    "relativePath": "Calendar/Daily notes/2024-05-30.md",
+    "frontmatter": {
+      "title": "2024-05-30",
+      "date created": "2024-05-30",
+      "date modified": "2024-05-30"
+    }
+  },
+  {
+    "fileName": "2024-05-09",
+    "relativePath": "Calendar/Daily notes/2024-05-09.md",
+    "frontmatter": {
+      "title": "2024-05-09",
+      "date created": "2024-05-09",
+      "date modified": "2024-05-09"
+    },
+    "headings": [
+      {
+        "heading": "资料",
+        "level": 2
+      }
+    ]
+  },
+  {
     "fileName": "2024-05-08",
     "relativePath": "Calendar/Daily notes/2024-05-08.md",
     "headings": [
@@ -46322,8 +47024,18 @@
     "frontmatter": {
       "title": "如何复盘",
       "date created": "2023-01-18",
-      "date modified": "2023-01-18"
+      "date modified": "2024-06-03"
     },
+    "headings": [
+      {
+        "heading": "复盘",
+        "level": 2
+      },
+      {
+        "heading": "步骤",
+        "level": 2
+      }
+    ],
     "backlinks": [
       {
         "fileName": "软技能",
@@ -46436,7 +47148,7 @@
     "frontmatter": {
       "title": "jrebel",
       "date created": "2022-12-07",
-      "date modified": "2023-10-17"
+      "date modified": "2024-05-29"
     },
     "headings": [
       {
@@ -46631,12 +47343,27 @@
     "frontmatter": {
       "title": "elk-arm安装",
       "date created": "2023-11-15",
-      "date modified": "2023-11-15"
+      "date modified": "2024-06-07"
     },
     "headings": [
       {
+        "heading": "8.11.1-arm64",
+        "level": 2
+      },
+      {
+        "heading": "7.17.21",
+        "level": 2
+      },
+      {
         "heading": "资料",
         "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "∑ es",
+        "link": "elk-arm安装",
+        "relativePath": "Spaces/2-Area/es/∑ es.md"
       }
     ]
   },
@@ -46704,7 +47431,7 @@
     "links": [
       {
         "link": "从0开始学架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "link": "cmu15445",
@@ -46715,7 +47442,7 @@
       },
       {
         "link": "从0开始学架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "link": "cmu15445",
@@ -46759,7 +47486,7 @@
     "links": [
       {
         "link": "从0开始学架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "link": "cmu15445",
@@ -46770,7 +47497,7 @@
       },
       {
         "link": "从0开始学架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "link": "cmu15445",
@@ -46778,7 +47505,7 @@
       },
       {
         "link": "从0开始学架构",
-        "relativePath": "Sources/Books/极客时间/从0开始学架构.md"
+        "relativePath": "Sources/Books/极客时间/从0开始学架构/从0开始学架构.md"
       },
       {
         "link": "log配置",

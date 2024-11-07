@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "97285e0651b43ff0",
+        "id": "ba749e06858ab524",
         "type": "tabs",
         "children": [
           {
-            "id": "a4cbdb795e153e8a",
+            "id": "ee83b86633317d89",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/极客时间/从0开始学架构.md",
+                "file": "Spaces/2-Area/数据库/cmu15445.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "094d185fabee98b5",
+            "id": "48ec07c1dcca957a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/极客时间/互联网演进模式.md",
+                "file": "Spaces/2-Area/数据库/cmu15445.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "e625f3387eba583b",
+            "id": "c58425c0fffe3763",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/极客时间/康威定理.md",
+                "file": "Spaces/2-Area/数据库/cmu15445.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +47,12 @@
             }
           },
           {
-            "id": "23b3512a9f934bf6",
+            "id": "395bc5b470151191",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/极客时间/康威定理.md",
+                "file": "Spaces/2-Area/es/∑ es.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,19 +60,20 @@
             }
           },
           {
-            "id": "408154dc17a29126",
+            "id": "4e603f2e4449f459",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/极客时间/SOA.md",
+                "file": "Spaces/2-Area/数据库/access method.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -92,7 +93,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -102,7 +103,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "从0",
+                "query": "mac",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -130,8 +131,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Books/极客时间/从0开始学架构.md",
+                "file": "Spaces/2-Area/es/∑ es.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Books/极客时间/从0开始学架构.md",
+                "file": "Spaces/2-Area/es/∑ es.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -179,7 +179,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.9389977473223232,
+                  "scale": 0.778703221989078,
                   "close": true
                 }
               }
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Books/极客时间/从0开始学架构.md",
+                "file": "Spaces/2-Area/es/∑ es.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Books/极客时间/从0开始学架构.md"
+                "file": "Spaces/2-Area/es/∑ es.md"
               }
             }
           },
@@ -252,11 +252,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 290.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -275,61 +275,62 @@
       "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "a4cbdb795e153e8a",
+  "active": "395bc5b470151191",
   "lastOpenFiles": [
-    "Sources/Books/极客时间/互联网演进模式.md",
-    "Sources/Books/极客时间/从0开始学架构.md",
-    "Calendar/Daily notes/2024-05-08.md",
-    "Sources/Books/极客时间/微服务.md",
+    "Spaces/2-Area/es/es.md",
     "Calendar/Daily notes/mack下载网站.md",
-    "Sources/Books/极客时间/SOA.md",
-    "Sources/Books/极客时间/微内核架构.md",
-    "Calendar/Daily notes/2024-05-07.md",
-    "Sources/Books/极客时间/sentinel.md",
-    "Sources/Books/极客时间/康威定理.md",
-    "Sources/Books/极客时间/限流算法.md",
-    "Sources/Books/极客时间/分层架构.md",
-    "Sources/Books/极客时间/FMEA.md",
-    "Calendar/Daily notes/2024-04-30.md",
-    "Sources/Books/极客时间/如何应对接口级故障.md",
-    "Sources/Books/极客时间/限流器设计.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/全文检索选型.md",
-    "Spaces/1-Project/我的面试指南/分布式系统/CAP定理.md",
-    "未命名.canvas",
-    "Spaces/1-Project/我的面试指南/分布式组件/§ 分布式.md",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型/redis-string.md",
-    "Spaces/1-Project/我的面试指南/mq/§ mq面试.md",
-    "Spaces/1-Project/我的面试指南/分布式系统/一致性.md",
+    "Spaces/2-Area/人与科技融合专题/必备软件/∑ 必备软件.md",
+    "Calendar/Daily notes/idea.md",
+    "未命名 1.canvas",
+    "Calendar/Daily notes/elk-arm安装.md",
+    "Spaces/2-Area/es/∑ es.md",
     "Spaces/2-Area/数据库/数据模型.md",
     "Spaces/2-Area/数据库/cmu15445.md",
-    "Sources/Books/微信读书同步/文学/1984-乔治·奥威尔.md",
-    "Calendar/Daily notes/log配置.md",
-    "Sources/Books/读书笔记/认知红利",
-    "Sources/Books/极客时间",
-    "testloom.loom",
+    "Spaces/2-Area/数据库/access method.md",
+    "Spaces/2-Area/数据库/Trees.md",
+    "Calendar/Daily notes/2024-07-10.md",
+    "Calendar/Daily notes/2024-07-01.md",
+    "Spaces/1-Project/我的面试指南/mysql/redolog和undolog的区别.md",
+    "Spaces/1-Project/我的面试指南/mysql/§ mysql目录.md",
+    "Spaces/1-Project/我的面试指南/mysql/∑ mysql.md",
+    "Spaces/1-Project/我的面试指南/mysql/MVCC.md",
+    "Spaces/1-Project/我的面试指南/分布式系统/ACID.md",
+    "Calendar/Daily notes/2024-06-13.md",
+    "Calendar/Daily notes/2024-06-25.md",
+    "temp/siyuan.db-shm",
+    "temp/siyuan.db-wal",
+    "temp/os",
+    "Spaces/2-Area/es/temp/siyuan.db-shm",
+    "Spaces/2-Area/es/temp/siyuan.db-wal",
+    "Spaces/2-Area/es/temp/os",
+    "data/storage/local.json",
+    "data/20210808180117-czj9bvb/20240621092532-cuswjni/20240621092532-the0i12/20240621092523-vsht6po.sy",
+    "data/20210808180117-czj9bvb/20240621092532-cuswjni/20240621092532-the0i12/20240621092457-j5np7uq.sy",
+    "data/20210808180117-czj9bvb/20240621092532-cuswjni/20240621092532-the0i12/20240621092532-te852jb/20240621092532-ft3d3ov/20240621092334-ijmtwcc.sy",
+    "data/20210808180117-czj9bvb/assets/image-20240621092532-8rw0hco.png",
+    "data/20210808180117-czj9bvb/assets/image-20240621092532-6ur9qka.png",
+    "data/20210808180117-czj9bvb/assets/image-20240621092532-r3safgc.png",
+    "data/20210808180117-czj9bvb/assets/image-20240621092532-vjiyy2l.png",
+    "temp/base64/image-20240621092532-r3safgc.png",
+    "temp/base64/image-20240621092532-vjiyy2l.png",
+    "temp/base64/image-20240621092532-8rw0hco.png",
+    "temp/base64/image-20240621092532-6ur9qka.png",
+    "Spaces/2-Area/es/data/20210808180117-czj9bvb/assets/weibo-20230519111041-ezla9f8.png",
+    "Spaces/2-Area/es/data/20210808180117-czj9bvb/assets/unordered-list-20210512170043-8dzzwai.svg",
+    "Spaces/1-Project/我的面试指南/解决方案/✨分布式多级缓存.md",
+    "Calendar/Daily notes/2024-06-05.md",
+    "未命名.canvas",
+    "Spaces/1-Project/我的面试指南/∑ 面试计划.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/redis/全文检索选型.md",
+    "Spaces/2-Area/软技能/软技能.md",
+    "Calendar/Daily notes/如何复盘.md",
+    "Spaces/1-Project/我的面试指南/分布式组件/∑ hystrix.md",
     "test.loom.canvas",
-    "Spaces/1-Project/我的面试指南/解决方案",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis/数据类型",
-    "Calendar/Daily notes/Untitled Diagram.svg",
-    "Spaces/1-Project/我的面试指南/分布式组件/redis",
-    "Extras/Draws/Scripts/Downloaded/Auto Layout.svg",
-    "Extras/Draws/Scripts/Downloaded/Set Font Family.svg",
-    "Extras/Draws/Scripts/Downloaded/Mindmap format.svg",
-    "Extras/Draws/Scripts/Downloaded/Mindmap connector.svg",
-    "Extras/Draws/Scripts/Downloaded/Grid Selected Images.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles vertically keep text centered.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally.svg",
-    "Extras/Draws/Scripts/Downloaded/Expand rectangles horizontally keep text centered.svg",
-    "Extras/Draws/Scripts/Downloaded",
-    "Extras/Draws/Scripts",
-    "Extras/Media/MySQL.pdf",
-    "Extras/Media/0531V3.0.pptx",
     "未命名 2.canvas",
-    "未命名 1.canvas",
     "未命名 3.canvas"
   ]
 }

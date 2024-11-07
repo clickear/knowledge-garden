@@ -1,10 +1,13 @@
 ---
 date created: 2022-09-15
-date modified: 2022-09-19
+date modified: 2024-06-05
 title: netty
+tags: [todo/continue]
 ---
 
 #todo/continue
+
+按此方法重写梳理: ⭐ [19 | 链式 & 比较 & 环式学习法：怎么多维度提升技术能力？-大厂晋升指南-极客时间](https://time.geekbang.org/column/article/331463)
 
 [BIO&NIO&AIO模型快速实战_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1JB4y1R7XB?p=1)
 

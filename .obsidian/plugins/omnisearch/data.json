@@ -6,7 +6,7 @@
   "PDFIndexing": false,
   "imagesIndexing": false,
   "splitCamelCase": false,
-  "ribbonIcon": false,
+  "ribbonIcon": true,
   "showExcerpt": true,
   "renderLineReturnInExcerpts": true,
   "showCreateButton": false,

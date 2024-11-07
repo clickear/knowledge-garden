@@ -1,7 +1,7 @@
 ---
 title: jrebel
 date created: 2022-12-07
-date modified: 2023-10-17
+date modified: 2024-05-29
 tags: []
 ---
 
@@ -25,6 +25,7 @@ tags: []
 
 ### 三方激活服务
 
++ [### 捡个便宜 - 交朋友吧 ###](https://www.jpy.wang/page/jrebel.html)(推荐，可用)
 + http://jrebel-license.jiweichengzhu.com/
 + https://jrebel.qekang.com/?utm_source=ld246.com  
 优点:
@@ -50,7 +51,15 @@ tags: []
 
 #### 使用docker
 
-[jrebel-server docker镜像](https://hub.docker.com/r/cliod/jrebel-server)
+[在线可以](https://www.jpy.wang/page/jrebel.html)
+
+[jrebel-server docker镜像](https://hub.docker.com/r/cliod/jrebel-server-go)
+
+docker run -d --name jrebel_proxy -p 8888:8888 wangdxing/golang-reverseproxy
+
+```shell
+docker run --restart=always -dit --name=jreber1 -p 7001:7001 cliod/jrebel-server-go
+```
 
 ## 使用中的坑
 

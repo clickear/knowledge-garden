@@ -46,5 +46,6 @@
   "obsidian-outliner",
   "mermaid-tools",
   "obsidian-table-generator",
-  "obsidian-plantuml"
+  "obsidian-plantuml",
+  "reveal-active-file-button"
 ]

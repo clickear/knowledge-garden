@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-19
-date modified: 2024-04-29
+date modified: 2024-05-09
 title: 资料
 tags: [todo/continue]
 ---
@@ -133,6 +133,7 @@ mainReactor负责监听连接，accept连接给subReactor处理，为什么要�
 
 # 资料
 
++ [极客时间-pthread,epoll性能对比](https://b.geekbang.org/member/course/detail/316150) ⭐
 + rocketmq中的netty使用: [29 从 RocketMQ 学 Netty 网络编程技巧.md](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/RocketMQ%20%E5%AE%9E%E6%88%98%E4%B8%8E%E8%BF%9B%E9%98%B6%EF%BC%88%E5%AE%8C%EF%BC%89/29%20%E4%BB%8E%20RocketMQ%20%E5%AD%A6%20Netty%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7.md)
 + reactor发展史: [高性能IO之Reactor模式 - 时间朋友 - 博客园](https://www.cnblogs.com/doit8791/p/7461479.html)
 + rocketMQ线程模式: [分布式消息队列 RocketMQ 源码分析 —— RPC 通信（二)](https://blog.51cto.com/u_15310381/3233658)
